@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- omit in toc -->
 ## Team 1- Library System
 
@@ -679,3 +678,4 @@ bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexter
 GeeksforGeeks. (2024, 01 21). Difference between Sequence Diagram and Activity Diagram. Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/difference-between-sequence-diagram-and-activity-diagram/
 
 GeeksforGeeks. (2024, 01 21). Use Case Diagrams | Unified Modeling Language (UML). Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/use-case-diagram/
+
