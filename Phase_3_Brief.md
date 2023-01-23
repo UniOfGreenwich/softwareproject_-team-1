@@ -1,8 +1,14 @@
 # Phase 3 - Implementation and Testing
 
+<<<<<<< HEAD
 **Submission Deadline: 19th March 2024**
 
 **Submission Guidance**: You will submit to [turnitin](https://moodlecurrent.gre.ac.uk/mod/assign/view.php?id=2414633) the **hash** of the final commit for the project, `phase\3` will be merged into `main` once you have finished developing and testing. 
+=======
+**Submission Deadline: 28th Marh 2023**
+
+**Submission Guidance**: You will submit to [turnitin](https://moodlecurrent.gre.ac.uk/mod/assign/view.php?id=2165634) the **hash** of the final commit for the project, `phase\3` will be merged into `main` once you have finished developing and testing. 
+>>>>>>> c0c209e (mod: Phase 3 brief released)
 
 
 - [Official Documentation for Markdown](https://www.markdownguide.org/basic-syntax/)
