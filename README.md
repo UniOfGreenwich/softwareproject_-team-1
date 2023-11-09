@@ -39,6 +39,7 @@
       - [Sequential](#sequential)
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
+- [ELEE1149-Project-Template](#elee1149-project-template)
 
 ## Introduction
 
@@ -383,3 +384,6 @@ rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: h
 Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
 
 Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
+
+# ELEE1149-Project-Template
+
