@@ -64,6 +64,7 @@
       - [Sequential](#sequential)
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
+- [ELEE1149-Project-Template](#elee1149-project-template)
 
 # Phase 1 - Requirements Engineering
 
@@ -724,16 +725,4 @@ GeeksforGeeks. (2024, 01 21). Difference between Sequence Diagram and Activity D
 
 GeeksforGeeks. (2024, 01 21). Use Case Diagrams | Unified Modeling Language (UML). Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/use-case-diagram/
 
-Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
-
-IBM. (2024, 01 21). Sequence Diagrams. Retrieved from IBM.com: https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams
-
-oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oclc.org/en/dewey.html
-
-Ramuthi, D. (2024, 01 21). 11 UML disgram Examples: Class, Activity, and More. Retrieved from venngage.com: https://venngage.com/blog/uml-diagram-examples/
-
-Shelton, B. (2024, 01 21). YouTube | UML Class Diagrams. Retrieved from YouTube.com: https://www.youtube.com/watch?v=6XrL5jXmTwM&ab_channel=LucidSoftware
-
-Visual Paradigm. (2024, 01 21). What is an Activity Diagram? Retrieved from visual-paradigm.com: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
-
-Visual Paradigm Online. (2024, 01 21). What are the six types of relationships in UML class diagrams? Retrieved from Visual Paradigm: https://blog.visual-paradigm.com/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
+# ELEE1149-Project-Template
