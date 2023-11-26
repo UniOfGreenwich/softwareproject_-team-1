@@ -14,9 +14,9 @@ ___
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
   - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
-  - [References and Acknowledgements](#references-and-acknowledgements)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
+  - [References and Acknowledgements](#references-and-acknowledgements)
 ___
 ## Introduction
 
@@ -101,13 +101,49 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 3. https://biplus.com.vn/incremental-process-model-in-software-engineering
 
 ## Glossary
+**User Requirements**
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals.
+**System Requirements**
+
+**Gantt Chart**
+**Kanban**
+**Functional Requirements**
+**Non-Functional Requirements**
+****
+****
+****
+****
+****
+****
+****
+****
+
 ## User Requirements Definition
 ## System Requirements Specification
 ## Possible Risks and Risk Planning
-## References and Acknowledgements
 ## Gantt Chart of the Project Plan
 Written in the popular app Mermaid for chart creation, this gantt chart shows the planning for phase 1 of this project, and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
-The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and give a base to other sections of the project thus boosting team members' confidence via the means of a visable road map REFERENCE REQUIRED.
-[![](https://mermaid.ink/img/pako:eNrNVcFu2zAM_RVCZ3mL7KEFdG3WYhgCBEmHYUAuqk0n2mzZo-QWQdF_Hx07TpwmO6zANp9E8T3yiaSlZ5FWGQot1saFsHLAX7ChQLhHU4KCOVXfMQ1w1_rhZmOoR2Um4G1FpQkA02k0m0Xf-Ot8nhm2cnBTlaUN1q277c7koDolG2StUiXjJFIqiidxIlU2gsUHWCyTySVYcoDlcnIdqfgAG6tZVnl4MoTtmVL0HmZ89KLDTK1PG-9bWBfO12V2LA72ab-yF6OmBuMyWGCOhI6jaU9PjTR5QIId96rHL_DR4hPo3tWi9qHG8r549i_wZ2MJS3TBX1JGfy6MXuuikf-iuuXWByz_X30L63_4LjSvoC6Mc8Pg_TON7_Z9T9XpNH5ygaqs2RmdZ76zEabEHNDq6qDvuo93a50prMexvj7H7n8ClZytz715KPD9Z-MezN9Id1dU3hvavjEVnM81KuuZWRga1-1_fETaVg75EgsbJA80AECvSR7rUfvWLZu6LrZHsYCnoO8xc0BNTpUfQS2LmO1FDpyBclKr06v1pFzrNJNvLtk45XxjmBf36ToDdB1L9WG4QCGZ_IabHHMTXuk66avDYVqukKJEfh9sxs_LcwtfCS5_iSuheZlhbpoirMTKvTDUNKFabl0qdKAGpWjq9oGZWrMmUwqdm8Ljyy8lyRdl?type=png)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNrNVcFu2zAM_RVCZ3mL7KEFdG3WYhgCBEmHYUAuqk0n2mzZo-QWQdF_Hx07TpwmO6zANp9E8T3yiaSlZ5FWGQot1saFsHLAX7ChQLhHU4KCOVXfMQ1w1_rhZmOoR2Um4G1FpQkA02k0m0Xf-Ot8nhm2cnBTlaUN1q277c7koDolG2StUiXjJFIqiidxIlU2gsUHWCyTySVYcoDlcnIdqfgAG6tZVnl4MoTtmVL0HmZ89KLDTK1PG-9bWBfO12V2LA72ab-yF6OmBuMyWGCOhI6jaU9PjTR5QIId96rHL_DR4hPo3tWi9qHG8r549i_wZ2MJS3TBX1JGfy6MXuuikf-iuuXWByz_X30L63_4LjSvoC6Mc8Pg_TON7_Z9T9XpNH5ygaqs2RmdZ76zEabEHNDq6qDvuo93a50prMexvj7H7n8ClZytz715KPD9Z-MezN9Id1dU3hvavjEVnM81KuuZWRga1-1_fETaVg75EgsbJA80AECvSR7rUfvWLZu6LrZHsYCnoO8xc0BNTpUfQS2LmO1FDpyBclKr06v1pFzrNJNvLtk45XxjmBf36ToDdB1L9WG4QCGZ_IabHHMTXuk66avDYVqukKJEfh9sxs_LcwtfCS5_iSuheZlhbpoirMTKvTDUNKFabl0qdKAGpWjq9oGZWrMmUwqdm8Ljyy8lyRdl)
+The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visable road map.
+
+A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
+1) Unidimentionallity.
+> One view being 'time', emphasizing efficiency.
+2) Objectivality.
+> Object oriented. 
+3) Deterministic.
+> A Gantt chart determins all that will occur in the project. 
+4) Analytic and Accountable.
+> Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently. 
+5) Squential.
+> After tasks have been completed, then the next task is to be completed, thus sequenciality.
+
+(Geraldi & Lechler, 2012)
+
+[![](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es?type=png)](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es)
+
 ## Kanban
+
+
+## References and Acknowledgements
+Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
