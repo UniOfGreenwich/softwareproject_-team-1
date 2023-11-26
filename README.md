@@ -102,7 +102,7 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 
 ## Glossary
 **User Requirements**
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals.
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals. (Maguire, et al., 1998)
 **System Requirements**
 
 **Gantt Chart**
@@ -146,4 +146,6 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 
 
 ## References and Acknowledgements
+Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
+
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
