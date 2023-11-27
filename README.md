@@ -19,7 +19,22 @@ ___
   - [References and Acknowledgements](#references-and-acknowledgements)
 ___
 ## Introduction
+
+The library system, comissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering manuals dating back to the early 1990s all the way through to generative AI journals printed this year by people such as OpenAI.
+
+The team was given a specification by the customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
+
+The team decided a ***Plan Driven Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
+
+
 ## Table
+
+| Name | Tasks |
+|:---:|:---:|
+| Toby Hagon | Glossary // References // Gantt Chart & Kanban
+| Jake Willshire | Github Project // Introduction // Github Admin
+| George Mathieson | Risk and Risk Planning // User Requirements
+| Azharul Haque Shuvo | Software Process Model // System Requirements
 ## Software Process Model
 ## Glossary
 **User Requirements**
