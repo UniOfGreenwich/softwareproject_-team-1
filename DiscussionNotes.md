@@ -19,7 +19,7 @@
 
  >  ## Incremental development is the process model we have chosen!
 
-![Alt text](/Documentation%20Pictures/image.png)
+![Alt text](./Documentation%20Pictures/incrementaldevelopment.png)
 
 ## User and System Requirements
 
