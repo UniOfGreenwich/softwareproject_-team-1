@@ -1,12 +1,12 @@
 # Phase 1 - Requirements Engineering
 
 # Team 1- Library System
+
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
-___
+
+---
 ### Contents
-- [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
-- [Team 1- Library System](#team-1--library-system)
-    - [Contents](#contents)
+
   - [Introduction](#introduction)
   - [Table](#table)
   - [Software Process Model](#software-process-model)
@@ -17,15 +17,14 @@ ___
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
-___
+
 ## Introduction
 
-The library system, comissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering manuals dating back to the early 1990s all the way through to generative AI journals printed this year by people such as OpenAI.
+The library system, comissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation all the way through to generative AI journals printed this year by organisations such as OpenAI.
 
-The team was given a specification by the customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
+The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
 
 The team decided a ***Plan Driven Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
-
 
 ## Table
 
@@ -35,16 +34,24 @@ The team decided a ***Plan Driven Incremental Design*** process was to be used a
 | Jake Willshire | Github Project // Introduction // Github Admin
 | George Mathieson | Risk and Risk Planning // User Requirements
 | Azharul Haque Shuvo | Software Process Model // System Requirements
-## Software Process Model
-## Glossary
-**User Requirements**
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals. (Maguire, et al., 1998)
-**System Requirements**
 
-**Gantt Chart**
-**Kanban**
-**Functional Requirements**
-**Non-Functional Requirements**
+## Software Process Model
+
+## Glossary
+
+> **User Requirements**<br>
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals. (Maguire, et al., 1998)
+
+> **System Requirements**<br>
+
+> **Gantt Chart**<br>
+
+> **Kanban**<br>
+
+> **Functional Requirements**<br>
+
+> **Non-Functional Requirements**<br>
+
 ****
 ****
 ****
@@ -55,33 +62,44 @@ Specifying a system's requirements from a user's point of view. Functions that s
 ****
 
 ## User Requirements Definition
+
 ## System Requirements Specification
+
 ## Possible Risks and Risk Planning
+
 ## Gantt Chart of the Project Plan
+
 Written in the popular app Mermaid for chart creation, this gantt chart shows the planning for phase 1 of this project, and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visable road map.
 
 A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
-1) Unidimentionallity.
-> One view being 'time', emphasizing efficiency.
-2) Objectivality.
-> Object oriented. 
-3) Deterministic.
-> A Gantt chart determins all that will occur in the project. 
-4) Analytic and Accountable.
-> Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently. 
-5) Squential.
-> After tasks have been completed, then the next task is to be completed, thus sequenciality.
+
+1) > Unidimentional
+    * One view being 'time', emphasizing efficiency.
+
+2) > Objective
+    * Object oriented.
+
+3) > Deterministic
+    * A Gantt chart determins all that will occur in the project.
+
+4) > Analytical and Accountable
+    * Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently.
+
+5) > Sequential
+    * After tasks have been completed, then the next task is to be completed, thus sequenciality.
 
 (Geraldi & Lechler, 2012)
 
-[![](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es?type=png)](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es)
+[![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es?type=png)](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es "Project Plan Gantt Chart")
 
 ## Kanban
 
+![Kanban](./Documentation%20Pictures/kanban.png "Kanban")
 
 ## References and Acknowledgements
+
 Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
 
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
