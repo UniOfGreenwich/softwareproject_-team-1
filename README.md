@@ -110,7 +110,7 @@ What follows is an outline of everything expected of the system in terms of func
 - 10p/day late return charge
 
 
-## Possible Risks
+## Potential Risks
 
 A stock management and lending system such as this has few - but by no means trivial - intrinsic risks derived from any aspect of the hardware, software, and/or personnel. Significant risks that we're aware of and continually take into consideration are as follows...
 
