@@ -64,11 +64,88 @@ Specifying a system's requirements from a user's point of view. Functions that s
 ****
 
 
-## User Requirements Definition
+## User Requirements
 
-## System Requirements Specification
 
-## Possible Risks and Risk Planning
+
+
+## Technical Requirements
+
+What follows is an outline of everything expected of the system in terms of functionality, compatibility, and back-end processing techniques.
+
+### Functional:
+
+**Account Management**
+- Access levels are determined by the organisation's personnel hierarchy
+- Account creation and deletion by authorised staff
+- Search, sort, and filter functionality for authorised staff
+- Account information is editable only by account-holder
+  - Encrypted and verified by md5sum (RDRR, no date)
+  - ID comprises the user's first and last name initials, 4 random numbers, and a random character respectively (e.g. jp4661d)
+  - Password must be 8 characters in length, contain a number and a symbol
+- Account balance credit and debt issuing
+  - Accounts are automatically charged for outstanding titles
+  - Customers can add credit to their account anytime
+  - Staff can clear account balances manually
+    - Usage log associated with the user and flagged upon abuse of this feature
+
+**Inventory Management**
+- Book/journal/article information amendable by authorised staff
+- Book/journal/article entry and removal by authorised staff
+- Search, sort, and filter functionality
+- Internal UID for each book/journal/article
+- Dewy Decimal Classification (OCLC, no date)
+- Book information
+  - ISBN (International ISBN Agency, no date)
+  - Title
+  - Author
+  - Mini-synopsis
+- Journal/article information
+  - DOI number
+  - Title
+  - Author
+  - Conference
+  - Journal name
+
+**Resource Optimisations**
+- Suitable search and sort algorithms for expected database size(s)
+- Data storage limit(s)
+  - Functionality is limited if storage is full
+- Data type and format validation throughout
+
+### Non-Functional:
+- A minimum of 20 books/journals/articles present in the system
+- 3, 7, and 14-week rental options
+- 10p/day late return charge
+
+
+## Possible Risks
+
+A stock management and lending system such as this has few - but by no means trivial - intrinsic risks derived from any aspect of the hardware, software, and/or personnel. Significant risks that we're aware of and continually take into consideration are as follows...
+
+**Hardware:**
+- Limited server data storage for database expandability
+- Exiguous server cache for indexing and logging
+- Unsuitable networking connections between server(s) and clients
+- Subpar server/client processing speed
+- System outages and/or data loss due to a lack of redundancy (FS Innovation, 2022)
+- Physical damage to equipment due to adverse conditions or deliberate tempering
+
+**Software:**
+- Non-compliance with legislation due to inadequate encryption, deletion, and extraction processes (HM Government, 2023a) (HM Government, 2023b)
+- Inconsistent data validation techniques
+- Arduous bug fixing due to poor code formatting, annotations, etc
+- Inappropriate datatype selection leading to overflow, truncated, and/or inaccurate data 
+- Redundant, non-modular, and inefficient code causing system underperformance
+- Unrobust data handling processes that allow for database conflicts and the overwriting of data
+
+**Personnel:**
+- User error from insufficient training
+- Data privacy/security compromised by unconfigured access levels
+- Project drift due to infrequent communication with stakeholders
+- Unsympathetic, offputting deployment method and timeframe (Amazon Web Services, no date)
+- Failure to provide technical support for the use and maintenance of the system
+
 
 ## Gantt Chart of the Project Plan
 
@@ -106,3 +183,17 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
 
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
+
+RDRR. (no date). md5sum: Compute MD5 Checksums. Retrieved from RDRR: https://rdrr.io/r/tools/md5sum.html
+
+OCLC. (no date). Dewey Services. Retrieved from OCLC: https://www.oclc.org/en/dewey.html
+
+International ISBN Agency. (no date). The International ISBN Agency. Retrieved from International ISBN Agency: https://www.isbn-international.org/
+
+FS Innovation. (2022, 06 01). Server Redundancy: Types, Benefits & Design. Retrieved from FS Innovation: https://community.fs.com/article/server-redundancy-types-benefits-and-design.html
+
+HM Government. (2023, 11 27a). Data protection. Retrieved from GOV.UK: https://www.gov.uk/data-protection
+
+HM Government. (2023, 11 27b). Freedom of Information Act 2000. Retrieved from LEGISLATION.GOV.UK: https://www.legislation.gov.uk/ukpga/2000/36/contents
+
+Amazon Web Services. (no date). Deployment methods. Retrieved from Amazon Web Services: https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/deployment-methods.html
