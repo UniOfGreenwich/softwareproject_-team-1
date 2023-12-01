@@ -1,14 +1,18 @@
 # Phase 1 - Requirements Engineering
 
 # Team 1- Library System
+
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
-___
-### Contents
+
+---
+## Contents
+
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
 - [Team 1- Library System](#team-1--library-system)
-    - [Contents](#contents)
+  - [Contents](#contents)
   - [Introduction](#introduction)
   - [Table](#table)
+  - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
     - [Incremental model stages:](#incremental-model-stages)
@@ -17,35 +21,66 @@ ___
       - [Drawbacks](#drawbacks)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
-  - [Glossary](#glossary)
+  - [Glossary](#glossary-1)
   - [User Requirements Definition](#user-requirements-definition)
-    - [Functional Requirements:](#functional-requirements)
-    - [Non-Functional Requrements](#non-functional-requrements)
+    - [Functional Requirements](#functional-requirements)
+    - [Non-Functional Requirements](#non-functional-requirements)
   - [System Requirements Specification](#system-requirements-specification)
     - [Functional:](#functional)
     - [Non-Functional:](#non-functional)
-  - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
+  - [Potential Risks](#potential-risks)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
+  - [References and Acknowledgements](#references-and-acknowledgements)
+- [Geraldi, J. \& Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594](#geraldi-j--lechler-t-2012-gantt-chart-and-the-scientific-management-in-projects-international-journal-of-managing-project-in-business-54-pp-578-594)
+  - [Kanban](#kanban-1)
 ___
 ## Introduction
 
-The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering manuals dating back to the early 1990s all the way through to generative AI journals printed this year by people such as OpenAI.
+The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation all the way through to generative AI journals printed this year by organisations such as OpenAI.
 
-The team was given a specification by the customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
+The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
 
-The team decided a ***Plan Driven Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
-
+The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
 
 ## Table
 
-| Name | Tasks |
+| Username | Tasks |
 |:---:|:---:|
-| Toby Hagon | Glossary // References // Gantt Chart & Kanban
-| Jake Willshire | Github Project // Introduction // Github Admin
-| George Mathieson | Risk and Risk Planning // System Requirements
-| Azharul Haque Shuvo | Software Process Model // User Requirements
+| [th5528e](https://github.com/th5528e) | Glossary // References // Gantt Chart // Kanban
+| [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
+| [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
+
+## Glossary
+
+**User Requirements**
+
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+
+**System requirements**
+
+Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
+
+**Gantt Chart**
+
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
+
+**Kanban**
+
+A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
+
+**Functional Requirements**
+
+Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
+
+**Non-Functional Requirements**
+
+The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
+
+
 ## Software Process Model
+
 The software process model is an abstraction of a software development process. It explains a procedure from a particular perspective. Some of the most popular Software process models are:
 
 - **Waterfall model:** It is a sequential, plan-driven process. It requires one to plan and schedule all activities before beginning the project.
@@ -62,7 +97,7 @@ The incremental model is now the most common approach for software development. 
 
 This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
 
-![Incremental Model](image.png)
+![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
 
 ### Incremental model stages:
 
@@ -130,25 +165,24 @@ Specifying a system's requirements from a user's point of view. Functions that s
 
 
 ## User Requirements Definition
-The following is an outline of everything a user expects from the system: it includes statements in natural language and diagrams that depict the services the system provides and its operational constraints.
-### Functional Requirements:
-**For Users** 
+The following is an outline of everything a user expects from the system: it includes statements in natural language and diagrams that illustrate the services the system provides and its operational constraints.
+### Functional Requirements
+**For User**
 * Allow users to search for books by title, author, or ISBN.
-* Users should be able to check out and return books.
-* The users can see which books are currently checked out and their due dates for return.
+* The system should be able to display a list of all the books in the library.
+* Allow users to check out and return books.
+* Allow users to see which books are currently checked out and their due dates for return.
+* Users should be able to reset their password.
 * The system should send reminders to users when a book is due to be returned.
-* The system should be able to display a list of all books in the library.
 * Allow users to pay their outstanding balance online using a credit or debit card.
 * The system should update the user’s account to reflect the payment immediately.
 * Provide helpful error messages and feedback to guide the users.
-* Allow users to reset their password
 
 **For Staff**
-* Allow staff to add and remove books from the library.
+* Staff can add and remove books from the library.
 * Staff should be able to generate reports regarding library usage and checkouts.
-  
-### Non-Functional Requrements
-*	User-friendly interface that allows easy navigation.
+### Non-Functional Requirements
+* User-friendly interface that allows easy navigation.
 * The system should be accessible 24/7, except for the scheduled maintenance period.
 * Ensure that robust data security and protection measures are in place to secure the privacy and confidentiality of users' data.
 * Should be compatible with all operating systems and devices.
@@ -169,7 +203,7 @@ What follows is an outline of everything expected of the system in terms of func
 - Account creation and deletion by authorised staff
 - Search, sort, and filter functionality for authorised staff
 - Account information is editable only by account-holder
-  - Encrypted and verified by md5sum
+  - Encrypted and verified by md5sum (RDRR, no date)
   - ID comprises the user's first and last name initials, 4 random numbers, and a random character respectively (e.g. jp4661d)
   - Password must be 8 characters in length, contain a number and a symbol
 - Account balance credit and debt issuing
@@ -183,9 +217,9 @@ What follows is an outline of everything expected of the system in terms of func
 - Book/journal/article entry and removal by authorised staff
 - Search, sort, and filter functionality
 - Internal UID for each book/journal/article
-- Dewy Decimal Classification
+- Dewy Decimal Classification (OCLC, no date)
 - Book information
-  - ISBN
+  - ISBN (International ISBN Agency, no date)
   - Title
   - Author
   - Mini-synopsis
@@ -208,7 +242,7 @@ What follows is an outline of everything expected of the system in terms of func
 - 10p/day late return charge
 
 
-## Possible Risks and Risk Planning
+## Potential Risks
 
 A stock management and lending system such as this has few - but by no means trivial - intrinsic risks derived from any aspect of the hardware, software, and/or personnel. Significant risks that we're aware of and continually take into consideration are as follows...
 
@@ -217,13 +251,14 @@ A stock management and lending system such as this has few - but by no means tri
 - Exiguous server cache for indexing and logging
 - Unsuitable networking connections between server(s) and clients
 - Subpar server/client processing speed
-- System outages and/or data loss due to a lack of server redundancy
+- System outages and/or data loss due to a lack of redundancy (FS Innovation, 2022)
+- Physical damage to equipment due to adverse conditions or deliberate tempering
 
 **Software:**
-- Non-compliance with data protection legislation due to inadequate encryption and deletion processes
+- Non-compliance with legislation due to inadequate encryption, deletion, and extraction processes (HM Government, 2023a) (HM Government, 2023b)
 - Inconsistent data validation techniques
 - Arduous bug fixing due to poor code formatting, annotations, etc
-- Inappropriate datatype selection leading to overflow, truncated, and/or inaccurate data
+- Inappropriate datatype selection leading to overflow, truncated, and/or inaccurate data 
 - Redundant, non-modular, and inefficient code causing system underperformance
 - Unrobust data handling processes that allow for database conflicts and the overwriting of data
 
@@ -231,29 +266,47 @@ A stock management and lending system such as this has few - but by no means tri
 - User error from insufficient training
 - Data privacy/security compromised by unconfigured access levels
 - Project drift due to infrequent communication with stakeholders
-- Unsympathetic, offputting deployment method and timeframe
+- Unsympathetic, offputting deployment method and timeframe (Amazon Web Services, no date)
 - Failure to provide technical support for the use and maintenance of the system
 
 
 ## Gantt Chart of the Project Plan
+<<<<<<<<< Temporary merge branch 1
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
 
+A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
+
+> Unidimensional
+
+* One view being 'time', emphasizing efficiency.
+
+> Objective
+* Object oriented.
+
+> Deterministic
+* A Gantt chart determins all that will occur in the project.
+
+> Analytical and Accountable
+* Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently.
+
+> Sequential
+* After tasks have been completed, then the next task is to be completed, thus sequenciality.
+---
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas.
-1) Unidimentionallity.
-> One view being 'time', emphasizing efficiency.
-2) Objectivality.
-> Object oriented. 
-3) Deterministic.
-> A Gantt chart determins all that will occur in the project. 
-4) Analytic and Accountable.
-> Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently. 
-5) Squential.
-> After tasks have been completed, then the next task is to be completed, thus sequenciality.
 
 (Geraldi & Lechler, 2012)
 
-[![](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es?type=png)](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es)
+![Project Plan Gantt Chart](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es "Project Plan Gantt Chart")
 
 ## Kanban
+
+
+## References and Acknowledgements
+Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
+
+Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
+=========
+## Kanban
+>>>>>>>>> Temporary merge branch 2
