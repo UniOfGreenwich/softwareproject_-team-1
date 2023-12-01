@@ -5,10 +5,11 @@
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
 
 ---
-### Contents
+## Contents
 
   - [Introduction](#introduction)
   - [Table](#table)
+  - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
     - [Incremental model stages:](#incremental-model-stages)
@@ -17,7 +18,6 @@
       - [Drawbacks](#drawbacks)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
-  - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
     - [Functional:](#functional)
@@ -33,42 +33,43 @@ The library system, commissioned to us as a project by our customer ***Blair&Co*
 
 The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
 
-The team decided a ***Plan Driven Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
+The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
 
 ## Table
 
-| Name | Tasks |
+| Username | Tasks |
 |:---:|:---:|
-| Toby Hagon | Glossary // References // Gantt Chart & Kanban
-| Jake Willshire | Github Project // Introduction // Github Admin
-| George Mathieson | Risk and Risk Planning // System Requirements
-| Azharul Haque Shuvo | Software Process Model // User Requirements
-
+| [th5528e](https://github.com/th5528e) | Glossary // References // Gantt Chart // Kanban
+| [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
+| [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
 
 ## Glossary
 
-> **User Requirements**
+**User Requirements**
 
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical and mental support, usablilty goals. (Maguire, et al., 1998)
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
 
-> **System Requirements**<br>
+**System requirements**
 
-> **Gantt Chart**<br>
+Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
 
-> **Kanban**<br>
+**Gantt Chart**
 
-> **Functional Requirements**<br>
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
 
-> **Non-Functional Requirements**<br>
+**Kanban**
 
-****
-****
-****
-****
-****
-****
-****
-****
+A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
+
+**Functional Requirements**
+
+Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
+
+**Non-Functional Requirements**
+
+The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
+
 
 ## Software Process Model
 
@@ -88,7 +89,7 @@ The incremental model is now the most common approach for software development. 
 
 This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
 
-![Incremental Model](image.png)
+![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
 
 ### Incremental model stages:
 
@@ -135,32 +136,6 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 1. https://www.collegenote.net/curriculum/software-engineering-csit/52/298/
 2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
 3. https://biplus.com.vn/incremental-process-model-in-software-engineering
-
-## Glossary
-**User Requirements**
-
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
-
-**System requirements**
-
-Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
-
-**Gantt Chart**
-
-A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
-
-**Kanban**
-
-A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
-
-**Functional Requirements**
-
-Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
-
-**Non-Functional Requirements**
-
-The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
-
 
 
 ## User Requirements
@@ -251,7 +226,7 @@ The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by t
 
 A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
 
-> Unidimentional
+> Unidimensional
 
 * One view being 'time', emphasizing efficiency.
 
