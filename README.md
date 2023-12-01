@@ -20,6 +20,8 @@ ___
   - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
+    - [Functional:](#functional)
+    - [Non-Functional:](#non-functional)
   - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
@@ -109,21 +111,29 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 
 ## Glossary
 **User Requirements**
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998)
-**System Requirements**
+
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+
+**System requirements**
+
+Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
 
 **Gantt Chart**
+
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
+
 **Kanban**
+
+A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
+
 **Functional Requirements**
+
+Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
+
 **Non-Functional Requirements**
-****
-****
-****
-****
-****
-****
-****
-****
+
+The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
+
 
 
 ## User Requirements Definition
@@ -234,7 +244,16 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 
 ## References and Acknowledgements
-Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
+Chitra, S. (2023, 11 2023). Functional vs Non-Functional Requirements. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
+
+Dimov, D. (2010). Nascent Entrepreneurs and Venture Emergence: Opportunity Confidence, Human Capital, and Early Planning. Journal of Management Studies, 47(6), 1124-1153.
+
+Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
+
+Grady, J. O. (2006). System Requirements Analysis. Burlington: Elsevier.
+Kniberg, H., & Skarin, M. (2010). Kanban and Scrum, making the most of both. C4Media Inc.
+
+Maguire, M. C., Kirakowski, J., & Vereker, N. (1998). RESPECT - User-Centered Requirements Handbook - Version 3.3 (Version 3.3 ed.). Loughborough: RESPECT Consortium 1998.
 
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
 
