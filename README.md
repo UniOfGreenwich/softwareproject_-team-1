@@ -12,6 +12,8 @@ ___
   - [Software Process Model](#software-process-model)
   - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
+    - [Functional Requirements:](#functional-requirements)
+    - [Non-Functional Requrements](#non-functional-requrements)
   - [System Requirements Specification](#system-requirements-specification)
   - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
@@ -120,6 +122,30 @@ Specifying a system's requirements from a user's point of view. Functions that s
 
 
 ## User Requirements Definition
+The following is an outline of everything a user expects from the system: it includes statements in natural language and diagrams that depict the services the system provides and its operational constraints.
+### Functional Requirements:
+**For Users** 
+* Allow users to search for books by title, author, or ISBN.
+* Users should be able to check out and return books.
+* The users can see which books are currently checked out and their due dates for return.
+* The system should send reminders to users when a book is due to be returned.
+* The system should be able to display a list of all books in the library.
+* Allow users to pay their outstanding balance online using a credit or debit card.
+* The system should update the user’s account to reflect the payment immediately.
+* Provide helpful error messages and feedback to guide the users.
+* Allow users to reset their password
+
+**For Staff**
+* Allow staff to add and remove books from the library.
+* Staff should be able to generate reports regarding library usage and checkouts.
+  
+### Non-Functional Requrements
+*	User-friendly interface that allows easy navigation.
+* The system should be accessible 24/7, except for the scheduled maintenance period.
+* Ensure that robust data security and protection measures are in place to secure the privacy and confidentiality of users' data.
+* Should be compatible with all operating systems and devices.
+* Capacity to manage several users and concurrent system access without performance degradation.
+* High performance and capacity to manage a huge amount of data.
 
 
 
