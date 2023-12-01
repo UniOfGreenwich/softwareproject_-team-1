@@ -1,14 +1,15 @@
 # Phase 1 - Requirements Engineering
 
 # Team 1- Library System
+
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
-___
-### Contents
-- [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
-- [Team 1- Library System](#team-1--library-system)
-    - [Contents](#contents)
+
+---
+## Contents
+
   - [Introduction](#introduction)
   - [Table](#table)
+  - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
     - [Incremental model stages:](#incremental-model-stages)
@@ -17,7 +18,6 @@ ___
       - [Drawbacks](#drawbacks)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
-  - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
     - [Functional:](#functional)
@@ -26,25 +26,53 @@ ___
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
-___
+
 ## Introduction
 
-The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering manuals dating back to the early 1990s all the way through to generative AI journals printed this year by people such as OpenAI.
+The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation all the way through to generative AI journals printed this year by organisations such as OpenAI.
 
-The team was given a specification by the customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
+The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
 
-The team decided a ***Plan Driven Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
-
+The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
 
 ## Table
 
-| Name | Tasks |
+| Username | Tasks |
 |:---:|:---:|
-| Toby Hagon | Glossary // References // Gantt Chart & Kanban
-| Jake Willshire | Github Project // Introduction // Github Admin
-| George Mathieson | Risk and Risk Planning // System Requirements
-| Azharul Haque Shuvo | Software Process Model // User Requirements
+| [th5528e](https://github.com/th5528e) | Glossary // References // Gantt Chart // Kanban
+| [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
+| [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
+
+## Glossary
+
+**User Requirements**
+
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+
+**System requirements**
+
+Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
+
+**Gantt Chart**
+
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
+
+**Kanban**
+
+A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
+
+**Functional Requirements**
+
+Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
+
+**Non-Functional Requirements**
+
+The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
+
+
 ## Software Process Model
+
 The software process model is an abstraction of a software development process. It explains a procedure from a particular perspective. Some of the most popular Software process models are:
 
 - **Waterfall model:** It is a sequential, plan-driven process. It requires one to plan and schedule all activities before beginning the project.
@@ -61,7 +89,7 @@ The incremental model is now the most common approach for software development. 
 
 This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
 
-![Incremental Model](image.png)
+![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
 
 ### Incremental model stages:
 
@@ -109,37 +137,8 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
 3. https://biplus.com.vn/incremental-process-model-in-software-engineering
 
-## Glossary
-**User Requirements**
-
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
-
-**System requirements**
-
-Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
-
-**Gantt Chart**
-
-A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
-
-**Kanban**
-
-A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
-
-**Functional Requirements**
-
-Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
-
-**Non-Functional Requirements**
-
-The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
-
-
 
 ## User Requirements
-
-
-
 
 ## Technical Requirements
 
@@ -225,27 +224,35 @@ Written in the popular app Mermaid for chart creation, this Gantt chart shows th
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
 
+A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
+
+> Unidimensional
+
+* One view being 'time', emphasizing efficiency.
+
+> Objective
+* Object oriented.
+
+> Deterministic
+* A Gantt chart determins all that will occur in the project.
+
+> Analytical and Accountable
+* Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently.
+
+> Sequential
+* After tasks have been completed, then the next task is to be completed, thus sequenciality.
+---
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas.
-1) Unidimentionallity.
-> One view being 'time', emphasizing efficiency.
-2) Objectivality.
-> Object oriented. 
-3) Deterministic.
-> A Gantt chart determins all that will occur in the project. 
-4) Analytic and Accountable.
-> Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently. 
-5) Squential.
-> After tasks have been completed, then the next task is to be completed, thus sequenciality.
 
 (Geraldi & Lechler, 2012)
 
-[![](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es?type=png)](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es)
+![Project Plan Gantt Chart](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es "Project Plan Gantt Chart")
 
 ## Kanban
 
+![Kanban](./Documentation%20Pictures/kanban.png "Kanban")
 
 ## References and Acknowledgements
-Chitra, S. (2023, 11 2023). Functional vs Non-Functional Requirements. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
 
 Dimov, D. (2010). Nascent Entrepreneurs and Venture Emergence: Opportunity Confidence, Human Capital, and Early Planning. Journal of Management Studies, 47(6), 1124-1153.
 
