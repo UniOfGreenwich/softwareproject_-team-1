@@ -10,9 +10,18 @@
   - [Introduction](#introduction)
   - [Table](#table)
   - [Software Process Model](#software-process-model)
+    - [Explanation of Incremental model](#explanation-of-incremental-model)
+    - [Incremental model stages:](#incremental-model-stages)
+    - [Advantages and Disadvantages](#advantages-and-disadvantages)
+      - [Benefits](#benefits)
+      - [Drawbacks](#drawbacks)
+    - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
+    - [References](#references)
   - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
+    - [Functional:](#functional)
+    - [Non-Functional:](#non-functional)
   - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
@@ -34,7 +43,7 @@ The team decided a ***Plan Driven Incremental Design*** process was to be used a
 | Jake Willshire | Github Project // Introduction // Github Admin
 | George Mathieson | Risk and Risk Planning // System Requirements
 | Azharul Haque Shuvo | Software Process Model // User Requirements
-## Software Process Model
+
 
 ## Glossary
 
@@ -61,10 +70,102 @@ Specifying a system's requirements from a user's point of view. Functions that s
 ****
 ****
 
+## Software Process Model
 
-## User Requirements Definition
+The software process model is an abstraction of a software development process. It explains a procedure from a particular perspective. Some of the most popular Software process models are:
 
-## System Requirements Specification
+- **Waterfall model:** It is a sequential, plan-driven process. It requires one to plan and schedule all activities before beginning the project.
+
+- **Incremental model:**  The incremental model could be plan-driven or agile. In this model specification, development, and validation activities are interleaved rather than separate, with rapid feedback across activities.
+
+- **Integration and Configuration:** This model assembles the system from pre-existing, configurable components.
+
+We have chosen the Incremental model for our Library system project. 
+
+### Explanation of Incremental model
+
+The incremental model is now the most common approach for software development. It can be plan-driven or agile or a mixture of these approaches. The system increments are predetermined in a plan-driven method; if an agile approach is used, the early increments are predetermined, but the creation of subsequent increments depends on progress and client priorities.1 
+
+This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
+
+![Incremental Model](image.png)
+
+### Incremental model stages:
+
+**Requirement analysis:** In this stage, the project's requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project and developing the overall project plan are also included in this step. This document undergoes multiple reviews and revisions after it is prepared before moving on to the next stage.2
+
+**Design:** During this stage, the project team creates a comprehensive implementation plan that includes system design, technology selection, and the creation of any prototypes or proofs of concept that may be required.2
+
+**Coding:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults. Physical execution of the designs is also made possible at this point.2
+
+**Testing:** This stage involves testing, integrating, and verifying the system's many parts as well as adding additional functionality. It is important to test the result after each code implementation to make sure it functions correctly with other code already produced for the same project. The system is then deployed to the production environment.2
+
+### Advantages and Disadvantages
+
+There are certain benefits and drawbacks to the incremental development process approach.
+
+#### Benefits
+
+* The software will be produced quickly throughout its life cycle.
+* Changes to the requirements and scope are affordable and adaptable.
+* At any stage in the development process, modifications could be made.
+* Compared to other models, this model is less expensive.
+* Customer feedback is welcome in every building.
+* Errors are easy to identify.2
+
+#### Drawbacks
+
+* Proper planning and designing are essential
+* As not every requirement is acquired in advance for the duration of the program, issues could occur.
+* Fixing a problem in one unit requires a lot of time and work since each iteration step is rigid and does not cross over with the others.
+
+### Reasons for choosing the Incremental model
+
+One of the main reasons for choosing the Incremental model in our Library System project is requirements. The library system requirements can change with time and when we are going to unveil more information other requirements may fall off. When a project’s requirements are constantly changing it is best to work with the incremental model.
+
+Another reason is that we can get customer feedback on the development work that has been done. Customers can comment on software demos and see how much has been implemented. 
+
+Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.2 
+
+The goals of the project are clearly stated and recognized, though some elements can change at each increment overtime.
+
+By using the incremental model, we can make a good mix of plan-driven and agile methods. We can stay engaged with customers whilst also sticking to the timelines and project phases.
+
+### References
+1. https://www.collegenote.net/curriculum/software-engineering-csit/52/298/
+2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
+3. https://biplus.com.vn/incremental-process-model-in-software-engineering
+
+## Glossary
+**User Requirements**
+
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+
+**System requirements**
+
+Requirements are defined for a project or item before efforts to create a design for a project. (Grady, 2006)
+
+**Gantt Chart**
+
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
+
+**Kanban**
+
+A system from the manufacturing industry in the 1940s developed by Toyota. Visualised workflow using tables with limitations in the ‘in progress’ tab. (Kniberg & Skarin, 2010)
+
+**Functional Requirements**
+
+Specified requirements of the customer/end user, that the system should offer. (Chitra, 2023)
+
+**Non-Functional Requirements**
+
+The requirements that a system must adhere to in the project contract. A few examples are: Maintainability, Portability, Reliability, Security, etc. (Chitra, 2023)
+
+
+
+## User Requirements
+
+## Technical Requirements
 
 What follows is an outline of everything expected of the system in terms of functionality, compatibility, and back-end processing techniques.
 
@@ -75,7 +176,7 @@ What follows is an outline of everything expected of the system in terms of func
 - Account creation and deletion by authorised staff
 - Search, sort, and filter functionality for authorised staff
 - Account information is editable only by account-holder
-  - Encrypted and verified by md5sum
+  - Encrypted and verified by md5sum (RDRR, no date)
   - ID comprises the user's first and last name initials, 4 random numbers, and a random character respectively (e.g. jp4661d)
   - Password must be 8 characters in length, contain a number and a symbol
 - Account balance credit and debt issuing
@@ -89,9 +190,9 @@ What follows is an outline of everything expected of the system in terms of func
 - Book/journal/article entry and removal by authorised staff
 - Search, sort, and filter functionality
 - Internal UID for each book/journal/article
-- Dewy Decimal Classification
+- Dewy Decimal Classification (OCLC, no date)
 - Book information
-  - ISBN
+  - ISBN (International ISBN Agency, no date)
   - Title
   - Author
   - Mini-synopsis
@@ -113,7 +214,8 @@ What follows is an outline of everything expected of the system in terms of func
 - 3, 7, and 14-week rental options
 - 10p/day late return charge
 
-## Possible Risks and Risk Planning
+
+## Potential Risks
 
 A stock management and lending system such as this has few - but by no means trivial - intrinsic risks derived from any aspect of the hardware, software, and/or personnel. Significant risks that we're aware of and continually take into consideration are as follows...
 
@@ -122,13 +224,14 @@ A stock management and lending system such as this has few - but by no means tri
 - Exiguous server cache for indexing and logging
 - Unsuitable networking connections between server(s) and clients
 - Subpar server/client processing speed
-- System outages and/or data loss due to a lack of server redundancy
+- System outages and/or data loss due to a lack of redundancy (FS Innovation, 2022)
+- Physical damage to equipment due to adverse conditions or deliberate tempering
 
 **Software:**
-- Non-compliance with data protection legislation due to inadequate encryption and deletion processes
+- Non-compliance with legislation due to inadequate encryption, deletion, and extraction processes (HM Government, 2023a) (HM Government, 2023b)
 - Inconsistent data validation techniques
 - Arduous bug fixing due to poor code formatting, annotations, etc
-- Inappropriate datatype selection leading to overflow, truncated, and/or inaccurate data
+- Inappropriate datatype selection leading to overflow, truncated, and/or inaccurate data 
 - Redundant, non-modular, and inefficient code causing system underperformance
 - Unrobust data handling processes that allow for database conflicts and the overwriting of data
 
@@ -136,11 +239,12 @@ A stock management and lending system such as this has few - but by no means tri
 - User error from insufficient training
 - Data privacy/security compromised by unconfigured access levels
 - Project drift due to infrequent communication with stakeholders
-- Unsympathetic, offputting deployment method and timeframe
+- Unsympathetic, offputting deployment method and timeframe (Amazon Web Services, no date)
 - Failure to provide technical support for the use and maintenance of the system
 
 
 ## Gantt Chart of the Project Plan
+
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
@@ -175,6 +279,26 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 ## References and Acknowledgements
 
-Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
+Dimov, D. (2010). Nascent Entrepreneurs and Venture Emergence: Opportunity Confidence, Human Capital, and Early Planning. Journal of Management Studies, 47(6), 1124-1153.
 
-Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
+Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
+
+Grady, J. O. (2006). System Requirements Analysis. Burlington: Elsevier.
+
+Kniberg, H., & Skarin, M. (2010). Kanban and Scrum, making the most of both. C4Media Inc.
+
+Maguire, M. C., Kirakowski, J., & Vereker, N. (1998). RESPECT - User-Centered Requirements Handbook - Version 3.3 (Version 3.3 ed.). Loughborough: RESPECT Consortium 1998.
+
+RDRR. (no date). md5sum: Compute MD5 Checksums. Retrieved from RDRR: https://rdrr.io/r/tools/md5sum.html
+
+OCLC. (no date). Dewey Services. Retrieved from OCLC: https://www.oclc.org/en/dewey.html
+
+International ISBN Agency. (no date). The International ISBN Agency. Retrieved from International ISBN Agency: https://www.isbn-international.org/
+
+FS Innovation. (2022, 06 01). Server Redundancy: Types, Benefits & Design. Retrieved from FS Innovation: https://community.fs.com/article/server-redundancy-types-benefits-and-design.html
+
+HM Government. (2023, 11 27a). Data protection. Retrieved from GOV.UK: https://www.gov.uk/data-protection
+
+HM Government. (2023, 11 27b). Freedom of Information Act 2000. Retrieved from LEGISLATION.GOV.UK: https://www.legislation.gov.uk/ukpga/2000/36/contents
+
+Amazon Web Services. (no date). Deployment methods. Retrieved from Amazon Web Services: https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/deployment-methods.html
