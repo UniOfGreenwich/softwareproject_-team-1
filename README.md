@@ -10,6 +10,13 @@ ___
   - [Introduction](#introduction)
   - [Table](#table)
   - [Software Process Model](#software-process-model)
+    - [Explanation of Incremental model](#explanation-of-incremental-model)
+    - [Incremental model stages:](#incremental-model-stages)
+    - [Advantages and Disadvantages](#advantages-and-disadvantages)
+      - [Benefits](#benefits)
+      - [Drawbacks](#drawbacks)
+    - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
+    - [References](#references)
   - [Glossary](#glossary)
   - [User Requirements Definition](#user-requirements-definition)
   - [System Requirements Specification](#system-requirements-specification)
@@ -36,6 +43,70 @@ The team decided a ***Plan Driven Incremental Design*** process was to be used a
 | George Mathieson | Risk and Risk Planning // System Requirements
 | Azharul Haque Shuvo | Software Process Model // User Requirements
 ## Software Process Model
+The software process model is an abstraction of a software development process. It explains a procedure from a particular perspective. Some of the most popular Software process models are:
+
+- **Waterfall model:** It is a sequential, plan-driven process. It requires one to plan and schedule all activities before beginning the project.
+
+- **Incremental model:**  The incremental model could be plan-driven or agile. In this model specification, development, and validation activities are interleaved rather than separate, with rapid feedback across activities.
+
+- **Integration and Configuration:** This model assembles the system from pre-existing, configurable components.
+
+We have chosen the Incremental model for our Library system project. 
+
+### Explanation of Incremental model
+
+The incremental model is now the most common approach for software development. It can be plan-driven or agile or a mixture of these approaches. The system increments are predetermined in a plan-driven method; if an agile approach is used, the early increments are predetermined, but the creation of subsequent increments depends on progress and client priorities.1 
+
+This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
+
+![Incremental Model](image.png)
+
+### Incremental model stages:
+
+**Requirement analysis:** In this stage, the project's requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project and developing the overall project plan are also included in this step. This document undergoes multiple reviews and revisions after it is prepared before moving on to the next stage.2
+
+**Design:** During this stage, the project team creates a comprehensive implementation plan that includes system design, technology selection, and the creation of any prototypes or proofs of concept that may be required.2
+
+**Coding:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults. Physical execution of the designs is also made possible at this point.2
+
+**Testing:** This stage involves testing, integrating, and verifying the system's many parts as well as adding additional functionality. It is important to test the result after each code implementation to make sure it functions correctly with other code already produced for the same project. The system is then deployed to the production environment.2
+
+### Advantages and Disadvantages
+
+There are certain benefits and drawbacks to the incremental development process approach.
+
+#### Benefits
+
+* The software will be produced quickly throughout its life cycle.
+* Changes to the requirements and scope are affordable and adaptable.
+* At any stage in the development process, modifications could be made.
+* Compared to other models, this model is less expensive.
+* Customer feedback is welcome in every building.
+* Errors are easy to identify.2
+
+#### Drawbacks
+
+* Proper planning and designing are essential
+* As not every requirement is acquired in advance for the duration of the program, issues could occur.
+* Fixing a problem in one unit requires a lot of time and work since each iteration step is rigid and does not cross over with the others.
+
+### Reasons for choosing the Incremental model
+
+One of the main reasons for choosing the Incremental model in our Library System project is requirements. The library system requirements can change with time and when we are going to unveil more information other requirements may fall off. When a project’s requirements are constantly changing it is best to work with the incremental model.
+
+Another reason is that we can get customer feedback on the development work that has been done. Customers can comment on software demos and see how much has been implemented. 
+
+Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.2 
+
+The goals of the project are clearly stated and recognized, though some elements can change at each increment overtime.
+
+By using the incremental model, we can make a good mix of plan-driven and agile methods. We can stay engaged with customers whilst also sticking to the timelines and project phases.
+
+### References
+1. https://www.collegenote.net/curriculum/software-engineering-csit/52/298/
+2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
+3. https://biplus.com.vn/incremental-process-model-in-software-engineering
+
 ## Glossary
 **User Requirements**
 Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998)
@@ -138,6 +209,7 @@ A stock management and lending system such as this has few - but by no means tri
 
 
 ## Gantt Chart of the Project Plan
+
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
@@ -165,3 +237,4 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
 
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
+
