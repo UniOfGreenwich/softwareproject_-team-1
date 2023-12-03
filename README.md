@@ -96,13 +96,13 @@ This model is better than a waterfall model when system requirements are expecte
 
 ### Incremental model stages:
 
-**Requirement analysis:** In this stage, the project's requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project and developing the overall project plan are also included in this step. This document undergoes multiple reviews and revisions after it is prepared before moving on to the next stage.2
+**Requirement analysis:** In this stage, the project's requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project and developing the overall project plan are also included in this step. This phase perform a crucial role in incremental model.2
 
-**Design:** During this stage, the project team creates a comprehensive implementation plan that includes system design, technology selection, and the creation of any prototypes or proofs of concept that may be required.2
+**Design:** During this stage, the project team creates an overall software architecture together with high level and detailed design. It's includes system design, technology selection, and the creation of any prototypes or proofs of concept that may be required.
 
-**Coding:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults. Physical execution of the designs is also made possible at this point.2
+**Impementation:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults. 3
 
-**Testing:** This stage involves testing, integrating, and verifying the system's many parts as well as adding additional functionality. It is important to test the result after each code implementation to make sure it functions correctly with other code already produced for the same project. The system is then deployed to the production environment.2
+**Testing:** In this stage, tester check the performance of each and every existing function and aditional functionality as per the customer requirement or not. It is important to test the result after each code implementation to make sure it works correctly with other code already produced for the same project. The system is then deployed to the production environment.
 
 ### Advantages and Disadvantages
 
@@ -115,13 +115,13 @@ There are certain benefits and drawbacks to the incremental development process 
 * At any stage in the development process, modifications could be made.
 * Compared to other models, this model is less expensive.
 * Customer feedback is welcome in every building.
-* Errors are easy to identify.2
+* Errors are easy to identify.4
 
 #### Drawbacks
 
 * Proper planning and designing are essential
 * As not every requirement is acquired in advance for the duration of the program, issues could occur.
-* Fixing a problem in one unit requires a lot of time and work since each iteration step is rigid and does not cross over with the others.
+* Fixing a problem in one unit requires a lot of time and work since each iteration step is rigid and does not cross over with the others.4
 
 ### Reasons for choosing the Incremental model
 
@@ -129,16 +129,18 @@ One of the main reasons for choosing the Incremental model in our Library System
 
 Another reason is that we can get customer feedback on the development work that has been done. Customers can comment on software demos and see how much has been implemented. 
 
-Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.2 
+Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.
 
 The goals of the project are clearly stated and recognized, though some elements can change at each increment overtime.
 
 By using the incremental model, we can make a good mix of plan-driven and agile methods. We can stay engaged with customers whilst also sticking to the timelines and project phases.
 
 ### References
-1. https://www.collegenote.net/curriculum/software-engineering-csit/52/298/
-2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
-3. https://biplus.com.vn/incremental-process-model-in-software-engineering
+1. Collegenote (n.d.). Incremental development. [online] collegenote.pythonanywhere.com. Available at: https://www.collegenote.net/curriculum/software-engineering-csit/52/298/.
+2. Budhiraja, G. (2023) Incremental model. [online] Coding ninjas studio. Available at: https://www.codingninjas.com/studio/library/incremental-model 
+3. Pedamkar, P. (2023). Incremental Model | What is Incremental Model with Examples? [online] EDUCBA. Available at: https://www.educba.com/incremental-model/.
+4. Bùi Xuân Hiền (2023). Incremental Process Model In Software Engineering From A-Z. [online] BiPlus. Available at: https://biplus.com.vn/incremental-process-model-in-software-engineering/.
+
 
 ## User Requirements
 
