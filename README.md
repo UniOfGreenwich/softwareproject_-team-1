@@ -140,16 +140,6 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 2. https://www.plutora.com/blog/incremental-model-what-and-how-to-implement-it#:~:text=The%20incremental%20model%20is%20a,thing%20from%20scratch%20at%20once.
 3. https://biplus.com.vn/incremental-process-model-in-software-engineering
 
-## Glossary
-
-**User Requirements**
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998)
-**System Requirements**
-**Gantt Chart**
-**Kanban**
-**Functional Requirements**
-**Non-Functional Requirements**
-
 ## User Requirements
 
 The following is an outline of everything a user expects from the system: it includes statements in natural language and diagrams that illustrate the services the system provides and its operational constraints.
