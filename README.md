@@ -7,9 +7,6 @@
 ---
 ## Contents
 
-- [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
-- [Team 1- Library System](#team-1--library-system)
-  - [Contents](#contents)
   - [Introduction](#introduction)
   - [Table](#table)
   - [Glossary](#glossary)
