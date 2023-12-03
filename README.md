@@ -22,18 +22,16 @@
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
   - [Glossary](#glossary-1)
-  - [User Requirements Definition](#user-requirements-definition)
+  - [User Requirements](#user-requirements)
     - [Functional Requirements](#functional-requirements)
     - [Non-Functional Requirements](#non-functional-requirements)
-  - [System Requirements Specification](#system-requirements-specification)
+  - [Technical Requirements](#technical-requirements)
     - [Functional:](#functional)
     - [Non-Functional:](#non-functional)
   - [Potential Risks](#potential-risks)
   - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
   - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
-- [Geraldi, J. \& Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594](#geraldi-j--lechler-t-2012-gantt-chart-and-the-scientific-management-in-projects-international-journal-of-managing-project-in-business-54-pp-578-594)
-  - [Kanban](#kanban-1)
 ___
 ## Introduction
 
@@ -146,27 +144,21 @@ By using the incremental model, we can make a good mix of plan-driven and agile 
 3. https://biplus.com.vn/incremental-process-model-in-software-engineering
 
 ## Glossary
+
 **User Requirements**
 Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998)
 **System Requirements**
-
 **Gantt Chart**
 **Kanban**
 **Functional Requirements**
 **Non-Functional Requirements**
-****
-****
-****
-****
-****
-****
-****
-****
 
+## User Requirements
 
-## User Requirements Definition
 The following is an outline of everything a user expects from the system: it includes statements in natural language and diagrams that illustrate the services the system provides and its operational constraints.
+
 ### Functional Requirements
+
 **For User**
 * Allow users to search for books by title, author, or ISBN.
 * The system should be able to display a list of all the books in the library.
@@ -181,6 +173,7 @@ The following is an outline of everything a user expects from the system: it inc
 **For Staff**
 * Staff can add and remove books from the library.
 * Staff should be able to generate reports regarding library usage and checkouts.
+
 ### Non-Functional Requirements
 * User-friendly interface that allows easy navigation.
 * The system should be accessible 24/7, except for the scheduled maintenance period.
@@ -189,10 +182,7 @@ The following is an outline of everything a user expects from the system: it inc
 * Capacity to manage several users and concurrent system access without performance degradation.
 * High performance and capacity to manage a huge amount of data.
 
-
-
-
-## System Requirements Specification
+## Technical Requirements
 
 What follows is an outline of everything expected of the system in terms of functionality, compatibility, and back-end processing techniques.
 
@@ -241,7 +231,6 @@ What follows is an outline of everything expected of the system in terms of func
 - 3, 7, and 14-week rental options
 - 10p/day late return charge
 
-
 ## Potential Risks
 
 A stock management and lending system such as this has few - but by no means trivial - intrinsic risks derived from any aspect of the hardware, software, and/or personnel. Significant risks that we're aware of and continually take into consideration are as follows...
@@ -271,7 +260,7 @@ A stock management and lending system such as this has few - but by no means tri
 
 
 ## Gantt Chart of the Project Plan
-<<<<<<<<< Temporary merge branch 1
+
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
@@ -279,7 +268,6 @@ The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by t
 A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
 
 > Unidimensional
-
 * One view being 'time', emphasizing efficiency.
 
 > Objective
@@ -294,19 +282,29 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 > Sequential
 * After tasks have been completed, then the next task is to be completed, thus sequenciality.
 ---
+
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas.
 
 (Geraldi & Lechler, 2012)
 
-![Project Plan Gantt Chart](https://mermaid.live/edit#pako:eNq9VFtr2zAU_ivCz3Ib2WkHfm1oGCMQko4x8ItinTjabNk7khZC6X_f8S23JV1LYcYPls93O9JBz0FWKQiSIJfGudQwepx2BbAnkCUTbI7VD8gcmzZ19rCR2KOUdPBYYSkdY5NJOJuF3-lJTVe1xNGVYctq7bYSodHJwFo2I7uiw0y0zby1DSzJUDtu61LxKA6FCKNRFHMmVIf8RlUIfc2kUWwBa0AwpJYQYeuRy7UDZC37vmcs4LeGLUv2pQY3yJ1G_GoJsYBfXiOUYJy9ks7jSbh_ZfN4iNZQz5N5PFSvh1vurIPyLfEsvnPvjvLZC_mwAezr1xMutP1pO3H6YnUhjdEmf90csW4Uj_J-Un_11XG6NG2LxFJD5F5h3-YNS4S4pbdVOx_Dz8ZhpXy76Crzdg1sgqRH3PvDzg1RHrWRhbZwGr4fqVpkgtzji3vyJFcF3H6RZiX_h920qKyVuPugFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pviHWz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KlhLX7g0SM0LQaV31XJnsiBx6IEHvm5u5YmWOcoySNaysPDyB2J72es "Project Plan Gantt Chart")
+![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfl1oGCMQko4x8ItinThabdk7khZC6X_f8S23Jd1KocYPls93O9JBz0FWKQiSIJfGudQwepx2BbBHkCUTbI7VT8gcmzZ19nkjsUcp6eChwlI6xiaTcDYLf9CTmq5qiaMrw5bV2m0lQqOTgbVsRnZFh5lom3lrG1iSoXbc1qXiURwKEUajKOZMqA75naoQ-ppJo9gC1oBgSC0hwtYjl2sHyFr2fc9YwG8NW5bsSw1ukDuN-M0SYgG_vEYowTh7JZ3Hk3D_yubxEK2hnifzeKheD7fcWQfl_8Sz-Ma9O8pnL-TDBrCvX0-40PbJduL0xepCGqNN_ro5Yt0oHuX9pP7qq-N0adoWiaWGyL3Cvs0blghxS2-rdj6GX4zDSvl20VXm7RrYBEmPuPeHnRuiPGgjC23hNHw_UrXIBLnHF_fkUa4KuP0qzUp-hN20qKyVuHunFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pvi7Wz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KolPaZCaF8JJ76rlzmRB4tADD3zdXMkTLXOUZffz5Q_1Tdhd?type=png "Project Plan Gantt Chart")
 
 ## Kanban
 
+![Kanban](./Documentation%20Pictures/kanban.png "Kanban")
 
 ## References and Acknowledgements
-Maguire, M. C., Kirakowski, J. & Vereker, N., 1998. RESPECT - User-Centered Requirements Handbook - Version 3.3. Version 3.3 ed. Loughborough: RESPECT Consortium 1998.
+
+Chitra, S. (2023, 11 2023). Functional vs Non-Functional Requirements. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
+
+Dimov, D. (2010). Nascent Entrepreneurs and Venture Emergence: Opportunity Confidence, Human Capital, and Early Planning. Journal of Management Studies, 47(6), 1124-1153.
+
+Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
+
+Grady, J. O. (2006). System Requirements Analysis. Burlington: Elsevier.
+
+Kniberg, H., & Skarin, M. (2010). Kanban and Scrum, making the most of both. C4Media Inc.
+
+Maguire, M. C., Kirakowski, J., & Vereker, N. (1998). RESPECT - User-Centered Requirements Handbook - Version 3.3 (Version 3.3 ed.). Loughborough: RESPECT Consortium 1998.
 
 Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
-=========
-## Kanban
->>>>>>>>> Temporary merge branch 2
