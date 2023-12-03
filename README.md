@@ -294,4 +294,16 @@ Kniberg, H., & Skarin, M. (2010). Kanban and Scrum, making the most of both. C4M
 
 Maguire, M. C., Kirakowski, J., & Vereker, N. (1998). RESPECT - User-Centered Requirements Handbook - Version 3.3 (Version 3.3 ed.). Loughborough: RESPECT Consortium 1998.
 
-Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594
+RDRR. (no date). md5sum: Compute MD5 Checksums. Retrieved from RDRR: https://rdrr.io/r/tools/md5sum.html
+
+OCLC. (no date). Dewey Services. Retrieved from OCLC: https://www.oclc.org/en/dewey.html
+
+International ISBN Agency. (no date). The International ISBN Agency. Retrieved from International ISBN Agency: https://www.isbn-international.org/
+
+FS Innovation. (2022, 06 01). Server Redundancy: Types, Benefits & Design. Retrieved from FS Innovation: https://community.fs.com/article/server-redundancy-types-benefits-and-design.html
+
+HM Government. (2023, 11 27a). Data protection. Retrieved from GOV.UK: https://www.gov.uk/data-protection
+
+HM Government. (2023, 11 27b). Freedom of Information Act 2000. Retrieved from LEGISLATION.GOV.UK: https://www.legislation.gov.uk/ukpga/2000/36/contents
+
+Amazon Web Services. (no date). Deployment methods. Retrieved from Amazon Web Services: https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/deployment-methods.html
