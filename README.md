@@ -2,13 +2,16 @@
 
 # Team 1- Library System
 
+<div align=center>
+
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
 
----
+</div>
+
+
 ## Contents
 
   - [Introduction](#introduction)
-  - [Table](#table)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
@@ -18,7 +21,6 @@
       - [Drawbacks](#drawbacks)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
-  - [Glossary](#glossary-1)
   - [User Requirements](#user-requirements)
     - [Functional Requirements](#functional-requirements)
     - [Non-Functional Requirements](#non-functional-requirements)
@@ -26,10 +28,9 @@
     - [Functional:](#functional)
     - [Non-Functional:](#non-functional)
   - [Potential Risks](#potential-risks)
-  - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
-  - [Kanban](#kanban)
+  - [Project Planning](#project-planning)
   - [References and Acknowledgements](#references-and-acknowledgements)
-___
+
 ## Introduction
 
 The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation all the way through to generative AI journals printed this year by organisations such as OpenAI.
@@ -38,7 +39,13 @@ The team was given a specification by our customer which involved basic function
 
 The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
 
-## Table
+---
+
+<div align=center>
+<br>
+
+**Table 1: Task Allocation**
+
 
 | Username | Tasks |
 |:---:|:---:|
@@ -46,6 +53,8 @@ The team decided a ***Incremental Design*** process was to be used as we could e
 | [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
 | [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
 | [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
+
+</div>
 
 ## Glossary
 
@@ -92,7 +101,13 @@ The incremental model is now the most common approach for software development. 
 
 This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally.1
 
+<div align=center>
+
+**Figure 1: Incremental Design Model**
+
 ![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
+
+</div>
 
 ### Incremental model stages:
 
@@ -248,7 +263,9 @@ A stock management and lending system such as this has few - but by no means tri
 - Failure to provide technical support for the use and maintenance of the system
 
 
-## Gantt Chart of the Project Plan
+## Project Planning
+
+### Gantt Chart
 
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
@@ -270,17 +287,26 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 
 > Sequential
 * After tasks have been completed, then the next task is to be completed, thus sequenciality.
+
+<br>
+
+A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas. (Geraldi & Lechler, 2012)
+
 ---
 
-A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas.
+<div align=center>
 
-(Geraldi & Lechler, 2012)
+**[Figure 2: Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfl1oGCMQko4x8ItinThabdk7khZC6X_f8S23Jd1KocYPls93O9JBz0FWKQiSIJfGudQwepx2BbBHkCUTbI7VT8gcmzZ19nkjsUcp6eChwlI6xiaTcDYLf9CTmq5qiaMrw5bV2m0lQqOTgbVsRnZFh5lom3lrG1iSoXbc1qXiURwKEUajKOZMqA75naoQ-ppJo9gC1oBgSC0hwtYjl2sHyFr2fc9YwG8NW5bsSw1ukDuN-M0SYgG_vEYowTh7JZ3Hk3D_yubxEK2hnifzeKheD7fcWQfl_8Sz-Ma9O8pnL-TDBrCvX0-40PbJduL0xepCGqNN_ro5Yt0oHuX9pP7qq-N0adoWiaWGyL3Cvs0blghxS2-rdj6GX4zDSvl20VXm7RrYBEmPuPeHnRuiPGgjC23hNHw_UrXIBLnHF_fkUa4KuP0qzUp-hN20qKyVuHunFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pvi7Wz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KolPaZCaF8JJ76rlzmRB4tADD3zdXMkTLXOUZffz5Q_1Tdhd?type=png)**
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfl1oGCMQko4x8ItinThabdk7khZC6X_f8S23Jd1KocYPls93O9JBz0FWKQiSIJfGudQwepx2BbBHkCUTbI7VT8gcmzZ19nkjsUcp6eChwlI6xiaTcDYLf9CTmq5qiaMrw5bV2m0lQqOTgbVsRnZFh5lom3lrG1iSoXbc1qXiURwKEUajKOZMqA75naoQ-ppJo9gC1oBgSC0hwtYjl2sHyFr2fc9YwG8NW5bsSw1ukDuN-M0SYgG_vEYowTh7JZ3Hk3D_yubxEK2hnifzeKheD7fcWQfl_8Sz-Ma9O8pnL-TDBrCvX0-40PbJduL0xepCGqNN_ro5Yt0oHuX9pP7qq-N0adoWiaWGyL3Cvs0blghxS2-rdj6GX4zDSvl20VXm7RrYBEmPuPeHnRuiPGgjC23hNHw_UrXIBLnHF_fkUa4KuP0qzUp-hN20qKyVuHunFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pvi7Wz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KolPaZCaF8JJ76rlzmRB4tADD3zdXMkTLXOUZffz5Q_1Tdhd?type=png "Project Plan Gantt Chart")
 
-## Kanban
+---
 
-![Kanban](./Documentation%20Pictures/kanban.png "Kanban")
+**[Figure 3: Kanban Board](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
+
+![Kanban](/Documentation%20Pictures/kanban.png "Kanban")
+
+</div>
 
 ## References and Acknowledgements
 
