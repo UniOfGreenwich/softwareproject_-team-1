@@ -2,16 +2,19 @@
 
 # Team 1- Library System
 
+<div align=center>
+
 ![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
 
----
+</div>
+
+
 ## Contents
 
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
 - [Team 1- Library System](#team-1--library-system)
   - [Contents](#contents)
   - [Introduction](#introduction)
-  - [Table](#table)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
@@ -20,22 +23,17 @@
       - [Advantages](#advantages)
       - [Disadvantages](#disadvantages)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
+    - [References](#references)
   - [User Requirements](#user-requirements)
     - [Functional Requirements](#functional-requirements)
     - [Non-Functional Requirements](#non-functional-requirements)
   - [Technical Requirements](#technical-requirements)
     - [Functional:](#functional)
     - [Non-Functional:](#non-functional)
-  - [Possible Risks and Risk Planning](#possible-risks-and-risk-planning)
-  - [Gantt Chart of the Project Plan](#gantt-chart-of-the-project-plan)
-      - [Unidimensional](#unidimensional)
-      - [Objective](#objective)
-      - [Deterministic](#deterministic)
-      - [Analytical and Accountable](#analytical-and-accountable)
-      - [Sequential](#sequential)
-  - [Kanban](#kanban)
+  - [Potential Risks](#potential-risks)
+  - [Project Planning](#project-planning)
   - [References and Acknowledgements](#references-and-acknowledgements)
-___
+
 ## Introduction
 
 The library system, comissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation all the way through to generative AI journals printed this year by organisations such as OpenAI.
@@ -44,7 +42,13 @@ The team was given a specification by our customer which involved basic function
 
 The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
 
-## Table
+---
+
+<div align=center>
+<br>
+
+**Table 1: Task Allocation**
+
 
 | Username | Tasks |
 |:---:|:---:|
@@ -52,6 +56,8 @@ The team decided a ***Incremental Design*** process was to be used as we could e
 | [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
 | [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
 | [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
+
+</div>
 
 ## Glossary
 
@@ -98,9 +104,15 @@ The incremental model is now the most common approach for software development. 
 
 This model is better than a waterfall model when system requirements are expected to change during the process. The way we solve issues is reflected in incremental development. We rarely figure out the entire solution to an issue up front; instead, we approach a solution incrementally and then go back when we see that we made a mistake. It is less expensive and simpler to make modifications to the software while it is being built when it is developed incrementally (Collegenote.net, 2023).
 
+<div align=center>
+
+**Figure 1: Incremental Design Model**
+
 ![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
 *Figure 1 (Collegenote.net, 2023)*
 
+
+</div>
 
 ### Incremental model stages:
 
@@ -252,7 +264,9 @@ A stock management and lending system such as this has few - but by no means tri
 - Failure to provide technical support for the use and maintenance of the system
 
 
-## Gantt Chart of the Project Plan
+## Project Planning
+
+### Gantt Chart
 
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
@@ -274,18 +288,26 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 
 #### Sequential
 * After tasks have been completed, then the next task is to be completed, thus sequenciality.
+
+<br>
+
+A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas. (Geraldi & Lechler, 2012)
+
 ---
 
-A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas.
+<div align=center>
 
-(Geraldi & Lechler, 2012)
+**[Figure 2: Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfl1oGCMQko4x8ItinThabdk7khZC6X_f8S23Jd1KocYPls93O9JBz0FWKQiSIJfGudQwepx2BbBHkCUTbI7VT8gcmzZ19nkjsUcp6eChwlI6xiaTcDYLf9CTmq5qiaMrw5bV2m0lQqOTgbVsRnZFh5lom3lrG1iSoXbc1qXiURwKEUajKOZMqA75naoQ-ppJo9gC1oBgSC0hwtYjl2sHyFr2fc9YwG8NW5bsSw1ukDuN-M0SYgG_vEYowTh7JZ3Hk3D_yubxEK2hnifzeKheD7fcWQfl_8Sz-Ma9O8pnL-TDBrCvX0-40PbJduL0xepCGqNN_ro5Yt0oHuX9pP7qq-N0adoWiaWGyL3Cvs0blghxS2-rdj6GX4zDSvl20VXm7RrYBEmPuPeHnRuiPGgjC23hNHw_UrXIBLnHF_fkUa4KuP0qzUp-hN20qKyVuHunFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pvi7Wz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KolPaZCaF8JJ76rlzmRB4tADD3zdXMkTLXOUZffz5Q_1Tdhd?type=png)**
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_itCz3Yb2Wk7_LrQMEYgJB1j4BfFOnG12bJ3JC2E0v--41sap0l3gxk_WD7f7UgHPfGsUsATnkvjXGoYPU67AtgDyJIJtsTqK2SOzZs6e_8osUcp6eC-wlI6xmazcLEIv9CTmq5qiaMrw9bV1u0kQqOTgbVsQXZFh5lpm3lrG1iSoXaBrUsVRHEoRBhNojhgQnXIz1SF0NdMGsVWsAUEQ2oJEXYeA7l1gKxl3_aMFfzQsGPJodTgBrlxxE-WECv47jVCCcbZC-k8jsL9KpvHl2gN9TSZx5fq5XDrvXVQ_k48i3-4d0f57Jl82AAO9csJV9p-s504fbG6kMZok79tjlg3ikd579SrvjpOl6ZtkVhqiNwrHNq8YokQ1_S2aqdj-ME4rJRvF11l2a6BzZD0iHt7tHPves17bWShLYzT9zNVi0wQNj67KQ9yU8D1R2k28r_4zYvKWon7f_Vi582uhv-ZODsCh4MdRmiQm0v3CEjjQPOEeTBKMpzc2m9K7Y5E2tk7HHNO0Mn5pk-vpJO-80yNHO_-pvWx5fJREi_q7boFS-ooENNQRL3PdPIGNz7mxsSNg-gmnLQZpwG7mSoe8BLoXtWKruWnBp5y2sUSUp7Qp4Kt9IVLeWqeCSq9q9Z7k_HEoYeA-7q5mGda5ihLnmxlYeH5Jy792oE?type=png "Project Plan Gantt Chart") *Figure 2*
 
-## Kanban
+---
 
-![Kanban](./Documentation%20Pictures/kanban.png "Kanban")
-*Figure 3*
+**[Figure 3: Kanban Board](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
+
+![Kanban](/Documentation%20Pictures/kanban.png "Kanban")
+
+</div>
 
 ## References and Acknowledgements
 
