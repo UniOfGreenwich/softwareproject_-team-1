@@ -32,6 +32,13 @@
     - [Non-Functional:](#non-functional)
   - [Potential Risks](#potential-risks)
   - [Project Planning](#project-planning)
+    - [Gantt Chart](#gantt-chart)
+      - [Unidimensional](#unidimensional)
+      - [Objective](#objective)
+      - [Deterministic](#deterministic)
+      - [Analytical and Accountable](#analytical-and-accountable)
+      - [Sequential](#sequential)
+    - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
 
 ## Introduction
@@ -106,7 +113,7 @@ This model is better than a waterfall model when system requirements are expecte
 
 <div align=center>
 
-**Figure 1: Incremental Design Model**
+**<a href="#Figure_1">Figure 1: Incremental Design Model (Collegenote.net, 2023)</a>**
 
 ![Incremental Model](/Documentation%20Pictures/IncrementalModel.png "Incremental Model")
 *Figure 1 (Collegenote.net, 2023)*
@@ -293,7 +300,7 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas. (Geraldi & Lechler, 2012)
 
----
+<br>
 
 <div align=center>
 
@@ -301,8 +308,20 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_itCz3Yb2Wk7_LrQMEYgJB1j4BfFOnG12bJ3JC2E0v--41sap0l3gxk_WD7f7UgHPfGsUsATnkvjXGoYPU67AtgDyJIJtsTqK2SOzZs6e_8osUcp6eC-wlI6xmazcLEIv9CTmq5qiaMrw9bV1u0kQqOTgbVsQXZFh5lpm3lrG1iSoXaBrUsVRHEoRBhNojhgQnXIz1SF0NdMGsVWsAUEQ2oJEXYeA7l1gKxl3_aMFfzQsGPJodTgBrlxxE-WECv47jVCCcbZC-k8jsL9KpvHl2gN9TSZx5fq5XDrvXVQ_k48i3-4d0f57Jl82AAO9csJV9p-s504fbG6kMZok79tjlg3ikd579SrvjpOl6ZtkVhqiNwrHNq8YokQ1_S2aqdj-ME4rJRvF11l2a6BzZD0iHt7tHPves17bWShLYzT9zNVi0wQNj67KQ9yU8D1R2k28r_4zYvKWon7f_Vi582uhv-ZODsCh4MdRmiQm0v3CEjjQPOEeTBKMpzc2m9K7Y5E2tk7HHNO0Mn5pk-vpJO-80yNHO_-pvWx5fJREi_q7boFS-ooENNQRL3PdPIGNz7mxsSNg-gmnLQZpwG7mSoe8BLoXtWKruWnBp5y2sUSUp7Qp4Kt9IVLeWqeCSq9q9Z7k_HEoYeA-7q5mGda5ihLnmxlYeH5Jy792oE?type=png "Project Plan Gantt Chart")
 
+</div>
+
 ---
 ### Kanban
+
+Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections Radigan, D. (2022).
+
+Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
+
+Below is a screenshot of our project Kanban from 01/12 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
+
+
+<div align=center>
+
 
 **[Figure 3: Kanban Board](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
 
@@ -312,13 +331,27 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 ## References and Acknowledgements
 
+We would like to thank the following for their contributions and support with this project:
+
+<div align=center>
+
+[CompEng0001](https://github.com/CompEng0001)
+
+</div>
+
+---
+
 Amazon. (2023, 12 04). Deployment Methods. Retrieved from docs.aws.amazon.com: https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/deployment-methods.html
 
 Budhiraja, G. (2023, 12 04). Incremental Model. Retrieved from codingninjas: https://www.codingninjas.com/studio/library/incremental-model
 
 Chitra, S. (2023, 12 04). Functional vs Non-Functional Requirements. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
 
+<div id="Figure_1">
+
 Collegenote.net. (2023, 12 03). Incremental Development. Retrieved from collegenote.net: https://www.collegenote.net/curriculum/software-engineering-csit/52/298/
+
+</div>
 
 Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
 
@@ -344,3 +377,6 @@ Pedamkar, P. (2023, 12 04). Incremental Model. Retrieved from educba.com: https:
 
 rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: https://rdrr.io/r/tools/md5sum.html
 
+Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
+
+Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
