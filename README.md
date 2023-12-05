@@ -18,8 +18,8 @@
     - [Explanation of Incremental model](#explanation-of-incremental-model)
     - [Incremental model stages:](#incremental-model-stages)
     - [Advantages and Disadvantages](#advantages-and-disadvantages)
-      - [Benefits](#benefits)
-      - [Drawbacks](#drawbacks)
+      - [Advantages](#advantages)
+      - [Disadvantages](#disadvantages)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
   - [User Requirements](#user-requirements)
     - [Functional Requirements](#functional-requirements)
@@ -130,7 +130,7 @@ This model is better than a waterfall model when system requirements are expecte
 
 There are certain benefits and drawbacks to the incremental development process approach.
 
-#### Benefits
+#### Advantages
 
 * The software will be produced quickly throughout its life cycle.
 * Changes to the requirements and scope are affordable and adaptable.
@@ -139,7 +139,7 @@ There are certain benefits and drawbacks to the incremental development process 
 * Customer feedback is welcome in every building.
 * Errors are easy to identify.
 
-#### Drawbacks
+#### Disadvantages 
 
 * Proper planning and designing are essential
 * As not every requirement is acquired in advance for the duration of the program, issues could occur.
