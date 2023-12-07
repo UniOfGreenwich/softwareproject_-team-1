@@ -70,7 +70,7 @@ The team decided a ***Incremental Design*** process was to be used as we could e
 
 **User Requirements**
 
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. E.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
 
 **System requirements**
 
@@ -78,7 +78,7 @@ Requirements are defined for a project or item before efforts to create a design
 
 **Gantt Chart**
 
-A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart-based planning method. (Geraldi & Lechler, 2012)
 
 **Kanban**
 
@@ -123,13 +123,13 @@ This model is better than a waterfall model when system requirements are expecte
 
 ### Incremental model stages:
 
-**Requirement analysis:** In this stage, the project's requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project and developing the overall project plan are also included in this step. This phase perform a crucial role in incremental model (Budhiraja, 2023).
+**Requirement analysis:** In this stage, the projects requirements, such as its objectives, restrictions, and scope, are gathered and examined. Determining the resources required to finish the project, and developing the overall project plan are also included in this step. This phase performs a crucial role in the incremental model (Budhiraja, 2023).
 
 **Design:** During this stage, the project team creates an overall software architecture together with high level and detailed design. It's includes system design, technology selection, and the creation of any prototypes or proofs of concept that may be required.
 
-**Impementation:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults (Pedamkar, 2023).
+**Implementation:** In this phase, the project is actually implemented by writing the code in accordance with the requirements of the final product. To update and improve the quality of the product, the coding standards must be properly followed, without using needless hard codes or defaults (Pedamkar, 2023).
 
-**Testing:** In this stage, tester check the performance of each and every existing function and aditional functionality as per the customer requirement or not. It is important to test the result after each code implementation to make sure it works correctly with other code already produced for the same project. The system is then deployed to the production environment.
+**Testing:** In this stage, tester check the performance of each and every existing function and additional functionality as per the customer requirement or not. It is important to test the result after each code implementation to make sure it works correctly with other code already produced for the same project. The system is then deployed to the production environment.
 
 ### Advantages and Disadvantages
 
@@ -204,7 +204,7 @@ What follows is an outline of everything expected of the system in terms of func
 - Access levels are determined by the organisation's personnel hierarchy
 - Account creation and deletion by authorised staff
 - Search, sort, and filter functionality for authorised staff
-- Account information is editable only by account-holder
+- Account information is editable only by accountholder
   - Encrypted and verified by md5sum (rdrr.io, 2023)
   - ID comprises the user's first and last name initials, 4 random numbers, and a random character respectively (e.g. jp4661d)
   - Password must be 8 characters in length, contain a number and a symbol
@@ -267,7 +267,7 @@ A stock management and lending system such as this has few - but by no means tri
 - User error from insufficient training
 - Data privacy/security compromised by unconfigured access levels
 - Project drift due to infrequent communication with stakeholders
-- Unsympathetic, offputting deployment method and timeframe (Amazon, 2023)
+- Unsympathetic, off-putting deployment method and timeframe (Amazon, 2023)
 - Failure to provide technical support for the use and maintenance of the system
 
 
@@ -279,7 +279,7 @@ Written in the popular app Mermaid for chart creation, this Gantt chart shows th
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
 
-A Gantt chart is well known to be an intuitive, simple, practical and a useful visial representation of activities and their accociated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
+A Gantt chart is well known to be an intuitive, simple, practical and a useful visual representation of activities and their associated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
 
 #### Unidimensional
 * One view being 'time', emphasizing efficiency.
@@ -288,13 +288,13 @@ A Gantt chart is well known to be an intuitive, simple, practical and a useful v
 * Object oriented.
 
 #### Deterministic
-* A Gantt chart determins all that will occur in the project.
+* A Gantt chart determines all that will occur in the project.
 
 #### Analytical and Accountable
 * Division of the project allowing for smaller bite-sized chunks so resources can be allocated efficiently.
 
 #### Sequential
-* After tasks have been completed, then the next task is to be completed, thus sequenciality.
+* After tasks have been completed, then the next task is to be completed, thus sequentially.
 
 <br>
 
