@@ -271,6 +271,7 @@ A stock management and lending system such as this has few - but by no means tri
 - Unsympathetic, off-putting deployment method and timeframe (Amazon, 2023)
 - Failure to provide technical support for the use and maintenance of the system
 
+To summarise, many hardware-related risks can be overcome by having a performance overhead, options for future expandability, physical security on location, and redundancy with the host system(s). As for software, by far the most impactful forms of risk mitigation would be to have a combination of robust encryption techniques, multi-factor authentification, data validation, and error correction. When it comes to personnel, however, a hierarchy of access levels alongside training and documentation for stakeholders would suffice.
 
 ## Project Planning
 
