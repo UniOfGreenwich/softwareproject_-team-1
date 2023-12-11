@@ -43,11 +43,15 @@
 
 ## Introduction
 
-The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation through to generative AI journals printed this year by organisations such as OpenAI.
+The library system, commissioned to us by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation through to generative AI journals printed this year by organisations such as OpenAI.
 
-The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
+The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes. These have been thoroughly explained and segregated into their individual categories of user and technical requirements in this documentation.
 
-The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
+The team decided an ***Incremental Design*** model was to be used as we could easily adapt to changing customer needs whilst also making deadlines key. As we are a team of junior developers, this model would help massively in collaboration and communication across our team and with our customer ensuring that no requirements would be missed.
+
+Risks and risk mitigation have also been taken into account as any project will involve certain issues along the way. We have identified the main risks we will see through the project and planned for mitigation to ensure a seemless development process.
+
+The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
 
 ---
 
@@ -317,13 +321,13 @@ Kanban is a method of improving software development by means of creating a visu
 
 Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
 
-Below is a screenshot of our project Kanban from 01/12 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
+Below is a screenshot of our project Kanban from 01/12/23 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
 
 
 <div align=center>
 
 
-**[Figure 3: Kanban Board](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
+**[Figure 3: Kanban Board 01/12/23](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
 
 ![Kanban](/Documentation%20Pictures/kanban.png "Kanban")
 
