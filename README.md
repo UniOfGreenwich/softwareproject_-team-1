@@ -1,5 +1,7 @@
 # Phase 1 - Requirements Engineering
 
+
+
 # Team 1- Library System
 
 <div align=center>
@@ -30,8 +32,16 @@
     - [Functional:](#functional)
     - [Non-Functional:](#non-functional)
   - [Potential Risks](#potential-risks)
+- [Phase 2 - System Modelling and Design](#phase-2---system-modelling-and-design)
+  - [Introduction](#introduction-1)
+  - [Use Case Diagrams](#use-case-diagrams)
+  - [Sequence Diagrams](#sequence-diagrams)
+  - [Class Diagrams](#class-diagrams)
+  - [Activity Diagrams](#activity-diagrams)
+  - [State Chart Diagrams](#state-chart-diagrams)
+  - [Gantt Chart](#gantt-chart)
   - [Project Planning](#project-planning)
-    - [Gantt Chart](#gantt-chart)
+    - [Gantt Chart](#gantt-chart-1)
       - [Unidimensional](#unidimensional)
       - [Objective](#objective)
       - [Deterministic](#deterministic)
@@ -39,7 +49,6 @@
       - [Sequential](#sequential)
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
-- [ELEE1149-Project-Template](#elee1149-project-template)
 
 ## Introduction
 
@@ -54,7 +63,6 @@ Risks and risk mitigation have also been taken into account as any project will 
 The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
 
 ---
-
 <div align=center>
 <br>
 
@@ -274,6 +282,16 @@ A stock management and lending system such as this has few - but by no means tri
 
 To summarise, many hardware-related risks can be overcome by having a performance overhead, options for future expandability, physical security on location, and redundancy with the host system(s). As for software, by far the most impactful forms of risk mitigation would be to have a combination of robust encryption techniques, multi-factor authentification, data validation, and error correction. When it comes to personnel, however, a hierarchy of access levels alongside training and documentation for stakeholders would suffice.
 
+# Phase 2 - System Modelling and Design
+## Introduction
+## Use Case Diagrams
+## Sequence Diagrams
+## Class Diagrams
+## Activity Diagrams
+## State Chart Diagrams
+## Gantt Chart
+
+
 ## Project Planning
 
 ### Gantt Chart
@@ -384,6 +402,3 @@ rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: h
 Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
 
 Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
-
-# ELEE1149-Project-Template
-
