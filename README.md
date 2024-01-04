@@ -20,7 +20,15 @@
   - [Activity Diagrams](#activity-diagrams)
   - [State Chart Diagrams](#state-chart-diagrams)
   - [Gantt Chart](#gantt-chart)
-
+  - [References](#references)
+  - [Requirements](#requirements)
+    - [A library system](#a-library-system)
+      - [Staff](#staff)
+      - [Students](#students)
+      - [Card Payments](#card-payments)
+      - [Inventory](#inventory)
+      - [Storage system of articles](#storage-system-of-articles)
+      - [Data storage](#data-storage)
 ## Introduction
 
 
@@ -46,3 +54,43 @@
 ## Activity Diagrams
 ## State Chart Diagrams
 ## Gantt Chart
+## References
+- Put references in like you did last time so th5528e can add them
+
+
+
+
+## Requirements
+### A library system
+#### Staff
+- Staff all have the same access level.
+- Staff can create a user.
+- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
+#### Students
+- Students will have a lower access level with limited access.
+- Students can look at their own account and pay any outstanding balances.
+#### Card Payments
+- There needs to be a card processing system for payment.
+- Payment cannot be stored.
+- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
+#### Inventory
+- 20 books, at least 3 should be journals.
+  - Books require:
+    - Titles
+    - ISBN number
+    - Authors
+    - Synopsis - Find one, don't write it.
+  - Journals require:
+    - Titles
+    - Authors
+    - DOI number
+    - Journal name
+    - Conference paper name of the journal name (Seb's words)
+#### Storage system of articles
+- Must use the Dewey Decimal System.
+- Renting
+- Books can only be rented in 3, 7, and 14 day intervals at a time.
+- Renting starts the same day they take out the article.
+- 10p late fee per day late.
+#### Data storage
+- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
