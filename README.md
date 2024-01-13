@@ -290,7 +290,7 @@ The library system design and development continues into Phase/2 documenting a l
 - **Sequence Diagrams**- show the actions whilst using the system between the user and system components.
 - **Class Diagrams**- show classes and their relationships within the system.
 - **State Diagrams**- show the response of the system to any events that occur during runtime.
-- **Activity Diagrams** - shows the actions the system takes, rather than the message and information flow of user of system.
+- **Activity Diagrams** - shows the actions the system takes, rather than the message and information flow of user and system.
 
 This phase also includes updated references and Kanban and a new Gantt chart to display the key milestones for Phase/2 activity until delivery on 23/1/24. Previous tasks from Phase/1 have been labeled accordingly and archived to clear up the confusion between completed and ongoing tasks of Phase/2.
 
