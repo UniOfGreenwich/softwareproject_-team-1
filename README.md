@@ -70,8 +70,36 @@ The library system needs many functions specified by the customer to be implemen
 
 ### Use Case Diagrams
 ---
+A use case diagram, which shows how users interact with a system visually, is an essential tool in system design. It acts as a guide to help stakeholders communicate and direct the development process by helping to understand the functional needs of a system from the viewpoint of the user.(Srinam 2023)
+<div align=center>
+<br>
+
+**Figure 1: Use Case Diagram of the Library System**
+
+![Use Case Diagram!](https://www.plantuml.com/plantuml/png/bLBDZjD03BxxAQmzPG-jX112GbMrK2WNLa9TkFNYdV4cequybUC8ylQGJakPT5VQvZIPxyUUpxxhZDJwDc8CZqewO3TqnYq0H7uoj8GQwiRG1sLd8Gbqko1xKcfnJsv7DJ_O41b7cAIE343EakBDjuDZ8Bb1wZ2U_axmFRUFh0UiFHm181zmDfjXzS2ahi5FAUrkpm1M6nOxt7Qt1J-cEaXvzPq6N0VXydRLiDiXEPTwiHBQiFKg9tU0e-a8dX-0KFHMWb3Tar3DMyacM89VMKZ963UyJselYdCuKtdPtqGBy7yqy_aIgtLIV8kUXh_a3xXOO10NUy-uN3vFVdyD-Ssx5zW0rKVlZ-aivdESPd9X_vaZ6r-Z-BdtOumhCegfpg9prLVoYx9JoRyf4-PfPD75YAR2_7ZXNzVASZVNb_lYW-KrVwNYlDUBCRJU6XOBZYmasSgQGcI_bHyw8DKKv6Z0lqy6vHvcbrL3MZF6CMJDw5CGljG2tB7uleqmVdy0)
+
+**Tabular Description Of Use Case diagram**
+</div>
+
+
+
 ### Sequence Diagrams
 ---
+
+A sequence diagram is a type of Unified Modelling Language (UML) diagram that shows the messages that are sent back and forth between objects during an interaction. A sequence diagram shows a set of items, symbolised by lifelines, together with the messages they exchange throughout the course of their relationship.(IBM 2021)
+<div align=center>
+<br>
+
+**Figure 2: Sequence Diagram for Member to Reserve a book**
+
+![Sequence Diagram Member!](https://www.plantuml.com/plantuml/png/VP9HRjim38RVTGh2JmdGN20FGxiK60Pq0zPW1s1ijX4gIuP4PV3j9yaHPC5staJo8t_-j9yTesNVAu4j6mlDcxnOj2Fyelv2jW5qqAUd608eMpcWveATHyVK9yobPuszUBwI3Z6oD3fX658rT496PJvJjPtUDV3Tc2zu3PKBEafOTmz4N5lUa2blcUEyJeudtHnbdP8e4wT1SFXs7t64D_CfzQxnZgp6dfedQ0Pqxf-nNRCN4nNvA764cMVQR8ee76OQzQNUoNd5ExQUia2axoQFy2hTe71CYvrzsv9pkxqG7LLsrxoS2MrxXNZIida-HowdwZqNo_auH_ZZoOuYnt2OzyOk-Aa_J6ajmgNwmC-aFfbtSpjPPCtHEsdUidEwKliLYoytb0elKaaUrvtz85w03tnMt9RVcXAeU9a6wNAiI00iNHI707EbillV8Rmf8cT6zkufjL2t3nth7av6VqZRfvyjG4i32sJxgqMj2YRbQDteRyF5xCEXiJtG1IRTLNz4zZNFJUFccMcgU0xTlbV_0G00)
+
+**Figure 3: Sequence Diagram for Librarian to Return book and fine collection**
+
+![Sequence Diagram Librarian!](https://www.plantuml.com/plantuml/png/jPJ1ZjD038RlynHMJgr4No07j405McaHKWjdv2PUThIJIJIUMTItPvnfS8OjvSIjjZ_Rl_yckUE88QR1mOCz1Gvdu3D76WnsSGpGI1Q3HTy0ChWbCbFkifsTqCS5EiDnRft9CgN6tgNuH3x76ErO1c9ErT3xSNoUIwVyeovzfk540GxKZQ6VcO66G5rDVRIUoW3hN5tQOyGJSYdtby38gVO58-bvcYftQ2o2DHAD6XKr6ei0ZNIV-Rq7Tcyl6rfu67zOlsaIK_0uKFC6cWcPVygjMrCeuKL12oilwQzDWi9kjQF-1mx4oSLD38cM1KAh3ItiBKyEpxEsO-ewOjviZUcfDkJwHGUAAVXYakelBhNmuOcwvtlcH7kAQ1rl6Y6_ptTiJS6aOJ6kXKyKjU4FVg5Wjzenqt1plkgzHHjqiQw3vSk1rCFeuQiT2CO0ZzOJJ6Xx0t3LbMzJBxvL3tDcNnjKmC8LB5jFZkcra2yl5Ff41k3ctrZqxZ6IDbpLAEyGMFyuLiBaUIwr-rAIHEMWrcuB4QwCrsAzuVzP22QZv7lpZ-do8GAE61FNBkJy0Wbpd97whRZWwuoqhUCYiIBoyQjOFnYQKy76t97lq-1-0G00)
+
+</div>
+
 ### Class Diagrams
 ---
 ### Activity Diagrams
@@ -90,6 +118,7 @@ The Activity diagram for this project depicts the process of the program from st
 ### State Chart Diagrams
 
 ## Gantt Chart
+
 Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
 
 The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
@@ -123,6 +152,10 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 ## References
 - Put references in like you did last time so th5528e can add them
+  
+Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
+
+IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
 ## Requirements
 ### A library system
