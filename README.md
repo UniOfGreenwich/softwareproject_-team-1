@@ -32,6 +32,7 @@
   - [Introduction](#introduction-1)
   - [Overall Architecture of the System](#overall-architecture-of-the-system)
     - [Use Case Diagrams](#use-case-diagrams)
+      - [Tabular Description Of Use Case diagram](#tabular-description-of-use-case-diagram)
     - [Sequence Diagrams](#sequence-diagrams)
     - [Class Diagrams](#class-diagrams)
     - [Activity Diagrams](#activity-diagrams)
@@ -306,11 +307,19 @@ A use case diagram, which shows how users interact with a system visually, is an
 <div align=center>
 <br>
 
-**Figure 1: Use Case Diagram of the Library System**
+**Figure 1.1: Library Management System Use Case Diagram**
 
-![Use Case Diagram!](https://www.plantuml.com/plantuml/png/bLBDZjD03BxxAQmzPG-jX112GbMrK2WNLa9TkFNYdV4cequybUC8ylQGJakPT5VQvZIPxyUUpxxhZDJwDc8CZqewO3TqnYq0H7uoj8GQwiRG1sLd8Gbqko1xKcfnJsv7DJ_O41b7cAIE343EakBDjuDZ8Bb1wZ2U_axmFRUFh0UiFHm181zmDfjXzS2ahi5FAUrkpm1M6nOxt7Qt1J-cEaXvzPq6N0VXydRLiDiXEPTwiHBQiFKg9tU0e-a8dX-0KFHMWb3Tar3DMyacM89VMKZ963UyJselYdCuKtdPtqGBy7yqy_aIgtLIV8kUXh_a3xXOO10NUy-uN3vFVdyD-Ssx5zW0rKVlZ-aivdESPd9X_vaZ6r-Z-BdtOumhCegfpg9prLVoYx9JoRyf4-PfPD75YAR2_7ZXNzVASZVNb_lYW-KrVwNYlDUBCRJU6XOBZYmasSgQGcI_bHyw8DKKv6Z0lqy6vHvcbrL3MZF6CMJDw5CGljG2tB7uleqmVdy0)
+![Library member Use Case Diagram!](https://www.plantuml.com/plantuml/png/bP11ImCn48Nl-HMFddOFNH0HGKgf2ZqfYFNOopGxxeOc4qbcmVnxjrqfBTI3SnfUllUHP9MLaWx1mxjTebIGIrOEndZ-L6X4SbslQ5rYgowAoNidNvGeWAp6jD7Y6OT3aiwpCUOOO_RowtlbiECq0sM4ush6cJRCvwZUMHHFCUvpVHxxs3cvI9vxjdkGjN4GhKV9URLfbgZMCU4MBPLSum6B1PnOFxICvV8wVFyV-ERkBtgwAuxaXYdP_b2z0bu-OUIhDofOE-7Qd3IBfa7rE6ZFeixIuTEtiYRdkTtAHogWZaPkilFtoJxEYgKTWly1)
 
-**Tabular Description Of Use Case diagram**
+![Librararian Use Case Diagram!](https://www.plantuml.com/plantuml/png/TP31pffG44Rtzoc-k8A5F41ZZDQctTIDjZit8unmusKk6OQal7qfbTy8lplWE-UGpAurKklgWE2lIjgZxLlZshd0DuD5g2yhG-6LS_DHN7ltqf1IZORoEvLyjZum_iqaPM3dABUeMFqSWvva1MeHfhUXF3rYlKOIOkabnUphaMH8N-HhZFSsVHc7zGSBAHdZn4rKM-oJVUJwojgcc0Cdjau5ZxgR_GvPjaMoBueHI84ls6pW9GzTmTXkF-U_SM3ZjyepDzA_cu86-a16mmKwJfV6C_XUMbgFUuxycKdpQWmiG8S9tMHPik-iOZ6Va_ae5_bEFd1naL_QWqeQiD7dFn_-wms72993HLeo0Xb3_wytBvnYxheTIz7LuIy0)
+
+</div>
+
+#### Tabular Description Of Use Case diagram
+
+<div align=center>
+<br>
+
 </div>
 
 ### Sequence Diagrams
