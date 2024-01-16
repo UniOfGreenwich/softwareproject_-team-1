@@ -16,7 +16,7 @@
 - [Introduction](#introduction)
 - [Overall Architecture of the System](#overall-architecture-of-the-system)
   - [Use Case Diagrams](#use-case-diagrams)
-    - [Tabular Description Of Use Case diagram](#tabular-description-of-use-case-diagram)
+    - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram)
   - [Sequence Diagrams](#sequence-diagrams)
   - [Class Diagrams](#class-diagrams)
   - [Activity Diagrams](#activity-diagrams)
@@ -78,17 +78,54 @@ A use case diagram, which shows how users interact with a system visually, is an
 **Figure 1.1: Library Management System Use Case Diagram**
 
 ![Library member Use Case Diagram!](https://www.plantuml.com/plantuml/png/bP11ImCn48Nl-HMFddOFNH0HGKgf2ZqfYFNOopGxxeOc4qbcmVnxjrqfBTI3SnfUllUHP9MLaWx1mxjTebIGIrOEndZ-L6X4SbslQ5rYgowAoNidNvGeWAp6jD7Y6OT3aiwpCUOOO_RowtlbiECq0sM4ush6cJRCvwZUMHHFCUvpVHxxs3cvI9vxjdkGjN4GhKV9URLfbgZMCU4MBPLSum6B1PnOFxICvV8wVFyV-ERkBtgwAuxaXYdP_b2z0bu-OUIhDofOE-7Qd3IBfa7rE6ZFeixIuTEtiYRdkTtAHogWZaPkilFtoJxEYgKTWly1)
-
-![Librararian Use Case Diagram!](https://www.plantuml.com/plantuml/png/TP31pffG44Rtzoc-k8A5F41ZZDQctTIDjZit8unmusKk6OQal7qfbTy8lplWE-UGpAurKklgWE2lIjgZxLlZshd0DuD5g2yhG-6LS_DHN7ltqf1IZORoEvLyjZum_iqaPM3dABUeMFqSWvva1MeHfhUXF3rYlKOIOkabnUphaMH8N-HhZFSsVHc7zGSBAHdZn4rKM-oJVUJwojgcc0Cdjau5ZxgR_GvPjaMoBueHI84ls6pW9GzTmTXkF-U_SM3ZjyepDzA_cu86-a16mmKwJfV6C_XUMbgFUuxycKdpQWmiG8S9tMHPik-iOZ6Va_ae5_bEFd1naL_QWqeQiD7dFn_-wms72993HLeo0Xb3_wytBvnYxheTIz7LuIy0)
+![Librarian Use Case Diagram!](https://www.plantuml.com/plantuml/png/TP31pffG44Rtzoc-k8A5F41ZZDQctTIDjZit8unmusKk6OQal7qfbTy8lplWE-UGpAurKklgWE2lIjgZxLlZshd0DuD5g2yhG-6LS_DHN7ltqf1IZORoEvLyjZum_iqaPM3dABUeMFqSWvva1MeHfhUXF3rYlKOIOkabnUphaMH8N-HhZFSsVHc7zGSBAHdZn4rKM-oJVUJwojgcc0Cdjau5ZxgR_GvPjaMoBueHI84ls6pW9GzTmTXkF-U_SM3ZjyepDzA_cu86-a16mmKwJfV6C_XUMbgFUuxycKdpQWmiG8S9tMHPik-iOZ6Va_ae5_bEFd1naL_QWqeQiD7dFn_-wms72993HLeo0Xb3_wytBvnYxheTIz7LuIy0)
 
 </div>
 
-#### Tabular Description Of Use Case diagram
+#### Tabular Description Of Use Case Diagram
+
 
 <div align=center>
 <br>
 
+**Table: Login Usecase**
+
+
+
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |   Librarian, Library Member    |
+| Description   | Enables users (library members and librarians) to log into the system securely. The system authenticates users based on their credentials (username and password). Users must have valid and authorized accounts to access the system. After login they can search for books.       | 
+| Data      |   User credentials (username and password)    |
+| Stimulas |   User command issued by a librarian or  member  |
+| Response   |  Successful login or authentication failure |
+|    Comments   |   Users must have valid credentials and appropriate permissions. The system should implement security measures such as encryption to protect user credentials   |
+
+**Table: Rent Books Usecase**
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |    Library Member    |
+| Description |  Enables members to rent books from the library. Members can select a book and the days of rent. Members can rent a book for 3,7 or 15 days.    | 
+| Data      |   Book information, member details, rental duration    |
+| Stimulas  |   User command issued by a library member  | 
+| Response  |  Confirmation of successful book renting |
+| Comments  |  Availability of the book should be checked before confirming the book. The system should update the book status accordingly. |
+
+**Table: Check Account Usecase**
+
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |    Library Member   |
+| Description |  Enables members to check their account status, including rent books and any fines accrued. The member can review their account details for transparency. The members can also pay there fine here through online. | 
+| Data      |   member details, rented books and fines.  |
+| Stimulas     | User command issued by a library member.|
+| Response     |  Display of Account details |
+| Comments  |  The system should provide clear information to avoid confusion. They payment information should not be stored on the system. |
+
+
+
 </div>
+
 
 
 
