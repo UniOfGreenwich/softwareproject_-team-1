@@ -3,14 +3,21 @@
 
 <div align=center>
 
-![The Library is a cool place to go and hang out!](https://th.bing.com/th/id/OIP.GBmXICXxseHDVOZBynhjPwHaEc?pid=ImgDet&rs=1 "The Library is a cool place to go and hang out!")
-
+![The Library is a cool place to go and hang out!](https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg "The Library is a cool place to go and hang out!")
+<!-- (bedbugexterminatorpro.ca, 2023) -->
 </div>
 
 <!-- omit in toc -->
 ## Contents
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
   - [Introduction](#introduction)
+  - [Requirements](#requirements)
+    - [Staff](#staff)
+    - [Students](#students)
+    - [Card Payments](#card-payments)
+    - [Inventory](#inventory)
+    - [Storage system of articles](#storage-system-of-articles)
+    - [Data storage](#data-storage)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
@@ -34,7 +41,15 @@
     - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram)
     - [Sequence Diagrams](#sequence-diagrams)
     - [Class Diagrams](#class-diagrams)
+      - [Inheritance. UML notation: \<|-- (blank arrow-head with solid line)](#inheritance-uml-notation----blank-arrow-head-with-solid-line)
+      - [Relisation/Implementation/Abstraction. UML notation: \<.. (arrow tip with dotted line)](#relisationimplementationabstraction-uml-notation--arrow-tip-with-dotted-line)
+      - [Association. UML notation: -- (solid line)](#association-uml-notation----solid-line)
+      - [Aggregation. UML notation: o-- (blank diamond head with solid line)](#aggregation-uml-notation-o---blank-diamond-head-with-solid-line)
+      - [Composition. UML notation: \*-- (filled diamond head with solid line)](#composition-uml-notation----filled-diamond-head-with-solid-line)
+      - [Dependency. UML notation: \<|.. (blank arrow-head with dotted line)](#dependency-uml-notation--blank-arrow-head-with-dotted-line)
+      - [Multiplicity.](#multiplicity)
     - [Activity Diagrams](#activity-diagrams)
+      - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram-1)
     - [State Chart Diagram](#state-chart-diagram)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
@@ -45,17 +60,6 @@
       - [Sequential](#sequential)
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
-- [rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: https://rdrr.io/r/tools/md5sum.html](#rdrrio-2023-12-04-md5sum-compute-md5-checksums-retrieved-from-rdrrio-httpsrdrriortoolsmd5sumhtml)
-  - [References](#references)
-- [Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.](#srinam-2023-use-case-diagram-retrieved-from-geeks-for-geeks--httpswwwgeeksforgeeksorguse-case-diagram)
-  - [Requirements](#requirements)
-    - [A library system](#a-library-system)
-      - [Staff](#staff)
-      - [Students](#students)
-      - [Card Payments](#card-payments)
-      - [Inventory](#inventory)
-      - [Storage system of articles](#storage-system-of-articles)
-      - [Data storage](#data-storage)
 
 # Phase 1 - Requirements Engineering
 
@@ -69,7 +73,43 @@ Risks and risk mitigation have also been taken into account as any project will 
 
 The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
 
+## Requirements
+### Staff
+- Staff all have the same access level.
+- Staff can create a user.
+- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
+### Students
+- Students will have a lower access level with limited access.
+- Students can look at their own account and pay any outstanding balances.
+### Card Payments
+- There needs to be a card processing system for payment.
+- Payment cannot be stored.
+- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
+### Inventory
+- 20 books, at least 3 should be journals.
+  - Books require:
+    - Titles
+    - ISBN number
+    - Authors
+    - Synopsis - Find one, don't write it.
+  - Journals require:
+    - Titles
+    - Authors
+    - DOI number
+    - Journal name
+    - Conference paper name of the journal name (Seb's words)
+### Storage system of articles
+- Must use the Dewey Decimal System.
+- Renting
+- Books can only be rented in 3, 7, and 14 day intervals at a time.
+- Renting starts the same day they take out the article.
+- 10p late fee per day late.
+### Data storage
+- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
+
+
 <div align=center>
+
 <br>
 
 
@@ -295,13 +335,13 @@ To summarise, many hardware-related risks can be overcome by having a performanc
 
 ## Introduction
 
-The library system design and development continues into Phase/2 documenting a list of diagrammatic sections that meticulously breakdown the system architecture into more manageable and understandable pieces whilst keeping both abstraction for the end user and technicality for the any future engineers:
+The library system design and development continues into Phase/2 documenting a list of diagrammatic sections that meticulously breakdown the system architecture, into more manageable and understandable pieces, whilst keeping both abstraction for the end user, and technicality for any future maintenance (Ramuthi, 2024):
 
 - **Use Case Diagrams**- show which functions of the system interact with the environment.
 - **Sequence Diagrams**- show the actions whilst using the system between the user and system components.
 - **Class Diagrams**- show classes and their relationships within the system.
 - **State Diagrams**- show the response of the system to any events that occur during runtime.
-- **Activity Diagrams** - shows the actions the system takes, rather than the message and information flow of user and system.
+- **Activity Diagrams** - shows the actions the system takes, rather than the message and information flow of the user and system.
 
 This phase also includes updated references and Kanban and a new Gantt chart to display the key milestones for Phase/2 activity until delivery on 23/1/24. Previous tasks from Phase/1 have been labeled accordingly and archived to clear up the confusion between completed and ongoing tasks of Phase/2.
 
@@ -313,7 +353,8 @@ The library system needs many functions specified by the customer to be implemen
 
 ### Use Case Diagrams
 ---
-A use case diagram, which shows how users interact with a system visually, is an essential tool in system design. It acts as a guide to help stakeholders communicate and direct the development process by helping to understand the functional needs of a system from the viewpoint of the user.(Srinam 2023)
+
+A use case diagram, which shows how users interact with a system visually, is an essential tool in system design. It acts as a guide to help stakeholders communicate and direct the development process by helping to understand the functional needs of a system from the viewpoint of the user (GeeksforGeeks, 2024).
 
 <div align=center>
 <br>
@@ -415,15 +456,15 @@ A use case diagram, which shows how users interact with a system visually, is an
 ### Sequence Diagrams
 ---
 
-A sequence diagram is a type of Unified Modelling Language (UML) diagram that shows the messages that are sent back and forth between objects during an interaction. A sequence diagram shows a set of items, symbolised by lifelines, together with the messages they exchange throughout the course of their relationship.(IBM 2021)
+A sequence diagram is a type of Unified Modelling Language (UML) diagram that shows the messages that are sent back and forth between objects during an interaction. A sequence diagram shows a set of items, symbolised by lifelines, together with the messages they exchange throughout the course of their relationship (IBM 2024).
 <div align=center>
 <br>
 
-**[ Figure 2: Sequence Diagram for Member to Reserve a book ](https://www.plantuml.com/plantuml/png/VP9HRjim38RVTGh2JmdGN20FGxiK60Pq0zPW1s1ijX4gIuP4PV3j9yaHPC5staJo8t_-j9yTesNVAu4j6mlDcxnOj2Fyelv2jW5qqAUd608eMpcWveATHyVK9yobPuszUBwI3Z6oD3fX658rT496PJvJjPtUDV3Tc2zu3PKBEafOTmz4N5lUa2blcUEyJeudtHnbdP8e4wT1SFXs7t64D_CfzQxnZgp6dfedQ0Pqxf-nNRCN4nNvA764cMVQR8ee76OQzQNUoNd5ExQUia2axoQFy2hTe71CYvrzsv9pkxqG7LLsrxoS2MrxXNZIida-HowdwZqNo_auH_ZZoOuYnt2OzyOk-Aa_J6ajmgNwmC-aFfbtSpjPPCtHEsdUidEwKliLYoytb0elKaaUrvtz85w03tnMt9RVcXAeU9a6wNAiI00iNHI707EbillV8Rmf8cT6zkufjL2t3nth7av6VqZRfvyjG4i32sJxgqMj2YRbQDteRyF5xCEXiJtG1IRTLNz4zZNFJUFccMcgU0xTlbV_0G00)**
+**Figure 2: Sequence Diagram for Member to Reserve a book**
 
 ![Sequence Diagram Member!](https://www.plantuml.com/plantuml/png/VP9HRjim38RVTGh2JmdGN20FGxiK60Pq0zPW1s1ijX4gIuP4PV3j9yaHPC5staJo8t_-j9yTesNVAu4j6mlDcxnOj2Fyelv2jW5qqAUd608eMpcWveATHyVK9yobPuszUBwI3Z6oD3fX658rT496PJvJjPtUDV3Tc2zu3PKBEafOTmz4N5lUa2blcUEyJeudtHnbdP8e4wT1SFXs7t64D_CfzQxnZgp6dfedQ0Pqxf-nNRCN4nNvA764cMVQR8ee76OQzQNUoNd5ExQUia2axoQFy2hTe71CYvrzsv9pkxqG7LLsrxoS2MrxXNZIida-HowdwZqNo_auH_ZZoOuYnt2OzyOk-Aa_J6ajmgNwmC-aFfbtSpjPPCtHEsdUidEwKliLYoytb0elKaaUrvtz85w03tnMt9RVcXAeU9a6wNAiI00iNHI707EbillV8Rmf8cT6zkufjL2t3nth7av6VqZRfvyjG4i32sJxgqMj2YRbQDteRyF5xCEXiJtG1IRTLNz4zZNFJUFccMcgU0xTlbV_0G00)
 
-**[ Figure 3: Sequence Diagram for Librarian to Return book and fine collection ](https://www.plantuml.com/plantuml/png/jPJ1ZjD038RlynHMJgr4No07j405McaHKWjdv2PUThIJIJIUMTItPvnfS8OjvSIjjZ_Rl_yckUE88QR1mOCz1Gvdu3D76WnsSGpGI1Q3HTy0ChWbCbFkifsTqCS5EiDnRft9CgN6tgNuH3x76ErO1c9ErT3xSNoUIwVyeovzfk540GxKZQ6VcO66G5rDVRIUoW3hN5tQOyGJSYdtby38gVO58-bvcYftQ2o2DHAD6XKr6ei0ZNIV-Rq7Tcyl6rfu67zOlsaIK_0uKFC6cWcPVygjMrCeuKL12oilwQzDWi9kjQF-1mx4oSLD38cM1KAh3ItiBKyEpxEsO-ewOjviZUcfDkJwHGUAAVXYakelBhNmuOcwvtlcH7kAQ1rl6Y6_ptTiJS6aOJ6kXKyKjU4FVg5Wjzenqt1plkgzHHjqiQw3vSk1rCFeuQiT2CO0ZzOJJ6Xx0t3LbMzJBxvL3tDcNnjKmC8LB5jFZkcra2yl5Ff41k3ctrZqxZ6IDbpLAEyGMFyuLiBaUIwr-rAIHEMWrcuB4QwCrsAzuVzP22QZv7lpZ-do8GAE61FNBkJy0Wbpd97whRZWwuoqhUCYiIBoyQjOFnYQKy76t97lq-1-0G00)**
+**Figure 3: Sequence Diagram for Librarian to Return book and fine collection**
 
 ![Sequence Diagram Librarian!](https://www.plantuml.com/plantuml/png/jPJ1ZjD038RlynHMJgr4No07j405McaHKWjdv2PUThIJIJIUMTItPvnfS8OjvSIjjZ_Rl_yckUE88QR1mOCz1Gvdu3D76WnsSGpGI1Q3HTy0ChWbCbFkifsTqCS5EiDnRft9CgN6tgNuH3x76ErO1c9ErT3xSNoUIwVyeovzfk540GxKZQ6VcO66G5rDVRIUoW3hN5tQOyGJSYdtby38gVO58-bvcYftQ2o2DHAD6XKr6ei0ZNIV-Rq7Tcyl6rfu67zOlsaIK_0uKFC6cWcPVygjMrCeuKL12oilwQzDWi9kjQF-1mx4oSLD38cM1KAh3ItiBKyEpxEsO-ewOjviZUcfDkJwHGUAAVXYakelBhNmuOcwvtlcH7kAQ1rl6Y6_ptTiJS6aOJ6kXKyKjU4FVg5Wjzenqt1plkgzHHjqiQw3vSk1rCFeuQiT2CO0ZzOJJ6Xx0t3LbMzJBxvL3tDcNnjKmC8LB5jFZkcra2yl5Ff41k3ctrZqxZ6IDbpLAEyGMFyuLiBaUIwr-rAIHEMWrcuB4QwCrsAzuVzP22QZv7lpZ-do8GAE61FNBkJy0Wbpd97whRZWwuoqhUCYiIBoyQjOFnYQKy76t97lq-1-0G00)
 
@@ -431,17 +472,103 @@ A sequence diagram is a type of Unified Modelling Language (UML) diagram that sh
 
 ### Class Diagrams
 ---
+
+**Class** diagrams are used to show the relationship between different planned classes for a class-based program. In this diagram, there are 9 different classes, and they are all related to each other in one way or another (Shelton, 2024). The different relationships in a normal class diagram are as follows (Visual Paradigm Online, 2024):
+
+#### Inheritance. UML notation: <|-- (blank arrow-head with solid line)
+Inherits previous attributes and methods of the super-class.
+
+#### Relisation/Implementation/Abstraction. UML notation: <.. (arrow tip with dotted line)
+An umbrella class such as a class named 'Animal' is an abstract class, as they can encompass many other classes under them.
+
+#### Association. UML notation: -- (solid line)
+No dependence between the classes, they are just related, and the relation between the two if not clear is put on the connecting line.
+
+#### Aggregation. UML notation: o-- (blank diamond head with solid line)
+A type of association that represents a whole and its parts, where they can be separated.
+
+#### Composition. UML notation: *-- (filled diamond head with solid line)
+A type of association, this represents parts of a whole that could not be present without its parent and vice versa.
+
+#### Dependency. UML notation: <|.. (blank arrow-head with dotted line)
+A dependency is where a class uses an attribute of another class in its methods.
+
+#### Multiplicity.
+When there can only be a certain amount of instances of a class in relation to another class. Represented by a solid line with the following notation: 
+- Zero to one: 0..1
+- Specific number: n
+- Zero to many: 0..*
+- One to many: 1..*
+- Specific Number range: m..n 
+
+
+
+
+
+<div align=center>
+
+**[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png)**
+
+![Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png "Class Diagram")
+
+</div>
+
+
+---
 ### Activity Diagrams
-**Activity **diagrams are behavioral diagrams that describe activity aspects within a system. An activity diagram moves just like a flow chart does, but does so with specific markers used for statements such as: if, switch and while. Other markers can denote the start, stop, parallel activities and swim lanes.
+---
+
+**Activity** diagrams are behavioral diagrams that describe activity aspects within a system. An activity diagram moves just like a flow chart does, but does so with specific markers used for statements such as: if, switch and while (Visual Paradigm, 2024). Other markers can denote the start, stop, parallel activities and swim lanes (GeeksforGeeks, 2024).
 
 The Activity diagram for this project depicts the process of the program from start to end, featuring all requested functional requirements, such as: a late fee system at 10p per day late, renting only in 3, 7 and 14 day intervals, having a teacher account that can control setup of new accounts and deletion of old accounts, amongst other requirements.
 
 <div align=center>
 
-**[Figure 1: Activity Diagram](https://www.plantuml.com/plantuml/png/hLLBRzj64BxlhnYWXqf03Z6QHoiU6iT9NGDjuSOfu4Cl8-vGMdWVpEnIgbhqltSu94LLIdgg3kPovfjlldci-IONvD85R_AJYoqo1iXRj6dluWOATsHCSSKJNDV5xLmvm3k7cnxs_WyChQVVepc9nGdrbm7vFVJiDyad1ky2RPWegkDzj8FP8Z-jVKTgVOlrquPJDpc_iYyilHnzYItnQ7z9tub7xTVCQJ-OrrxYpT-VaIEQGufML5scKJfBhxxzppHDYkN1_KbmzKeo66sRoNjNwYqiVaeR5q4YVkrS-NvfQim4YzyoCTniavmLi3HCBM4P7x1IW4ZjIeQo9SVGMo860XInzvZpNkHKnamX-wtpmdoNeHsTK2TcgYKhk0oBc9OGKu75WV9I0YU5zyJ1vUnIp9Eyevm9yv6mtXBBf6lfJPbnHuGA_XaZRYZGAG9WTSF2HO1QGsLM4vlWYBK-YBI7JhnVP-YB5D1hgBV8M2iaDOfgalUwVdBYW0MGIM0fK-mjYXbPkkW-TSFRIFXHd9gHhEOGKECu5_1Kn3hbK9issQCSnk0FlzngXXSGkx0cphtjvXOMBCWKPgsmeKYC9V5I0wv6Ui4_FZwNtoEuQQHIjF9BfaFgIcLEc_QEF6dJSakrQnnPwBHzhe75DHD82EIEISOhT76Ognat9uFLUDaGyfbq-eQYTKt_TnYQcVEjP0i71RFxRB5k4wpbSa19WCCMGA3OwN9fxd6xl39zSPCUIcSfbijDMasUkxYJH-93TGmwcaxW7yGYcr2D5SiMf4mP4DOfgKeMmD2jEstuuC0TEezhVzQsATEFQGy1um4i7lB4qWzolBfzvc-gu_7rVBnwKPqsR_LMicaqsMU0rf8LEbFddL0NN4lKCoWkK2uOsi_CQRvYVQsbu_Z5Qat3AOmxDSx6oDj1hmTFiPUzy5ZEjqU4mjNpLbtG445BtFT23PSQpUd2NAxJRBWNYX-8SYL7JvZ7gmWriWLB1PtFfm87nmwzisSAhqkXqFQZXnOFGOSiz7g2W5RQAgbpmMXxJ2D9ePQK_AyUpo4n3M7LMDB_TW5cdZEYuKjm-J_vyjiWo5CY4Sr9Fx2Vn27zoYMrvetuk-3_0G00)**
+**[Figure 5: Activity Diagram](https://www.plantuml.com/plantuml/png/hLLBRzj64BxlhnYWXqf03Z6QHoiU6iT9NGDjuSOfu4Cl8-vGMdWVpEnIgbhqltSu94LLIdgg3kPovfjlldci-IONvD85R_AJYoqo1iXRj6dluWOATsHCSSKJNDV5xLmvm3k7cnxs_WyChQVVepc9nGdrbm7vFVJiDyad1ky2RPWegkDzj8FP8Z-jVKTgVOlrquPJDpc_iYyilHnzYItnQ7z9tub7xTVCQJ-OrrxYpT-VaIEQGufML5scKJfBhxxzppHDYkN1_KbmzKeo66sRoNjNwYqiVaeR5q4YVkrS-NvfQim4YzyoCTniavmLi3HCBM4P7x1IW4ZjIeQo9SVGMo860XInzvZpNkHKnamX-wtpmdoNeHsTK2TcgYKhk0oBc9OGKu75WV9I0YU5zyJ1vUnIp9Eyevm9yv6mtXBBf6lfJPbnHuGA_XaZRYZGAG9WTSF2HO1QGsLM4vlWYBK-YBI7JhnVP-YB5D1hgBV8M2iaDOfgalUwVdBYW0MGIM0fK-mjYXbPkkW-TSFRIFXHd9gHhEOGKECu5_1Kn3hbK9issQCSnk0FlzngXXSGkx0cphtjvXOMBCWKPgsmeKYC9V5I0wv6Ui4_FZwNtoEuQQHIjF9BfaFgIcLEc_QEF6dJSakrQnnPwBHzhe75DHD82EIEISOhT76Ognat9uFLUDaGyfbq-eQYTKt_TnYQcVEjP0i71RFxRB5k4wpbSa19WCCMGA3OwN9fxd6xl39zSPCUIcSfbijDMasUkxYJH-93TGmwcaxW7yGYcr2D5SiMf4mP4DOfgKeMmD2jEstuuC0TEezhVzQsATEFQGy1um4i7lB4qWzolBfzvc-gu_7rVBnwKPqsR_LMicaqsMU0rf8LEbFddL0NN4lKCoWkK2uOsi_CQRvYVQsbu_Z5Qat3AOmxDSx6oDj1hmTFiPUzy5ZEjqU4mjNpLbtG445BtFT23PSQpUd2NAxJRBWNYX-8SYL7JvZ7gmWriWLB1PtFfm87nmwzisSAhqkXqFQZXnOFGOSiz7g2W5RQAgbpmMXxJ2D9ePQK_AyUpo4n3M7LMDB_TW5cdZEYuKjm-J_vyjiWo5CY4Sr9Fx2Vn27zoYMrvetuk-3_0G00)**
 
----
+![Activity Diagram](https://www.plantuml.com/plantuml/png/hLLBRzj64BxlhnYWXqf03Z6QHoiU6iT9NGDjuSOfu4Cl8-vGMdWVpEnIgbhqltSu94LLIdgg3kPovfjlldci-IONvD85R_AJYoqo1iXRj6dluWOATsHCSSKJNDV5xLmvm3k7cnxs_WyChQVVepc9nGdrbm7vFVJiDyad1ky2RPWegkDzj8FP8Z-jVKTgVOlrquPJDpc_iYyilHnzYItnQ7z9tub7xTVCQJ-OrrxYpT-VaIEQGufML5scKJfBhxxzppHDYkN1_KbmzKeo66sRoNjNwYqiVaeR5q4YVkrS-NvfQim4YzyoCTniavmLi3HCBM4P7x1IW4ZjIeQo9SVGMo860XInzvZpNkHKnamX-wtpmdoNeHsTK2TcgYKhk0oBc9OGKu75WV9I0YU5zyJ1vUnIp9Eyevm9yv6mtXBBf6lfJPbnHuGA_XaZRYZGAG9WTSF2HO1QGsLM4vlWYBK-YBI7JhnVP-YB5D1hgBV8M2iaDOfgalUwVdBYW0MGIM0fK-mjYXbPkkW-TSFRIFXHd9gHhEOGKECu5_1Kn3hbK9issQCSnk0FlzngXXSGkx0cphtjvXOMBCWKPgsmeKYC9V5I0wv6Ui4_FZwNtoEuQQHIjF9BfaFgIcLEc_QEF6dJSakrQnnPwBHzhe75DHD82EIEISOhT76Ognat9uFLUDaGyfbq-eQYTKt_TnYQcVEjP0i71RFxRB5k4wpbSa19WCCMGA3OwN9fxd6xl39zSPCUIcSfbijDMasUkxYJH-93TGmwcaxW7yGYcr2D5SiMf4mP4DOfgKeMmD2jEstuuC0TEezhVzQsATEFQGy1um4i7lB4qWzolBfzvc-gu_7rVBnwKPqsR_LMicaqsMU0rf8LEbFddL0NN4lKCoWkK2uOsi_CQRvYVQsbu_Z5Qat3AOmxDSx6oDj1hmTFiPUzy5ZEjqU4mjNpLbtG445BtFT23PSQpUd2NAxJRBWNYX-8SYL7JvZ7gmWriWLB1PtFfm87nmwzisSAhqkXqFQZXnOFGOSiz7g2W5RQAgbpmMXxJ2D9ePQK_AyUpo4n3M7LMDB_TW5cdZEYuKjm-J_vyjiWo5CY4Sr9Fx2Vn27zoYMrvetuk-3_0G00 "Activity Diagram")
 
+</div>
+
+#### Tabular Description Of Use Case Diagram
+
+
+<div align=center>
+<br>
+
+**Table: Login Usecase**
+
+
+
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |   Librarian, Library Member    |
+| Description   | Enables users (library members and librarians) to log into the system securely. The system authenticates users based on their credentials (username and password). Users must have valid and authorized accounts to access the system. After login they can search for books.       | 
+| Data      |   User credentials (username and password)    |
+| Stimulas |   User command issued by a librarian or  member  |
+| Response   |  Successful login or authentication failure |
+|    Comments   |   Users must have valid credentials and appropriate permissions. The system should implement security measures such as encryption to protect user credentials   |
+
+**Table: Rent Books Usecase**
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |    Library Member    |
+| Description |  Enables members to rent books from the library. Members can select a book and the days of rent. Members can rent a book for 3,7 or 15 days.    | 
+| Data      |   Book information, member details, rental duration    |
+| Stimulas  |   User command issued by a library member  | 
+| Response  |  Confirmation of successful book renting |
+| Comments  |  Availability of the book should be checked before confirming the book. The system should update the book status accordingly. |
+
+**Table: Check Account Usecase**
+
+| Components     | Description |
+| ----------- | ----------- |
+| Actors      |    Library Member   |
+| Description |  Enables members to check their account status, including rent books and any fines accrued. The member can review their account details for transparency. The members can also pay there fine here through online. | 
+| Data      |   member details, rented books and fines.  |
+| Stimulas     | User command issued by a library member.|
+| Response     |  Display of Account details |
+| Comments  |  The system should provide clear information to avoid confusion. They payment information should not be stored on the system. |
 
 
 </div>
@@ -457,15 +584,17 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 
 ![State Chart Diagram](State_Chart_Diagram.png)
 
+</div>
+
 ## Project Planning
 
 ### Gantt Chart
 
-Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 of this project and will be fleshed out to show phases 2 and 3 when they have been finalised.
+Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 and 2 of this project, of which phase 1 is already completed. Phase 3 will be fleshed out in the future once phase 2 is completed on the 23rd of January 2024.
 
-The Gantt chart, Kanban/Table, Introduction, and Glossary are to be drafted by the 23rd of November 2023. This is to allow for clarity in what is completed/to be completed so far within the project and to give a base to other sections of the project, thus boosting the team's confidence via means of a visible road map.
+The Gantt chart, Overall Architecture, Sequence Diagram, Class Diagram, Activity Diagram and State Chart Diagrams are to be drafted by the 2nd of January 2024. After this period, the diagrams and information are to be finalised and referenced. This again will give clarity in what is completed/to be completed in the future of the project, to give the team a boost in moral via means of a visible road map.
 
-A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within industry and are built to focus on 5 main areas.
+A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within industry, and are built to focus on 5 main areas (Geraldi & Lechler, 2012).
 
 #### Unidimensional
 * One view being 'time', emphasising efficiency.
@@ -485,49 +614,45 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 <br>
 
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within the industry and are built to focus on 5 main areas. (Geraldi & Lechler, 2012)
-
 <br>
 
 <div align=center>
 
-**[Figure 2: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
+**[Figure 6: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png "Project Plan Gantt Chart")
 
 </div>
 
-<<<<<<< HEAD
-<div align=center>
-
-Phase2
-**[Figure 2: Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_ivCz3Ib2WkHfl1oGCMQko4x8ItinThabdk7khZC6X_f8S23Jd1KocYPls93O9JBz0FWKQiSIJfGudQwepx2BbBHkCUTbI7VT8gcmzZ19nkjsUcp6eChwlI6xiaTcDYLf9CTmq5qiaMrw5bV2m0lQqOTgbVsRnZFh5lom3lrG1iSoXbc1qXiURwKEUajKOZMqA75naoQ-ppJo9gC1oBgSC0hwtYjl2sHyFr2fc9YwG8NW5bsSw1ukDuN-M0SYgG_vEYowTh7JZ3Hk3D_yubxEK2hnifzeKheD7fcWQfl_8Sz-Ma9O8pnL-TDBrCvX0-40PbJduL0xepCGqNN_ro5Yt0oHuX9pP7qq-N0adoWiaWGyL3Cvs0blghxS2-rdj6GX4zDSvl20VXm7RrYBEmPuPeHnRuiPGgjC23hNHw_UrXIBLnHF_fkUa4KuP0qzUp-hN20qKyVuHunFbvsdTP8z8TF89-f6jA_g9xUug0gzQINE-b8OIgYjm3pV6V2RyLt4O3POCfo6HLP5_fRWdt5pvi7Wz-1nG8k8aLerluwpI64GIci6n3Go1e48TE3Jm7Mo7tw1GYcc3Y3VgEPSqBLVSu6k58beBrQLpaQBgl9KolPaZCaF8JJ76rlzmRB4tADD3zdXMkTLXOUZffz5Q_1Tdhd?type=png)**
-
-![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9VFtr2zAU_itCz3Yb2Wk7_LrQMEYgJB1j4BfFOnG12bJ3JC2E0v--41sap0l3gxk_WD7f7UgHPfGsUsATnkvjXGoYPU67AtgDyJIJtsTqK2SOzZs6e_8osUcp6eC-wlI6xmazcLEIv9CTmq5qiaMrw9bV1u0kQqOTgbVsQXZFh5lpm3lrG1iSoXaBrUsVRHEoRBhNojhgQnXIz1SF0NdMGsVWsAUEQ2oJEXYeA7l1gKxl3_aMFfzQsGPJodTgBrlxxE-WECv47jVCCcbZC-k8jsL9KpvHl2gN9TSZx5fq5XDrvXVQ_k48i3-4d0f57Jl82AAO9csJV9p-s504fbG6kMZok79tjlg3ikd579SrvjpOl6ZtkVhqiNwrHNq8YokQ1_S2aqdj-ME4rJRvF11l2a6BzZD0iHt7tHPves17bWShLYzT9zNVi0wQNj67KQ9yU8D1R2k28r_4zYvKWon7f_Vi582uhv-ZODsCh4MdRmiQm0v3CEjjQPOEeTBKMpzc2m9K7Y5E2tk7HHNO0Mn5pk-vpJO-80yNHO_-pvWx5fJREi_q7boFS-ooENNQRL3PdPIGNz7mxsSNg-gmnLQZpwG7mSoe8BLoXtWKruWnBp5y2sUSUp7Qp4Kt9IVLeWqeCSq9q9Z7k_HEoYeA-7q5mGda5ihLnmxlYeH5Jy792oE?type=png "Project Plan Gantt Chart")
-
-</div>
-
 ---
-=======
->>>>>>> 7ef77f2 (Added references to intro and architecture paras. Also added Kanban seciton with updated board)
+
 ### Kanban
 
 Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections Radigan, D. (2022).
 
 Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
 
-<<<<<<< HEAD
 Below is a screenshot of our project Kanban from 01/12/23 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
 
-IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
-
 <div align=center>
-
 
 **[Figure 3: Kanban Board 01/12/23](https://github.com/orgs/TeachingMaterial/projects/9/views/2)**
 
 ![Kanban](/Documentation%20Pictures/kanban.png "Kanban")
 
 </div>
+
+Below is a screenshot of our project Kanban from 21/01/24.
+
+<div align=center>
+
+
+**[Figure 3: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
+
+![Kanban](kanban2.png)
+
+</div>
+
 
 ## References and Acknowledgements
 
@@ -576,67 +701,36 @@ oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oc
 Pedamkar, P. (2023, 12 04). Incremental Model. Retrieved from educba.com: https://www.educba.com/incremental-model/
 
 rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: https://rdrr.io/r/tools/md5sum.html
-=======
-Below is a screenshot of our project Kanban from 21/01/24 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
-
-<div align=center>
-
-
-**[Figure 3: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
-
-![Kanban](kanban2.png)
-
-</div>
-
-## References
-- Put references in like you did last time so th5528e can add them
-  
-Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
 
 IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
+Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
+
 IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
->>>>>>> 7ef77f2 (Added references to intro and architecture paras. Also added Kanban seciton with updated board)
 
 Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
+  
+
+IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
 Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
 
-<<<<<<< HEAD
-Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
-=======
-## Requirements
-### A library system
-#### Staff
-- Staff all have the same access level.
-- Staff can create a user.
-- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
-#### Students
-- Students will have a lower access level with limited access.
-- Students can look at their own account and pay any outstanding balances.
-#### Card Payments
-- There needs to be a card processing system for payment.
-- Payment cannot be stored.
-- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
-#### Inventory
-- 20 books, at least 3 should be journals.
-  - Books require:
-    - Titles
-    - ISBN number
-    - Authors
-    - Synopsis - Find one, don't write it.
-  - Journals require:
-    - Titles
-    - Authors
-    - DOI number
-    - Journal name
-    - Conference paper name of the journal name (Seb's words)
-#### Storage system of articles
-- Must use the Dewey Decimal System.
-- Renting
-- Books can only be rented in 3, 7, and 14 day intervals at a time.
-- Renting starts the same day they take out the article.
-- 10p late fee per day late.
-#### Data storage
-- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
->>>>>>> 7ef77f2 (Added references to intro and architecture paras. Also added Kanban seciton with updated board)
+bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexterminatorpro.ca: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
+
+GeeksforGeeks. (2024, 01 21). Difference between Sequence Diagram and Activity Diagram. Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/difference-between-sequence-diagram-and-activity-diagram/
+
+GeeksforGeeks. (2024, 01 21). Use Case Diagrams | Unified Modeling Language (UML). Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/use-case-diagram/
+
+Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
+
+IBM. (2024, 01 21). Sequence Diagrams. Retrieved from IBM.com: https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams
+
+oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oclc.org/en/dewey.html
+
+Ramuthi, D. (2024, 01 21). 11 UML disgram Examples: Class, Activity, and More. Retrieved from venngage.com: https://venngage.com/blog/uml-diagram-examples/
+
+Shelton, B. (2024, 01 21). YouTube | UML Class Diagrams. Retrieved from YouTube.com: https://www.youtube.com/watch?v=6XrL5jXmTwM&ab_channel=LucidSoftware
+
+Visual Paradigm. (2024, 01 21). What is an Activity Diagram? Retrieved from visual-paradigm.com: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+
+Visual Paradigm Online. (2024, 01 21). What are the six types of relationships in UML class diagrams? Retrieved from Visual Paradigm: https://blog.visual-paradigm.com/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
