@@ -27,6 +27,7 @@
     - [Deterministic](#deterministic)
     - [Analytical and Accountable](#analytical-and-accountable)
     - [Sequential](#sequential)
+  - [Kanban](#kanban)
 - [References](#references)
 - [Requirements](#requirements)
   - [A library system](#a-library-system)
@@ -39,7 +40,7 @@
 
 ## Introduction
 
-The library system design and development continues into Phase/2 documenting a list of diagrammatic sections that meticulously breakdown the system architecture into more manageable and understandable pieces whilst keeping both abstraction for the end user and technicality for the any future maintenance:
+The library system design and development continues into Phase/2 documenting a list of diagrammatic sections that meticulously breakdown the system architecture into more manageable and understandable pieces whilst keeping both abstraction for the end user and technicality for the any future engineers:
 
 - **Use Case Diagrams**- show which functions of the system interact with the environment.
 - **Sequence Diagrams**- show the actions whilst using the system between the user and system components.
@@ -67,11 +68,12 @@ This phase also includes updated references and Kanban and a new Gantt chart to 
 ## Overall Architecture of the System
 The library system needs many functions specified by the customer to be implemented, for example, inventory searching, fine payment, secure login and rule-sets for both normal and super users. A lot of transactional functions exist whilst a desire for data storage and event processing also exists. The system architecture needs to create an amalgamation of many traditional application types.
 
-**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
+**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data IBM Corporation (2021).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
 
 ### Use Case Diagrams
 ---
 A use case diagram, which shows how users interact with a system visually, is an essential tool in system design. It acts as a guide to help stakeholders communicate and direct the development process by helping to understand the functional needs of a system from the viewpoint of the user.(Srinam 2023)
+
 <div align=center>
 <br>
 
@@ -240,12 +242,35 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 </div>
 
+### Kanban
+
+Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections Radigan, D. (2022).
+
+Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
+
+Below is a screenshot of our project Kanban from 21/01/24 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
+
+<div align=center>
+
+
+**[Figure 3: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
+
+![Kanban](kanban2.png)
+
+</div>
+
 ## References
 - Put references in like you did last time so th5528e can add them
   
 Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
 
 IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
+
+IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
+
+Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
+
+Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
 
 ## Requirements
 ### A library system
