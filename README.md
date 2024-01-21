@@ -42,14 +42,6 @@
     - [Analytical and Accountable](#analytical-and-accountable)
     - [Sequential](#sequential)
 - [References](#references)
-- [Requirements](#requirements-1)
-  - [A library system](#a-library-system)
-    - [Staff](#staff-1)
-    - [Students](#students-1)
-    - [Card Payments](#card-payments-1)
-    - [Inventory](#inventory-1)
-    - [Storage system of articles](#storage-system-of-articles-1)
-    - [Data storage](#data-storage-1)
 
 ## Introduction
 
@@ -95,7 +87,7 @@ This phase also includes updated references and Kanban and a new Gantt chart to 
 - Renting starts the same day they take out the article.
 - 10p late fee per day late.
 ### Data storage
-- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
+- JSON, XML, CSV, matrix -  any of these to show what each student has taken out.
 
 
 <div align=center>
@@ -243,7 +235,9 @@ When there can only be a certain amount of instances of a class in relation to a
 
 
 ### Activity Diagrams
-**Activity **diagrams are behavioral diagrams that describe activity aspects within a system. An activity diagram moves just like a flow chart does, but does so with specific markers used for statements such as: if, switch and while. Other markers can denote the start, stop, parallel activities and swim lanes.
+---
+
+**Activity** diagrams are behavioral diagrams that describe activity aspects within a system. An activity diagram moves just like a flow chart does, but does so with specific markers used for statements such as: if, switch and while (Visual Paradigm, 2024). Other markers can denote the start, stop, parallel activities and swim lanes (GeeksforGeeks, 2024).
 
 The Activity diagram for this project depicts the process of the program from start to end, featuring all requested functional requirements, such as: a late fee system at 10p per day late, renting only in 3, 7 and 14 day intervals, having a teacher account that can control setup of new accounts and deletion of old accounts, amongst other requirements.
 
@@ -290,43 +284,26 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 </div>
 
 
+
+
 ## References
-- Put references in like you did last time so th5528e can add them
 
+bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexterminatorpro.ca: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
 
+GeeksforGeeks. (2024, 01 21). Difference between Sequence Diagram and Activity Diagram. Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/difference-between-sequence-diagram-and-activity-diagram/
 
+GeeksforGeeks. (2024, 01 21). Use Case Diagrams | Unified Modeling Language (UML). Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/use-case-diagram/
 
-## Requirements
-### A library system
-#### Staff
-- Staff all have the same access level.
-- Staff can create a user.
-- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
-#### Students
-- Students will have a lower access level with limited access.
-- Students can look at their own account and pay any outstanding balances.
-#### Card Payments
-- There needs to be a card processing system for payment.
-- Payment cannot be stored.
-- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
-#### Inventory
-- 20 books, at least 3 should be journals.
-  - Books require:
-    - Titles
-    - ISBN number
-    - Authors
-    - Synopsis - Find one, don't write it.
-  - Journals require:
-    - Titles
-    - Authors
-    - DOI number
-    - Journal name
-    - Conference paper name of the journal name (Seb's words)
-#### Storage system of articles
-- Must use the Dewey Decimal System.
-- Renting
-- Books can only be rented in 3, 7, and 14 day intervals at a time.
-- Renting starts the same day they take out the article.
-- 10p late fee per day late.
-#### Data storage
-- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
+Geraldi, J., & Lechler, T. (2012). Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), 578-594.
+
+IBM. (2024, 01 21). Sequence Diagrams. Retrieved from IBM.com: https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams
+
+oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oclc.org/en/dewey.html
+
+Ramuthi, D. (2024, 01 21). 11 UML disgram Examples: Class, Activity, and More. Retrieved from venngage.com: https://venngage.com/blog/uml-diagram-examples/
+
+Shelton, B. (2024, 01 21). YouTube | UML Class Diagrams. Retrieved from YouTube.com: https://www.youtube.com/watch?v=6XrL5jXmTwM&ab_channel=LucidSoftware
+
+Visual Paradigm. (2024, 01 21). What is an Activity Diagram? Retrieved from visual-paradigm.com: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+
+Visual Paradigm Online. (2024, 01 21). What are the six types of relationships in UML class diagrams? Retrieved from Visual Paradigm: https://blog.visual-paradigm.com/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
