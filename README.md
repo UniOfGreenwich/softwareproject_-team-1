@@ -11,13 +11,6 @@
 ## Contents
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
   - [Introduction](#introduction)
-  - [Requirements](#requirements)
-    - [Staff](#staff)
-    - [Students](#students)
-    - [Card Payments](#card-payments)
-    - [Inventory](#inventory)
-    - [Storage system of articles](#storage-system-of-articles)
-    - [Data storage](#data-storage)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
@@ -41,23 +34,11 @@
     - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram)
     - [Sequence Diagrams](#sequence-diagrams)
     - [Class Diagrams](#class-diagrams)
-      - [Inheritance. UML notation: \<|-- (blank arrow-head with solid line)](#inheritance-uml-notation----blank-arrow-head-with-solid-line)
-      - [Relisation/Implementation/Abstraction. UML notation: \<.. (arrow tip with dotted line)](#relisationimplementationabstraction-uml-notation--arrow-tip-with-dotted-line)
-      - [Association. UML notation: -- (solid line)](#association-uml-notation----solid-line)
-      - [Aggregation. UML notation: o-- (blank diamond head with solid line)](#aggregation-uml-notation-o---blank-diamond-head-with-solid-line)
-      - [Composition. UML notation: \*-- (filled diamond head with solid line)](#composition-uml-notation----filled-diamond-head-with-solid-line)
-      - [Dependency. UML notation: \<|.. (blank arrow-head with dotted line)](#dependency-uml-notation--blank-arrow-head-with-dotted-line)
-      - [Multiplicity.](#multiplicity)
     - [Activity Diagrams](#activity-diagrams)
       - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram-1)
     - [State Chart Diagram](#state-chart-diagram)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
-      - [Unidimensional](#unidimensional)
-      - [Objective](#objective)
-      - [Deterministic](#deterministic)
-      - [Analytical and Accountable](#analytical-and-accountable)
-      - [Sequential](#sequential)
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
 
@@ -72,41 +53,6 @@ The team decided an ***Incremental Design*** model was to be used as we could ea
 Risks and risk mitigation have also been taken into account as any project will involve certain issues along the way. We have identified the main risks we will see through the project and planned for mitigation to ensure a seemless development process.
 
 The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
-
-## Requirements
-### Staff
-- Staff all have the same access level.
-- Staff can create a user.
-- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
-### Students
-- Students will have a lower access level with limited access.
-- Students can look at their own account and pay any outstanding balances.
-### Card Payments
-- There needs to be a card processing system for payment.
-- Payment cannot be stored.
-- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
-### Inventory
-- 20 books, at least 3 should be journals.
-  - Books require:
-    - Titles
-    - ISBN number
-    - Authors
-    - Synopsis - Find one, don't write it.
-  - Journals require:
-    - Titles
-    - Authors
-    - DOI number
-    - Journal name
-    - Conference paper name of the journal name (Seb's words)
-### Storage system of articles
-- Must use the Dewey Decimal System.
-- Renting
-- Books can only be rented in 3, 7, and 14 day intervals at a time.
-- Renting starts the same day they take out the article.
-- 10p late fee per day late.
-### Data storage
-- JSON, XML, CSV, matrix -  any of these to show what each student has taken out.
-
 
 <div align=center>
 
@@ -350,7 +296,6 @@ The library system needs many functions specified by the customer to be implemen
 
 **Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data IBM Corporation (2021).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
 
-
 ### Use Case Diagrams
 ---
 
@@ -367,12 +312,14 @@ A use case diagram, which shows how users interact with a system visually, is an
 
 </div>
 
+### Tabular Description Of Use Case Diagram
+
+---
+
 <div align=center>
 <br>
 
-### Tabular Description Of Use Case Diagram
-
-**Table: Login Usecase**
+**Table 2: Login Usecase**
 
 
 | Components     | Description |
@@ -384,7 +331,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response   |  Successful login or authentication failure |
 |    Comments   |   Users must have valid credentials and appropriate permissions. The system should implement security measures such as encryption to protect user credentials   |
 
-**Table: Rent Books Usecase**
+**Table 3: Rent Books Usecase**
 | Components     | Description |
 | ----------- | ----------- |
 | Actors      |    Library Member    |
@@ -394,7 +341,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response  |  Confirmation of successful book renting |
 | Comments  |  Availability of the book should be checked before confirming the book. The system should update the book status accordingly. |
 
-**Table: Check Account Usecase**
+**Table 4: Check Account Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -405,7 +352,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response     |  Display of Account details |
 | Comments  |  The system should provide clear information to avoid confusion. The payment information should not be stored on the system. |
 
-**Table: Manage Members Usecase**
+**Table 5: Manage Members Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -417,7 +364,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Comments      |    Requires appropiate permissions and access to member data.   |
 
 
-**Table: Manage Books Usecase**
+**Table 6: Manage Books Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -428,7 +375,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response      |    Confirmation of book management actions |
 | Comments      |    Requires appropriate permissions  to access and change books data.    |
 
-**Table: Generate report Usecase**
+**Table 7: Generate report Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -440,7 +387,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Comments      |    The system should support various report formats.   |
 
 
-**Table: Return Books Usecase**
+**Table 8: Return Books Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -473,27 +420,34 @@ A sequence diagram is a type of Unified Modelling Language (UML) diagram that sh
 ### Class Diagrams
 ---
 
-**Class** diagrams are used to show the relationship between different planned classes for a class-based program. In this diagram, there are 9 different classes, and they are all related to each other in one way or another (Shelton, 2024). The different relationships in a normal class diagram are as follows (Visual Paradigm Online, 2024):
+**Class diagrams** are used to show the relationship between different planned classes for a class-based program. In this diagram, there are 9 different classes, and they are all related to each other in one way or another (Shelton, 2024). The different relationships in a normal class diagram are as follows (Visual Paradigm Online, 2024):
 
-#### Inheritance. UML notation: <|-- (blank arrow-head with solid line)
+**Inheritance. UML notation: <|-- (blank arrow-head with solid line)**
+
 Inherits previous attributes and methods of the super-class.
 
-#### Relisation/Implementation/Abstraction. UML notation: <.. (arrow tip with dotted line)
+**Relisation/Implementation/Abstraction. UML notation: <.. (arrow tip with dotted line)**
+
 An umbrella class such as a class named 'Animal' is an abstract class, as they can encompass many other classes under them.
 
-#### Association. UML notation: -- (solid line)
+**Association. UML notation: -- (solid line)**
+
 No dependence between the classes, they are just related, and the relation between the two if not clear is put on the connecting line.
 
-#### Aggregation. UML notation: o-- (blank diamond head with solid line)
+**Aggregation. UML notation: o-- (blank diamond head with solid line)**
+
 A type of association that represents a whole and its parts, where they can be separated.
 
-#### Composition. UML notation: *-- (filled diamond head with solid line)
+**Composition. UML notation: *-- (filled diamond head with solid line)**
+
 A type of association, this represents parts of a whole that could not be present without its parent and vice versa.
 
-#### Dependency. UML notation: <|.. (blank arrow-head with dotted line)
+**Dependency. UML notation: <|.. (blank arrow-head with dotted line)**
+
 A dependency is where a class uses an attribute of another class in its methods.
 
-#### Multiplicity.
+**Multiplicity**
+
 When there can only be a certain amount of instances of a class in relation to another class. Represented by a solid line with the following notation: 
 - Zero to one: 0..1
 - Specific number: n
@@ -580,12 +534,13 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 
 <div align=center>
 
-**[State Chart Diagram](State_Chart_Diagram.png)**
+**[Figure 6: State Chart Diagram](State_Chart_Diagram.png)**
 
 ![State Chart Diagram](State_Chart_Diagram.png)
 
 </div>
 
+<<<<<<< HEAD
 ## Project Planning
 
 ### Gantt Chart
@@ -596,19 +551,19 @@ The Gantt chart, Overall Architecture, Sequence Diagram, Class Diagram, Activity
 
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within industry, and are built to focus on 5 main areas (Geraldi & Lechler, 2012).
 
-#### Unidimensional
+**Unidimensional**
 * One view being 'time', emphasising efficiency.
 
-#### Objective
+**Objective**
 * Object-oriented.
 
-#### Deterministic
+**Deterministic**
 * A Gantt chart determines all that will occur in the project.
 
-#### Analytical and Accountable
+**Analytical and Accountable**
 * Division of the project allows for smaller bite-sized chunks so resources can be allocated efficiently.
 
-#### Sequential
+**Sequential**
 * After tasks have been completed, then the next task is to be completed, thus sequentially.
 
 <br>
@@ -618,17 +573,13 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 <div align=center>
 
-**[Figure 6: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
+**[Figure 7: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png "Project Plan Gantt Chart")
 
 </div>
 
----
-
 ### Kanban
-
-Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections Radigan, D. (2022).
 
 Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
 
@@ -708,8 +659,6 @@ IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Availa
 
 Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
 
-
-IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
 Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
 
