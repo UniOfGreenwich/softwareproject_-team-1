@@ -366,11 +366,6 @@ Below is a screenshot of our project Kanban from 21/01/24 and will change throug
 
 
 ## References
-- Put references in like you did last time so th5528e can add them
-  
-Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
-
-IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
 IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
 
