@@ -4,8 +4,9 @@
 <div align=center>
 
 ![The Library is a cool place to go and hang out!](https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg "The Library is a cool place to go and hang out!")
-<!-- (bedbugexterminatorpro.ca, 2023) -->
 </div>
+<i>(bedbugexterminatorpro.ca, 2023)</i>
+
 
 <!-- omit in toc -->
 ## Contents
@@ -39,7 +40,7 @@
     - [State Chart Diagram](#state-chart-diagram)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
-    - [Kanban](#kanban)
+  - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
 
 # Phase 1 - Requirements Engineering
@@ -294,7 +295,7 @@ This phase also includes updated references and Kanban and a new Gantt chart to 
 ## Overall Architecture of the System
 The library system needs many functions specified by the customer to be implemented, for example, inventory searching, fine payment, secure login and rule-sets for both normal and super users. A lot of transactional functions exist whilst a desire for data storage and event processing also exists. The system architecture needs to create an amalgamation of many traditional application types.
 
-**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data IBM Corporation (2021).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
+**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data (IBM, 2024).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
 
 ### Use Case Diagrams
 ---
@@ -461,9 +462,9 @@ When there can only be a certain amount of instances of a class in relation to a
 
 <div align=center>
 
-**[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png)**
+**[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVcuO2jAU_ZUoK6aE-QDUTTuoEhIwo9JZNV1c7AvjktipH0wjyr_3Oi87EYt2A_jcc8992lxTpjimy5QVYMxKwElDmUtnUCcf_ywWibGOo7RblC6GLQJ7Q93CQl6IonSdfCCTsEgK_rOl_lROSyiSGDsodc6lsaDtSpiqgJrwx8fEB_D4EDMhMgPNX6AuCYpjNQ6j9CJiax3IuSSrr7CJcM3l3Fgt5Kk5Sigxl4sOqYj1rjQnjiCdQp2E3OAFCwI4WEy4OtBPwp-dnfX-DyRA0FoOSNYLkWn-y4kRdz5kdpd_67ONyvNJHwsFNlT1SWuov_8YDAcoQDJfiybCjOM71mvv_9BAluYwBueR_iyOG433X5sVuXiphSdvQcIJ_TwaiGmkBr6SoTlyLDAch9hDeaFiDrXZkCsBFIOd91ax86SUguxP3jjBLZzxHv8kLvfwkAYta1S7FbbAcARn35Q20wkEqUjJL3uktN5_3oXTvpaqMsJE_O7CRC6r53U4dOZdM4geZEoekabOsMWjDQp3LFKkDInOX4eJTgwvYbC-VEIF62c38c0mLr65vA248Zdn7xhDY0Yzjm7qNWyTR7_VFY6RnSsP_lUYYaMtNMicFrYmZgDxdyX8xe8m49fjCyL1eREX9ERisz5uFsJlfZQsEs9azazXyvq99NtcQf3fQr3_oNgIUfr2KzKs7Oyezr3otzRLS9QlCE5vObU0SfKUqqQupUv6yfEIrrB52lKpA4oWj6VLqx1mqav8y9a9_unyCIUhFLmga7jt_h_81-0vGM5W9g?type=png)**
 
-![Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png "Class Diagram")
+![Class Diagram](https://mermaid.ink/img/pako:eNqVVcuO2jAU_ZUoK6aE-QDUTTuoEhIwo9JZNV1c7AvjktipH0wjyr_3Oi87EYt2A_jcc8992lxTpjimy5QVYMxKwElDmUtnUCcf_ywWibGOo7RblC6GLQJ7Q93CQl6IonSdfCCTsEgK_rOl_lROSyiSGDsodc6lsaDtSpiqgJrwx8fEB_D4EDMhMgPNX6AuCYpjNQ6j9CJiax3IuSSrr7CJcM3l3Fgt5Kk5Sigxl4sOqYj1rjQnjiCdQp2E3OAFCwI4WEy4OtBPwp-dnfX-DyRA0FoOSNYLkWn-y4kRdz5kdpd_67ONyvNJHwsFNlT1SWuov_8YDAcoQDJfiybCjOM71mvv_9BAluYwBueR_iyOG433X5sVuXiphSdvQcIJ_TwaiGmkBr6SoTlyLDAch9hDeaFiDrXZkCsBFIOd91ax86SUguxP3jjBLZzxHv8kLvfwkAYta1S7FbbAcARn35Q20wkEqUjJL3uktN5_3oXTvpaqMsJE_O7CRC6r53U4dOZdM4geZEoekabOsMWjDQp3LFKkDInOX4eJTgwvYbC-VEIF62c38c0mLr65vA248Zdn7xhDY0Yzjm7qNWyTR7_VFY6RnSsP_lUYYaMtNMicFrYmZgDxdyX8xe8m49fjCyL1eREX9ERisz5uFsJlfZQsEs9azazXyvq99NtcQf3fQr3_oNgIUfr2KzKs7Oyezr3otzRLS9QlCE5vObU0SfKUqqQupUv6yfEIrrB52lKpA4oWj6VLqx1mqav8y9a9_unyCIUhFLmga7jt_h_81-0vGM5W9g?type=png "Class Diagram")
 
 </div>
 
@@ -530,7 +531,7 @@ The Activity diagram for this project depicts the process of the program from st
 
 ### State Chart Diagram
 
-The purpose of a state chart diagram is to model the dynamic nature of a system. State chart diagrams act as a graphical representation of changes to components within a system by either internal or external events. A fully comprehensive state chart diagram would cover all possible states - including system crashes - in order for unexpected occurrences to be dealt with by a failsafe. In order to describe the relationship between components, a state chart diagram also includes the flow of control within a system (activities, data passthrough, etc).
+The purpose of a state chart diagram is to model the dynamic nature of a system. State chart diagrams act as a graphical representation of changes to components within a system by either internal or external events. A fully comprehensive state chart diagram would cover all possible states - including system crashes - in order for unexpected occurrences to be dealt with by a failsafe. In order to describe the relationship between components, a state chart diagram also includes the flow of control within a system (activities, data passthrough, etc) (Yildirim, Campean, & Williams, 2017).
 
 <div align=center>
 
@@ -540,7 +541,6 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 
 </div>
 
-<<<<<<< HEAD
 ## Project Planning
 
 ### Gantt Chart
@@ -579,9 +579,11 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 </div>
 
-### Kanban
+## Kanban
 
-Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
+Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections (Radigan, 2023).
+
+Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method (Toyota, 2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
 
 Below is a screenshot of our project Kanban from 01/12/23 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
 
@@ -597,7 +599,7 @@ Below is a screenshot of our project Kanban from 21/01/24.
 
 <div align=center>
 
-**[Figure 3: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
+**[Figure 4: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](kanban2.png)
 
@@ -651,16 +653,25 @@ Pedamkar, P. (2023, 12 04). Incremental Model. Retrieved from educba.com: https:
 
 rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: https://rdrr.io/r/tools/md5sum.html
 
-IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
+IBM. (2024, 01 22). Processing Transaction Systems. Retrieved from IBM: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
 
-Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
+IBM. (2024, 01 21). Sequence Diagrams. Retrieved from IBM.com: https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams
 
-IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
+oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oclc.org/en/dewey.html
 
-Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
+Radigan, D. (2023, 12 08). Software Development - Kanban. Retrieved from atlassian.com: https://www.atlassian.com/agile/kanban
 
+Ramuthi, D. (2024, 01 21). 11 UML diagram Examples: Class, Activity, and More. Retrieved from venngage.com: https://venngage.com/blog/uml-diagram-examples/
 
-Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
+Shelton, B. (2024, 01 21). YouTube | UML Class Diagrams. Retrieved from YouTube.com: https://www.youtube.com/watch?v=6XrL5jXmTwM&ab_channel=LucidSoftware
+
+Toyota. (2023, 12 08). Toyota Production System - Company Information, Vision & Philosophy. Retrieved from Toyota: https://global.toyota/en/company/vision-and-philosophy/production-system/
+
+Visual Paradigm. (2024, 01 21). What is an Activity Diagram? Retrieved from visual-paradigm.com: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+
+Visual Paradigm Online. (2024, 01 21). What are the six types of relationships in UML class diagrams? Retrieved from Visual Paradigm: https://blog.visual-paradigm.com/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
+
+Yildirim, U., Campean, F., & Williams, H. (2017). Function modeling using the system state flow diagram. Artificial Intelligence for Engineering Design, Analysis and Manufacturing. Volume 31, 413-435.
 
 bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexterminatorpro.ca: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
 
