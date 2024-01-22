@@ -35,7 +35,7 @@
     - [Sequence Diagrams](#sequence-diagrams)
     - [Class Diagrams](#class-diagrams)
     - [Activity Diagrams](#activity-diagrams)
-    - [State Chart Diagrams](#state-chart-diagrams)
+    - [State Chart Diagram](#state-chart-diagram)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
       - [Unidimensional](#unidimensional)
@@ -384,10 +384,20 @@ The Activity diagram for this project depicts the process of the program from st
 
 ---
 
+
+
 </div>
 
-### State Chart Diagrams
- 
+
+### State Chart Diagram
+
+The purpose of a state chart diagram is to model the dynamic nature of a system. State chart diagrams act as a graphical representation of changes to components within a system by either internal or external events. A fully comprehensive state chart diagram would cover all possible states - including system crashes - in order for unexpected occurrences to be dealt with by a failsafe. In order to describe the relationship between components, a state chart diagram also includes the flow of control within a system (activities, data passthrough, etc).
+
+<div align=center>
+
+**[State Chart Diagram](State_Chart_Diagram.png)**
+
+![State Chart Diagram](State_Chart_Diagram.png)
 
 ## Project Planning
 
