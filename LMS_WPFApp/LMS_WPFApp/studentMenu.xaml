@@ -1,0 +1,18 @@
+﻿<Window x:Class="LMS_WPFApp.studentMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LMS_WPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="560,212,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" Margin="362,89,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>
+
+
+
+    </Grid>
+</Window>
