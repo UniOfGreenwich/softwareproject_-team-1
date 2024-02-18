@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 
+<<<<<<< HEAD
 namespace LMS_WPFApp
 {
     public partial class studentMenu : Window
@@ -26,3 +27,6 @@ namespace LMS_WPFApp
         }
     }
 }
+=======
+
+>>>>>>> c12f289 (first UI additions)

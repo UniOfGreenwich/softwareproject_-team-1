@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="User Management" Height="450" Width="800">
     <Grid>
         <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
@@ -24,6 +25,15 @@
         <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." SelectionChanged="usernameComboBox_SelectionChanged" FontSize="12"/>
         <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password"/>
+=======
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="createUser" Content="Create User" HorizontalAlignment="Left" Margin="210,280,0,0" VerticalAlignment="Top"/>
+        <Button Content="Delete User" HorizontalAlignment="Left" Margin="546,280,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="deleteUserButton" HorizontalAlignment="Left" Margin="519,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="183,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+>>>>>>> c12f289 (first UI additions)
 
 
     </Grid>
