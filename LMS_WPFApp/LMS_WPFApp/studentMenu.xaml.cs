@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 15a958a (updated cs files for functionality)
 namespace LMS_WPFApp
@@ -88,3 +89,6 @@ namespace LMS_WPFApp
     }
 }
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+
+>>>>>>> 4b11006 (first UI additions)

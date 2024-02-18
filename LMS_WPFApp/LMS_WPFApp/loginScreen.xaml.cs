@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -229,3 +230,7 @@ namespace LMS_WPFApp
     }
 }
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+
+
+>>>>>>> 4b11006 (first UI additions)

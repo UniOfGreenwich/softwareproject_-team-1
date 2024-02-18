@@ -7,6 +7,7 @@
         mc:Ignorable="d"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         Title="Student Menu" Height="450" Width="800">
@@ -27,6 +28,13 @@
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="560,212,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="560,212,0,0" VerticalAlignment="Top"/>
+>>>>>>> 4b11006 (first UI additions)
         <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" Margin="362,89,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>
 
 
