@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+<<<<<<< HEAD
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -111,3 +112,7 @@ namespace LMS_WPFApp
 
     }
 }
+=======
+
+
+>>>>>>> c12f289 (first UI additions)
