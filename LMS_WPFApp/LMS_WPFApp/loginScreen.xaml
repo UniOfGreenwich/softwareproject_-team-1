@@ -1,0 +1,20 @@
+﻿<Window x:Class="LMS_WPFApp.loginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LMS_WPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="passwordTestBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="LMS" VerticalAlignment="Top" AutomationProperties.Name="titleMain" Height="41" Width="47" FontSize="24"/>
+        <Label x:Name="usernameLbl" Content="Username" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="passwordLbl" Content="Password" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="64"/>
+
+    </Grid>
+</Window>
