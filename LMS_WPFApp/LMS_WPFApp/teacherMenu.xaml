@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="createUser" Content="Create User" HorizontalAlignment="Left" Margin="210,280,0,0" VerticalAlignment="Top"/>
-        <Button Content="Delete User" HorizontalAlignment="Left" Margin="546,280,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="50"/>
         <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="deleteUserButton" HorizontalAlignment="Left" Margin="519,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="183,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
+        <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
 
 
     </Grid>
