@@ -21,9 +21,9 @@ namespace LMS_WPFApp
         public paymentGateway()
         {
             InitializeComponent();
-            DataTable.
-            ComboBox cb=new ComboBox();
-            cb.DataContext = db;
+            //DataTable.
+            //ComboBox cb=new ComboBox();
+            //cb.DataContext = db;
 
         }
 
