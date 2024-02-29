@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace LMS_WPFApp
 {
-    internal interface ISystemObjectManager
+    internal interface I_SystemObjectManager
     {
+        void OpenDatabaseFile();
+        void CloseDatabaseFile(string databaseName);
         void CreateNewObject(string objectName);
         void DeleteObject(string objectName);
         void CreateNewField(string fieldName, object fieldValue);
