@@ -6,39 +6,39 @@ using System.Threading.Tasks;
 
 namespace LMS_WPFApp
 {
-    internal class UserManager : ISystemObjectManager
+    internal class UserManager : I_SystemObjectManager
     {
-        void ISystemObjectManager.CreateNewField(string fieldName, object fieldValue)
+        void I_SystemObjectManager.CreateNewField(string fieldName, object fieldValue)
         {
             throw new NotImplementedException();
         }
 
-        void ISystemObjectManager.CreateNewObject(string objectName)
+        void I_SystemObjectManager.CreateNewObject(string objectName)
         {
             throw new NotImplementedException();
         }
 
-        void ISystemObjectManager.DeleteField(string fieldName)
+        void I_SystemObjectManager.DeleteField(string fieldName)
         {
             throw new NotImplementedException();
         }
 
-        void ISystemObjectManager.DeleteObject(string objectName)
+        void I_SystemObjectManager.DeleteObject(string objectName)
         {
             throw new NotImplementedException();
         }
 
-        object ISystemObjectManager.GetFieldContents(string fieldName)
+        object I_SystemObjectManager.GetFieldContents(string fieldName)
         {
             throw new NotImplementedException();
         }
 
-        string ISystemObjectManager.GetObjectName()
+        string I_SystemObjectManager.GetObjectName()
         {
             throw new NotImplementedException();
         }
 
-        void ISystemObjectManager.SetObjectName(string objectName)
+        void I_SystemObjectManager.SetObjectName(string objectName)
         {
             throw new NotImplementedException();
         }
