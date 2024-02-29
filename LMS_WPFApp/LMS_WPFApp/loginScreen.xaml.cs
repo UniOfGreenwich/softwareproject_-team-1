@@ -13,7 +13,14 @@ namespace LMS_WPFApp
             InitializeComponent();
         }
 
+namespace LMS_WPFApp
+{
+    public partial class loginScreen : Window
+    {
+        private void loginButton_Click_1(object sender, RoutedEventArgs e)
+        {
 
+<<<<<<< HEAD
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             
@@ -48,10 +55,13 @@ namespace LMS_WPFApp
                 
                 MessageBox.Show("Invalid username or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+=======
+>>>>>>> 15a958a (updated cs files for functionality)
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             Close();
         }
 
@@ -116,3 +126,9 @@ namespace LMS_WPFApp
 
 
 >>>>>>> c12f289 (first UI additions)
+=======
+
+        }
+    }
+}
+>>>>>>> 15a958a (updated cs files for functionality)
