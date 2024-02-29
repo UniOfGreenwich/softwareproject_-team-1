@@ -28,8 +28,8 @@
 =======
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="50" Click="createUserButton_Click"/>
+        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="50" Click="deleteUserButton_Click"/>
         <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
 <<<<<<< HEAD
         <TextBox x:Name="deleteUserButton" HorizontalAlignment="Left" Margin="519,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>

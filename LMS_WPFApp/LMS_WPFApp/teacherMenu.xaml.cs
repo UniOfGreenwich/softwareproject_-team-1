@@ -229,5 +229,22 @@ namespace LMS_WPFApp
 =======
 ﻿using System.Windows;
 
+namespace LMS_WPFApp
+{
+    public partial class teacherMenu : Window
+    {
+        private void createUserButton_Click(object sender, RoutedEventArgs e)
+        {
 
+<<<<<<< HEAD
 >>>>>>> c12f289 (first UI additions)
+=======
+        }
+
+        private void deleteUserButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}
+>>>>>>> 15a958a (updated cs files for functionality)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.Windows;
 =======
 ﻿using System;
@@ -17,11 +18,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 //using System.Windows.Forms;
 >>>>>>> d5f169f (added payment window UI start)
+=======
+﻿using System.Windows;
+>>>>>>> 15a958a (updated cs files for functionality)
 
 namespace LMS_WPFApp
 {
     public partial class paymentGateway : Window
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
@@ -36,16 +41,24 @@ namespace LMS_WPFApp
         private void cancelPayFeesButton_Click(object sender, RoutedEventArgs e)
 =======
         public paymentGateway()
+=======
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+>>>>>>> 15a958a (updated cs files for functionality)
         {
-            InitializeComponent();
-            //DataTable.
-            //ComboBox cb=new ComboBox();
-            //cb.DataContext = db;
 
         }
 
+<<<<<<< HEAD
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 >>>>>>> d5f169f (added payment window UI start)
+=======
+        private void payFeesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cancelPayFeesButton_Click(object sender, RoutedEventArgs e)
+>>>>>>> 15a958a (updated cs files for functionality)
         {
 
         }
