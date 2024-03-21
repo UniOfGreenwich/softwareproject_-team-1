@@ -1,1 +1,25 @@
-﻿username,access level,lastName,firstName,balance,itemWithdrawn1,itemWithdrawn2,itemWithdrawn3,itemWithdrawn4,itemWithdrawn5,returnTime1,returnTime2,returnTime3,returnTime4,returnTime5
+﻿username,accessLevel,lastName,firstName,balance,password
+jd1234a,0,Doe,John,-4.70,password123
+as5678b,1,Smith,Alice,0.50,secure456
+rw9012c,0,Williams,Robert,-3.20,adminPass789
+mm6789d,0,Miller,Mary,-2.50,student321
+bh3456e,0,Harris,Benjamin,0.10,teacher789
+cc9012f,0,Clark,Catherine,-4.00,adminPass123
+rg5678g,0,Garcia,Richard,-3.50,student987
+ws1234h,0,Scott,Wendy,1.00,teacher567
+ph9012i,0,Hill,Patrick,0.70,adminPass456
+kb5678j,0,Baker,Katherine,-1.50,student654
+dt1234k,1,Turner,David,0.20,teacher234
+gw5678l,0,White,Gloria,-2.80,adminPass321
+mt9012m,0,Moore,Thomas,0.00,student432
+tp5678n,1,Parker,Taylor,0.30,teacher876
+rb1234o,2,Brooks,Rebecca,-3.60,adminPass654
+ly9012p,0,Young,Lisa,-1.00,student765
+hn5678q,0,Nguyen,Henry,0.60,teacher345
+cw1234r,0,Watson,Caroline,-2.10,adminPass987
+tt5678s,0,Taylor,Tracy,-1.20,student543
+rw9012t,1,Reed,Rachel,0.90,teacher432
+vm1234u,2,Moore,Vanessa,-3.40,adminPass555
+hx5678v,0,Xu,Helen,-2.30,student789
+kt1234w,1,Tan,Kevin,0.80,teacher678
+sg5678x,0,Singh,Sarah,-3.90,adminPass888
