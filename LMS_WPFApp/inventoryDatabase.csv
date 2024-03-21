@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 498a434 (User Database update, added addUser screen.)
 ﻿title,ISBN,authors,doi,journal,conference,synopsis,deweyDecimal,possession,possessionStart,duration
 To Kill a Mockingbird,978-0-06-112008-4,Harper Lee,,,,To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful winning the Pulitzer Prize and has become a classic of modern American literature.,813.54.1,,,
 To Kill a Mockingbird,978-0-06-112008-4,Harper Lee,,,,To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful winning the Pulitzer Prize and has become a classic of modern American literature.,813.54.2,,,
@@ -25,6 +28,7 @@ Journal of Personality and Social Psychology,,Various,,Journal of Personality an
 Nature,,Various,,Nature,,Nature is a multidisciplinary scientific journal that publishes original research across a wide range of scientific disciplines including biology chemistry physics and earth sciences.,500.0.1,,,
 Science,,Various,,Science,,Science is a leading peer-reviewed scientific journal that covers a wide range of scientific disciplines including biology chemistry physics and social sciences. It publishes original research reviews and commentary.,500.0.1,,,
 The Lancet,,Various,,The Lancet,,The Lancet is a prestigious medical journal that publishes original research reviews and commentary on various aspects of medicine and healthcare including clinical trials public health and global health issues.,610.0.1,,,
+<<<<<<< HEAD
 =======
 ﻿title,ISBN,authors,doi,journal,conference,synopsis,deweyDecimal
 To Kill a Mockingbird,978-0-06-112008-4,Harper Lee,,,,To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful winning the Pulitzer Prize and has become a classic of modern American literature.,813.54
@@ -52,3 +56,5 @@ Nature,,Various,,Nature,,Nature is a multidisciplinary scientific journal that p
 Science,,Various,,Science,,Science is a leading peer-reviewed scientific journal that covers a wide range of scientific disciplines including biology chemistry physics and social sciences. It publishes original research reviews and commentary.,500
 The Lancet,,Various,,The Lancet,,The Lancet is a prestigious medical journal that publishes original research reviews and commentary on various aspects of medicine and healthcare including clinical trials public health and global health issues.,610
 >>>>>>> 91bd0b5 (databases were not added last week, here they are)
+=======
+>>>>>>> 498a434 (User Database update, added addUser screen.)
