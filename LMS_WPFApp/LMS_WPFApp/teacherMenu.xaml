@@ -28,6 +28,7 @@
 =======
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+<<<<<<< HEAD
         <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="50" Click="createUserButton_Click"/>
         <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="50" Click="deleteUserButton_Click"/>
         <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
@@ -39,6 +40,20 @@
         <TextBox HorizontalAlignment="Left" Margin="500,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
         <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
 >>>>>>> d5f169f (added payment window UI start)
+=======
+        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
+        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="75" Click="deleteUserButton_Click"/>
+        <TextBlock x:Name="addUserTitle" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="User Management" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="85,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="221,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="85,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="Balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="221,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="86,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name"/>
+        <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="221,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name"/>
+        <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="86,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Access Level"/>
+        <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="221,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance"/>
+
+>>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
 
 
     </Grid>
