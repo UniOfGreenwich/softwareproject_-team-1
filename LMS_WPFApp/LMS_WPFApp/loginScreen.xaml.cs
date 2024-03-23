@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -12,13 +13,22 @@ namespace LMS_WPFApp
         {
             InitializeComponent();
         }
+=======
+using System.Windows.Navigation;
+>>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
 
 namespace LMS_WPFApp
 {
     public partial class loginScreen : Window
     {
+        public loginScreen()
+        {
+            InitializeComponent();
+        }
+
         private void loginButton_Click_1(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +67,11 @@ namespace LMS_WPFApp
             }
 =======
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+            teacherMenu teacherMenu = new teacherMenu();
+            teacherMenu.Show();
+            Close();
+>>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
@@ -129,6 +144,8 @@ namespace LMS_WPFApp
 =======
 
         }
+
+
     }
 }
 >>>>>>> 15a958a (updated cs files for functionality)
