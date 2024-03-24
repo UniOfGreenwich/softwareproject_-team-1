@@ -19,7 +19,7 @@ namespace LMS_WPFApp
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
 
