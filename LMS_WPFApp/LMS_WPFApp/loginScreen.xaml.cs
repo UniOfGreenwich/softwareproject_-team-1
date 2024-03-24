@@ -77,6 +77,7 @@ namespace LMS_WPFApp
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             Close();
         }
 
@@ -143,6 +144,9 @@ namespace LMS_WPFApp
 >>>>>>> c12f289 (first UI additions)
 =======
 
+=======
+            Close();
+>>>>>>> cf83c19 (Further Functionality to the User Management Window)
         }
 
 
