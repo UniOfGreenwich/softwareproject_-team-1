@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
 using System.Threading;
 
 namespace LMS_WPFApp
@@ -22,6 +25,7 @@ namespace LMS_WPFApp
         }
         private void PopulateComboBox()
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             usernameToDeleteCombo.Items.Clear();
@@ -254,21 +258,24 @@ namespace LMS_WPFApp
 >>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
 =======
             // Clear the ComboBox items
+=======
+            
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
             usernameToDeleteCombo.Items.Clear();
 
-            // Path to the CSV file
-            string filePath = "userData.csv";
+            
+            string filePath = "userDatabase.csv";
 
-            // Read all lines from the CSV file
+            
             string[] lines = File.ReadAllLines(filePath);
 
-            // Iterate through each line and add usernames to the ComboBox
-            foreach (string line in lines.Skip(1)) // Skip header line
+            
+            foreach (string line in lines.Skip(1))
             {
                 string[] fields = line.Split(',');
 
-                // Add username to the ComboBox
-                usernameToDeleteCombo.Items.Add(fields[0]); // Assuming username is the first field
+                
+                usernameToDeleteCombo.Items.Add(fields[0]);
             }
         }
         
@@ -280,36 +287,35 @@ namespace LMS_WPFApp
             {
                 return;
             }
-            MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete the user with the username '{usernameToDelete}'?",
-                                              "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete the user with the username '{usernameToDelete}'?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
             {
-                // Path to the CSV file
-                string filePath = "userData.csv";
 
-                // Read all lines from the CSV file
+                string filePath = "userDatabase.csv";
+
+
                 string[] lines = File.ReadAllLines(filePath);
 
                 bool userFound = false;
 
-                // Open a StreamWriter to write back to the CSV file
+
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
                     foreach (string line in lines)
                     {
-                        // Split the line into fields
+                       
                         string[] fields = line.Split(',');
 
-                        // Check if the username matches
+                       
                         if (fields.Length > 0 && fields[0] == usernameToDelete)
                         {
-                            // Skip this line (i.e., don't write it back to the file)
+                       
                             userFound = true;
                             continue;
                         }
 
-                        // Write the line back to the file
+                       
                         writer.WriteLine(line);
                     }
                 }
@@ -336,7 +342,7 @@ namespace LMS_WPFApp
             string passwordValue = password.Text;
 
             if (firstNameValue == "Enter text here..." || lastNameValue == "Enter text here..." || accessLevelValue == "Enter text here..." || balanceValue == "Enter text here..." || passwordValue == "Enter text here..." || 
-                ContainsNumber(firstNameValue) || ContainsNumber(lastNameValue) || !IsNumeric(accessLevelValue) || !IsNumeric(balanceValue))
+                ContainsNumber(firstNameValue) || ContainsNumber(lastNameValue) || !IsNumeric(accessLevelValue) || !IsNumeric(balanceValue) || (accessLevelValue != "0" && accessLevelValue != "1"))
             {
                 MessageBox.Show("Incorrect Input", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
@@ -351,26 +357,27 @@ namespace LMS_WPFApp
             }
             string username = GenerateUsername(firstNameValue, lastNameValue);
 
-            // Path to the CSV file
-            string filePath = "userData.csv";
 
-            // Write data to the CSV file
+            string filePath = "userDatabase.csv";
+
+
             using (StreamWriter writer = new StreamWriter(filePath, true, Encoding.UTF8))
             {
-                // If the file doesn't exist, write header
+
                 if (new FileInfo(filePath).Length == 0)
                 {
                     writer.WriteLine("Username,Password,First Name,Last Name,Access Level,Balance");
                 }
 
-                // Write data to the file
-                writer.WriteLine($"{username},{passwordValue},{firstNameValue},{lastNameValue},{accessLevelValue},{balanceValue}"); ;
+
+                writer.WriteLine($"{username},{passwordValue},{accessLevelValue},{firstNameValue},{lastNameValue},{balanceValue}");
+                
             }
 
-            // Optionally, you can display a message indicating that the data has been saved.
-            MessageBox.Show("User data has been saved to userData.csv", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
+            MessageBox.Show($"Generated Username: '{username}' Password: '{passwordValue}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
+            return;
         }
         
         private bool ContainsNumber(string text)
@@ -420,7 +427,7 @@ namespace LMS_WPFApp
             // Username Construction
             string username = $"{firstName[0]}{lastName[0]}{randomNumber}{randomLetter}";
 
-            string filePath = "userData.csv";
+            string filePath = "userDatabase.csv";
 
             if (UsernameExists(filePath,username))
             {
@@ -431,26 +438,32 @@ namespace LMS_WPFApp
         }
         private bool UsernameExists(string filePath, string username)
         {
-            // Read all lines from the CSV file
+
             string[] lines = File.ReadAllLines(filePath);
 
-            // Iterate through each line and check if the username exists
+
             foreach (string line in lines)
             {
                 string[] fields = line.Split(',');
-                string existingUsername = fields[0]; // Assuming username is the first field
+                string existingUsername = fields[0];
 
-                // Check if the username matches
+                
                 if (existingUsername == username)
                 {
-                    return true; // Username already exists
+                    return true;
                 }
             }
 
-            return false; // Username does not exist
+            return false;
         }
 
         private void usernameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            return;
+        }
+
+        private void balance_TextChanged(object sender, TextChangedEventArgs e)
         {
             return;
         }

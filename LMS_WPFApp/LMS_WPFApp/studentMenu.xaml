@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         Title="Student Menu" Height="450" Width="800">
     <Grid>
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
