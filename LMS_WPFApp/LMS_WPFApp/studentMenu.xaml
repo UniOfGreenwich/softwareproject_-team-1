@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Student Menu" Height="450" Width="800">
     <Grid>
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
