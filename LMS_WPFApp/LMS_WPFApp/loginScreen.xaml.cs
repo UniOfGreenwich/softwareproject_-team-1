@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -16,6 +17,11 @@ namespace LMS_WPFApp
 =======
 using System.Windows.Navigation;
 >>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
+=======
+using System.IO;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
 
 namespace LMS_WPFApp
 {
@@ -26,13 +32,17 @@ namespace LMS_WPFApp
             InitializeComponent();
         }
 
-        private void loginButton_Click_1(object sender, RoutedEventArgs e)
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+=======
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
             
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Password;
@@ -65,6 +75,7 @@ namespace LMS_WPFApp
                 
                 MessageBox.Show("Invalid username or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+<<<<<<< HEAD
 =======
 >>>>>>> 15a958a (updated cs files for functionality)
 =======
@@ -72,6 +83,8 @@ namespace LMS_WPFApp
             teacherMenu.Show();
             Close();
 >>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
+=======
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
@@ -135,6 +148,7 @@ namespace LMS_WPFApp
         }
 
 
+<<<<<<< HEAD
 
     }
 }
@@ -149,6 +163,8 @@ namespace LMS_WPFApp
 >>>>>>> cf83c19 (Further Functionality to the User Management Window)
         }
 
+=======
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
 
     }
 }

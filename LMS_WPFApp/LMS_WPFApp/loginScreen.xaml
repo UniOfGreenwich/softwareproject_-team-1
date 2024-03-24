@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
 <<<<<<< HEAD
+<<<<<<< HEAD
         Title="Library Management System" Height="450" Width="800">
     <Grid>
 
@@ -15,17 +16,24 @@
         <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="120"/>
 =======
         Title="MainWindow" Height="450" Width="800">
+=======
+        Title="Library Management System" Height="450" Width="800">
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
     <Grid>
 
-        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top" Click="loginButton_Click_1"/>
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top" Click="loginButton_Click"/>
         <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top" Click="quitButton_Click"/>
         <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <TextBox x:Name="passwordTestBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 >>>>>>> c12f289 (first UI additions)
 =======
         <TextBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="120"/>
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         <TextBlock HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="LMS" VerticalAlignment="Top" AutomationProperties.Name="titleMain" Height="41" Width="47" FontSize="24"/>
         <Label x:Name="usernameLbl" Content="Username" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top"/>
         <Label x:Name="passwordLbl" Content="Password" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="64"/>
