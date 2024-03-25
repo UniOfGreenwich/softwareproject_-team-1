@@ -4,28 +4,29 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace LMS_WPFApp
 {
     public class InventoryManager : I_SystemObjectManager
     {
         private List<List<string>>? inventoryList;
-        private static string databasePath = "C:/Data/InventoryDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
-        private List<string> headers { get; set; }
-        public string? Title { get; set; }
-        public string? Author { get; set; }
-        public string? Description { get; set; }
-        public string? ISBN {  get; set; }
-        public string? TotalQuantity { get; set; }
-        public string? RentedQuantity { get; set; }
+        private static readonly string databasePath = "C:/Data/InventoryDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
+        private List<string>? tableHeaders { get; set; }
+        public string? title { get; set; }
+        public string? author { get; set; }
+        public string? description { get; set; }
+        public string? iSBN { get; set; }
+        public string? totalQuantity { get; set; }
+        public string? rentedQuantity { get; set; }
 
         void I_SystemObjectManager.OpenDatabaseFile()
         {
-            using(var reader = new StreamReader(databasePath))
+            using (var reader = new StreamReader(databasePath))
             {
                 this.inventoryList = new List<List<string>>();
-                this.headers = new List<string>();
-                while(!reader.EndOfStream)
+                this.tableHeaders = new List<string>();
+                while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(',');
@@ -39,12 +40,13 @@ namespace LMS_WPFApp
                 }
                 reader.Close();
             }
-            this.headers = inventoryList[0];
+            this.tableHeaders = inventoryList[0];
         }
         void I_SystemObjectManager.CloseDatabaseFile(List<List<string>> inventoryList)
         {
-            string inventoryString = '';
-            string rowString = '';
+            string inventoryString;
+            string rowString;
+
             using (var writer = new StreamWriter(databasePath))
             {
                 foreach (var row in inventoryList)
@@ -63,18 +65,17 @@ namespace LMS_WPFApp
 
         void I_SystemObjectManager.CreateNewField(string fieldName, List<List<string>> inventoryList)
         {
-            
-            headers.Add(fieldName);
+            tableHeaders.Add(fieldName);
             foreach (var row in inventoryList)
             {
-                row.Add(null);
+                row.Add("");
             }
         }
 
         void I_SystemObjectManager.CreateNewObject(string objectName)
         {
-            List<string> headers = 
-            
+            tableHeaders.ForEach(tableHeaders.Add();
+
         }
 
         void I_SystemObjectManager.DeleteField(string fieldName)
@@ -89,17 +90,21 @@ namespace LMS_WPFApp
 
         object I_SystemObjectManager.GetFieldContents(string fieldName)
         {
-            throw new NotImplementedException();
+            inventoryList.Find(fieldName);
         }
 
-        string I_SystemObjectManager.GetObjectName()
+        void I_SystemObjectManager.EditObject(string objectName, List<string> editedItems)
         {
-            throw new NotImplementedException();
-        }
-
-        void I_SystemObjectManager.SetObjectName(string objectName)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                int foundIndex = inventoryList.FindIndex(objectName);
+                inventoryList.RemoveAt(foundIndex);
+                inventoryList.Insert(foundIndex, editedItems);
+            }
+            catch
+            {
+                throw new Exception("Object not found!");
+            }
         }
     }
 }
