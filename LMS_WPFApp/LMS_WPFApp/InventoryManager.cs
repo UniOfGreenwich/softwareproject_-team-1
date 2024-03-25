@@ -136,8 +136,8 @@ namespace LMS_WPFApp
             int foundIndex = FindObjectInList(objectName);
             inventoryList.RemoveAt(foundIndex);
             inventoryList.Insert(foundIndex, editedItems);
-        }
 
+        }
         int FindObjectInList(string objectName)
         {
             List<string> objectNameColumn = new List<string>();
@@ -146,12 +146,6 @@ namespace LMS_WPFApp
                 objectNameColumn.Add(inventoryList[i][0]);
             }
             return objectNameColumn.FindIndex(name => name == objectName);
-        }
-
-        string I_SystemObjectManager.GetSpecificObjectData(string objectName, string fieldName)
-        {
-            int specificIndex = tableHeaders.IndexOf(fieldName);
-            return inventoryList[FindObjectInList(objectName)][specificIndex];
         }
     }
 }
