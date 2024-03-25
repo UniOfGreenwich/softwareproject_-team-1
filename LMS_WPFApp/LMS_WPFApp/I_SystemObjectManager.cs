@@ -9,13 +9,12 @@ namespace LMS_WPFApp
     internal interface I_SystemObjectManager
     {
         void OpenDatabaseFile();
-        void CloseDatabaseFile(string databaseName);
+        void CloseDatabaseFile(List<List<string>> inventoryList);
         void CreateNewObject(string objectName);
+        void EditObject(string objectName, List<string> editedItems);
         void DeleteObject(string objectName);
         void CreateNewField(string fieldName, object fieldValue);
         void DeleteField(string fieldName);
-        string GetObjectName();
-        void SetObjectName(string objectName);
         object GetFieldContents(string fieldName);
     }
 }
