@@ -16,5 +16,6 @@ namespace LMS_WPFApp
         void CreateNewField(string fieldName, List<List<string>> inventoryList);
         void DeleteField(string fieldName);
         List<string> GetObjectInfo(string objectName);
+        string GetSpecificObjectData(string objectName, string fieldName);
     }
 }

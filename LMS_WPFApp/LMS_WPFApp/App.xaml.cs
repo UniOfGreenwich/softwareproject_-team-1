@@ -9,6 +9,7 @@ namespace LMS_WPFApp
     /// </summary>
     public partial class App : Application
     {
+
     }
 
 }
