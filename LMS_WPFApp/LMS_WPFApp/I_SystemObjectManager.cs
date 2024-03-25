@@ -10,11 +10,11 @@ namespace LMS_WPFApp
     {
         void OpenDatabaseFile();
         void CloseDatabaseFile(List<List<string>> inventoryList);
-        void CreateNewObject(string objectName);
+        void CreateNewObject(List<string> objectItems);
         void EditObject(string objectName, List<string> editedItems);
         void DeleteObject(string objectName);
-        void CreateNewField(string fieldName, object fieldValue);
+        void CreateNewField(string fieldName, List<List<string>> inventoryList);
         void DeleteField(string fieldName);
-        object GetFieldContents(string fieldName);
+        List<string> GetObjectInfo(string objectName);
     }
 }

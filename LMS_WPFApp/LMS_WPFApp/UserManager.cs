@@ -8,12 +8,17 @@ namespace LMS_WPFApp
 {
     internal class UserManager : I_SystemObjectManager
     {
-        void I_SystemObjectManager.CreateNewField(string fieldName, object fieldValue)
+        void I_SystemObjectManager.CloseDatabaseFile(List<List<string>> inventoryList)
         {
             throw new NotImplementedException();
         }
 
-        void I_SystemObjectManager.CreateNewObject(string objectName)
+        void I_SystemObjectManager.CreateNewField(string fieldName, List<List<string>> inventoryList)
+        {
+            throw new NotImplementedException();
+        }
+
+        void I_SystemObjectManager.CreateNewObject(List<string> objectItems)
         {
             throw new NotImplementedException();
         }
@@ -28,17 +33,17 @@ namespace LMS_WPFApp
             throw new NotImplementedException();
         }
 
-        object I_SystemObjectManager.GetFieldContents(string fieldName)
+        void I_SystemObjectManager.EditObject(string objectName, List<string> editedItems)
         {
             throw new NotImplementedException();
         }
 
-        string I_SystemObjectManager.GetObjectName()
+        List<string> I_SystemObjectManager.GetObjectInfo(string objectName)
         {
             throw new NotImplementedException();
         }
 
-        void I_SystemObjectManager.SetObjectName(string objectName)
+        void I_SystemObjectManager.OpenDatabaseFile()
         {
             throw new NotImplementedException();
         }
