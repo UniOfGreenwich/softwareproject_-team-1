@@ -4,9 +4,13 @@ namespace LMS_WPFApp
 {
     public partial class studentMenu : Window
     {
-        public studentMenu()
+        private UserManager Users;
+        private InventoryManager Inventory;
+        public studentMenu(UserManager users, InventoryManager inventory)
         {
             InitializeComponent();
+            this.Users = users;
+            this.Inventory = inventory;
         }
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
