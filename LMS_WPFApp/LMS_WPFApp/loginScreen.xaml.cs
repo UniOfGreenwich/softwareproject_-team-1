@@ -52,7 +52,7 @@ namespace LMS_WPFApp
             switch(Int32.Parse(Users.GetSpecificObjectData(username, "accessLevel")))
             {
                 default:
-                    studentMenu studentMenu = new studentMenu(Users, Inventory);
+                    studentMenu studentMenu = new studentMenu(Users, Inventory, username);
                     studentMenu.Show();
                     break;
 
