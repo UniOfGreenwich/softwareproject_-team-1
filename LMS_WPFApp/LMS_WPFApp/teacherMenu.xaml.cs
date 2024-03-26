@@ -16,10 +16,20 @@ namespace LMS_WPFApp
 {
     public partial class teacherMenu : Window
     {
-        
+        private UserManager Users;
+        private InventoryManager Inventory;
+
+        public teacherMenu(UserManager users, InventoryManager inventory)
+        {
+            InitializeComponent();
+            this.Users = users;
+            this.Inventory = inventory;
+            PopulateComboBox();
+        }
+
         private void backTeacherMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            loginScreen loginScreen = new loginScreen();
+            loginScreen loginScreen = new loginScreen(Users,Inventory);
             loginScreen.Show();
             Close();
         }
@@ -27,122 +37,56 @@ namespace LMS_WPFApp
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
+=======
+>>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
             usernameToDeleteCombo.Items.Clear();
-
-            
-            string filePath = "userDatabase.csv";
-
-            
-            string[] lines = File.ReadAllLines(filePath);
-
-            
-            foreach (string line in lines.Skip(1))
+            foreach (string username in Users.GetObjectsFromField("username"))
             {
-                string[] fields = line.Split(',');
-
-                
-                usernameToDeleteCombo.Items.Add(fields[0]);
+                usernameToDeleteCombo.Items.Add(username);
             }
+
+            //TOBY!!! Delete this if you're happy with the above^
+
+            //string filePath = "userDatabase.csv";
+            //string[] lines = File.ReadAllLines(filePath);
+            //foreach (string line in lines.Skip(1))
+            //{
+            //    string[] fields = line.Split(',');
+            //    usernameToDeleteCombo.Items.Add(fields[0]);
         }
         
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             string usernameToDelete = usernameToDeleteCombo.Text;
-            if (usernameToDelete == "Enter text here...")
-            {
-                return;
-            }
+            
             MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete the user with the username '{usernameToDelete}'?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
             {
+                Users.DeleteObject(usernameToDelete);
 
-                string filePath = "userDatabase.csv";
-
-
-                string[] lines = File.ReadAllLines(filePath);
-
-                bool userFound = false;
-
-
-                using (StreamWriter writer = new StreamWriter(filePath))
-                {
-                    foreach (string line in lines)
-                    {
-                       
-                        string[] fields = line.Split(',');
-
-                       
-                        if (fields.Length > 0 && fields[0] == usernameToDelete)
-                        {
-                       
-                            userFound = true;
-                            continue;
-                        }
-
-                       
-                        writer.WriteLine(line);
-                    }
-                }
-
-                if (userFound)
-                {
-                    MessageBox.Show($"User with username '{usernameToDelete}' has been deleted.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
-                    usernameToDeleteCombo.Text = "Select a user to delete...";
-                    PopulateComboBox();
-                } else
-                {
-                    MessageBox.Show($"User '{usernameToDelete}' does not exist.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                
-            }
-            
+                MessageBox.Show($"User with username '{usernameToDelete}' has been deleted.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                usernameToDeleteCombo.Text = "Select a user to delete...";
+                PopulateComboBox();
+            }   
         }
         private void createUserButton_Click(object sender, RoutedEventArgs e)
         {
-            string firstNameValue = firstName.Text.ToLower();
-            string lastNameValue = lastName.Text.ToLower();
-            string accessLevelValue = accessLevel.Text;
-            string balanceValue = balance.Text;
-            string passwordValue = password.Text;
+            List<string> newUserList = new List<string>();
 
-            if (firstNameValue == "Enter text here..." || lastNameValue == "Enter text here..." || accessLevelValue == "Enter text here..." || balanceValue == "Enter text here..." || passwordValue == "Enter text here..." || 
-                ContainsNumber(firstNameValue) || ContainsNumber(lastNameValue) || !IsNumeric(accessLevelValue) || !IsNumeric(balanceValue) || (accessLevelValue != "0" && accessLevelValue != "1"))
-            {
-                MessageBox.Show("Incorrect Input", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            } else
-            {
-                firstName.Text = "Enter text here...";
-                lastName.Text = "Enter text here...";
-                accessLevel.Text = "Enter text here...";
-                balance.Text = "Enter text here...";
-                password.Text = "Enter text here...";
+            string username = GenerateUsername(firstName.Text, lastName.Text);
 
-            }
-            string username = GenerateUsername(firstNameValue, lastNameValue);
+            newUserList.Add(username);
+            newUserList.Add(accessLevel.Text);
+            newUserList.Add(lastName.Text.ToLower());
+            newUserList.Add(firstName.Text.ToLower());
+            newUserList.Add(balance.Text);
+            newUserList.Add(password.Text);
 
-
-            string filePath = "userDatabase.csv";
-
-
-            using (StreamWriter writer = new StreamWriter(filePath, true, Encoding.UTF8))
-            {
-
-                if (new FileInfo(filePath).Length == 0)
-                {
-                    writer.WriteLine("Username,Password,First Name,Last Name,Access Level,Balance");
-                }
-
-
-                writer.WriteLine($"{username},{passwordValue},{accessLevelValue},{firstNameValue},{lastNameValue},{balanceValue}");
-                
-            }
-
-
-            MessageBox.Show($"Generated Username: '{username}' Password: '{passwordValue}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
-
+            Users.CreateNewObject(newUserList);
+            MessageBox.Show($"Generated Username: '{username}' Password: '{password.Text}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
         
@@ -155,14 +99,6 @@ namespace LMS_WPFApp
         {
             return double.TryParse(text, out _);
         }
-
-        public teacherMenu()
-        {
-            InitializeComponent();
-            PopulateComboBox();
-        }
-
-
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {

@@ -10,11 +10,19 @@ namespace LMS_WPFApp
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         public studentMenu()
+=======
+        private UserManager Users;
+        private InventoryManager Inventory;
+        public studentMenu(UserManager users, InventoryManager inventory)
+>>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
         {
             InitializeComponent();
+            this.Users = users;
+            this.Inventory = inventory;
         }
 <<<<<<< HEAD
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
