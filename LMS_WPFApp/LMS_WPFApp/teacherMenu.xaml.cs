@@ -26,7 +26,6 @@ namespace LMS_WPFApp
             this.Inventory = inventory;
             PopulateComboBox();
         }
-
         private void backTeacherMenuButton_Click(object sender, RoutedEventArgs e)
         {
             loginScreen loginScreen = new loginScreen(Users,Inventory);
@@ -46,17 +45,7 @@ namespace LMS_WPFApp
             {
                 usernameToDeleteCombo.Items.Add(username);
             }
-
-            //TOBY!!! Delete this if you're happy with the above^
-
-            //string filePath = "userDatabase.csv";
-            //string[] lines = File.ReadAllLines(filePath);
-            //foreach (string line in lines.Skip(1))
-            //{
-            //    string[] fields = line.Split(',');
-            //    usernameToDeleteCombo.Items.Add(fields[0]);
         }
-        
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             string usernameToDelete = usernameToDeleteCombo.Text;
@@ -89,17 +78,6 @@ namespace LMS_WPFApp
             MessageBox.Show($"Generated Username: '{username}' Password: '{password.Text}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
-        
-        private bool ContainsNumber(string text)
-        {
-            return text.Any(char.IsDigit);
-        }
-
-        private bool IsNumeric(string text)
-        {
-            return double.TryParse(text, out _);
-        }
-
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -108,7 +86,6 @@ namespace LMS_WPFApp
                 tb.Text = "";
             }
         }
-
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -129,42 +106,20 @@ namespace LMS_WPFApp
             // Username Construction
             string username = $"{firstName[0]}{lastName[0]}{randomNumber}{randomLetter}";
 
-            string filePath = "userDatabase.csv";
-
-            if (UsernameExists(filePath,username))
+            if (Users.FindObjectInList(username) != -1)
+            {
+                return username;
+            }
+            else
             {
                 return GenerateUsername(firstName, lastName);
             }
-
-            return username;
         }
-        private bool UsernameExists(string filePath, string username)
-        {
-
-            string[] lines = File.ReadAllLines(filePath);
-
-
-            foreach (string line in lines)
-            {
-                string[] fields = line.Split(',');
-                string existingUsername = fields[0];
-
-                
-                if (existingUsername == username)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         private void usernameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
             return;
         }
-
         private void balance_TextChanged(object sender, TextChangedEventArgs e)
         {
             return;

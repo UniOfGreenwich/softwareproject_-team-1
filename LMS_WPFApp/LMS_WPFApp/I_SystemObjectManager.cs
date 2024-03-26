@@ -11,7 +11,7 @@ namespace LMS_WPFApp
         void OpenDatabaseFile();
         void CloseDatabaseFile();
         public void CreateNewObject(List<string> objectItems);
-        void EditObject(string objectName, List<string> editedItems);
+        void EditObject(string objectName, string editedItem, string fieldName);
         void DeleteObject(string objectName);
         void CreateNewField(string fieldName, List<List<string>> objectList);
         void DeleteField(string fieldName);
