@@ -9,13 +9,21 @@ namespace LMS_WPFApp
     public partial class loginScreen : Window
     {
         UserManager Users = new UserManager();
+        InventoryManager Inventory = new InventoryManager();
 
         public loginScreen()
         {
             InitializeComponent();
-            
+            Users.OpenDatabaseFile();
+            Inventory.OpenDatabaseFile();
         }
 
+        public loginScreen(UserManager users, InventoryManager inventory)
+        {
+            InitializeComponent();
+            this.Users = users;
+            this.Inventory = inventory;
+        }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -27,61 +35,43 @@ namespace LMS_WPFApp
             // Checks if user exists in database.
             if (Users.FindObjectInList(username) == -1)
             {
-                throw new Exception("Username not found. Are you a bot?");
+                MessageBox.Show("Username not found. Are you a bot?", "Oopsie Poopsie!", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+                //throw new Exception("Username not found. Are you a bot?");
             }
 
             // Checks if password is null or password is not equal to value returned from database.
-            if (password == null || password != Users.GetSpecificObjectData(username, "Password"))
+            if (password == null || password != Users.GetSpecificObjectData(username, "password"))
             {
-                throw new Exception("Invalid password! Try again..");
+                MessageBox.Show("Password not valid.", "Oopsie Poopsie!", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+                //throw new Exception("Invalid password! Try again..");
             }
 
             // Gets access level from Users. Switch statement to choose which menu based on access.
-            switch(Int32.Parse(Users.GetSpecificObjectData(username, "AccessLevel")))
+            switch(Int32.Parse(Users.GetSpecificObjectData(username, "accessLevel")))
             {
                 default:
-                    studentMenu studentMenu = new studentMenu();
+                    studentMenu studentMenu = new studentMenu(Users, Inventory);
+                    studentMenu.Show();
                     break;
 
                 case 1:
-                    teacherMenu teacherMenu = new teacherMenu();
+                    teacherMenu teacherMenu = new teacherMenu(Users, Inventory);
+                    teacherMenu.Show();
                     break;
             }
 
             // Close window after login?
             Close();
-            
-            //bool isAuthenticated = AuthenticateUser(username, password);
-
-            //if (isAuthenticated)
-            //{
-                
-            //    string accessLevel = GetUserAccessLevel(username);
-                
-            //    if (accessLevel == "1")
-            //    {
-            //        teacherMenu teacherMenu = new teacherMenu();
-            //        teacherMenu.Show();
-            //    }
-            //    else if (accessLevel == "0")
-            //    {
-            //        studentMenu studentMenu = new studentMenu();
-            //        studentMenu.Show();
-            //    }
-
-                
-            //    Close();
-            //}
-            //else
-            //{
-                
-            //    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
+        
         }
 
         // Closes application window if quit pressed
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
+            Users.CloseDatabaseFile();
+            Inventory.CloseDatabaseFile();
             Close();
         }
 

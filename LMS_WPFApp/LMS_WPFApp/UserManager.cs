@@ -2,70 +2,85 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LMS_WPFApp
 {
-    internal class UserManager : I_SystemObjectManager
+    public class UserManager : I_SystemObjectManager
     {
-        private static readonly string databasePath = "C:/Data/UserDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
-        private List<List<string>>? userList;
-        private List<string>? tableHeaders { get; set; }
+        private static readonly string databasePath = "userDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
+        public List<List<string>>? userList;
+        public List<string>? tableHeaders { get; set; }
 
-        void I_SystemObjectManager.OpenDatabaseFile()
+        public void OpenDatabaseFile()
         {
-            // open file using StreamReader class
-            using (var reader = new StreamReader(databasePath))
+            try
             {
-                // create string list for storing file data
-                this.userList = new List<List<string>>();
-                // create header list for column headers
-                this.tableHeaders = new List<string>();
-                while (!reader.EndOfStream)
+                Console.WriteLine("Opening database file...");
+                using (var reader = new StreamReader(databasePath))
                 {
-                    // splits values from file by commas
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    List<string> rowValues = new List<string>();
+                    userList = new List<List<string>>();
+                    tableHeaders = new List<string>();
 
-                    foreach (var value in values)
+                    if (!reader.EndOfStream)
                     {
-                        rowValues.Add(value);
+                        var headerLine = reader.ReadLine();
+                        tableHeaders = headerLine.Split(',').ToList();
                     }
-                    this.userList.Add(rowValues);
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(',');
+                        userList.Add(values.ToList());
+                    }
                 }
-                reader.Close();
+                Console.WriteLine("Database file opened successfully.");
             }
-            this.tableHeaders = userList[0];
-            userList.RemoveAt(0);
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Database file not found: " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Error reading the database file: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
-        void I_SystemObjectManager.CloseDatabaseFile(List<List<string>> inventoryList)
+
+
+        public void CloseDatabaseFile()
         {
-            List<string> rowStringList = new List<string>();
+            // Concatenate tableHeaders and userList
+            List<string> listToWrite = new List<string>();
+            listToWrite.Add(string.Join(",", tableHeaders)); // Add header row
+            listToWrite.AddRange(userList.Select(row => string.Join(",", row))); // Add user data rows
+
+            // Write the concatenated list to the file
             using (var writer = new StreamWriter(databasePath))
             {
-                foreach (var row in inventoryList)
+                foreach (var item in listToWrite)
                 {
-                    string rowCommaString = String.Join(",", row);
-                    rowStringList.Add(rowCommaString);
+                    writer.WriteLine(item);
                 }
-                string inventoryString = String.Join("\n", rowStringList);
-                writer.Write(inventoryString);
-                writer.Close();
             }
         }
 
-        void I_SystemObjectManager.CreateNewField(string fieldName, List<List<string>> inventoryList)
+        public void CreateNewField(string fieldName, List<List<string>> userList)
         {
             tableHeaders.Add(fieldName);
-            foreach (var row in inventoryList)
+            foreach (var row in userList)
             {
                 row.Insert((row.Count() + 1), "");
             }
         }
 
-        void I_SystemObjectManager.CreateNewObject(List<string> objectItems)
+        public void CreateNewObject(List<string> objectItems)
         {
             // check if objectItems list is empty or values are null
             if (objectItems == null || objectItems.Count == 0 || objectItems[0] == null)
@@ -77,14 +92,14 @@ namespace LMS_WPFApp
             // Check if an object with the same name already exists
             if (userList.Any(item => item.Count > 0 && item[0] == objectName))
             {
-                throw new ArgumentException("An object with the same name already exists in the inventory.");
+                throw new ArgumentException("An object with the same name already exists in the user.");
             }
 
-            // If no issues, add the new object to the inventory
+            // If no issues, add the new object to the userlist
             userList.Add(objectItems);
         }
 
-        void I_SystemObjectManager.DeleteField(string fieldName)    //TODO change error handling to argumentexception
+        public void DeleteField(string fieldName)    //TODO change error handling to argumentexception
         {
             int deletionIndex = tableHeaders.IndexOf(fieldName);
 
@@ -93,7 +108,6 @@ namespace LMS_WPFApp
                 foreach (var row in userList)
                 {
                     row.RemoveAt(deletionIndex);
-                    //this.inventoryList.Insert(inventoryList.IndexOf(row), row);
                 }
                 tableHeaders.RemoveAt(deletionIndex);
             }
@@ -103,12 +117,12 @@ namespace LMS_WPFApp
             }
         }
 
-        void I_SystemObjectManager.DeleteObject(string objectName)
+        public void DeleteObject(string objectName)
         {
             userList.RemoveAt(FindObjectInList(objectName));
         }
 
-        void I_SystemObjectManager.EditObject(string objectName, List<string> editedItems)
+        public void EditObject(string objectName, List<string> editedItems)
         {
             if (FindObjectInList(objectName) == -1 || objectName != null)
             {
@@ -126,7 +140,7 @@ namespace LMS_WPFApp
             userList.Insert(foundIndex, editedItems);
         }
 
-        List<string> I_SystemObjectManager.GetObjectInfo(string objectName)
+        public List<string> GetObjectInfo(string objectName)
         {
             return userList[FindObjectInList(objectName)];
         }
@@ -141,12 +155,12 @@ namespace LMS_WPFApp
 
             if (objectNameColumn.FindIndex(name => name == objectName) == -1)
             {
-                throw new ArgumentNullException("FindObjectInList", "Item does not exist!");
+                //throw new ArgumentNullException("FindObjectInList", "Item does not exist!");
+                return -1;
             }
 
             return objectNameColumn.FindIndex(name => name == objectName);
         }
-
         public string GetSpecificObjectData(string objectName, string fieldName)
         {
             int specificIndex = tableHeaders.IndexOf(fieldName);
@@ -156,6 +170,26 @@ namespace LMS_WPFApp
             }
 
             return userList[FindObjectInList(objectName)][specificIndex];
+        }
+        public int FindFieldNameInList(string fieldName)
+        {
+            // Get the first row of userList to represent column names
+            List<string> fieldNames = tableHeaders;
+
+            // Find the index of the fieldName in the fieldNames list
+            return fieldNames.IndexOf(fieldName);
+        }
+        public List<string> GetObjectsFromField(string fieldName)
+        {
+            int fieldIndex = FindFieldNameInList(fieldName);
+            List<string> objectsFromField = new List<string>();
+
+            for (int i = 0; i < userList.Count; i++)
+            {
+                // Add the object from the specified field in the current row to the list
+                objectsFromField.Add(userList[i][fieldIndex]);
+            }
+            return objectsFromField;
         }
     }
 }
