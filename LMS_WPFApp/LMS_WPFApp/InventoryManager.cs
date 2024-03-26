@@ -132,22 +132,23 @@ namespace LMS_WPFApp
             return inventoryList[FindObjectInList(objectName)];    
         }
 
-        public void EditObject(string objectName, List<string> editedItems)
+        public void EditObject(string objectName, string editedItem, string fieldName)
         {
-            if(FindObjectInList(objectName) == -1 || objectName != null)
-            {
-                throw new ArgumentNullException("EditObject", "Object not found in table.");
-            }
+            //if(FindObjectInList(objectName) == -1 || objectName != null)
+            //{
+            //    throw new ArgumentNullException("EditObject", "Object not found in table.");
+            //}
 
-            if(editedItems == null)
-            {
-                throw new ArgumentNullException("EditObject", "Edited items cannot be null");
-            }
+            //if(editedItem == null)
+            //{
+            //    throw new ArgumentNullException("EditObject", "Edited items cannot be null");
+            //}
 
             // do as normal if no errors
-            int foundIndex = FindObjectInList(objectName);
-            inventoryList.RemoveAt(foundIndex);
-            inventoryList.Insert(foundIndex, editedItems);
+            int objectIndex = FindObjectInList(objectName);
+            int fieldIndex = FindFieldNameInList(fieldName);
+            inventoryList[objectIndex].RemoveAt(fieldIndex);
+            inventoryList[objectIndex].Insert(fieldIndex, editedItem);
         }
 
         private int FindObjectInList(string objectName)
