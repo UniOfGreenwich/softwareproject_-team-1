@@ -1,0 +1,27 @@
+username,accessLevel,lastName,firstName,balance,password
+jd1234a,0,Doe,John,-4.7,password123
+as5678b,1,Smith,Alice,0.5,secure456
+rw9012c,0,Williams,Robert,-3.2,adminPass789
+mm6789d,0,Miller,Mary,-2.5,student321
+bh3456e,0,Harris,Benjamin,0.1,teacher789
+cc9012f,0,Clark,Catherine,-4,adminPass123
+rg5678g,0,Garcia,Richard,-3.5,student987
+ws1234h,0,Scott,Wendy,1,teacher567
+ph9012i,0,Hill,Patrick,0.7,adminPass456
+kb5678j,0,Baker,Katherine,-1.5,student654
+dt1234k,1,Turner,David,0.2,teacher234
+gw5678l,0,White,Gloria,-2.8,adminPass321
+mt9012m,0,Moore,Thomas,0,student432
+tp5678n,1,Parker,Taylor,0.3,teacher876
+rb1234o,2,Brooks,Rebecca,-3.6,adminPass654
+ly9012p,0,Young,Lisa,-1,student765
+hn5678q,0,Nguyen,Henry,0.6,teacher345
+cw1234r,0,Watson,Caroline,-2.1,adminPass987
+tt5678s,0,Taylor,Tracy,-1.2,student543
+rw9012t,1,Reed,Rachel,0.9,teacher432
+vm1234u,2,Moore,Vanessa,-3.4,adminPass555
+hx5678v,0,Xu,Helen,-2.3,student789
+kt1234w,1,Tan,Kevin,0.8,teacher678
+sg5678x,0,Singh,Sarah,-3.9,adminPass888
+js4806b,123,1,john,smith,0
+pp6789h,0,parker,peter,0,I am Sp00derman
