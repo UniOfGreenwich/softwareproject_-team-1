@@ -10,7 +10,7 @@ namespace LMS_WPFApp
 {
     public class UserManager : I_SystemObjectManager
     {
-        private static readonly string databasePath = "userDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
+        private static readonly string databasePath = "userDatabase.csv";  //change file path here if needed. Needs to be static in deployment
         public List<List<string>>? userList;
         public List<string>? tableHeaders { get; set; }
 
