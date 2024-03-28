@@ -60,9 +60,7 @@ namespace LMS_WPFApp
 =======
 >>>>>>> 035a63d (Changed logic in loginScreen.xaml.cs to reflect new UserManager class.)
             string username = usernameTextBox.Text;
-            string password = passwordTextBox.Password;
-
-            // Is authenticate needed? We can split the following logic into its own "Authenticate method". Speak to George/Toby
+            string password = UserManager.ToSHA512(passwordTextBox.Password);
             
             // Checks if user exists in database.
             if (Users.FindObjectInList(username) == -1)
@@ -156,6 +154,7 @@ namespace LMS_WPFApp
 >>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
             Close();
         }
+<<<<<<< HEAD
 
         //TODO @george to update when authentication and password hashing complete. Is this method needed?
         private bool AuthenticateUser(string username, string password)
@@ -209,6 +208,8 @@ namespace LMS_WPFApp
 
 =======
 >>>>>>> 035a63d (Changed logic in loginScreen.xaml.cs to reflect new UserManager class.)
+=======
+>>>>>>> 47e7a5a (Added password hashing.)
     }
 }
 =======
