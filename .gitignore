@@ -347,5 +347,5 @@ Temporary Items
 .apdisk
 
 # Include databases located in /bin folder
-![Bb]in/inventoryDatabase
-![Bb]in/userDatabase
+![Bb]in/Debug/net7.0-windows7.0/inventoryDatabase
+![Bb]in/Debug/net7.0-windows7.0/userDatabase
