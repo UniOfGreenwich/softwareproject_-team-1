@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="paymentGateway" Height="450" Width="800">
     <Grid>
+<<<<<<< HEAD
         <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,20 +21,16 @@
         <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
 >>>>>>> 15a958a (updated cs files for functionality)
+=======
+        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="77,155,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
+>>>>>>> 70e15b7 (Part of PaymentGateway)
         <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Margin="300,150,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Height="35" Width="200" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="425,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="35" Width="100" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="275,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="35" Width="100" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="425,250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="35" Width="100" FontSize="22"/>
-        <ComboBox HorizontalAlignment="Left" Margin="550,250,0,0" VerticalAlignment="Top" Height="35" Width="100" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="Visa"/>
-            <ComboBoxItem Content="Master Card"/>
-        </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="275,252,0,0" VerticalAlignment="Top" Height="35" Width="100" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="Shuvo"/>
-            <ComboBoxItem Content="ejfejfe"/>
-            <ComboBoxItem Content="ksjdksjdskds"/>
-            <ComboBoxItem Content="jwdojwkodw"/>
-        </ComboBox>
+        <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Top" Height="35" Width="250" FontSize="22"/>
+        <TextBox x:Name="CvcText" HorizontalAlignment="Left" Margin="275,284,0,0" TextWrapping="Wrap" Text="CVC" VerticalAlignment="Top" Height="36" Width="100" FontSize="22" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.495,-0.251"/>
+        <TextBox x:Name="ExpiryDateText" HorizontalAlignment="Left" Margin="425,284,0,0" TextWrapping="Wrap" Text="Exp MM/YYYY" VerticalAlignment="Top" Height="35" Width="100" FontSize="22" RenderTransformOrigin="0.43,-0.623"/>
+        <TextBox x:Name="CardNumberText" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Width="250" Height="36" FontSize="22"/>
+        <TextBox x:Name="PaymentText" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top" Width="250" Height="32" FontSize="22" TextChanged="PaymentText_TextChanged"/>
     </Grid>
 </Window>
