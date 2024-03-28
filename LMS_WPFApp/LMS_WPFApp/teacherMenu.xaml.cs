@@ -66,16 +66,17 @@ namespace LMS_WPFApp
             List<string> newUserList = new List<string>();
 
             string username = GenerateUsername(firstName.Text, lastName.Text);
-
+            string newPassword = UserManager.ToSHA512(password.Text);
+            
             newUserList.Add(username);
+            newUserList.Add(newPassword);
             newUserList.Add(accessLevel.Text);
             newUserList.Add(lastName.Text.ToLower());
             newUserList.Add(firstName.Text.ToLower());
             newUserList.Add(balance.Text);
-            newUserList.Add(password.Text);
 
             Users.CreateNewObject(newUserList);
-            MessageBox.Show($"Generated Username: '{username}' Password: '{password.Text}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"Generated Username: '{username}' Password: '{newPassword}'", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
