@@ -28,9 +28,7 @@ namespace LMS_WPFApp
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = usernameTextBox.Text;
-            string password = passwordTextBox.Password;
-
-            // Is authenticate needed? We can split the following logic into its own "Authenticate method". Speak to George/Toby
+            string password = UserManager.ToSHA512(passwordTextBox.Password);
             
             // Checks if user exists in database.
             if (Users.FindObjectInList(username) == -1)
@@ -73,26 +71,6 @@ namespace LMS_WPFApp
             Users.CloseDatabaseFile();
             Inventory.CloseDatabaseFile();
             Close();
-        }
-
-        //TODO @george to update when authentication and password hashing complete. Is this method needed?
-        private bool AuthenticateUser(string username, string password)
-        {
-            string filePath = "userDatabase.csv";
-            string[] lines = File.ReadAllLines(filePath);
-            
-            foreach (string line in lines.Skip(1))
-            {
-                string[] fields = line.Split(',');
-                string storedUsername = fields[0];
-                string storedPassword = fields[1];
-
-                if (username == storedUsername && password == storedPassword)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }

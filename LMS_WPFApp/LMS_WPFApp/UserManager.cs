@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -191,6 +192,19 @@ namespace LMS_WPFApp
                 objectsFromField.Add(userList[i][fieldIndex]);
             }
             return objectsFromField;
+        }
+        public static string ToSHA512(string s)
+        {
+            using (SHA512 sha512 = SHA512.Create())
+            {
+                StringBuilder hash = new StringBuilder();
+                byte[] hashArray = sha512.ComputeHash(Encoding.UTF8.GetBytes(s));
+                foreach (byte b in hashArray)
+                {
+                    hash.Append(b.ToString("x"));
+                }
+                return hash.ToString();
+            }
         }
     }
 }
