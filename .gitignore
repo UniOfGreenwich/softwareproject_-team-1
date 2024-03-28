@@ -345,3 +345,7 @@ ASALocalRun/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Include databases located in /bin folder
+![Bb]in/inventoryDatabase
+![Bb]in/userDatabase
