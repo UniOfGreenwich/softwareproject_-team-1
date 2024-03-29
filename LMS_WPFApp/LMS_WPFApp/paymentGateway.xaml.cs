@@ -4,12 +4,19 @@ namespace LMS_WPFApp
 {
     public partial class paymentGateway : Window
     {
-        /*private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private UserManager Users;
+        private InventoryManager Inventory;
+        private List<string> userData;
+        private string username;
+
+        public paymentGateway(UserManager users, InventoryManager inventory, string username)
         {
-         
-
-        }*/
-
+            InitializeComponent();
+            this.Users = users;
+            this.Inventory = inventory;
+            userData = Users.GetObjectInfo(username);
+            this.username = username;
+        }
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
             string cardNumber = CardNumberText.Text;
@@ -17,16 +24,27 @@ namespace LMS_WPFApp
             string cvc = CvcText.Text;
             float paymentAmount = float.Parse(PaymentText.Text);
 
-            if (IsValidCreditCard(cardNumber, expiryDate, cvc) && paymentAmount > 0)
-            {
-                // Check card type
-                string cardType = GetCardType(CardNumberText.Text);
-                MessageBox.Show("Payment successful! Card Type: " + cardType);
-            }
-            else
+            if (!IsValidCreditCard(cardNumber, expiryDate, cvc))
             {
                 MessageBox.Show("Invalid credit card details. Please check and try again.");
+                return;
             }
+
+            // Check if the payment amount is greater than 0
+            if (paymentAmount <= 0)
+            {
+                MessageBox.Show("Payment amount must be greater than 0.");
+                return;
+            }
+
+            // Payment successful
+            string cardType = GetCardType(cardNumber);
+            MessageBox.Show("Payment successful! Card Type: " + cardType);
+
+            studentMenu menu = new studentMenu(Users, Inventory, username);
+            menu.Show();
+            // Close the paymentGateway window
+            Close();
         }
 
         // Method to validate credit card details
@@ -71,10 +89,29 @@ namespace LMS_WPFApp
 
         private void cancelPayFeesButton_Click(object sender, RoutedEventArgs e)
         {
+            
+
+            // Show the studentMenu window
+            studentMenu menu = new studentMenu(Users, Inventory,username);
+            menu.Show();
+            // Close the paymentGateway window
+            Close();
+        }
+
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
 
         }
 
-       
+        private void CardNumberText_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
+
+        private void PaymentText_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 
    
