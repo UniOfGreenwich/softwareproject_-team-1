@@ -9,7 +9,6 @@
 
 
 <!-- omit in toc -->
-<<<<<<< HEAD
 ## Contents
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
   - [Introduction](#introduction)
@@ -38,7 +37,11 @@
     - [Activity Diagrams](#activity-diagrams)
       - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram-1)
     - [State Chart Diagram](#state-chart-diagram)
-- [Phase 3 - Implementation and Testing](#phase-3---implementation-and-testing)
+  - [Phase 3 - Implementation and Testing](#phase-3---implementation-and-testing)
+  - [Implementation](#implementation)
+    - [The `InventoryManager` Class](#the-inventorymanager-class)
+    - [The `UserManager` Class](#the-usermanager-class)
+  - [Testing](#testing)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
   - [Kanban](#kanban)
@@ -543,7 +546,84 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 
 </div>
 
-# Phase 3 - Implementation and Testing
+## Phase 3 - Implementation and Testing
+
+## Implementation
+
+### The `InventoryManager` Class
+
+**The `InventoryManager` class** is responsible for managing the inventory of books and journals in the library system. It contains several methods that facilitate operations such as adding, deleting, editing, and retrieving inventory items and their information. 
+
+**Core Method**
+
+**`OpenDatabaseFile()`:**
+
+Opens the inventory database file(`.csv` format) and reads its contents into memory.
+
+**`CloseDatabaseFile()`:**
+
+Closes the inventory database file and saves the current state of the inventory data back to the database file. It concatenates the `tableHeaders` and `inventoryList` into a list of strings and writes it line by line to the CSV file.
+
+**`CreateNewObject()`:**
+
+Adds a new item to the inventory.It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
+
+**`DeleteObject()`:**
+
+Deletes an item from the inventory.
+
+**`GetObjectInfo()`:**
+
+ Retrieves all information for a specific object (inventory item) by its name. It uses the `FindObjectInList` helper method to locate the object's index and then returns the entire row from `inventoryList` at that index.
+
+**`EditObject:`**
+
+Edits information about an item in the inventory. It uses helper methods to find the object's and field's index, then removes the old value and inserts the new edited value in the inventoryList.
+
+**`FindObjectInList` and `FindFieldNameInList`:**
+
+ These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
+
+---
+### The `UserManager` Class
+The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
+
+**`OpenDatabaseFile()`:**
+
+Opens the Uer database file and reads its contents into memory. Reads the user data from a CSV file located at the specified path and initializes the `userList` and `tableHeaders` properties with the data read from the file.
+
+**`CloseDatabaseFile()`:**
+
+The purpose of this method is to save any changes made to the user data in the database file. The method first closes the user database file, then prepares the data to be written back to the file and writes the updated user data back to the database file to effectively save any changes made to the user data.
+
+**`CreateNewObject()`:** 
+
+Add new user to the user database.  It validates the input user data, ensuring that it is not null and that the object name does not already exist in the database. If no issues are found, it adds the new user to the `userList`.
+
+**`DeleteObject()`:**
+
+Deletes an user entry from the databse. It finds the index of the user by name and removes it from the `userList`.
+
+**`EditObject()`:** 
+
+Edits user information in the database. This method finds the user by name, locates the field to edit, and updates its value with the new information provided.
+
+**`GetObejectInfo()`:**
+
+To retrieve information about a specific user in the user database. It finds the user by name and returns its information as a list of strings.
+
+**`GetSpecificObjectData()`:**
+
+Retrieves specific data about a user from the user database. It finds the user by name, retrieves the index of the specified field, and returns the corresponding data for that field.
+
+
+**`ToSHA512()`:**
+
+Serves for password hashing using a secure algorithm (SHA512) for password storage.
+
+---
+
+## Testing
 
 ## Project Planning
 
@@ -582,6 +662,7 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png "Project Plan Gantt Chart")
 
 </div>
+
 
 ## Kanban
 
