@@ -23,6 +23,7 @@ namespace LMS_WPFApp
 >>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
 =======
         private List<string> userData;
+        private string username;
         public studentMenu(UserManager users, InventoryManager inventory, string username)
 >>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
         {
@@ -30,10 +31,15 @@ namespace LMS_WPFApp
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
+            this.username = username;
         }
 <<<<<<< HEAD
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
+            paymentGateway paymentWindow = new paymentGateway(Users, Inventory,username);
+            paymentWindow.Show();
+
+            Close();
             int newBalance = 0; //shuvo change this when you finish payment methods. need a return value for new balance
             Users.EditObject(userData[0], newBalance.ToString(), "balance");
             return;
