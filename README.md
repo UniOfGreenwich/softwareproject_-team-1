@@ -9,6 +9,7 @@
 
 
 <!-- omit in toc -->
+<<<<<<< HEAD
 ## Contents
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
   - [Introduction](#introduction)
@@ -37,6 +38,7 @@
     - [Activity Diagrams](#activity-diagrams)
       - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram-1)
     - [State Chart Diagram](#state-chart-diagram)
+- [Phase 3 - Implementation and Testing](#phase-3---implementation-and-testing)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
   - [Kanban](#kanban)
@@ -540,6 +542,8 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 ![State Chart Diagram](State_Chart_Diagram.png)
 
 </div>
+
+# Phase 3 - Implementation and Testing
 
 ## Project Planning
 
