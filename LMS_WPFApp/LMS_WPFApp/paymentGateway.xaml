@@ -13,7 +13,7 @@
         <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center"/>
         <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Top" Height="35" Width="250" FontSize="22"/>
         <TextBox x:Name="CvcText" HorizontalAlignment="Left" Margin="275,284,0,0" TextWrapping="Wrap" Text="CVC" VerticalAlignment="Top" Height="36" Width="100" FontSize="22" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.495,-0.251"/>
-        <TextBox x:Name="ExpiryDateText" HorizontalAlignment="Left" Margin="425,284,0,0" TextWrapping="Wrap" Text="Exp MM/YYYY" VerticalAlignment="Top" Height="35" Width="100" FontSize="22" RenderTransformOrigin="0.43,-0.623"/>
+        <TextBox x:Name="ExpiryDateText" HorizontalAlignment="Left" Margin="425,284,0,0" TextWrapping="Wrap" Text="Exp MM/YY" VerticalAlignment="Top" Height="35" Width="100" FontSize="22" RenderTransformOrigin="0.43,-0.623"/>
         <TextBox x:Name="CardNumberText" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Width="250" Height="36" FontSize="22" TextChanged="CardNumberText_TextChanged"/>
         <TextBox x:Name="PaymentText" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top" Width="250" Height="32" FontSize="22" TextChanged="PaymentText_TextChanged"/>
     </Grid>
