@@ -93,7 +93,7 @@ namespace LMS_WPFApp
             // Username Construction
             string username = $"{firstName[0]}{lastName[0]}{randomNumber}{randomLetter}";
 
-            if (Users.FindObjectInList(username) != -1)
+            if (Users.FindObjectInList(username) == -1)
             {
                 return username;
             }
