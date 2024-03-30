@@ -1,7 +1,7 @@
 namespace LMS_UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class LoginTest
     {
         [TestMethod]
         public void TestMethod1()
