@@ -5,16 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
-        Title="Library Management System" Height="450" Width="800">
-    <Grid>
+        Title="Library Management System" Height="600" Width="800">
 
-        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top" Click="loginButton_Click"/>
-        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top" Click="quitButton_Click"/>
-        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="LMS" VerticalAlignment="Top" AutomationProperties.Name="titleMain" Height="41" Width="47" FontSize="24"/>
-        <Label x:Name="usernameLbl" Content="Username" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="passwordLbl" Content="Password" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="64"/>
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#ADADAD" CornerRadius="5" Margin="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#D0D0D0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="#3498DB" />
+            <Setter Property="Foreground" Value="White" />
+            <Style.Triggers>
+                <Trigger Property="IsDefault" Value="True">
+                    <Setter Property="Background" Value="#3498DB" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
 
-    </Grid>
+    <Viewbox Stretch="UniformToFill">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\rds-p_zmsjrop\Desktop\team1programming\softwareproject_-team-1\LMS_WPFApp\LMS_WPFApp\bin\Debug\net7.0-windows7.0\resources\12345.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="LMS" FontSize="36pt" FontFamily="Segoe UI" FontWeight="Bold" TextAlignment="Center" Foreground="#D9D9FF"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="20">
+                <Label Content="Username" FontSize="14pt" FontFamily="Segoe UI" Foreground="#D9D9FF"/>
+                <TextBox x:Name="usernameTextBox" Width="150" TextWrapping="Wrap" />
+
+                <Label Content="Password" FontSize="14pt" FontFamily="Segoe UI" Foreground="#D9D9FF"/>
+                <PasswordBox x:Name="passwordTextBox" Width="150" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="0,0,0,0">
+                <Button x:Name="loginButton" HorizontalAlignment="Center" Content="Login" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="loginButton_Click" Width="200"/>
+                <Button x:Name="quitButton" HorizontalAlignment="Center" Content="Quit" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="quitButton_Click" Width="200" />
+            </StackPanel>
+        </Grid>
+    </Viewbox>
 </Window>
