@@ -143,6 +143,15 @@ namespace LMS_WPFApp
 >>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
         }
 
+       /* private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            double scaleFactor = Math.Min(this.ActualWidth / 800, this.ActualHeight / 450)*0.5; // Adjust values according to your initial window size
+                                                                                            // Now, you can scale your UI elements using the scaleFactor
+                                                                                            // For example:
+            usernameTextBox.FontSize = 14 * scaleFactor;
+            // Adjust other UI elements similarly
+        }*/
+
         // Closes application window if quit pressed
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 498a434 (User Database update, added addUser screen.)
+=======
+>>>>>>> 4d6cbb1 (added some UI updates)
 ﻿username,accessLevel,lastName,firstName,balance,password
 jd1234a,0,Doe,John,-4.70,password123
 as5678b,1,Smith,Alice,0.50,secure456
@@ -28,8 +31,11 @@ hx5678v,0,Xu,Helen,-2.30,student789
 kt1234w,1,Tan,Kevin,0.80,teacher678
 sg5678x,0,Singh,Sarah,-3.90,adminPass888
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ﻿username,access level,lastName,firstName,balance,itemWithdrawn1,itemWithdrawn2,itemWithdrawn3,itemWithdrawn4,itemWithdrawn5,returnTime1,returnTime2,returnTime3,returnTime4,returnTime5
 >>>>>>> 91bd0b5 (databases were not added last week, here they are)
 =======
 >>>>>>> 498a434 (User Database update, added addUser screen.)
+=======
+>>>>>>> 4d6cbb1 (added some UI updates)
