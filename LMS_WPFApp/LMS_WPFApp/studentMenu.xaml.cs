@@ -28,10 +28,14 @@ namespace LMS_WPFApp
 >>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
         {
             InitializeComponent();
+            
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
             this.username = username;
+
+            LoadDebtFromCSV(username);
+            
         }
 <<<<<<< HEAD
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
@@ -81,6 +85,29 @@ namespace LMS_WPFApp
 >>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
             return;
         }
+
+        private void LoadDebtFromCSV(string username)
+        {
+            try
+            {
+                string balance = Users.GetSpecificObjectData(username, "balance");
+                double currentDebt = double.Parse(balance);
+                currentDebtLabel.Content = $"Current Debt: £{currentDebt.ToString("0.00")}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading debt: {ex.Message}");
+            }
+        }
+
+        
+        private void populateBookInfo(string deweyDecimal)
+        {
+            return;
+
+        }
+
+
     }
 }
 =======
