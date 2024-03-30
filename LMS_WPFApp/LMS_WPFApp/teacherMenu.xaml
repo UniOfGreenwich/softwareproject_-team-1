@@ -113,27 +113,7 @@
             <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
             <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
             <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="balance_TextChanged"/>
-            <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224" Foreground="#D9D9FF">
-                <Run Text="Access Level "/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text="0"/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text=" - Student"/>
-                <LineBreak/>
-                <Run Text="Access Level "/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text="1"/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text=" - Teacher"/>
-                <LineBreak/>
-                <Run Text="Access Level "/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text="2"/>
-                <Run Language="en-gb" Text="'"/>
-                <Run Text=" - System Admin"/>
-                <LineBreak/>
-                <Run Language="en-gb" Text="Balance must be a number"/>
-            </TextBlock>
+            <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224" Foreground="#D9D9FF"><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="0"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="1"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="2"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - System"/><LineBreak/><Run Text="Balance must be a number"/></TextBlock>
             <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name" FontWeight="Bold" Background="#000000" Foreground="#D9D9FF"/>
             <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name" FontWeight="Bold" Foreground="#D9D9FF"/>
             <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="154,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#D9D9FF" FontWeight="Bold"><Run Text="Access Level"/><Run Text=" 0"/><Run Language="en-gb" Text=" "/><Run Text="or 1"/></TextBlock>
