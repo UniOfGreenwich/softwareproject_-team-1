@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS_WPFApp", "LMS_WPFApp\LMS_WPFApp.csproj", "{075F9DA9-B284-4597-8958-7A05BFE98957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS_WPFApp", "LMS_WPFApp\LMS_WPFApp.csproj", "{075F9DA9-B284-4597-8958-7A05BFE98957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS_UnitTests", "LMS_UnitTests\LMS_UnitTests.csproj", "{A2BE1C60-DCF1-4367-9112-091ED752C0F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{075F9DA9-B284-4597-8958-7A05BFE98957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{075F9DA9-B284-4597-8958-7A05BFE98957}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{075F9DA9-B284-4597-8958-7A05BFE98957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
