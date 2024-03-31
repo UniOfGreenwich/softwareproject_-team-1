@@ -14,10 +14,14 @@ namespace LMS_WPFApp
         public studentMenu(UserManager users, InventoryManager inventory, string username)
         {
             InitializeComponent();
+            
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
             this.username = username;
+
+            LoadDebtFromCSV(username);
+            
         }
 
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
@@ -44,5 +48,28 @@ namespace LMS_WPFApp
             bookRental.Show();
             Close();
         }
+
+        private void LoadDebtFromCSV(string username)
+        {
+            try
+            {
+                string balance = Users.GetSpecificObjectData(username, "balance");
+                double currentDebt = double.Parse(balance);
+                currentDebtLabel.Content = $"Current Debt: £{currentDebt.ToString("0.00")}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading debt: {ex.Message}");
+            }
+        }
+
+        
+        private void populateBookInfo(string deweyDecimal)
+        {
+            return;
+
+        }
+
+
     }
 }
