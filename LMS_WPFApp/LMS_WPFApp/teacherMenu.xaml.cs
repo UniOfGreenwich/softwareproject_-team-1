@@ -20,7 +20,7 @@ namespace LMS_WPFApp
         }
         private void backTeacherMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            loginScreen loginScreen = new loginScreen(Users,Inventory);
+            loginScreen loginScreen = new loginScreen(Users, Inventory);
             loginScreen.Show();
             Close();
         }

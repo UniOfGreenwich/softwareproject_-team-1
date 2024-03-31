@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace LMS_WPFApp
 {
@@ -6,8 +7,10 @@ namespace LMS_WPFApp
     {
         private UserManager Users;
         private InventoryManager Inventory;
+
         private List<string> userData;
         private string username;
+
         public studentMenu(UserManager users, InventoryManager inventory, string username)
         {
             InitializeComponent();
@@ -16,9 +19,10 @@ namespace LMS_WPFApp
             userData = Users.GetObjectInfo(username);
             this.username = username;
         }
+
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
-            paymentGateway paymentWindow = new paymentGateway(Users, Inventory,username);
+            paymentGateway paymentWindow = new paymentGateway(Users, Inventory, username);
             paymentWindow.Show();
 
             Close();
@@ -29,16 +33,16 @@ namespace LMS_WPFApp
 
         private void logoutStudentMenu_Click(object sender, RoutedEventArgs e)
         {
-            loginScreen loginScreen = new loginScreen(Users,Inventory);
+            loginScreen loginScreen = new loginScreen(Users, Inventory);
             loginScreen.Show();
             Close();
         }
 
-        private void inventoryButton_Click(object sender, RoutedEventArgs e)
+        private void rentBookButton_Click(object sender, RoutedEventArgs e)
         {
-            //toby update this when you have inventory screen made. These params need to be passed in
-            //inventoryScreen inventoryScreen = new inventoryScreen(Inventory, userData);
-            return;
+            bookRental bookRental = new bookRental(Users, Inventory, username);
+            bookRental.Show();
+            Close();
         }
     }
 }
