@@ -17,6 +17,7 @@
 - [Contents](#contents)
 - [Task Alocation](#task-alocation)
 - [Implementation](#implementation)
+  - [Interfaces](#interfaces)
   - [The `InventoryManager` Class](#the-inventorymanager-class)
   - [The `UserManager` Class](#the-usermanager-class)
 - [Testing](#testing)
@@ -25,6 +26,10 @@
   
 ## Task Alocation
 ## Implementation
+
+### Interfaces
+
+The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end 
 
 ### The `InventoryManager` Class
 
