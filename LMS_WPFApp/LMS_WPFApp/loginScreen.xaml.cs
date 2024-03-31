@@ -30,6 +30,7 @@ namespace LMS_WPFApp
         {
             string username = usernameTextBox.Text;
             string password = UserManager.ToSHA512(passwordTextBox.Password);
+            //MessageBox.Show(UserManager.ToSHA512(password));
             
             // Checks if user exists in database.
             if (Users.FindObjectInList(username) == -1)

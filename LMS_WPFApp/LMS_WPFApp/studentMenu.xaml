@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Student Menu" Height="450" Width="800">
     <Grid>
-
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="542,279,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
@@ -21,6 +20,5 @@
         <Label x:Name="Conference" FontSize="14" Width="200" Height="30" Margin="10,130,590,245" Content="Conference: "/>
         <Label x:Name="Synopsis" FontSize="14" Width="200" Height="30" Margin="10,160,590,207" Content="Synopsis: "/>
         <Label x:Name="deweyDecimal" FontSize="14" Width="200" Height="30" Margin="10,190,590,177" Content="Dewey Decimal: "/>
-
     </Grid>
 </Window>
