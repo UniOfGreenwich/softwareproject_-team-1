@@ -17,6 +17,15 @@ namespace LMS_WPFApp
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
             this.username = username;
+
+            titleSearch.Text = "Search Title";
+            authorSearch.Text = "Search Author";
+            isbnSearch.Text = "Search ISBN";
+
+            List<String> durations = "Select Duration,3 Days,7 Days,14 Days".Split(',').ToList();
+            rentDuration.ItemsSource = durations;
+            rentDuration.SelectedIndex = 0;
+
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -51,6 +60,7 @@ namespace LMS_WPFApp
         {
             string searchTitle = titleSearch.Text;
             List<string> matchingTitles = new List<string>();
+            matchingTitles.Insert(0, "Select Result");
 
             if (!string.IsNullOrWhiteSpace(searchTitle) && searchTitle != "Search Title")
             {
@@ -58,25 +68,31 @@ namespace LMS_WPFApp
                 isbnSearch.IsEnabled = false;
                 foreach (var bookInfo in Inventory.inventoryList)
                 {
-                    string title = bookInfo[Inventory.tableHeaders.IndexOf("title")];
+                    string title = bookInfo[Inventory.inventoryHeaders.IndexOf("title")];
                     if (title.ToLower().Contains(searchTitle.ToLower()))
                     {
-                        matchingTitles.Add(title);
+                        if (bookInfo[Inventory.inventoryHeaders.IndexOf("possession")] == "")
+                        {
+                            matchingTitles.Add(title);
+
+                        }
                     }
                 }
-                results.ItemsSource = matchingTitles;
             }
             else
             {
                 authorSearch.IsEnabled = true;
                 isbnSearch.IsEnabled = true;
             }
+            results.ItemsSource = matchingTitles;
+            results.SelectedIndex = 0;
         }
 
         private void authorSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchAuthor = authorSearch.Text;
             List<string> matchingTitles = new List<string>();
+            matchingTitles.Insert(0, "Select Result");
 
             if (!string.IsNullOrWhiteSpace(searchAuthor) && searchAuthor != "Search Author")
             {
@@ -84,10 +100,14 @@ namespace LMS_WPFApp
                 isbnSearch.IsEnabled = false;
                 foreach (var bookInfo in Inventory.inventoryList)
                 {
-                    string author = bookInfo[Inventory.tableHeaders.IndexOf("authors")];
+                    string author = bookInfo[Inventory.inventoryHeaders.IndexOf("authors")];
                     if (author.ToLower().Contains(searchAuthor.ToLower()))
                     {
-                        matchingTitles.Add(bookInfo[Inventory.tableHeaders.IndexOf("title")]);
+                        if (bookInfo[Inventory.inventoryHeaders.IndexOf("possession")] == "")
+                        {
+                            matchingTitles.Add(bookInfo[Inventory.inventoryHeaders.IndexOf("title")]);
+
+                        }
                     }
                 }
                 results.ItemsSource = matchingTitles;
@@ -97,12 +117,15 @@ namespace LMS_WPFApp
                 titleSearch.IsEnabled = true;
                 isbnSearch.IsEnabled = true;
             }
+            results.ItemsSource = matchingTitles;
+            results.SelectedIndex = 0;
         }
 
         private void isbnSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchISBN = isbnSearch.Text;
             List<string> matchingTitles = new List<string>();
+            matchingTitles.Insert(0, "Select Result");
 
             if (!string.IsNullOrWhiteSpace(searchISBN) && searchISBN != "Search ISBN")
             {
@@ -110,11 +133,14 @@ namespace LMS_WPFApp
                 authorSearch.IsEnabled = false;
                 foreach (var bookInfo in Inventory.inventoryList)
                 {
-                    string isbn = bookInfo[Inventory.tableHeaders.IndexOf("ISBN")];
+                    string isbn = bookInfo[Inventory.inventoryHeaders.IndexOf("ISBN")];
                     if (isbn.ToLower().Contains(searchISBN.ToLower()))
                     {
-                        matchingTitles.Add(bookInfo[Inventory.tableHeaders.IndexOf("title")]);
-                    }
+                        if (bookInfo[Inventory.inventoryHeaders.IndexOf("possession")] == "")
+                        {
+                            matchingTitles.Add(bookInfo[Inventory.inventoryHeaders.IndexOf("title")]);
+
+                        }                    }
                 }
                 results.ItemsSource = matchingTitles;
             }
@@ -123,12 +149,34 @@ namespace LMS_WPFApp
                 titleSearch.IsEnabled = true;
                 authorSearch.IsEnabled = true;
             }
+            results.ItemsSource = matchingTitles;
+            results.SelectedIndex = 0;
         }
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
-            studentMenu studentMenu = new studentMenu(Users, Inventory, username);
-            studentMenu.Show();
+            string title = results.SelectedItem.ToString();
+            if (title == "Select Result")
+            {
+                MessageBox.Show("Please select a book.");
+                return;
+            }
+            string duration = rentDuration.SelectedItem.ToString();
+            if (duration == "Select Duration")
+            {
+                MessageBox.Show("Please select a duration.");
+                return;
+            }
+            string currentDate = DateTime.Now.ToString();
+
+            Inventory.EditObject(title, username, "possession");
+            Inventory.EditObject(title, currentDate, "possessionStart");
+            Inventory.EditObject(title, duration, "duration");
+
+            MessageBox.Show("Book Rental Successfully Registered", "Poopsie Whoopsie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            bookRental bookRental = new bookRental(Users, Inventory, username);
+            bookRental.Show();
             Close();
         }
 

@@ -12,7 +12,7 @@ namespace LMS_WPFApp
     {
         public List<List<string>>? inventoryList;
         private static readonly string databasePath = "inventoryDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
-        public List<string>? tableHeaders { get; set; }
+        public List<string>? inventoryHeaders { get; set; }
         public string? title { get; set; }
         public string? author { get; set; }
         public string? description { get; set; }
@@ -28,12 +28,12 @@ namespace LMS_WPFApp
                 using (var reader = new StreamReader(databasePath))
                 {
                     inventoryList = new List<List<string>>();
-                    tableHeaders = new List<string>();
+                    inventoryHeaders = new List<string>();
 
                     if (!reader.EndOfStream)
                     {
                         var headerLine = reader.ReadLine();
-                        tableHeaders = headerLine.Split(',').ToList();
+                        inventoryHeaders = headerLine.Split(',').ToList();
                     }
 
                     while (!reader.EndOfStream)
@@ -62,7 +62,7 @@ namespace LMS_WPFApp
         {
             // Concatenate tableHeaders and userList
             List<string> listToWrite = new List<string>();
-            listToWrite.Add(string.Join(",", tableHeaders)); // Add header row
+            listToWrite.Add(string.Join(",", inventoryHeaders)); // Add header row
             listToWrite.AddRange(inventoryList.Select(row => string.Join(",", row))); // Add user data rows
 
             // Write the concatenated list to the file
@@ -77,7 +77,7 @@ namespace LMS_WPFApp
 
         public void CreateNewField(string fieldName, List<List<string>> inventoryList)
         {
-            tableHeaders.Add(fieldName);
+            inventoryHeaders.Add(fieldName);
             foreach (var row in inventoryList)
             {
                 row.Insert((row.Count() + 1), "");
@@ -105,7 +105,7 @@ namespace LMS_WPFApp
 
         public void DeleteField(string fieldName)
         {
-            int deletionIndex = tableHeaders.IndexOf(fieldName);
+            int deletionIndex = inventoryHeaders.IndexOf(fieldName);
 
             if (deletionIndex != -1)
             {
@@ -114,7 +114,7 @@ namespace LMS_WPFApp
                     row.RemoveAt(deletionIndex);
                     //this.inventoryList.Insert(inventoryList.IndexOf(row), row);
                 }
-                tableHeaders.RemoveAt(deletionIndex);
+                inventoryHeaders.RemoveAt(deletionIndex);
             }
             else
             {
@@ -163,7 +163,7 @@ namespace LMS_WPFApp
 
         public string GetSpecificObjectData(string objectName, string fieldName)
         {
-            int specificIndex = tableHeaders.IndexOf(fieldName);
+            int specificIndex = inventoryHeaders.IndexOf(fieldName);
             return inventoryList[FindObjectInList(objectName)][specificIndex];
         }
         public List<string> GetObjectsFromField(string fieldName)
@@ -172,19 +172,8 @@ namespace LMS_WPFApp
         }
         public int FindFieldNameInList(string fieldName)
         {
-            List<string> fieldNameColumn = new List<string>();
-            for (int i = 0; i < inventoryList.Count; i++)
-            {
-                fieldNameColumn.Add(inventoryList[0][i]);
-            }
-
-            if (fieldNameColumn.FindIndex(name => name == fieldName) == -1)
-            {
-                //throw new ArgumentNullException("FindObjectInList", "Item does not exist!");
-                return -1;
-            }
-
-            return fieldNameColumn.FindIndex(name => name == fieldName);
+            // Find the index of the fieldName in the fieldNames list
+            return inventoryHeaders.IndexOf(fieldName);
         }
     }
 }
