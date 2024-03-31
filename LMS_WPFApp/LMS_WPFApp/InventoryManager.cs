@@ -11,7 +11,7 @@ namespace LMS_WPFApp
     public class InventoryManager : I_SystemObjectManager
     {
         public List<List<string>>? inventoryList;
-        private static readonly string databasePath = "../inventoryDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
+        private static readonly string databasePath = "inventoryDatabase.csv";  //change file path here if needed. Needs to be static in deployment.
         public List<string>? tableHeaders { get; set; }
         public string? title { get; set; }
         public string? author { get; set; }
