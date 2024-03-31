@@ -86,7 +86,7 @@
     <Viewbox Stretch="UniformToFill">
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="C:\Users\rds-p_zmsjrop\Desktop\team1programming\softwareproject_-team-1\LMS_WPFApp\LMS_WPFApp\bin\Debug\net7.0-windows7.0\resources\12345.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
@@ -101,7 +101,7 @@
 
             <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="115">
                 <Border Background="#80FFFFFF" Margin="0">
-                    <Image Source="C:\Users\rds-p_zmsjrop\Desktop\team1programming\softwareproject_-team-1\LMS_WPFApp\LMS_WPFApp\bin\Debug\net7.0-windows7.0\resources\Logo.png" Height="75" Width="106"/>
+                    <Image Source="/Logo.png" Height="75" Width="106"/>
                 </Border>
             </StackPanel>
 
