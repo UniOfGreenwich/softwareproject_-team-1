@@ -117,15 +117,6 @@ namespace LMS_WPFApp
                 return GenerateUsername(firstName, lastName);
             }
         }
-        private void usernameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-            return;
-        }
-        private void balance_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            return;
-        }
     }
 }
 =======
