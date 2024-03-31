@@ -57,6 +57,7 @@
     - [State Chart Diagram](#state-chart-diagram)
   - [Phase 3 - Implementation and Testing](#phase-3---implementation-and-testing)
   - [Implementation](#implementation)
+    - [Interfaces](#interfaces)
     - [The `InventoryManager` Class](#the-inventorymanager-class)
     - [The `UserManager` Class](#the-usermanager-class)
   - [Testing](#testing)
@@ -511,8 +512,6 @@ When there can only be a certain amount of instances of a class in relation to a
 
 
 
-
-
 <div align=center>
 
 **[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png)**
@@ -597,6 +596,10 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 ## Phase 3 - Implementation and Testing
 
 ## Implementation
+
+### Interfaces
+
+The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end 
 
 ### The `InventoryManager` Class
 
