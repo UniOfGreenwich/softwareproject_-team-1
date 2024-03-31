@@ -7,10 +7,18 @@
         mc:Ignorable="d"
         Title="Student Menu" Height="450" Width="800">
     <Grid>
-        <Button x:Name="rentBookButton" Content="Rent Book" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
-        <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="560,212,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
-        <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" Margin="362,89,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
+        <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="542,279,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
+        <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Center" Margin="0,69,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>
 
+        <Label x:Name="currentDebtLabel" FontSize="14" Margin="542,318,69,59" Content="Current Balance: "/>
+        <Label x:Name="title" FontSize="14" Width="200" Height="30" Margin="10,10,590,394" Content="Title: "/>
+        <Label x:Name="ISBN" FontSize="14" Width="200" Height="30" Margin="10,40,590,359" Content="ISBN: "/>
+        <Label x:Name="DOI" FontSize="14" Width="200" Height="30" Margin="10,70,590,315" Content="DOI: "/>
+        <Label x:Name="Journal" FontSize="14" Width="200" Height="30" Margin="10,100,590,280" Content="Journal: "/>
+        <Label x:Name="Conference" FontSize="14" Width="200" Height="30" Margin="10,130,590,245" Content="Conference: "/>
+        <Label x:Name="Synopsis" FontSize="14" Width="200" Height="30" Margin="10,160,590,207" Content="Synopsis: "/>
+        <Label x:Name="deweyDecimal" FontSize="14" Width="200" Height="30" Margin="10,190,590,177" Content="Dewey Decimal: "/>
     </Grid>
 </Window>

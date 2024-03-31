@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
+using System.Windows.Controls;
 
 namespace LMS_WPFApp
 {
@@ -65,6 +66,34 @@ namespace LMS_WPFApp
             Close();
         
         }
+
+        private void Username_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "Username")
+            {
+                tb.Text = "";
+            }
+        }
+        private void Username_TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(tb.Text))
+            {
+                tb.Text = "Username";
+            }
+        }
+       
+
+
+        /* private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+         {
+             double scaleFactor = Math.Min(this.ActualWidth / 800, this.ActualHeight / 450)*0.5; // Adjust values according to your initial window size
+                                                                                             // Now, you can scale your UI elements using the scaleFactor
+                                                                                             // For example:
+             usernameTextBox.FontSize = 14 * scaleFactor;
+             // Adjust other UI elements similarly
+         }*/
 
         // Closes application window if quit pressed
         private void quitButton_Click(object sender, RoutedEventArgs e)
