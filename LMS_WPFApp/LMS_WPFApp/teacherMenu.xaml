@@ -18,7 +18,7 @@
         <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="balance_TextChanged"/>
+        <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="23,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224"><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="0"/><Run Language="en-gb" Text="'"/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="1"/><Run Language="en-gb" Text="'"/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="2"/><Run Language="en-gb" Text="'"/><Run Text=" - System Admin"/><LineBreak/><Run Language="en-gb" Text="Balance must be a number"/></TextBlock>
         <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name"/>
         <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name"/>
@@ -26,7 +26,7 @@
         <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="306,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance"/>
         <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Left" Margin="589,300,0,0" VerticalAlignment="Top" Width="75" Click="backTeacherMenuButton_Click"/>
         <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
-        <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." SelectionChanged="usernameComboBox_SelectionChanged" FontSize="12"/>
+        <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." FontSize="12"/>
         <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password"/>
 =======
