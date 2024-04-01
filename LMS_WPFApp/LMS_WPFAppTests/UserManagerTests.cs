@@ -6,7 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+<<<<<<< HEAD
 using System.Security.AccessControl;
+=======
+>>>>>>> 647d516 (BookRental test and part of user manager test)
 
 namespace LMS_WPFApp.Tests
 {
@@ -38,14 +41,21 @@ namespace LMS_WPFApp.Tests
         {
             UserManager userManager = new UserManager();
 
+<<<<<<< HEAD
             userManager.OpenDatabaseFile();
+=======
+>>>>>>> 647d516 (BookRental test and part of user manager test)
 
             //Act: Close the database file 
             userManager.CloseDatabaseFile();
 
+<<<<<<< HEAD
             // Assert: Check if userList and tableHeaders are null after closing the database file
             Assert.IsNull(userManager.userList, "User list should be null after closing the database file");
             Assert.IsNull(userManager.tableHeaders, "Table headers should be null after closing the database file");
+=======
+            Assert.Fail();
+>>>>>>> 647d516 (BookRental test and part of user manager test)
         }
 
         [TestMethod()]
@@ -85,7 +95,11 @@ namespace LMS_WPFApp.Tests
             // Arrange: Create an instance of UserManager
             UserManager userManager = new UserManager();
 
+<<<<<<< HEAD
            userManager.OpenDatabaseFile();
+=======
+            userManager.OpenDatabaseFile();
+>>>>>>> 647d516 (BookRental test and part of user manager test)
 
             // Scenario 1: Adding an object to an existing userList
             List<string> newObject = new List<string>() { "xy1234zs", "newpassword1", "1", "Dev", "John", "2.0" };
@@ -102,6 +116,7 @@ namespace LMS_WPFApp.Tests
         [TestMethod()]
         public void EditObjectTest()
         {
+<<<<<<< HEAD
             // Arrange: Create an instance of UserManager
             UserManager userManager = new UserManager();
 
@@ -116,5 +131,45 @@ namespace LMS_WPFApp.Tests
             //userManager.CloseDatabaseFile();
         }
 
+=======
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetObjectInfoTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void FindObjectInListTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetSpecificObjectDataTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void FindFieldNameInListTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetObjectsFromFieldTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void ToSHA512Test()
+        {
+            Assert.Fail();
+        }
+>>>>>>> 647d516 (BookRental test and part of user manager test)
     }
 }
