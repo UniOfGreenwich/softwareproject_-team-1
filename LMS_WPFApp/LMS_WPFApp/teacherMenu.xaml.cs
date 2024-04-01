@@ -47,6 +47,15 @@ namespace LMS_WPFApp
                 PopulateComboBox();
             }   
         }
+        private void balance_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Add your implementation here
+        }
+        private void usernameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Add your implementation here
+        }
+
         private void createUserButton_Click(object sender, RoutedEventArgs e)
         {
             List<string> newUserList = new List<string>();

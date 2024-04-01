@@ -14,7 +14,6 @@ namespace LMS_WPFApp
         public studentMenu(UserManager users, InventoryManager inventory, string username)
         {
             InitializeComponent();
-            
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
