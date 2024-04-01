@@ -14,6 +14,7 @@
     <Grid>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
 =======
         <Button x:Name="rentBookButton" Content="Rent Book" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
@@ -46,6 +47,9 @@
 
 <<<<<<< HEAD
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
+=======
+        <Button x:Name="rentBookButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
+>>>>>>> 34bd6df (Mod: Update phase/3 for George)
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="542,279,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
         <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Center" Margin="0,69,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>

@@ -551,13 +551,13 @@ The purpose of a state chart diagram is to model the dynamic nature of a system.
 
 ### Interfaces
 
-The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end 
+The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end developer can easily implement the functions in the xaml.cs back-end. The creation of `I_SystemObjectManager` allows the methods to be created in the `InventoryManager` and `UserManager` classes as seen below.
 
 ### The `InventoryManager` Class
 
 **The `InventoryManager` class** is responsible for managing the inventory of books and journals in the library system. It contains several methods that facilitate operations such as adding, deleting, editing, and retrieving inventory items and their information. 
 
-**Core Method**
+**Core Methods**
 
 **`OpenDatabaseFile()`:**
 
@@ -583,6 +583,8 @@ Deletes an item from the inventory.
 
 Edits information about an item in the inventory. It uses helper methods to find the object's and field's index, then removes the old value and inserts the new edited value in the inventoryList.
 
+**Helper Methods**
+
 **`FindObjectInList` and `FindFieldNameInList`:**
 
  These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
@@ -590,6 +592,8 @@ Edits information about an item in the inventory. It uses helper methods to find
 ---
 ### The `UserManager` Class
 The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
+
+**Core Methods**
 
 **`OpenDatabaseFile()`:**
 
@@ -619,6 +623,7 @@ To retrieve information about a specific user in the user database. It finds the
 
 Retrieves specific data about a user from the user database. It finds the user by name, retrieves the index of the specified field, and returns the corresponding data for that field.
 
+**Helper Methods**
 
 **`ToSHA512()`:**
 

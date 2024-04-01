@@ -34,7 +34,6 @@ namespace LMS_WPFApp
 >>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
         {
             InitializeComponent();
-            
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);

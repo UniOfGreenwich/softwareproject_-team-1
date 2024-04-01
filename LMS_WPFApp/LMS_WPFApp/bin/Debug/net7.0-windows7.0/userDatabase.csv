@@ -1,9 +1,13 @@
 username,password,accessLevel,lastName,firstName,balance
 <<<<<<< HEAD
+<<<<<<< HEAD
 jd1234a,bed4efa1d4fdbd954bd3705d6a2a78270ec9a52ecfbfb010c61862af5c76af1761ffeb1aef6aca1bf5d02b3781aa854fabd2b69c790de74e17ecfec3cb6ac4bf,0,Doe,John,-4.7
 as5678b,bed4efa1d4fdbd954bd3705d6a2a78270ec9a52ecfbfb010c61862af5c76af1761ffeb1aef6aca1bf5d02b3781aa854fabd2b69c790de74e17ecfec3cb6ac4bf,1,Smith,Alice,0.5
 =======
 jd1234a,bed4efa1d4fdbd954bd3705d6a2a7827ec9a52ecfbfb010c61862af5c76af1761ffeb1aef6aca1bf5d02b3781aa854fabd2b69c79de74e17ecfec3cb6ac4bf,0,Doe,John,-4.7
+=======
+jd1234a,bed4efa1d4fdbd954bd3705d6a2a7827ec9a52ecfbfb010c61862af5c76af1761ffeb1aef6aca1bf5d02b3781aa854fabd2b69c79de74e17ecfec3cb6ac4bf,0,Doe,John,0
+>>>>>>> 34bd6df (Mod: Update phase/3 for George)
 as5678b,secure456,1,Smith,Alice,0.5
 >>>>>>> 50a1437 (What's New:)
 rw9012c,adminPass789,0,Williams,Robert,-3.2
