@@ -10,9 +10,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         Title="Student Menu" Height="450" Width="800">
+=======
+        Title="Student Menu" Height="600" Width="1150">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#B3FFFFFF" CornerRadius="5" Margin="0,0,0,10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#D0D0D0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="IsDefault" Value="True">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Foreground" Value="Black" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+>>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
     <Grid>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,8 +85,9 @@
 =======
 =======
         <Grid.Background>
-            <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
         </Grid.Background>
+<<<<<<< HEAD
 >>>>>>> 4829259 (What's New:)
         <Button x:Name="rentBookButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
 >>>>>>> 34bd6df (Mod: Update phase/3 for George)
@@ -124,5 +157,13 @@
         <Label x:Name="Synopsis" FontSize="14" Width="200" Height="30" Margin="10,160,590,207" Content="Synopsis: "/>
         <Label x:Name="deweyDecimal" FontSize="14" Width="200" Height="30" Margin="10,190,590,177" Content="Dewey Decimal: "/>
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
+=======
+        <Button x:Name="rentBookButton" Content="Renting" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="0,200,0,0" VerticalAlignment="Top" Click="rentBookButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+        <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="250,200,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="700,200,0,0" VerticalAlignment="Top" Click="payFeesButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+        <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="30" Background="#B3FFFFFF" FontFamily="Century Gothic" Height="40" Width="220"/>
+        <Label x:Name="currentDebtLabel" FontSize="20" Margin="462,443,462,64" Content="Current Balance: " Background="#B3FFFFFF" FontFamily="Century Gothic"/>
+
+>>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
     </Grid>
 </Window>
