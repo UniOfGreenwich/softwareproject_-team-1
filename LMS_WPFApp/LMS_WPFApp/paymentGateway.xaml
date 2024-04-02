@@ -6,33 +6,8 @@
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
         Title="paymentGateway" Height="450" Width="800">
-    <Window.Resources>
-        <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="#B3FFFFFF" CornerRadius="5" Margin="0,0,0,10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#D0D0D0" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Background" Value="White" />
-            <Setter Property="Foreground" Value="Black" />
-            <Style.Triggers>
-                <Trigger Property="IsDefault" Value="True">
-                    <Setter Property="Background" Value="White" />
-                    <Setter Property="Foreground" Value="Black" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
     <Grid>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +32,11 @@
         <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
 >>>>>>> 70e15b7 (Part of PaymentGateway)
+=======
+        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
+        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
+>>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
         <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center"/>
         <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Top" Height="35" Width="250" FontSize="22"/>
         <TextBox x:Name="CvcText" HorizontalAlignment="Left" Margin="275,284,0,0" TextWrapping="Wrap" Text="CVC" VerticalAlignment="Top" Height="36" Width="100" FontSize="22" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.495,-0.251"/>
@@ -64,6 +44,7 @@
         <TextBox x:Name="CardNumberText" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Width="250" Height="36" FontSize="22" TextChanged="CardNumberText_TextChanged"/>
         <TextBox x:Name="PaymentText" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top" Width="250" Height="32" FontSize="22" TextChanged="PaymentText_TextChanged"/>
     </Grid>
+<<<<<<< HEAD
 =======
         <Grid.Background>
             <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
@@ -100,4 +81,6 @@
         <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center" Background="#B3FFFFFF" FontFamily="Century Gothic"/>
      </Grid>
 >>>>>>> 1429753 (Updated UI, changed background to Logo.png for now, as background.png is broken)
+=======
+>>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
 </Window>
