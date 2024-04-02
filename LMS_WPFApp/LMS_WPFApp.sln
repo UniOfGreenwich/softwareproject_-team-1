@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS_WPFApp", "LMS_WPFApp\LM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS_UnitTests", "LMS_UnitTests\LMS_UnitTests.csproj", "{A2BE1C60-DCF1-4367-9112-091ED752C0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS_WPFAppTests", "LMS_WPFAppTests\LMS_WPFAppTests.csproj", "{EDC6961D-FECE-462E-B2AC-220979FB7822}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2BE1C60-DCF1-4367-9112-091ED752C0F4}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{EDC6961D-FECE-462E-B2AC-220979FB7822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDC6961D-FECE-462E-B2AC-220979FB7822}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDC6961D-FECE-462E-B2AC-220979FB7822}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDC6961D-FECE-462E-B2AC-220979FB7822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
