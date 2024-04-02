@@ -85,6 +85,7 @@ namespace LMS_WPFApp
 >>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         }
 
+        // Open the book rental window
         private void rentBookButton_Click(object sender, RoutedEventArgs e)
         {
 <<<<<<< HEAD

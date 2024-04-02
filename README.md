@@ -695,6 +695,26 @@ Serves for password hashing using a secure algorithm (SHA512) for password stora
 
 ## Testing
 
+**`teacherMenuTests`:**
+
+The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
+- Opening window
+- Closing window
+- Generating usernames
+- Creating new users
+- Deleting users
+- Database handling
+
+All tests passed successfully (as shown in **Figure 8**), and the teacher menu functionality was verified to be working as expected.
+
+<div align=center>
+
+**[Figure 8: Teacher Menu Test Results]()**
+
+![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
 ## Project Planning
 
 ### Gantt Chart
@@ -767,7 +787,7 @@ Below is a screenshot of our project Kanban from 21/01/24.
 
 <div align=center>
 
-**[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+**[Figure 9: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](Documentation/kanban.png)
 

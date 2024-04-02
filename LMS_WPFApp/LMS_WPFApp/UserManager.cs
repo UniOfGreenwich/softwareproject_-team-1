@@ -249,16 +249,24 @@ namespace LMS_WPFApp
             }
             return objectsFromField;
         }
+
+        // Hashing function for password encryption
         public static string ToSHA512(string s)
         {
+            // Create a SHA512 hash from the input string
             using (SHA512 sha512 = SHA512.Create())
             {
+                // Convert the byte array to a hexadecimal string
                 StringBuilder hash = new StringBuilder();
+                // Convert the input string to a byte array and compute the hash
                 byte[] hashArray = sha512.ComputeHash(Encoding.UTF8.GetBytes(s));
+                // Convert the byte array to a hexadecimal string
                 foreach (byte b in hashArray)
                 {
+                    // Append the byte value to the hash string in hexadecimal format
                     hash.Append(b.ToString("x"));
                 }
+                // Return the hexadecimal string
                 return hash.ToString();
             }
         }
