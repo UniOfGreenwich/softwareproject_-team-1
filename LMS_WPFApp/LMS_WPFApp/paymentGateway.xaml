@@ -8,6 +8,7 @@
         Title="paymentGateway" Height="450" Width="800">
     <Grid>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,9 @@
 >>>>>>> 15a958a (updated cs files for functionality)
 =======
         <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="77,155,0,0" VerticalAlignment="Top"/>
+=======
+        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" FontSize="16"/>
+>>>>>>> 727d4af (Complete Payment Gateway)
         <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
 >>>>>>> 70e15b7 (Part of PaymentGateway)
