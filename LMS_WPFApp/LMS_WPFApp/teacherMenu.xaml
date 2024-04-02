@@ -123,6 +123,7 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
+<<<<<<< HEAD
 >>>>>>> 1429753 (Updated UI, changed background to Logo.png for now, as background.png is broken)
 =======
         Title="User Management" Height="600" Width="1150">
@@ -133,6 +134,8 @@
 =======
         Title="User Management" Height="600" Width="1150">
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
+=======
+>>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
     <Viewbox Stretch="UniformToFill">
 
         <Grid>
@@ -151,7 +154,7 @@
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
 =======
             <Grid.Background>
-                <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
             </Grid.Background>
 >>>>>>> 4829259 (What's New:)
             <Grid.RowDefinitions>
@@ -161,12 +164,17 @@
             </Grid.RowDefinitions>
 >>>>>>> 4d6cbb1 (added some UI updates)
 
-            <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Segoe UI" FontWeight="Bold" TextAlignment="Center" Foreground="#D9D9FF"/>
+            <!-- Your other UI elements here -->
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>
             </StackPanel>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
             <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="171,275,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="createUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="537,168,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="deleteUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="34,88,0,0" TextWrapping="Wrap" Background="#B3FFFFFF" VerticalAlignment="Top" Width="112"  FontFamily="Century Gothic"/>
@@ -182,6 +190,7 @@
             <ComboBox x:Name="usernameToDeleteCombo" Background="#B3FFFFFF" Margin="537,133,136,253" IsEditable="True" Text="Choose..." FontSize="12"/>
             <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="42,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="42,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
@@ -205,6 +214,8 @@
 >>>>>>> df99ad0 (What's New:)
 =======
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
+=======
+>>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
         </Grid>
     </Viewbox>
 </Window>
