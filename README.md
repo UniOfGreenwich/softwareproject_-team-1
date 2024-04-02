@@ -29,6 +29,9 @@
   - [The `teacherMenu` partial class](#the-teachermenu-partial-class-1)
   - [The `loginScreen` partial class](#the-loginscreen-partial-class-1)
 - [Testing](#testing)
+    - [`teacherMenuTests`:](#teachermenutests)
+    - [`userManagerTest`:](#usermanagertest)
+    - [`bookRentalTest`:](#bookrentaltest)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
   
@@ -301,7 +304,23 @@ It provides a username and password input for users. Then it checks if the usern
 
 ## Testing
 
-**`teacherMenuTests`:**
+**Testing Strategies**
+
+The team employed a variety of testing strategies to ensure the reliability and functionality of the program. 
+
+**Integration Test**
+
+Integration testing is performed to test how the individual components of the program work together as a whole.
+
+**Unit Test**
+
+Unit testing is used to test individual components or units of the program in isolation.
+
+**UI Testing**
+
+Tests the user interface elements and their behaviour. It verifies the window opens and closes as expected and ensures UI elements function correctly based on user interaction.
+
+#### `teacherMenuTests`:
 
 The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
 - Opening window
@@ -318,6 +337,44 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 **[Figure 8: Teacher Menu Test Results]()**
 
 ![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
+#### `userManagerTest`:
+
+<div align=center>
+
+**Table 2: UserManager Test Cases and Result**
+
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|` OpenDatabaseFileTest` | Tests the `OpenDatabaseFile` method in UserManager to ensure it correctly reads the database file. | Database file is successfully opened  and `userList` and `tableHeader`s are populated. | Passed 
+| `CloseDatabaseFileTest` | Tests if the method properly close the database file and save if any changes occur | Successfully closed the database and saved the updated data | passed
+| `CreateNewFieldTest` | Tests if `CreateNewField` method successfully creates a new field to table headers and initializes it with empty value | Successfully Created a new field to `tableHeader` and has empty values for all the user in `userList` | Passed
+| `CreateNewObjectTest` | Test the CreateNewObject to ensure it's correctly create a new user or object to an existing `userList` | The new object successfully added to `userList`| Passed
+| `EditObjectTest` | Test the EditObject function to ensure it correctly modify existing object's field value | Successfully modify an exististing object's field value | Passed 
+
+
+**[Figure 9: UserManager Test Results]()**
+
+![UserManager Test Results](Documentation/UserManagerTest.png)
+
+</div>
+
+#### `bookRentalTest`:
+
+<div align=center>
+
+**Table 3: bookRental Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`bookRentalOpenTest` | Tests If the `bookRental` Window open successfully | The window opens when the program run but the test not running in test explorer | Not Run
+| `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
+
+
+**[Figure 10: bookRental UI Test Results]()**
+
+![bookRental Test Results](Documentation/bookRentalTest.png)
 
 </div>
 
