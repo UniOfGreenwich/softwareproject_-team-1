@@ -75,7 +75,7 @@ namespace LMS_WPFApp
             }
         }
 
-        public void CreateNewField(string fieldName, List<List<string>> inventoryList)
+        public void CreateNewField(string fieldName)
         {
             inventoryHeaders.Add(fieldName);
             foreach (var row in inventoryList)
