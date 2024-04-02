@@ -15,15 +15,15 @@
 
 ## Contents 
 - [Contents](#contents)
-- [Task Allocation](#task-allocation)
+- [Task Alocation](#task-alocation)
 - [Implementation](#implementation)
-  - [Interfaces](#interfaces)
   - [The `InventoryManager` Class](#the-inventorymanager-class)
   - [The `UserManager` Class](#the-usermanager-class)
+  - [The `paymentGateway` partial class](#the-paymentgateway-partial-class)
 - [Testing](#testing)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
-  
+
 ## Task Allocation
 
 <div align=center>
@@ -40,10 +40,6 @@
 </div>
 
 ## Implementation
-
-### Interfaces
-
-The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end developer can easily implement the functions in the xaml.cs back-end. The creation of `I_SystemObjectManager` allows the methods to be created in the `InventoryManager` and `UserManager` classes as seen below.
 
 ### The `InventoryManager` Class
 ---
@@ -76,14 +72,14 @@ Deletes an item from the inventory.
 
 Edits information about an item in the inventory. It uses helper methods to find the object's and field's index, then removes the old value and inserts the new edited value in the inventoryList.
 
-**Helper Methods**
-
 **`FindObjectInList` and `FindFieldNameInList`:**
 
  These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
 
 ---
+
 ### The `UserManager` Class
+
 ---
 
 The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
@@ -118,13 +114,34 @@ To retrieve information about a specific user in the user database. It finds the
 
 Retrieves specific data about a user from the user database. It finds the user by name, retrieves the index of the specified field, and returns the corresponding data for that field.
 
-**Helper Methods**
 
 **`ToSHA512()`:**
 
 Serves for password hashing using a secure algorithm (SHA512) for password storage.
 
 ---
+
+### The `paymentGateway` partial class
+
+The `paymentGateway` class is responsible for handling payment from the users through various types of cards. It facilitates the process of users making payments towards their owed fees or balances.
+
+**Core Methods**
+
+**`payFeesButton_Click`:**
+
+Handles the logic for processing payments when the user clicks the "Pay Fees" button. It gathers information such as the credit card number, expiry date, CVC, and payment amount entered by the user. It validates the credit card details, checks if the payment amount exceeds the owed balance, and updates the user's balance in the database accordingly. If the payment is successful, it displays a confirmation message and navigates the user back to the student menu window.
+
+**`IsValidCreditCard()`:**
+
+Validates the credit card details entered by the user .It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
+
+**`GetCardType()`:**
+
+This method determines the type of credit card based on its number. 
+
+---
+
+
 
 ## Testing
 ## Kanban
