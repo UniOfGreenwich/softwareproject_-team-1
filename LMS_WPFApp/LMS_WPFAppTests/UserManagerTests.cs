@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Security.AccessControl;
 
 namespace LMS_WPFApp.Tests
 {
@@ -37,11 +38,14 @@ namespace LMS_WPFApp.Tests
         {
             UserManager userManager = new UserManager();
 
+            userManager.OpenDatabaseFile();
 
             //Act: Close the database file 
             userManager.CloseDatabaseFile();
 
-            Assert.Fail();
+            // Assert: Check if userList and tableHeaders are null after closing the database file
+            Assert.IsNull(userManager.userList, "User list should be null after closing the database file");
+            Assert.IsNull(userManager.tableHeaders, "Table headers should be null after closing the database file");
         }
 
         [TestMethod()]
@@ -81,7 +85,7 @@ namespace LMS_WPFApp.Tests
             // Arrange: Create an instance of UserManager
             UserManager userManager = new UserManager();
 
-            userManager.OpenDatabaseFile();
+           userManager.OpenDatabaseFile();
 
             // Scenario 1: Adding an object to an existing userList
             List<string> newObject = new List<string>() { "xy1234zs", "newpassword1", "1", "Dev", "John", "2.0" };
@@ -98,43 +102,19 @@ namespace LMS_WPFApp.Tests
         [TestMethod()]
         public void EditObjectTest()
         {
+            // Arrange: Create an instance of UserManager
+            UserManager userManager = new UserManager();
+
+           // userManager.OpenDatabaseFile();
+
+            //Act
+            userManager.EditObject("xy1234z", "newpassword", "password");
+
+            //Asert
             Assert.Fail();
+
+            //userManager.CloseDatabaseFile();
         }
 
-        [TestMethod()]
-        public void GetObjectInfoTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void FindObjectInListTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void GetSpecificObjectDataTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void FindFieldNameInListTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void GetObjectsFromFieldTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void ToSHA512Test()
-        {
-            Assert.Fail();
-        }
     }
 }
