@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
 ﻿using System.IO;
@@ -17,6 +18,10 @@ using System.Threading;
 ﻿using System.Windows;
 using System.Windows.Controls;
 >>>>>>> df99ad0 (What's New:)
+=======
+﻿using System.Windows;
+using System.Windows.Controls;
+>>>>>>> 49823c5 (What's New:)
 
 namespace LMS_WPFApp
 {
