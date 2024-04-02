@@ -34,7 +34,7 @@
     </Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
+            <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
 
         <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="35" Width="250" Margin="0,150,0,250" HorizontalAlignment="Center">
