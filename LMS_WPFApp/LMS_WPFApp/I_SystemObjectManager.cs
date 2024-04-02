@@ -13,7 +13,7 @@ namespace LMS_WPFApp
         public void CreateNewObject(List<string> objectItems);
         void EditObject(string objectName, string editedItem, string fieldName);
         void DeleteObject(string objectName);
-        void CreateNewField(string fieldName, List<List<string>> objectList);
+        void CreateNewField(string fieldName);
         void DeleteField(string fieldName);
         List<string> GetObjectInfo(string objectName);
         string GetSpecificObjectData(string objectName, string fieldName);
