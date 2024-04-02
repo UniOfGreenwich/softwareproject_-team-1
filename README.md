@@ -23,11 +23,26 @@
 - [Testing](#testing)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
-  
-## Task Alocation
+
+## Task Allocation
+
+<div align=center>
+
+**Table 1: Task Allocation**
+
+| Username | Tasks |
+|:---:|:---:|
+| [th5528e](https://github.com/th5528e) | UI/XAML Design // Kanban // Inventory Testing
+| [Repi909](https://github.com/Repi909) | Github Admin // User/Inventory Classes and Interface // Login and StudentMenu Testing
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Pull Requests // Hashing and Auth // TeacherMenu Testing
+| [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // User Testing
+
+</div>
+
 ## Implementation
 
 ### The `InventoryManager` Class
+---
 
 **The `InventoryManager` class** is responsible for managing the inventory of books and journals in the library system. It contains several methods that facilitate operations such as adding, deleting, editing, and retrieving inventory items and their information. 
 
@@ -62,7 +77,10 @@ Edits information about an item in the inventory. It uses helper methods to find
  These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
 
 ---
+
 ### The `UserManager` Class
+
+---
 
 The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
 
@@ -127,4 +145,29 @@ This method determines the type of credit card based on its number.
 
 ## Testing
 ## Kanban
-## References and Acknowledgements  
+
+
+Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections (Radigan, 2023).
+
+Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method (Toyota, 2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
+
+Below is a screenshot of our project Kanban from 21/01/24 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
+
+<div align=center>
+
+**[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+
+![Kanban](kanban.png)
+
+</div>
+
+## References and Acknowledgements
+
+We would like to thank the following for their contributions and support with this project:
+
+<div align=center>
+
+[CompEng0001](https://github.com/CompEng0001)<br>
+Nathanial Sadler
+
+</div>
