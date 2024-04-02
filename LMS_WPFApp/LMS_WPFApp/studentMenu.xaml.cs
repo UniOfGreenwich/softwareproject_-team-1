@@ -49,14 +49,16 @@ namespace LMS_WPFApp
 >>>>>>> d07a775 (What's New:)
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
+
+            //passes the balance to the payment gateway
+
             string balance = Users.GetSpecificObjectData(username, "balance");
             paymentGateway paymentWindow = new paymentGateway(Users, Inventory, username, balance);
             paymentWindow.Show();
 
             Close();
             LoadDebtFromCSV(username);
-            // int newBalance = 0; //shuvo change this when you finish payment methods. need a return value for new balance
-            // Users.EditObject(userData[0], newBalance.ToString(), "balance");
+            
             return;
         }
 
