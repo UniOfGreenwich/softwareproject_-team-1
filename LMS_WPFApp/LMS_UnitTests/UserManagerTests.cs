@@ -82,6 +82,8 @@ namespace LMS_UnitTests
 
            userManager.OpenDatabaseFile();
 
+           userManager.DeleteObject("xy1234z");
+
             // Scenario 1: Adding an object to an existing userList
             List<string> newObject = new List<string>() { "xy1234z", "newpassword1", "1", "Dev", "John", "2.0" };
             // Act: Add the new object

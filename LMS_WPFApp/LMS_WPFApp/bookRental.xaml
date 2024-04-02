@@ -34,8 +34,9 @@
     </Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Logo.png" Stretch="Fill"/>
+            <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
+
         <TextBlock x:Name="titleSearchLabel" HorizontalAlignment="Left" Margin="300,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Title Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
         <TextBox x:Name="titleSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="titleSearch_TextChanged" Margin="0,100,0,0"/>
         <TextBlock x:Name="autherSearchLabel" HorizontalAlignment="Left" Margin="300,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Author Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
