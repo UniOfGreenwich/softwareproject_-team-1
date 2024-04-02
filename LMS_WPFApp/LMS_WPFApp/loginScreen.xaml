@@ -60,7 +60,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="#B3FFFFFF" CornerRadius="5" Margin="0,0,0,10">
+                        <Border Background="#ADADAD" CornerRadius="5" Margin="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -71,56 +71,52 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Background" Value="White" />
-            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="#3498DB" />
+            <Setter Property="Foreground" Value="White" />
             <Style.Triggers>
                 <Trigger Property="IsDefault" Value="True">
-                    <Setter Property="Background" Value="White" />
-                    <Setter Property="Foreground" Value="Black" />
+                    <Setter Property="Background" Value="#3498DB" />
+                    <Setter Property="Foreground" Value="White" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
 >>>>>>> 4d6cbb1 (added some UI updates)
 
-    <Viewbox Stretch="Fill">
+    <Viewbox Stretch="UniformToFill">
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="75" Width="106">
-                <Border Background="#B3FFFFFF" Margin="0">
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="115">
+                <Border Background="#80FFFFFF" Margin="0">
                     <Image Source="/Logo.png" Height="75" Width="106"/>
                 </Border>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Margin="20" VerticalAlignment="Center">
-                <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Width="150">
-                    <TextBox x:Name="usernameTextBox" Width="150" Text="Username" TextWrapping="Wrap" GotFocus="Username_TextBox_GotFocus" LostFocus="Username_TextBox_LostFocus" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
-                </Border>
-                <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Margin="0,20,0,0" Width="150">
-                    <PasswordBox x:Name="passwordTextBox" Width="150" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
-                </Border>
+                
+                <TextBox x:Name="usernameTextBox" Width="150" Text="Username" TextWrapping="Wrap" GotFocus="Username_TextBox_GotFocus" LostFocus="Username_TextBox_LostFocus"/>
+                
+                <PasswordBox x:Name="passwordTextBox" Width="150" />
+            
             </StackPanel>
 
             <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="400" Margin="0,0,0,0">
-                <Button x:Name="loginButton" HorizontalAlignment="Center" Content="Login" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="loginButton_Click" Width="150" FontFamily="Century Gothic"/>
-                <Button x:Name="quitButton" HorizontalAlignment="Center" Content="Quit" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="quitButton_Click" Width="150" FontFamily="Century Gothic" />
+                <Button x:Name="loginButton" HorizontalAlignment="Center" Content="Login" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="loginButton_Click" Width="200"/>
+                <Button x:Name="quitButton" HorizontalAlignment="Center" Content="Quit" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="quitButton_Click" Width="200" />
             </StackPanel>
-
         </Grid>
     </Viewbox>
 </Window>
