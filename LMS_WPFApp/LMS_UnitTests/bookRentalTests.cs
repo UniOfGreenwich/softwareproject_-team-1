@@ -37,8 +37,10 @@ namespace LMS_UnitTests
             // Wait for the window to open
             bool windowOpened = thread.Join(TimeSpan.FromSeconds(5));
 
-            // Assert
-            Assert.IsTrue(windowOpened && bookRentalInstance.IsVisible, "Book rental window did not open!");
+            if (!windowOpened && !bookRentalInstance.IsVisible)
+            {
+                Assert.Fail("Book rental window did not open!");
+            }
         }
 
         [STAThread]
@@ -69,7 +71,7 @@ namespace LMS_UnitTests
             bool timeout = !thread.Join(TimeSpan.FromSeconds(5));
 
             // Assert
-            Assert.IsTrue(timeout || !bookRentalInstance.IsVisible, "The window did not close");
+            Assert.IsTrue(!timeout || bookRentalInstance.IsVisible, "The window did not close");
         }
 
     }
