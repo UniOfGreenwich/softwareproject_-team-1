@@ -144,8 +144,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Grid.Background>
-                <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
             </Grid.Background>
+<<<<<<< HEAD
 =======
 >>>>>>> df99ad0 (What's New:)
 =======
@@ -157,14 +158,15 @@
                 <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
             </Grid.Background>
 >>>>>>> 4829259 (What's New:)
+=======
+
+>>>>>>> b4cae44 (What's New:)
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 >>>>>>> 4d6cbb1 (added some UI updates)
-
-            <!-- Your other UI elements here -->
 
             <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>

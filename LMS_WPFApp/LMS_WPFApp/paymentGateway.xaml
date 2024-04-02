@@ -62,7 +62,7 @@
 =======
 =======
         <Grid.Background>
-            <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
+            <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
 <<<<<<< HEAD
 >>>>>>> 4829259 (What's New:)
