@@ -36,15 +36,14 @@
 
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
             </Grid.Background>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-
-            <!-- Your other UI elements here -->
 
             <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>
