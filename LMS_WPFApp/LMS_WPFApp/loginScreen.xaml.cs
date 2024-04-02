@@ -52,6 +52,7 @@ namespace LMS_WPFApp
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -61,7 +62,11 @@ namespace LMS_WPFApp
             
 =======
 >>>>>>> 035a63d (Changed logic in loginScreen.xaml.cs to reflect new UserManager class.)
+=======
+            // Get username and password from textboxes
+>>>>>>> f3203c5 (What's New:)
             string username = usernameTextBox.Text;
+            // Hashes password using SHA512
             string password = UserManager.ToSHA512(passwordTextBox.Password);
             //MessageBox.Show(UserManager.ToSHA512(password));
             

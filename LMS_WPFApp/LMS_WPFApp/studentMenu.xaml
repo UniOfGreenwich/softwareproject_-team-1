@@ -96,6 +96,7 @@
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="542,279,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
         <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Center" Margin="0,69,0,0" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="24"/>
 
+<<<<<<< HEAD
         <Label x:Name="currentDebtLabel" FontSize="14" Margin="542,318,69,59" Content="Current Balance: "/>
         <Label x:Name="title" FontSize="14" Width="200" Height="30" Margin="10,10,590,394" Content="Title: "/>
         <Label x:Name="ISBN" FontSize="14" Width="200" Height="30" Margin="10,40,590,359" Content="ISBN: "/>
@@ -163,6 +164,9 @@
 
 >>>>>>> b4cae44 (What's New:)
         <Button x:Name="rentBookButton" Content="Renting" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="0,200,0,0" VerticalAlignment="Top" Click="rentBookButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+=======
+        <Button x:Name="rentBookButton" Content="Rent Book" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="0,200,0,0" VerticalAlignment="Top" Click="rentBookButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+>>>>>>> f3203c5 (What's New:)
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="250,200,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="700,200,0,0" VerticalAlignment="Top" Click="payFeesButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
         <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="30" Background="#B3FFFFFF" FontFamily="Century Gothic" Height="40" Width="220"/>
