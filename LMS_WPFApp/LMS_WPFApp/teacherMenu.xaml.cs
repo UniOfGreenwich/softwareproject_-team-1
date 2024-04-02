@@ -27,7 +27,7 @@ namespace LMS_WPFApp
 {
     public partial class teacherMenu : Window
     {
-        private UserManager Users;
+        public UserManager Users;
         private InventoryManager Inventory;
 
         public teacherMenu(UserManager users, InventoryManager inventory)
