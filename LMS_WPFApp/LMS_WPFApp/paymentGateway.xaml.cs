@@ -8,14 +8,20 @@ namespace LMS_WPFApp
         private InventoryManager Inventory;
         private List<string> userData;
         private string username;
+        private string initialBalance;
 
-        public paymentGateway(UserManager users, InventoryManager inventory, string username)
+        public paymentGateway(UserManager users, InventoryManager inventory, string username, string initialBalance)
         {
             InitializeComponent();
             this.Users = users;
             this.Inventory = inventory;
             userData = Users.GetObjectInfo(username);
             this.username = username;
+            this.initialBalance = initialBalance;
+
+            //PaymentText.Text = initialBalance;
+
+             owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
         }
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -23,6 +29,20 @@ namespace LMS_WPFApp
             string expiryDate = ExpiryDateText.Text;
             string cvc = CvcText.Text;
             float paymentAmount = float.Parse(PaymentText.Text);
+
+            // Calculate the new balance
+            float currentBalance = float.Parse(initialBalance);
+            float newBalance = currentBalance - paymentAmount;
+
+            if (newBalance < 0)
+            {
+                MessageBox.Show("Payment amount exceeds the current debt.");
+                return;
+            }
+
+
+            // Update the balance in the database
+            Users.EditObject(username, newBalance.ToString(), "balance");
 
             if (!IsValidCreditCard(cardNumber, expiryDate, cvc))
             {
