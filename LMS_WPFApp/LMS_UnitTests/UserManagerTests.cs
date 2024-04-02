@@ -57,13 +57,8 @@ namespace LMS_UnitTests
 
             userManager.OpenDatabaseFile();
 
-            // Initialize tableHeaders and userList
-            userManager.tableHeaders = new List<string>() { "username", "password", "accessLevel", "lastName", "firstName", "balance" };
-            userManager.userList = new List<List<string>>();
             // Act: Create a new field
-            userManager.CreateNewField("email", userManager.userList);
-
-            userManager.CloseDatabaseFile();
+            userManager.CreateNewField("email");
 
             // Assert: Check if the new field has been added to tableHeaders
             CollectionAssert.Contains(userManager.tableHeaders, "email", "New field should be added to tableHeaders");
@@ -74,7 +69,8 @@ namespace LMS_UnitTests
                 Assert.AreEqual("", user.Last(), "New field should have an empty value for each user");
             }
 
-           
+            userManager.CloseDatabaseFile();
+
         }
 
         [TestMethod()]
@@ -87,7 +83,7 @@ namespace LMS_UnitTests
            userManager.OpenDatabaseFile();
 
             // Scenario 1: Adding an object to an existing userList
-            List<string> newObject = new List<string>() { "xy1234zs", "newpassword1", "1", "Dev", "John", "2.0" };
+            List<string> newObject = new List<string>() { "xy1234z", "newpassword1", "1", "Dev", "John", "2.0" };
             // Act: Add the new object
             userManager.CreateNewObject(newObject);
 
@@ -105,7 +101,7 @@ namespace LMS_UnitTests
 
             userManager.OpenDatabaseFile();
 
-            string username = "xy1234zs";
+            string username = "xy1234z";
             string hashedPassword = UserManager.ToSHA512("newpassword1");
 
             //Act
