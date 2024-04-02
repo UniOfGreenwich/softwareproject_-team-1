@@ -79,14 +79,17 @@ namespace LMS_WPFApp
             tableHeaders = null;
         }
 
-        public void CreateNewField(string fieldName, List<List<string>> userList)
+        public void CreateNewField(string fieldName)
         {
             tableHeaders.Add(fieldName);
+            int newFieldIndex = tableHeaders.IndexOf(fieldName);
+
             foreach (var row in userList)
             {
-                row.Insert((row.Count() + 1), "");
+                row.Insert(newFieldIndex, "");
             }
         }
+
 
         public void CreateNewObject(List<string> objectItems)
         {
