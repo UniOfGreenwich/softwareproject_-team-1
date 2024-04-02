@@ -57,6 +57,11 @@ namespace LMS_WPFApp
 
         public void CloseDatabaseFile()
         {
+            if (userList == null)
+            {
+                return;
+            }
+
             // Concatenate tableHeaders and userList
             List<string> listToWrite = new List<string>();
             listToWrite.Add(string.Join(",", tableHeaders)); // Add header row
@@ -70,6 +75,8 @@ namespace LMS_WPFApp
                     writer.WriteLine(item);
                 }
             }
+            userList = null;
+            tableHeaders = null;
         }
 
         public void CreateNewField(string fieldName, List<List<string>> userList)
