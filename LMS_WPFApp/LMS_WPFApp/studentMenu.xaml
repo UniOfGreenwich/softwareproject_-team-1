@@ -39,7 +39,7 @@
             <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
 
-        <Button x:Name="rentBookButton" Content="Renting" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="0,200,0,0" VerticalAlignment="Top" Click="rentBookButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
+        <Button x:Name="rentBookButton" Content="Rent Book" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="0,200,0,0" VerticalAlignment="Top" Click="rentBookButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="250,200,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="700,200,0,0" VerticalAlignment="Top" Click="payFeesButton_Click" Width="200" Height="200" FontSize="24" FontFamily="Century Gothic"/>
         <TextBlock x:Name="studentMenuTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Student Menu" VerticalAlignment="Top" FontSize="30" Background="#B3FFFFFF" FontFamily="Century Gothic" Height="40" Width="220"/>
