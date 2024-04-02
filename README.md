@@ -15,9 +15,6 @@
 - [Team 1- Library System](#team-1--library-system)
   - [Contents](#contents)
   - [Introduction](#introduction)
-- [The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.](#the-documentation-will-further-develop-as-the-project-moves-through-its-key-phases-with-the-initial-planning-of-phase1-being-delivered-on-121223)
-  - [Contents](#contents-1)
-  - [Task Allocation](#task-allocation)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
@@ -62,6 +59,9 @@
     - [The `teacherMenu` partial class](#the-teachermenu-partial-class)
     - [The `loginScreen` partial class](#the-loginscreen-partial-class)
   - [Testing](#testing)
+      - [`teacherMenuTests`:](#teachermenutests)
+      - [`userManagerTest`:](#usermanagertest)
+      - [`bookRentalTest`:](#bookrentaltest)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
       - [Unidimensional](#unidimensional)
@@ -72,7 +72,6 @@
     - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
 
-<<<<<<< HEAD
 # Phase 1 - Requirements Engineering
 
 ## Introduction
@@ -120,24 +119,6 @@ The team decided a ***Incremental Design*** process was to be used as we could e
 - JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
 
 The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
-=======
-## Contents 
-- [Contents](#contents)
-- [Task Allocation](#task-allocation)
-- [Implementation](#implementation)
-  - [The `InventoryManager` Class](#the-inventorymanager-class)
-  - [The `UserManager` Class](#the-usermanager-class)
-  - [The `paymentGateway` partial class](#the-paymentgateway-partial-class)
-  - [The `bookRental` partial class](#the-bookrental-partial-class)
-  - [The `studentMenu` partial class](#the-studentmenu-partial-class)
-  - [The `teacherMenu` partial class](#the-teachermenu-partial-class)
-  - [The `loginScreen` partial class](#the-loginscreen-partial-class)
-- [Testing](#testing)
-- [Kanban](#kanban)
-- [References and Acknowledgements](#references-and-acknowledgements)
-  
-## Task Allocation
->>>>>>> af20bf5 (All the implementations doc)
 
 <div align=center>
 
@@ -810,7 +791,23 @@ It provides a username and password input for users. Then it checks if the usern
 
 ## Testing
 
-**`teacherMenuTests`:**
+**Testing Strategies**
+
+The team employed a variety of testing strategies to ensure the reliability and functionality of the program. 
+
+**Integration Test**
+
+Integration testing is performed to test how the individual components of the program work together as a whole.
+
+**Unit Test**
+
+Unit testing is used to test individual components or units of the program in isolation.
+
+**UI Testing**
+
+Tests the user interface elements and their behaviour. It verifies the window opens and closes as expected and ensures UI elements function correctly based on user interaction.
+
+#### `teacherMenuTests`:
 
 The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
 - Opening window
@@ -827,6 +824,44 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 **[Figure 8: Teacher Menu Test Results]()**
 
 ![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
+#### `userManagerTest`:
+
+<div align=center>
+
+**Table 2: UserManager Test Cases and Result**
+
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|` OpenDatabaseFileTest` | Tests the `OpenDatabaseFile` method in UserManager to ensure it correctly reads the database file. | Database file is successfully opened  and `userList` and `tableHeader`s are populated. | Passed 
+| `CloseDatabaseFileTest` | Tests if the method properly close the database file and save if any changes occur | Successfully closed the database and saved the updated data | passed
+| `CreateNewFieldTest` | Tests if `CreateNewField` method successfully creates a new field to table headers and initializes it with empty value | Successfully Created a new field to `tableHeader` and has empty values for all the user in `userList` | Passed
+| `CreateNewObjectTest` | Test the CreateNewObject to ensure it's correctly create a new user or object to an existing `userList` | The new object successfully added to `userList`| Passed
+| `EditObjectTest` | Test the EditObject function to ensure it correctly modify existing object's field value | Successfully modify an exististing object's field value | Passed 
+
+
+**[Figure 9: UserManager Test Results]()**
+
+![UserManager Test Results](Documentation/UserManagerTest.png)
+
+</div>
+
+#### `bookRentalTest`:
+
+<div align=center>
+
+**Table 3: bookRental Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`bookRentalOpenTest` | Tests If the `bookRental` Window open successfully | The window opens when the program run but the test not running in test explorer | Not Run
+| `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
+
+
+**[Figure 10: bookRental UI Test Results]()**
+
+![bookRental Test Results](Documentation/bookRentalTest.png)
 
 </div>
 
