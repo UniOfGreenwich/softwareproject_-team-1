@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Security.AccessControl;
 
-namespace LMS_WPFApp.Tests
+namespace LMS_UnitTests
 {
     [TestClass()]
     public class UserManagerTests
@@ -77,7 +77,6 @@ namespace LMS_WPFApp.Tests
            
         }
 
-
         [TestMethod()]
         public void CreateNewObjectTest()
         {
@@ -98,22 +97,31 @@ namespace LMS_WPFApp.Tests
             userManager.CloseDatabaseFile();
         }
 
-
         [TestMethod()]
         public void EditObjectTest()
         {
             // Arrange: Create an instance of UserManager
             UserManager userManager = new UserManager();
 
-           // userManager.OpenDatabaseFile();
+            userManager.OpenDatabaseFile();
+
+            string username = "xy1234z";
+            string hashedPassword = UserManager.ToSHA512("newpassword");
 
             //Act
-            userManager.EditObject("xy1234z", "newpassword", "password");
+            if(userManager.FindObjectInList(username) == -1)
+            {
+                Assert.Inconclusive("Object not found in list. Aborting test.");
+            }
+          
+            userManager.EditObject(username,hashedPassword, "password");
 
-            //Asert
-            Assert.Fail();
+            if(userManager.GetSpecificObjectData(username, "password") != hashedPassword)
+            {
+                Assert.Fail("Object was not edited correctly");
+            }
 
-            //userManager.CloseDatabaseFile();
+            userManager.CloseDatabaseFile();
         }
 
     }

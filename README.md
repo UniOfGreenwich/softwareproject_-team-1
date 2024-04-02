@@ -15,7 +15,7 @@
 
 ## Contents 
 - [Contents](#contents)
-- [Task Alocation](#task-alocation)
+- [Task Allocation](#task-allocation)
 - [Implementation](#implementation)
   - [The `InventoryManager` Class](#the-inventorymanager-class)
   - [The `UserManager` Class](#the-usermanager-class)
@@ -23,7 +23,7 @@
 - [Testing](#testing)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
-
+  
 ## Task Allocation
 
 <div align=center>
@@ -79,7 +79,6 @@ Edits information about an item in the inventory. It uses helper methods to find
 ---
 
 ### The `UserManager` Class
-
 ---
 
 The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
@@ -157,7 +156,7 @@ Below is a screenshot of our project Kanban from 21/01/24 and will change throug
 
 **[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
-![Kanban](kanban.png)
+![Kanban](Documentation/kanban.png)
 
 </div>
 

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Windows.Threading;
 using LMS_WPFApp;
 
-namespace LMS_WPFApp.Tests
+namespace LMS_UnitTests
 {
     [TestClass()]
     public class bookRentalTests
