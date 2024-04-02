@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
         Title="User Management" Height="600" Width="1150">
+
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template">
@@ -33,7 +34,6 @@
         </Style>
     </Window.Resources>
     <Viewbox Stretch="UniformToFill">
-
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
@@ -49,7 +49,6 @@
             <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>
             </StackPanel>
-
             <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="171,275,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="createUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="537,168,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="deleteUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="34,88,0,0" TextWrapping="Wrap" Background="#B3FFFFFF" VerticalAlignment="Top" Width="112"  FontFamily="Century Gothic"/>
