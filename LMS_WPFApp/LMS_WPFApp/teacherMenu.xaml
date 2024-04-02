@@ -8,6 +8,9 @@
         Title="User Management" Height="600" Width="1150">
     <Viewbox Stretch="UniformToFill">
         <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
