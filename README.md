@@ -15,7 +15,7 @@
 
 ## Contents 
 - [Contents](#contents)
-- [Task Alocation](#task-alocation)
+- [Task Allocation](#task-allocation)
 - [Implementation](#implementation)
   - [The `InventoryManager` Class](#the-inventorymanager-class)
   - [The `UserManager` Class](#the-usermanager-class)
@@ -77,6 +77,7 @@ Edits information about an item in the inventory. It uses helper methods to find
  These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
 
 ---
+
 ### The `UserManager` Class
 ---
 
