@@ -17,6 +17,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
 =======
         <Button x:Name="rentBookButton" Content="Rent Book" HorizontalAlignment="Left" Margin="95,217,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
@@ -50,6 +51,11 @@
 <<<<<<< HEAD
         <Button x:Name="inventoryButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="inventoryButton_Click"/>
 =======
+=======
+        <Grid.Background>
+            <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+>>>>>>> 4829259 (What's New:)
         <Button x:Name="rentBookButton" Content="Inventory" HorizontalAlignment="Left" Margin="197,323,0,0" VerticalAlignment="Top" Click="rentBookButton_Click"/>
 >>>>>>> 34bd6df (Mod: Update phase/3 for George)
         <Button x:Name="logoutStudentMenu" Content="Logout" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Click="logoutStudentMenu_Click"/>

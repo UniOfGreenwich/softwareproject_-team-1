@@ -139,6 +139,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Grid.Background>
                 <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
             </Grid.Background>
@@ -148,6 +149,11 @@
 >>>>>>> 49823c5 (What's New:)
 =======
 >>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
+=======
+            <Grid.Background>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+>>>>>>> 4829259 (What's New:)
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
