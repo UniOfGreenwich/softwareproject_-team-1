@@ -28,7 +28,9 @@ namespace LMS_WPFApp
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+            // Get username and password from textboxes
             string username = usernameTextBox.Text;
+            // Hashes password using SHA512
             string password = UserManager.ToSHA512(passwordTextBox.Password);
             //MessageBox.Show(UserManager.ToSHA512(password));
             

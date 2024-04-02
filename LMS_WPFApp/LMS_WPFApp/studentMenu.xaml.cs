@@ -43,6 +43,7 @@ namespace LMS_WPFApp
             Close();
         }
 
+        // Open the book rental window
         private void rentBookButton_Click(object sender, RoutedEventArgs e)
         {
             bookRental bookRental = new bookRental(Users, Inventory, username);

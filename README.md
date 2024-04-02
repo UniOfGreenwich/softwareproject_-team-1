@@ -143,6 +143,27 @@ This method determines the type of credit card based on its number.
 
 
 ## Testing
+
+**`teacherMenuTests`:**
+
+The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
+- Opening window
+- Closing window
+- Generating usernames
+- Creating new users
+- Deleting users
+- Database handling
+
+All tests passed successfully (as shown in **Figure 8**), and the teacher menu functionality was verified to be working as expected.
+
+<div align=center>
+
+**[Figure 8: Teacher Menu Test Results]()**
+
+![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
 ## Kanban
 
 
@@ -154,7 +175,7 @@ Below is a screenshot of our project Kanban from 21/01/24 and will change throug
 
 <div align=center>
 
-**[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+**[Figure 9: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](Documentation/kanban.png)
 
