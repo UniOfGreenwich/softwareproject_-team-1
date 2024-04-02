@@ -718,7 +718,7 @@ Below is a screenshot of our project Kanban from 21/01/24.
 
 **[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
-![Kanban](kanban.png)
+![Kanban](Documentation/kanban.png)
 
 
 </div>
