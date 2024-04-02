@@ -17,7 +17,9 @@ namespace LMS_UnitTests
             // Arrange
             var testUserManager = new UserManager();
             var testInventoryManager = new InventoryManager();
-            var username = "test_user";
+            var username = "jd1234a";
+            testUserManager.OpenDatabaseFile();
+            testInventoryManager.OpenDatabaseFile();
 
             bookRental bookRentalInstance = null;
 
@@ -46,7 +48,9 @@ namespace LMS_UnitTests
             // Arrange
             var testUserManager = new UserManager();
             var testInventoryManager = new InventoryManager();
-            var username = "test_user";
+            var username = "jd1234a";
+            testUserManager.OpenDatabaseFile();
+            testInventoryManager.OpenDatabaseFile();
 
             bookRental bookRentalInstance = null;
 

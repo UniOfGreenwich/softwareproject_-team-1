@@ -105,8 +105,8 @@ namespace LMS_UnitTests
 
             userManager.OpenDatabaseFile();
 
-            string username = "xy1234z";
-            string hashedPassword = UserManager.ToSHA512("newpassword");
+            string username = "xy1234zs";
+            string hashedPassword = UserManager.ToSHA512("newpassword1");
 
             //Act
             if(userManager.FindObjectInList(username) == -1)

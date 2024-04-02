@@ -1,14 +1,11 @@
-﻿using System.IO;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Threading;
 
 namespace LMS_WPFApp
 {
     public partial class teacherMenu : Window
     {
-        private UserManager Users;
+        public UserManager Users;
         private InventoryManager Inventory;
 
         public teacherMenu(UserManager users, InventoryManager inventory)
@@ -32,7 +29,7 @@ namespace LMS_WPFApp
                 usernameToDeleteCombo.Items.Add(username);
             }
         }
-        private void deleteUserButton_Click(object sender, RoutedEventArgs e)
+        public void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             string usernameToDelete = usernameToDeleteCombo.Text;
             
@@ -56,7 +53,7 @@ namespace LMS_WPFApp
             // Add your implementation here
         }
 
-        private void createUserButton_Click(object sender, RoutedEventArgs e)
+        public void createUserButton_Click(object sender, RoutedEventArgs e)
         {
             List<string> newUserList = new List<string>();
 
@@ -90,7 +87,7 @@ namespace LMS_WPFApp
                 tb.Text = "Enter text here...";
             }
         }
-        private string GenerateUsername(string firstName, string lastName)
+        public string GenerateUsername(string firstName, string lastName)
         {
             // RNG x4
             Random random = new Random();
@@ -110,6 +107,36 @@ namespace LMS_WPFApp
             {
                 return GenerateUsername(firstName, lastName);
             }
+        }
+
+        private void firstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void accessLevel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void balance_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void usernameToDeleteCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -5,12 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
-        Title="User Management" Height="600" Width="800">
+        Title="User Management" Height="600" Width="1150">
     <Viewbox Stretch="UniformToFill">
         <Grid>
-            <Grid.Background>
-                <ImageBrush ImageSource="\bin\Debug\net7.0-windows7.0\resources\12345.jpg" Stretch="UniformToFill"/>
-            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -23,10 +20,10 @@
 
             <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
             <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="75" Click="deleteUserButton_Click"/>
-            <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="firstName_TextChanged"/>
+            <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="lastName_TextChanged"/>
+            <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="accessLevel_TextChanged"/>
+            <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="balance_TextChanged_1"/>
             <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224" Foreground="#D9D9FF"><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="0"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="1"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="2"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - System"/><LineBreak/><Run Text="Balance must be a number"/></TextBlock>
             <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name" FontWeight="Bold" Background="#000000" Foreground="#D9D9FF"/>
             <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name" FontWeight="Bold" Foreground="#D9D9FF"/>
@@ -34,8 +31,8 @@
             <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="306,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#D9D9FF"/>
             <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Left" Margin="589,300,0,0" VerticalAlignment="Top" Width="75" Click="backTeacherMenuButton_Click"/>
             <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#D9D9FF"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
-            <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." FontSize="12"/>
-            <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." FontSize="12" SelectionChanged="usernameToDeleteCombo_SelectionChanged"/>
+            <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="password_TextChanged"/>
             <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password" FontWeight="Bold" Foreground="#D9D9FF"/>
         </Grid>
     </Viewbox>
