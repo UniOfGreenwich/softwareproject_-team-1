@@ -195,7 +195,7 @@ namespace LMS_WPFApp
             int objectIndex = FindObjectInList(objectName);
             int fieldIndex = FindFieldNameInList(fieldName);
             userList[objectIndex].RemoveAt(fieldIndex);
-            userList[objectIndex].Insert(fieldIndex,editedItem);
+            userList[objectIndex].Insert(fieldIndex, editedItem);
         }
 
         public List<string> GetObjectInfo(string objectName)
