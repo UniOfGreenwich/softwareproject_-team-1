@@ -19,8 +19,7 @@ namespace LMS_WPFApp
             this.username = username;
             this.initialBalance = initialBalance;
 
-
-            owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
+              owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
         }
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -67,7 +66,7 @@ namespace LMS_WPFApp
         }
 
         // Method to validate credit card details
-        private bool IsValidCreditCard(string cardNumber, string expiryDate, string cvc)
+        public bool IsValidCreditCard(string cardNumber, string expiryDate, string cvc)
         {
             // Simple validation for demonstration purposes
             if (cardNumber.Length == 16 && expiryDate.Length == 5 && cvc.Length == 3)
@@ -82,7 +81,7 @@ namespace LMS_WPFApp
         }
 
         // Method to determine the card type
-        private string GetCardType(string cardNumber)
+        public string GetCardType(string cardNumber)
         {
             // Remove any non-numeric characters from the card number
             string cleanCardNumber = cardNumber.Replace(" ", "").Replace("-", "");
@@ -109,9 +108,8 @@ namespace LMS_WPFApp
         private void cancelPayFeesButton_Click(object sender, RoutedEventArgs e)
         {
 
-
             // Show the studentMenu window
-            studentMenu menu = new studentMenu(Users, Inventory, username);
+            studentMenu menu = new studentMenu(Users, Inventory,username);
             menu.Show();
             // Close the paymentGateway window
             Close();
@@ -131,7 +129,5 @@ namespace LMS_WPFApp
         {
 
         }
-    }
-
-
+    } 
 }

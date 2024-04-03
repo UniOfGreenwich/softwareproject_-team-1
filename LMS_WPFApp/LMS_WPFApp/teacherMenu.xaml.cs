@@ -42,7 +42,7 @@ namespace LMS_WPFApp
                 MessageBox.Show($"User with username '{usernameToDelete}' has been deleted.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                 usernameToDeleteCombo.Text = "Select a user to delete...";
                 PopulateComboBox();
-            }
+            }   
         }
         private void balance_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -59,7 +59,6 @@ namespace LMS_WPFApp
 
             string username = GenerateUsername(firstName.Text, lastName.Text);
             string newPassword = UserManager.ToSHA512(password.Text);
-
             newUserList.Add(username);
             newUserList.Add(newPassword);
             newUserList.Add(accessLevel.Text);

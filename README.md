@@ -7,7 +7,6 @@
 <!-- (bedbugexterminatorpro.ca, 2023) -->
 </div>
 
-
 <!-- omit in toc -->
 ## Contents
 
@@ -126,7 +125,6 @@ The documentation will further develop as the project moves through its key phas
 
 **Table 1: Task Allocation**
 
-
 | Username | Tasks |
 |:---:|:---:|
 | [th5528e](https://github.com/th5528e) | Glossary // References // Gantt Chart // Kanban
@@ -142,8 +140,6 @@ The documentation will further develop as the project moves through its key phas
 | [Repi909](https://github.com/Repi909) | Github Admin // User/Inventory Classes and Interface // Login and StudentMenu Testing
 | [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Pull Requests // Hashing and Auth // TeacherMenu Testing
 | [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // UserManager and bookRent Testing
-
-</div>
 
 </div>
 
@@ -649,6 +645,7 @@ Deletes an item from the inventory.
 
 Edits information about an item in the inventory. It uses helper methods to find the object's and field's index, then removes the old value and inserts the new edited value in the inventoryList.
 
+
 **Helper Methods**
 
 **`FindObjectInList` and `FindFieldNameInList`:**
@@ -656,6 +653,7 @@ Edits information about an item in the inventory. It uses helper methods to find
  These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
 
 ---
+
 ### The `UserManager` Class
 ---
 
@@ -720,7 +718,81 @@ This method determines the type of credit card based on its number.
 ---
 ### The `bookRental` partial class
 
-This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are allowed to rent books for 3,7 or 14 days.
+
+**Core Methods**
+
+**`titleSearch_TextChanged()`:**
+
+Filters the list of available books based on the entered title, updating the search results displayed.
+
+**`isbnSearch_TextChanged()`:**
+
+It filters the books based on the ISBN number entered by the user and shows possible results.
+
+**`authorSearch_TextChanged()`:**
+
+Filters the available books and journals list by the searched author name and displays the result.
+
+**`submitButton_Click()`:**
+
+This function processes the selected book or journal for renting. This function updates the status of the book and records the rental duration and show the confirmation message upon button clicked.
+
+---
+
+### The `studentMenu` partial class
+
+
+The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view their own account, pay any outstanding balances and rent any books.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Opens the payment gateway window to allow the students to pay their outstanding balance. This also Retrieves the current outstanding balance and passes it to the payment gateway window.
+
+**`rentBookButton_Click()`:**
+
+Navigates to the bookRental window for allowing students to rent books.
+
+**`LoadDebtFromCSV()`:**
+
+Shows the current outstanding balance of the user also the updated amount after paying.
+
+---
+
+### The `teacherMenu` partial class
+
+This class provides options for staff or teachers to manage user accounts, such as deleting existing accounts, creating new user accounts or editing information of the user.
+
+**`deleteUserButton_Click()`:**
+
+Deletes the existing user from the user data after confirming the deletion with a message box.
+
+**`createUserButton_Click()`**
+
+Allows staff to create a new user. This function also hashes the password using SHA512 before adding it to the user data.
+
+**`GenerateUsername()`**
+
+it generates a unique username based on the provided first name and last name. this function instructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+
+---
+
+### The `loginScreen` partial class
+
+This class handles user login attempts, verifies credentials, and directs users to the appropriate menu based on their access level.
+
+**Core Methods**
+
+**`loginButton_Click()`:**
+
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it navigates the users to the appropriate menu based on their access level.
+
+---
+### The `bookRental` partial class
+
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are allowed to rent books for 3,7 or 14 days.
 
 **Core Methods**
 
@@ -789,7 +861,43 @@ This class handles user login attempts, verifies credentials, and directs users 
 
 **`loginButton_Click()`:**
 
-It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides a message for unsuccessful login attempts. If the login is successful it navigates the users to the appropriate menu based on their access level.
+
+---
+
+### The `paymentGateway` partial class
+
+This class handles the payment section of the application.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Upon the button click, the cardNumberText.Text, expiryDateText.Text, CvcText.Text and PaymentText.Text have their values stored in string and float parameters. These Parameters are then used to validate the card details, and pay the amount entered in to the PaymentText.Text textbox. The method from the Users class 'EditObject' is then used to change the stored amount of money owed in the userDatabase.csv.
+
+**`IsValidCreditCard()`:**
+
+This is a private void method which takes the cardNumber, expiryDate and cvc and strings and checks their lengths to ensure the right amount of characters are entered in to the relevant text boxes.
+
+**`GetCardType()`:**
+
+A private string that takes the cardNumber value, and removes any spaces or '-' characters to make one long string value to use in the cleanCardNumber value to identify which card is being used, where a card number starting with 4 is Visa, 5 is Mastercard, and 34 is American Express.
+
+**`cancelPayFeesButton_Click()`:**
+
+This takes the user back to the studentMenu window.
+
+**`TextBox_TextChanged()`:**
+
+Placeholder function.
+
+**`CardNumberText_TextChanged()`:**
+
+Placeholder function.
+
+**`PaymentText_TextChanged()`:**
+
+Placeholder function.
 
 ---
 
@@ -862,10 +970,27 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 |`bookRentalOpenTest` | Tests If the `bookRental` Window open successfully | The window opens when the program run but the test not running in test explorer | Not Run
 | `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
 
-
+  
 **[Figure 10: bookRental UI Test Results]()**
 
 ![bookRental Test Results](Documentation/bookRentalTest.png)
+
+</div>
+
+#### `paymentGatewayTest`:
+
+<div align=center>
+
+**Table 4: paymentGateway Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`TestGetCardType_Visa` | Tests the `getCardType` function to see what card is being used to pay with. This test tries to use the Visa card. It also tests to see if the window opens successfully | The window opens when the program is run, and the test passes as well, only when the `getCardType` function is run as public. | Run
+| `TestIsValidCreditCard_Valid` | Tests the UI`IsValidCreditCard` function. And tests the UI by loading and closing the test window. | The window closes and no errors are found. | Run
+
+
+**[Figure 4: paymentGateway UI Test Results]()**
+
+![bookRental Test Results](Documentation/paymentGatewayTestResults.png)
 
 </div>
 
@@ -954,6 +1079,32 @@ We would like to thank the following for their contributions and support with th
 
 <div align=center>
 
+[CompEng0001](https://github.com/CompEng0001) for his guidance.<br>
+
+Nathaniel Sadler, for his donation of Logo designs (Sadler, 2024).
+
+</div>
+
+## References
+
+bedbugexterminatorpro.ca, 2023. library.jpg. [Online] 
+Available at: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
+
+Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594.
+
+IBM, 2024. Processing Transaction Systems. [Online] 
+Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
+oclc.org, 2023. Dewey Services. [Online] 
+Available at: https://www.oclc.org/en/dewey.html
+
+Radigan, D., 2023. Software Development - Kanban. [Online] 
+Available at: https://www.atlassian.com/agile/kanban
+
+Sadler, N. N., 2024. Logo resources, LMS. Bromley: Nathaniel Sadler Motion Design: https://vimeo.com/nathanielsadler.
+
+Toyota, 2023. Toyota Production System - Company Information, Vision & Philosophy. [Online] 
+Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/
+
 [CompEng0001](https://github.com/CompEng0001)
 Nathanial Sadler
 
@@ -1015,3 +1166,4 @@ bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexter
 GeeksforGeeks. (2024, 01 21). Difference between Sequence Diagram and Activity Diagram. Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/difference-between-sequence-diagram-and-activity-diagram/
 
 GeeksforGeeks. (2024, 01 21). Use Case Diagrams | Unified Modeling Language (UML). Retrieved from GeeksforGeeks.org: https://www.geeksforgeeks.org/use-case-diagram/
+

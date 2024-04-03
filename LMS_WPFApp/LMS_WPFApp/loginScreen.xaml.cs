@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -33,7 +33,7 @@ namespace LMS_WPFApp
             // Hashes password using SHA512
             string password = UserManager.ToSHA512(passwordTextBox.Password);
             //MessageBox.Show(UserManager.ToSHA512(password));
-
+            
             // Checks if user exists in database.
             if (Users.FindObjectInList(username) == -1)
             {
@@ -51,7 +51,7 @@ namespace LMS_WPFApp
             }
 
             // Gets access level from Users. Switch statement to choose which menu based on access.
-            switch (Int32.Parse(Users.GetSpecificObjectData(username, "accessLevel")))
+            switch(Int32.Parse(Users.GetSpecificObjectData(username, "accessLevel")))
             {
                 default:
                     studentMenu studentMenu = new studentMenu(Users, Inventory, username);
@@ -66,7 +66,6 @@ namespace LMS_WPFApp
 
             // Close window after login?
             Close();
-
         }
 
         private void Username_TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -85,7 +84,6 @@ namespace LMS_WPFApp
                 tb.Text = "Username";
             }
         }
-
 
 
         /* private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
