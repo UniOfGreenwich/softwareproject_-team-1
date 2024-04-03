@@ -35,7 +35,9 @@
     - [`bookRentalTest`:](#bookrentaltest)
     - [`paymentGatewayTest`:](#paymentgatewaytest)
 - [Kanban](#kanban)
-- [References and Acknowledgements](#references-and-acknowledgements)
+- [Gantt Chart](#gantt-chart)
+- [Acknowledgements](#acknowledgements)
+- [References](#references)
   
 ## Task Allocation
 
@@ -366,11 +368,11 @@ The `teacherMenuTests` class contains unit tests for the following high-level te
 - Deleting users
 - Database handling
 
-All tests passed successfully (as shown in **Figure 8**), and the teacher menu functionality was verified to be working as expected.
+All tests passed successfully (as shown in **Figure 1**), and the teacher menu functionality was verified to be working as expected.
 
 <div align=center>
 
-**[Figure 8: Teacher Menu Test Results]()**
+**[Figure 1: Teacher Menu Test Results]()**
 
 ![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
 
@@ -391,7 +393,7 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 | `EditObjectTest` | Test the EditObject function to ensure it correctly modify existing object's field value | Successfully modify an exististing object's field value | Passed 
 
 
-**[Figure 9: UserManager Test Results]()**
+**[Figure 2: UserManager Test Results]()**
 
 ![UserManager Test Results](Documentation/UserManagerTest.png)
 
@@ -408,7 +410,7 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 | `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
 
 
-**[Figure 10: bookRental UI Test Results]()**
+**[Figure 3: bookRental UI Test Results]()**
 
 ![bookRental Test Results](Documentation/bookRentalTest.png)
 
@@ -425,7 +427,7 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 | `TestIsValidCreditCard_Valid` | Tests the UI`IsValidCreditCard` function. And tests the UI by loading and closing the test window. | The window closes and no errors are found. | Run
 
 
-**[Figure 11: paymentGateway UI Test Results]()**
+**[Figure 4: paymentGateway UI Test Results]()**
 
 ![bookRental Test Results](Documentation/paymentGatewayTestResults.png)
 
@@ -444,19 +446,80 @@ Below is a screenshot of our project Kanban from 21/01/24 and will change throug
 
 <div align=center>
 
-**[Figure 9: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+**[Figure 5: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](Documentation/kanban.png)
 
 </div>
 
-## References and Acknowledgements
+## Gantt Chart
+Written in the popular app Mermaid for chart creation, this Gantt chart shows the planning for phase 1 and 2 of this project, of which phase 1 is already completed. Phase 3 will be fleshed out in the future once phase 2 is completed on the 23rd of January 2024.
+
+The Gantt chart, Overall Architecture, Sequence Diagram, Class Diagram, Activity Diagram and State Chart Diagrams are to be drafted by the 2nd of January 2024. After this period, the diagrams and information are to be finalised and referenced. This again will give clarity in what is completed/to be completed in the future of the project, to give the team a boost in moral via means of a visible road map.
+
+A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within industry, and are built to focus on 5 main areas (Geraldi & Lechler, 2012).
+
+**Unidimensional**
+* One view being 'time', emphasising efficiency.
+
+**Objective**
+* Object-oriented.
+
+**Deterministic**
+* A Gantt chart determines all that will occur in the project.
+
+**Analytical and Accountable**
+* Division of the project allows for smaller bite-sized chunks so resources can be allocated efficiently.
+
+**Sequential**
+* After tasks have been completed, then the next task is to be completed, thus sequentially.
+
+<br>
+
+<div align=center>
+
+**[Figure 6: Project Plan Gantt Chart, Phase 3 Update](https://mermaid.ink/img/pako:eNrFVttum0AQ_ZUVz5AYSGKHtyhOoqpFjexEVSW_rNmxvQ0sdC-xrCj_3uFqTHDbqCqxLBuYmXPO7M7O8GJFKQMrsNZUaL0QBD-a6xjIA9CEuORepj8g0uQut5PrDZWVF6MablOZUE3IdOqEofMdPwtRWhXG8FSQebrSWyohx4lAKRIiXVz6TLmKjFK5WxBJrm2VJcz2fMd1HW_k-TZxWen5Da3gmIxQwcgMViBBIFqAAVsjbbrSIEkRfVFFzOCZw5YEjSn3q-EOJT4q9JjBT8MlJCC0OqLOyANxf9Jm5F5aHtpVZuTeelzcfKc0JH8jT8l3rl1Ln-rRJ3OHxn5c4YyrJ1WC4xXJYioEF-vfk0uZ5YgtvWP2Jq8yplRTpIhRrJZcITRpnpDAdU_xW6B1y_CT0DJlprgpLffFPZCpRDyMvWit3KTCvOWCxlzBofqqpjI3ctH3sndRHugyhtPPVCzpIHx3caoUlbt_5SL9ZCf188jtLYFmY-sSquHuqN6AxHLAepJr-0CJX4HPzTLhugVS1F6zzeuWayfpbkvq5F0k0aYcvyf3urDuNxQ9PWKyvOPhap45rlcCTlglaf_TiPv6DJLGMbmS0QbPQKSNhP7d2ePtF_xIJYw8Z1Qkc3a0Eh7DL3lHI9e56imna0mT8ngWNamG0DDHblWsaMU_BOd1THG6DEh4hX_PXO-G5JzrvASLim_29n_ydttonK65mEcSoL-rYT9voPzzLm3gjZ2RVzOdVeZHgYdfg9JFl0DVI79y8bzeRcjoLp-D2FpgS3dD6KhbQa1AacNQQQjCfAS9BhphV_0o-mWaPs0w_WbID0s_u7mahjcnCesnb6H7o7fkkz3yOdsXeV-dFY1ftYeAm8-Ug4niXXSmRJB5dvvw-ZMDBx8dfLu9QuMRs2wrAXyR5gzfw19y94WFYzOBhRXgJYMVNbFeWAvxiq7U6HS-E5EVaGnAtsq5VHUDK1jRWOFTYFynMizf7YtX_Ndfh4-RJw?type=png)**
+
+![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNrFVttum0AQ_ZUVz5AYSGKHtyhOoqpFjexEVSW_rNmxvQ0sdC-xrCj_3uFqTHDbqCqxLBuYmXPO7M7O8GJFKQMrsNZUaL0QBD-a6xjIA9CEuORepj8g0uQut5PrDZWVF6MablOZUE3IdOqEofMdPwtRWhXG8FSQebrSWyohx4lAKRIiXVz6TLmKjFK5WxBJrm2VJcz2fMd1HW_k-TZxWen5Da3gmIxQwcgMViBBIFqAAVsjbbrSIEkRfVFFzOCZw5YEjSn3q-EOJT4q9JjBT8MlJCC0OqLOyANxf9Jm5F5aHtpVZuTeelzcfKc0JH8jT8l3rl1Ln-rRJ3OHxn5c4YyrJ1WC4xXJYioEF-vfk0uZ5YgtvWP2Jq8yplRTpIhRrJZcITRpnpDAdU_xW6B1y_CT0DJlprgpLffFPZCpRDyMvWit3KTCvOWCxlzBofqqpjI3ctH3sndRHugyhtPPVCzpIHx3caoUlbt_5SL9ZCf188jtLYFmY-sSquHuqN6AxHLAepJr-0CJX4HPzTLhugVS1F6zzeuWayfpbkvq5F0k0aYcvyf3urDuNxQ9PWKyvOPhap45rlcCTlglaf_TiPv6DJLGMbmS0QbPQKSNhP7d2ePtF_xIJYw8Z1Qkc3a0Eh7DL3lHI9e56imna0mT8ngWNamG0DDHblWsaMU_BOd1THG6DEh4hX_PXO-G5JzrvASLim_29n_ydttonK65mEcSoL-rYT9voPzzLm3gjZ2RVzOdVeZHgYdfg9JFl0DVI79y8bzeRcjoLp-D2FpgS3dD6KhbQa1AacNQQQjCfAS9BhphV_0o-mWaPs0w_WbID0s_u7mahjcnCesnb6H7o7fkkz3yOdsXeV-dFY1ftYeAm8-Ug4niXXSmRJB5dvvw-ZMDBx8dfLu9QuMRs2wrAXyR5gzfw19y94WFYzOBhRXgJYMVNbFeWAvxiq7U6HS-E5EVaGnAtsq5VHUDK1jRWOFTYFynMizf7YtX_Ndfh4-RJw?type=png)
+
+</div>
+
+
+
+
+
+## Acknowledgements
 
 We would like to thank the following for their contributions and support with this project:
 
 <div align=center>
 
-[CompEng0001](https://github.com/CompEng0001)<br>
-Nathanial Sadler
+[CompEng0001](https://github.com/CompEng0001) for his guidance.<br>
+
+Nathaniel Sadler, for his donation of Logo designs (Sadler, 2024).
 
 </div>
+
+## References
+
+bedbugexterminatorpro.ca, 2023. library.jpg. [Online] 
+Available at: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
+
+Geraldi, J. & Lechler, T., 2012. Gantt Chart and the Scientific Management in Projects. International Journal of Managing Project in Business, 5(4), pp. 578-594.
+
+IBM, 2024. Processing Transaction Systems. [Online] 
+Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
+oclc.org, 2023. Dewey Services. [Online] 
+Available at: https://www.oclc.org/en/dewey.html
+
+Radigan, D., 2023. Software Development - Kanban. [Online] 
+Available at: https://www.atlassian.com/agile/kanban
+
+Sadler, N. N., 2024. Logo resources, LMS. Bromley: Nathaniel Sadler Motion Design: https://vimeo.com/nathanielsadler.
+
+Toyota, 2023. Toyota Production System - Company Information, Vision & Philosophy. [Online] 
+Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/
+
+
+
+
