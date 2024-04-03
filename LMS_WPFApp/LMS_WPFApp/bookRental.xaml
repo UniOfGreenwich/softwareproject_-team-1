@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
-        Title="Renting" Height="450" Width="800">
+        Title="Renting" Height="600" Width="1150">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template">
@@ -37,16 +37,17 @@
             <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
 
-        <TextBlock x:Name="titleSearchLabel" HorizontalAlignment="Left" Margin="300,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Title Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-        <TextBox x:Name="titleSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="titleSearch_TextChanged" Margin="0,100,0,0"/>
-        <TextBlock x:Name="autherSearchLabel" HorizontalAlignment="Left" Margin="300,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Author Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-        <TextBox x:Name="authorSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="authorSearch_TextChanged" Margin="0,150,0,0"/>
-        <TextBlock x:Name="isbnSeachLabel" HorizontalAlignment="Left" Margin="300,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-        <TextBox x:Name="isbnSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="isbnSearch_TextChanged" Margin="0,200,0,0"/>
-        <TextBlock x:Name="resultsLabel" HorizontalAlignment="Left" Margin="300,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-        <ComboBox x:Name="results" HorizontalAlignment="Left" Margin="300,250,0,0" VerticalAlignment="Top" Width="200"/>
-        <TextBlock x:Name="rentDurationLabel" HorizontalAlignment="Left" Margin="300,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-        <ComboBox x:Name="rentDuration" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="titleSearchLabel" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Text="Title Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic" Margin="0,-500,0,0"/>
+        <TextBox x:Name="titleSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" TextChanged="titleSearch_TextChanged" Margin="0,-400,0,0"/>
+        <TextBlock x:Name="autherSearchLabel" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Text="Author Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic" Margin="0,-300,0,0"/>
+        <TextBox x:Name="authorSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" TextChanged="authorSearch_TextChanged" Margin="0,-200,0,0"/>
+        <TextBlock x:Name="isbnSeachLabel" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Text="ISBN Search" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic" Margin="0,-100,0,0"/>
+        <TextBox x:Name="isbnSearch" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" TextChanged="isbnSearch_TextChanged" Margin="0,0,0,0"/>
+        <TextBlock x:Name="resultsLabel" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Text="Results" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic" Margin="0,100,0,0"/>
+        <ComboBox x:Name="results" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Margin="0,200,0,0"/>
+        <TextBlock x:Name="rentDurationLabel" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Text="Rent Duration" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic" Margin="0,300,0,0"/>
+        <ComboBox x:Name="rentDuration" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Margin="0,400,0,0"/>
+
 
 
         <Button x:Name="backButton" Content="Back"  Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Margin="150,300,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="backButton_Click" FontSize="20"/>
