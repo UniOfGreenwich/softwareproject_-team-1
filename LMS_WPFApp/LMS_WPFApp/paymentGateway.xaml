@@ -33,50 +33,9 @@
         </Style>
     </Window.Resources>
     <Grid>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
-=======
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top"/>
->>>>>>> d5f169f (added payment window UI start)
-=======
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
->>>>>>> 15a958a (updated cs files for functionality)
-=======
-        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="77,155,0,0" VerticalAlignment="Top"/>
-=======
-        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" FontSize="16"/>
->>>>>>> 727d4af (Complete Payment Gateway)
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
->>>>>>> 70e15b7 (Part of PaymentGateway)
-=======
-=======
         <Grid.Background>
             <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
         </Grid.Background>
-<<<<<<< HEAD
->>>>>>> 4829259 (What's New:)
-        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="455,342,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top" Click="payFeesButton_Click"/>
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
-        <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center"/>
-        <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Top" Height="35" Width="250" FontSize="22"/>
-        <TextBox x:Name="CvcText" HorizontalAlignment="Left" Margin="275,284,0,0" TextWrapping="Wrap" Text="CVC" VerticalAlignment="Top" Height="36" Width="100" FontSize="22" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.495,-0.251"/>
-        <TextBox x:Name="ExpiryDateText" HorizontalAlignment="Left" Margin="425,284,0,0" TextWrapping="Wrap" Text="Exp MM/YY" VerticalAlignment="Top" Height="35" Width="100" FontSize="22" RenderTransformOrigin="0.43,-0.623"/>
-        <TextBox x:Name="CardNumberText" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Width="250" Height="36" FontSize="22" TextChanged="CardNumberText_TextChanged"/>
-        <TextBox x:Name="PaymentText" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top" Width="250" Height="32" FontSize="22" TextChanged="PaymentText_TextChanged"/>
-=======
 
         <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="35" Width="250" Margin="0,150,0,250" HorizontalAlignment="Center">
             <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Center" Height="35" Width="250" FontSize="22" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
@@ -107,45 +66,5 @@
         <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="425,334,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click" Height="100" Width="100" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="275,334,0,0" VerticalAlignment="Top" Click="payFeesButton_Click" Height="100" Width="100" Style="{StaticResource ButtonStyle}"/>
         <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center" Background="#B3FFFFFF" FontFamily="Century Gothic"/>
->>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
     </Grid>
-<<<<<<< HEAD
-=======
-        <Grid.Background>
-            <ImageBrush ImageSource="/Logo.png" Stretch="Fill"/>
-        </Grid.Background>
-
-        <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="35" Width="250" Margin="0,150,0,250" HorizontalAlignment="Center">
-            <TextBox x:Name="nameCard" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Name On Card" VerticalAlignment="Center" Height="35" Width="250" FontSize="22" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
-        </Border>
-
-        <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="36" Width="100" Margin="275,284,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBox x:Name="CvcText" Text="CVC" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Height="36" Width="100" FontSize="22" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.495,-0.251"/>
-        </Border>
-
-        <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="35" Width="100" Margin="425,284,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBox x:Name="ExpiryDateText" Text="Exp MM/YY" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Height="35" Width="100" FontSize="16" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic" RenderTransformOrigin="0.43,-0.623"/>
-        </Border>
-
-        <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="36" Width="250" Margin="0,190,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBox x:Name="CardNumberText" Text="Card Number" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="36" FontSize="22" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
-        </Border>
-
-        <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Height="32" Width="250" Margin="0,231,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBox x:Name="PaymentText" Text="Payment Amount" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="32" FontSize="22" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
-        </Border>
-
-
-
-        
-
-
-        <Label x:Name="owedMoniesLabel" Content="Owed Monies: SAMPLE TEXT" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" FontSize="16" Background="#B3FFFFFF" FontFamily="Century Gothic"/>
-        <Button x:Name="cancelPayFeesButton" Content="Cancel" HorizontalAlignment="Left" Margin="425,334,0,0" VerticalAlignment="Top" Click="cancelPayFeesButton_Click" Height="100" Width="100" Style="{StaticResource ButtonStyle}"/>
-        <Button x:Name="payFeesButton" Content="Pay Fees" HorizontalAlignment="Left" Margin="275,334,0,0" VerticalAlignment="Top" Click="payFeesButton_Click" Height="100" Width="100" Style="{StaticResource ButtonStyle}"/>
-        <TextBlock x:Name="paymentMenuTextBlock" HorizontalAlignment="Left" Margin="300,89,0,0" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top" FontSize="30" Width="200" TextAlignment="Center" Background="#B3FFFFFF" FontFamily="Century Gothic"/>
-     </Grid>
->>>>>>> 1429753 (Updated UI, changed background to Logo.png for now, as background.png is broken)
-=======
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
 </Window>

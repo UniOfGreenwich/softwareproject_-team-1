@@ -5,97 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LMS_WPFApp"
         mc:Ignorable="d"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Title="User Management" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
-        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="75" Click="deleteUserButton_Click"/>
-        <TextBlock x:Name="addUserTitle" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="307"><Run Text="User Management"/><Run Language="en-gb" Text=" - Teacher"/></TextBlock>
-<<<<<<< HEAD
-        <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="23,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224"><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="0"/><Run Language="en-gb" Text="'"/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="1"/><Run Language="en-gb" Text="'"/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="2"/><Run Language="en-gb" Text="'"/><Run Text=" - System Admin"/><LineBreak/><Run Language="en-gb" Text="Balance must be a number"/></TextBlock>
-        <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name"/>
-        <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name"/>
-        <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="154,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="Access Level"/><Run Text=" 0"/><Run Language="en-gb" Text=" "/><Run Text="or 1"/></TextBlock>
-        <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="306,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance"/>
-        <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Left" Margin="589,300,0,0" VerticalAlignment="Top" Width="75" Click="backTeacherMenuButton_Click"/>
-        <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
-        <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." FontSize="12"/>
-        <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password"/>
-=======
-        Title="MainWindow" Height="450" Width="800">
-=======
-        Title="User Management" Height="450" Width="800">
->>>>>>> cf83c19 (Further Functionality to the User Management Window)
-    <Grid>
-<<<<<<< HEAD
-        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="50" Click="createUserButton_Click"/>
-        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="50" Click="deleteUserButton_Click"/>
-        <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
-<<<<<<< HEAD
-        <TextBox x:Name="deleteUserButton" HorizontalAlignment="Left" Margin="519,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="183,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
->>>>>>> c12f289 (first UI additions)
-=======
-        <TextBox HorizontalAlignment="Left" Margin="500,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
->>>>>>> d5f169f (added payment window UI start)
-=======
-        <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
-        <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="75" Click="deleteUserButton_Click"/>
-        <TextBlock x:Name="addUserTitle" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="User Management" VerticalAlignment="Top" FontSize="24"/>
-<<<<<<< HEAD
-        <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="85,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="221,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="85,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="Balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="221,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="86,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name"/>
-        <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="221,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name"/>
-        <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="86,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Access Level"/>
-        <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="221,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance"/>
-
->>>>>>> 832661b (Added functionality to the teacherMenu for methods for adding people to the database. More functionality is needed here, adding tomorrow.)
-=======
-=======
->>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
-        <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="balance_TextChanged"/>
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="23,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224"><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="0"/><Run Language="en-gb" Text="'"/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="1"/><Run Language="en-gb" Text="'"/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Language="en-gb" Text="'"/><Run Text="2"/><Run Language="en-gb" Text="'"/><Run Text=" - System Admin"/><LineBreak/><Run Language="en-gb" Text="Balance must be a number"/></TextBlock>
-        <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name"/>
-        <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name"/>
-        <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="154,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="Access Level"/><Run Text=" 0"/><Run Language="en-gb" Text=" "/><Run Text="or 1"/></TextBlock>
-        <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="306,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance"/>
-        <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Left" Margin="589,300,0,0" VerticalAlignment="Top" Width="75" Click="backTeacherMenuButton_Click"/>
-        <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
-        <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." SelectionChanged="usernameComboBox_SelectionChanged" FontSize="12"/>
-        <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password"/>
->>>>>>> cf83c19 (Further Functionality to the User Management Window)
-=======
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="createUser" Content="Create User" HorizontalAlignment="Left" Margin="210,280,0,0" VerticalAlignment="Top"/>
-        <Button Content="Delete User" HorizontalAlignment="Left" Margin="546,280,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="teacherMenuTitle" HorizontalAlignment="Center" Margin="0,114,0,0" TextWrapping="Wrap" Text="Teacher Menu" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="deleteUserButton" HorizontalAlignment="Left" Margin="519,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="183,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
->>>>>>> 4b11006 (first UI additions)
-=======
-        Title="User Management" Height="600" Width="800">
-=======
         Title="User Management" Height="600" Width="1150">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
@@ -123,60 +32,23 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-<<<<<<< HEAD
->>>>>>> 1429753 (Updated UI, changed background to Logo.png for now, as background.png is broken)
-=======
-        Title="User Management" Height="600" Width="1150">
->>>>>>> df99ad0 (What's New:)
-=======
-        Title="User Management" Height="600" Width="1150">
->>>>>>> 49823c5 (What's New:)
-=======
-        Title="User Management" Height="600" Width="1150">
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
-=======
->>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
     <Viewbox Stretch="UniformToFill">
 
         <Grid>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Grid.Background>
                 <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
             </Grid.Background>
-<<<<<<< HEAD
-=======
->>>>>>> df99ad0 (What's New:)
-=======
->>>>>>> 49823c5 (What's New:)
-=======
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
-=======
-            <Grid.Background>
-                <ImageBrush ImageSource="/Logo.png" Stretch="UniformToFill"/>
-            </Grid.Background>
->>>>>>> 4829259 (What's New:)
-=======
 
->>>>>>> b4cae44 (What's New:)
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
->>>>>>> 4d6cbb1 (added some UI updates)
 
             <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>
             </StackPanel>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
             <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="171,275,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="createUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="537,168,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="deleteUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="34,88,0,0" TextWrapping="Wrap" Background="#B3FFFFFF" VerticalAlignment="Top" Width="112"  FontFamily="Century Gothic"/>
@@ -192,32 +64,6 @@
             <ComboBox x:Name="usernameToDeleteCombo" Background="#B3FFFFFF" Margin="537,133,136,253" IsEditable="True" Text="Choose..." FontSize="12"/>
             <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="42,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
             <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="42,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
-            <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Margin="285,300,0,0" VerticalAlignment="Top" Width="75" Click="createUserButton_Click"/>
-            <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Width="75" Click="deleteUserButton_Click"/>
-            <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="firstName_TextChanged"/>
-            <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="lastName_TextChanged"/>
-            <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="accessLevel_TextChanged"/>
-            <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="306,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="balance_TextChanged_1"/>
-            <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="119" Width="224" Foreground="#D9D9FF"><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="0"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Student"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="1"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - Teacher"/><LineBreak/><Run Text="Access Level "/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text="2"/><Run Text=" "/><Run Text="'"/><Run Text=" "/><Run Text=" - System"/><LineBreak/><Run Text="Balance must be a number"/></TextBlock>
-            <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="171,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name" FontWeight="Bold" Background="#000000" Foreground="#D9D9FF"/>
-            <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="306,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name" FontWeight="Bold" Foreground="#D9D9FF"/>
-            <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="154,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#D9D9FF" FontWeight="Bold"><Run Text="Access Level"/><Run Text=" 0"/><Run Language="en-gb" Text=" "/><Run Text="or 1"/></TextBlock>
-            <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="306,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#D9D9FF"/>
-            <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Left" Margin="589,300,0,0" VerticalAlignment="Top" Width="75" Click="backTeacherMenuButton_Click"/>
-            <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#D9D9FF"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
-            <ComboBox x:Name="usernameToDeleteCombo" Margin="438,218,235,168" IsEditable="True" Text="Choose..." FontSize="12" SelectionChanged="usernameToDeleteCombo_SelectionChanged"/>
-            <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="170,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TextChanged="password_TextChanged"/>
-            <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password" FontWeight="Bold" Foreground="#D9D9FF"/>
-<<<<<<< HEAD
->>>>>>> df99ad0 (What's New:)
-=======
->>>>>>> 0a03f53 (Revert "Updated UI, changed background to Logo.png for now, as background.png…")
-=======
->>>>>>> b9e289e (Re-adding the UI changes with the LMS background)
         </Grid>
     </Viewbox>
 </Window>

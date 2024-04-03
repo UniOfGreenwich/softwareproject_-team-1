@@ -1,37 +1,17 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 15a958a (updated cs files for functionality)
 namespace LMS_WPFApp
 {
     public partial class studentMenu : Window
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
-        public studentMenu()
-=======
         private UserManager Users;
         private InventoryManager Inventory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public studentMenu(UserManager users, InventoryManager inventory)
->>>>>>> 9a8e0ad (Add/Mod: Lots of changes. Implemented interface in login screen. Teacher menu has some implementation as well. Moved csv files to /bin)
-=======
-=======
 
->>>>>>> d07a775 (What's New:)
         private List<string> userData;
         private string username;
 
         public studentMenu(UserManager users, InventoryManager inventory, string username)
->>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
         {
             InitializeComponent();
             this.Users = users;
@@ -40,13 +20,9 @@ namespace LMS_WPFApp
             this.username = username;
 
             LoadDebtFromCSV(username);
-            
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> d07a775 (What's New:)
+        }
+
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -58,7 +34,7 @@ namespace LMS_WPFApp
 
             Close();
             LoadDebtFromCSV(username);
-            
+
             return;
         }
 
@@ -67,43 +43,14 @@ namespace LMS_WPFApp
             loginScreen loginScreen = new loginScreen(Users, Inventory);
             loginScreen.Show();
             Close();
-=======
-=======
->>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
-        private void payFeesButton_Click(object sender, RoutedEventArgs e)
-        {
-            return;
-        }
-
-        private void logoutStudentMenu_Click(object sender, RoutedEventArgs e)
-        {
-<<<<<<< HEAD
-
->>>>>>> 15a958a (updated cs files for functionality)
-=======
-            loginScreen loginScreen = new loginScreen();
-            loginScreen.Show();
-            Close();
->>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
         }
 
         // Open the book rental window
         private void rentBookButton_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            //toby update this when you have inventory screen made. These params need to be passed in
-            //inventoryScreen inventoryScreen = new inventoryScreen(Inventory, userData);
->>>>>>> d94b79e (Add/Mod: Removed redundant code from teacher.cs. Prepped Student.cs for payments and inventory)
-            return;
-=======
             bookRental bookRental = new bookRental(Users, Inventory, username);
             bookRental.Show();
             Close();
->>>>>>> d07a775 (What's New:)
         }
 
         private void LoadDebtFromCSV(string username)
@@ -120,7 +67,7 @@ namespace LMS_WPFApp
             }
         }
 
-        
+
         private void populateBookInfo(string deweyDecimal)
         {
             return;
@@ -130,18 +77,3 @@ namespace LMS_WPFApp
 
     }
 }
-=======
-
->>>>>>> c12f289 (first UI additions)
-=======
-
-=======
-            return;
->>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
-        }
-    }
-}
->>>>>>> 15a958a (updated cs files for functionality)
-=======
-
->>>>>>> 4b11006 (first UI additions)
