@@ -4,21 +4,24 @@
 <div align=center>
 
 ![The Library is a cool place to go and hang out!](https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg "The Library is a cool place to go and hang out!")
+<!-- (bedbugexterminatorpro.ca, 2023) -->
 </div>
-<i>(bedbugexterminatorpro.ca, 2023)</i>
 
 
 <!-- omit in toc -->
 ## Contents
+
 - [Phase 1 - Requirements Engineering](#phase-1---requirements-engineering)
+- [Team 1- Library System](#team-1--library-system)
+  - [Contents](#contents)
   - [Introduction](#introduction)
   - [Glossary](#glossary)
   - [Software Process Model](#software-process-model)
     - [Explanation of Incremental model](#explanation-of-incremental-model)
     - [Incremental model stages:](#incremental-model-stages)
     - [Advantages and Disadvantages](#advantages-and-disadvantages)
-      - [Advantages](#advantages)
-      - [Disadvantages](#disadvantages)
+      - [Benefits](#benefits)
+      - [Drawbacks](#drawbacks)
     - [Reasons for choosing the Incremental model](#reasons-for-choosing-the-incremental-model)
     - [References](#references)
   - [User Requirements](#user-requirements)
@@ -35,23 +38,85 @@
     - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram)
     - [Sequence Diagrams](#sequence-diagrams)
     - [Class Diagrams](#class-diagrams)
+      - [Inheritance. UML notation: \<|-- (blank arrow-head with solid line)](#inheritance-uml-notation----blank-arrow-head-with-solid-line)
+      - [Relisation/Implementation/Abstraction. UML notation: \<.. (arrow tip with dotted line)](#relisationimplementationabstraction-uml-notation--arrow-tip-with-dotted-line)
+      - [Association. UML notation: -- (solid line)](#association-uml-notation----solid-line)
+      - [Aggregation. UML notation: o-- (blank diamond head with solid line)](#aggregation-uml-notation-o---blank-diamond-head-with-solid-line)
+      - [Composition. UML notation: \*-- (filled diamond head with solid line)](#composition-uml-notation----filled-diamond-head-with-solid-line)
+      - [Dependency. UML notation: \<|.. (blank arrow-head with dotted line)](#dependency-uml-notation--blank-arrow-head-with-dotted-line)
+      - [Multiplicity.](#multiplicity)
     - [Activity Diagrams](#activity-diagrams)
       - [Tabular Description Of Use Case Diagram](#tabular-description-of-use-case-diagram-1)
     - [State Chart Diagram](#state-chart-diagram)
+  - [Phase 3 - Implementation and Testing](#phase-3---implementation-and-testing)
+  - [Implementation](#implementation)
+    - [Interfaces](#interfaces)
+    - [The `InventoryManager` Class](#the-inventorymanager-class)
+    - [The `UserManager` Class](#the-usermanager-class)
+    - [The `paymentGateway` partial class](#the-paymentgateway-partial-class)
+    - [The `bookRental` partial class](#the-bookrental-partial-class)
+    - [The `studentMenu` partial class](#the-studentmenu-partial-class)
+    - [The `teacherMenu` partial class](#the-teachermenu-partial-class)
+    - [The `loginScreen` partial class](#the-loginscreen-partial-class)
+  - [Testing](#testing)
+      - [`teacherMenuTests`:](#teachermenutests)
+      - [`userManagerTest`:](#usermanagertest)
+      - [`bookRentalTest`:](#bookrentaltest)
   - [Project Planning](#project-planning)
     - [Gantt Chart](#gantt-chart)
-  - [Kanban](#kanban)
+      - [Unidimensional](#unidimensional)
+      - [Objective](#objective)
+      - [Deterministic](#deterministic)
+      - [Analytical and Accountable](#analytical-and-accountable)
+      - [Sequential](#sequential)
+    - [Kanban](#kanban)
   - [References and Acknowledgements](#references-and-acknowledgements)
 
 # Phase 1 - Requirements Engineering
 
 ## Introduction
 
-The library system, commissioned to us by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation through to generative AI journals printed this year by organisations such as OpenAI. The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes. These have been thoroughly explained and segregated into their individual categories of user and technical requirements in this documentation.
+The library system, commissioned to us as a project by our customer ***Blair&Co***, was the result of a need for a new and modernised system to monitor and control their extensive collection of computer hardware, programming and engineering documents dating back to early 1980s MS-DOS documentation through to generative AI journals printed this year by organisations such as OpenAI.
 
-The team decided an ***Incremental Design*** model was to be used as we could easily adapt to changing customer needs whilst also making deadlines key. As we are a team of junior developers, this model would help massively in collaboration and communication across our team and with our customer ensuring that no requirements would be missed.
+The team was given a specification by our customer which involved basic functions such as an inventory system through to advanced functions such as payment methods and authentication for security purposes.
 
-Risks and risk mitigation have also been taken into account as any project will involve certain issues along the way. We have identified the main risks we will see through the project and planned for mitigation to ensure a seemless development process.
+The team decided a ***Incremental Design*** process was to be used as we could easily adapt to changing customer needs whilst also making deadlines key.
+
+---
+
+## Requirements
+### Staff
+- Staff all have the same access level.
+- Staff can create a user.
+- "Staff can delete a user, but a confirmation window will occur when asking to delete a user."
+### Students
+- Students will have a lower access level with limited access.
+- Students can look at their own account and pay any outstanding balances.
+### Card Payments
+- There needs to be a card processing system for payment.
+- Payment cannot be stored.
+- A validation check is required and keep in mind all credit card numbers depending on vendor have a different starting number.
+### Inventory
+- 20 books, at least 3 should be journals.
+  - Books require:
+    - Titles
+    - ISBN number
+    - Authors
+    - Synopsis - Find one, don't write it.
+  - Journals require:
+    - Titles
+    - Authors
+    - DOI number
+    - Journal name
+    - Conference paper name of the journal name (Seb's words)
+### Storage system of articles
+- Must use the Dewey Decimal System.
+- Renting
+- Books can only be rented in 3, 7, and 14 day intervals at a time.
+- Renting starts the same day they take out the article.
+- 10p late fee per day late.
+### Data storage
+- JSON, XML, CSV, matrix -  any of these to show what each student has taken out (perhaps start all csv/text files with words so that the files can be identified as book logs - Toby idea).
 
 The documentation will further develop as the project moves through its key phases with the initial planning of Phase/1 being delivered on 12/12/23.
 
@@ -59,16 +124,26 @@ The documentation will further develop as the project moves through its key phas
 
 <br>
 
-
 **Table 1: Task Allocation**
 
 
 | Username | Tasks |
 |:---:|:---:|
-| [th5528e](https://github.com/th5528e) | Activity Diagrams // Class Diagrams // References // Gantt Chart 
-| [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban // Overall Architecture
-| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | State Chart Diagrams // Pull Requests
-| [shuvo00000](https://github.com/shuvo00000) | Sequence Diagrams // Use Case Diagrams
+| [th5528e](https://github.com/th5528e) | Glossary // References // Gantt Chart // Kanban
+| [Repi909](https://github.com/Repi909) | Github Admin // Introduction // Kanban
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Risk and Risk Planning // System Requirements
+| [shuvo00000](https://github.com/shuvo00000) | Software Process Model // User Requirements
+
+<br>
+
+| Username | Tasks |
+|:---:|:---:|
+| [th5528e](https://github.com/th5528e) | UI/XAML Design // Kanban // Inventory Testing
+| [Repi909](https://github.com/Repi909) | Github Admin // User/Inventory Classes and Interface // Login and StudentMenu Testing
+| [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Pull Requests // Hashing and Auth // TeacherMenu Testing
+| [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // UserManager and bookRent Testing
+
+</div>
 
 </div>
 
@@ -76,7 +151,7 @@ The documentation will further develop as the project moves through its key phas
 
 **User Requirements**
 
-Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. E.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
+Specifying a system's requirements from a user's point of view. Functions that support a user in their tasks. e.g. the interfaces they will use, physical support, mental support, and usability goals. (Maguire, et al., 1998).
 
 **System requirements**
 
@@ -84,7 +159,7 @@ Requirements are defined for a project or item before efforts to create a design
 
 **Gantt Chart**
 
-A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart-based planning method. (Geraldi & Lechler, 2012)
+A popular Time-Focused, Objective, Deterministic, Analytic, Accountable, and Sequential chart based planning method. (Geraldi & Lechler, 2012)
 
 **Kanban**
 
@@ -141,7 +216,7 @@ This model is better than a waterfall model when system requirements are expecte
 
 There are certain benefits and drawbacks to the incremental development process approach.
 
-#### Advantages
+#### Benefits
 
 * The software will be produced quickly throughout its life cycle.
 * Changes to the requirements and scope are affordable and adaptable.
@@ -150,7 +225,7 @@ There are certain benefits and drawbacks to the incremental development process 
 * Customer feedback is welcome in every building.
 * Errors are easy to identify.
 
-#### Disadvantages 
+#### Drawbacks
 
 * Proper planning and designing are essential
 * As not every requirement is acquired in advance for the duration of the program, issues could occur.
@@ -164,7 +239,7 @@ One of the main reasons for choosing the Incremental model in our Library System
 
 Another reason is that we can get customer feedback on the development work that has been done. Customers can comment on software demos and see how much has been implemented. 
 
-Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.
+Also, our team is small and inexperienced. For an inexperienced team, it is better to go with the incremental model.2 
 
 The goals of the project are clearly stated and recognized, though some elements can change at each increment over time.
 
@@ -210,7 +285,7 @@ What follows is an outline of everything expected of the system in terms of func
 - Access levels are determined by the organisation's personnel hierarchy
 - Account creation and deletion by authorised staff
 - Search, sort, and filter functionality for authorised staff
-- Account information is editable only by accountholder
+- Account information is editable only by account-holder
   - Encrypted and verified by md5sum (rdrr.io, 2023)
   - ID comprises the user's first and last name initials, 4 random numbers, and a random character respectively (e.g. jp4661d)
   - Password must be 8 characters in length, contain a number and a symbol
@@ -273,7 +348,7 @@ A stock management and lending system such as this has few - but by no means tri
 - User error from insufficient training
 - Data privacy/security compromised by unconfigured access levels
 - Project drift due to infrequent communication with stakeholders
-- Unsympathetic, off-putting deployment method and timeframe (Amazon, 2023)
+- Unsympathetic, offputting deployment method and timeframe (Amazon, 2023)
 - Failure to provide technical support for the use and maintenance of the system
 
 To summarise, many hardware-related risks can be overcome by having a performance overhead, options for future expandability, physical security on location, and redundancy with the host system(s). As for software, by far the most impactful forms of risk mitigation would be to have a combination of robust encryption techniques, multi-factor authentification, data validation, and error correction. When it comes to personnel, however, a hierarchy of access levels alongside training and documentation for stakeholders would suffice.
@@ -295,7 +370,8 @@ This phase also includes updated references and Kanban and a new Gantt chart to 
 ## Overall Architecture of the System
 The library system needs many functions specified by the customer to be implemented, for example, inventory searching, fine payment, secure login and rule-sets for both normal and super users. A lot of transactional functions exist whilst a desire for data storage and event processing also exists. The system architecture needs to create an amalgamation of many traditional application types.
 
-**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data (IBM, 2024).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
+**Information systems architecture** allows the developers to employ a storage base for the library information as well as include transactional features such as querying the storage base for information when required. Storage mediums can be decided by the developer team with examples such as SQLExpress Server, XML files and JSON NoSQL databases being possible solutions. Transactional systems provide secure, available and fast response functions for the application to easily query and return necessary data IBM Corporation (2021).  Secure events such as user logins and payments can be adequately processed using encryption within the base and more simple events such as a book search will be effortless. The end user will be able to use a simple but effective UI to easily navigate and operate the application. Overheads for processing and storage can be managed remotely ensuring minimal downtime and costs for the user. Security of both hardware and software can be controlled by the developers during both development and during the maintenance and support period as specified by the customer.
+
 
 ### Use Case Diagrams
 ---
@@ -313,14 +389,12 @@ A use case diagram, which shows how users interact with a system visually, is an
 
 </div>
 
-### Tabular Description Of Use Case Diagram
-
----
-
 <div align=center>
 <br>
 
-**Table 2: Login Usecase**
+### Tabular Description Of Use Case Diagram
+
+**Table: Login Usecase**
 
 
 | Components     | Description |
@@ -332,7 +406,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response   |  Successful login or authentication failure |
 |    Comments   |   Users must have valid credentials and appropriate permissions. The system should implement security measures such as encryption to protect user credentials   |
 
-**Table 3: Rent Books Usecase**
+**Table: Rent Books Usecase**
 | Components     | Description |
 | ----------- | ----------- |
 | Actors      |    Library Member    |
@@ -342,7 +416,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response  |  Confirmation of successful book renting |
 | Comments  |  Availability of the book should be checked before confirming the book. The system should update the book status accordingly. |
 
-**Table 4: Check Account Usecase**
+**Table: Check Account Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -353,7 +427,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response     |  Display of Account details |
 | Comments  |  The system should provide clear information to avoid confusion. The payment information should not be stored on the system. |
 
-**Table 5: Manage Members Usecase**
+**Table: Manage Members Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -365,7 +439,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Comments      |    Requires appropiate permissions and access to member data.   |
 
 
-**Table 6: Manage Books Usecase**
+**Table: Manage Books Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -376,7 +450,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Response      |    Confirmation of book management actions |
 | Comments      |    Requires appropriate permissions  to access and change books data.    |
 
-**Table 7: Generate report Usecase**
+**Table: Generate report Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -388,7 +462,7 @@ A use case diagram, which shows how users interact with a system visually, is an
 | Comments      |    The system should support various report formats.   |
 
 
-**Table 8: Return Books Usecase**
+**Table: Return Books Usecase**
 
 | Components     | Description |
 | ----------- | ----------- |
@@ -425,32 +499,26 @@ A sequence diagram is a type of Unified Modelling Language (UML) diagram that sh
 
 The class diagram also shows which attributes or methods of each class are public or private by showing a '+' or a '-' next to the item. If something is private, other classes will not be able to use the attribute/method, and the opposite is true for a public attribute/method. You can even have a full public or private class (Shelton, 2024). The different relationships in a normal class diagram are as follows:
 
-**Inheritance. UML notation: <|-- (blank arrow-head with solid line)**
 
+#### Inheritance. UML notation: <|-- (blank arrow-head with solid line)
 Inherits previous attributes and methods of the super-class.
 
-**Relisation/Implementation/Abstraction. UML notation: <.. (arrow tip with dotted line)**
-
+#### Relisation/Implementation/Abstraction. UML notation: <.. (arrow tip with dotted line)
 An umbrella class such as a class named 'Animal' is an abstract class, as they can encompass many other classes under them.
 
-**Association. UML notation: -- (solid line)**
-
+#### Association. UML notation: -- (solid line)
 No dependence between the classes, they are just related, and the relation between the two if not clear is put on the connecting line.
 
-**Aggregation. UML notation: o-- (blank diamond head with solid line)**
-
+#### Aggregation. UML notation: o-- (blank diamond head with solid line)
 A type of association that represents a whole and its parts, where they can be separated.
 
-**Composition. UML notation: *-- (filled diamond head with solid line)**
-
+#### Composition. UML notation: *-- (filled diamond head with solid line)
 A type of association, this represents parts of a whole that could not be present without its parent and vice versa.
 
-**Dependency. UML notation: <|.. (blank arrow-head with dotted line)**
-
+#### Dependency. UML notation: <|.. (blank arrow-head with dotted line)
 A dependency is where a class uses an attribute of another class in its methods.
 
-**Multiplicity**
-
+#### Multiplicity.
 When there can only be a certain amount of instances of a class in relation to another class. Represented by a solid line with the following notation: 
 - Zero to one: 0..1
 - Specific number: n
@@ -461,13 +529,11 @@ When there can only be a certain amount of instances of a class in relation to a
 (Visual Paradigm Online, 2024)
 
 
-
-
 <div align=center>
 
-**[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVcuO2jAU_ZUoK6aE-QDUTTuoEhIwo9JZNV1c7AvjktipH0wjyr_3Oi87EYt2A_jcc8992lxTpjimy5QVYMxKwElDmUtnUCcf_ywWibGOo7RblC6GLQJ7Q93CQl6IonSdfCCTsEgK_rOl_lROSyiSGDsodc6lsaDtSpiqgJrwx8fEB_D4EDMhMgPNX6AuCYpjNQ6j9CJiax3IuSSrr7CJcM3l3Fgt5Kk5Sigxl4sOqYj1rjQnjiCdQp2E3OAFCwI4WEy4OtBPwp-dnfX-DyRA0FoOSNYLkWn-y4kRdz5kdpd_67ONyvNJHwsFNlT1SWuov_8YDAcoQDJfiybCjOM71mvv_9BAluYwBueR_iyOG433X5sVuXiphSdvQcIJ_TwaiGmkBr6SoTlyLDAch9hDeaFiDrXZkCsBFIOd91ax86SUguxP3jjBLZzxHv8kLvfwkAYta1S7FbbAcARn35Q20wkEqUjJL3uktN5_3oXTvpaqMsJE_O7CRC6r53U4dOZdM4geZEoekabOsMWjDQp3LFKkDInOX4eJTgwvYbC-VEIF62c38c0mLr65vA248Zdn7xhDY0Yzjm7qNWyTR7_VFY6RnSsP_lUYYaMtNMicFrYmZgDxdyX8xe8m49fjCyL1eREX9ERisz5uFsJlfZQsEs9azazXyvq99NtcQf3fQr3_oNgIUfr2KzKs7Oyezr3otzRLS9QlCE5vObU0SfKUqqQupUv6yfEIrrB52lKpA4oWj6VLqx1mqav8y9a9_unyCIUhFLmga7jt_h_81-0vGM5W9g?type=png)**
+**[Figure 4: Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png)**
 
-![Class Diagram](https://mermaid.ink/img/pako:eNqVVcuO2jAU_ZUoK6aE-QDUTTuoEhIwo9JZNV1c7AvjktipH0wjyr_3Oi87EYt2A_jcc8992lxTpjimy5QVYMxKwElDmUtnUCcf_ywWibGOo7RblC6GLQJ7Q93CQl6IonSdfCCTsEgK_rOl_lROSyiSGDsodc6lsaDtSpiqgJrwx8fEB_D4EDMhMgPNX6AuCYpjNQ6j9CJiax3IuSSrr7CJcM3l3Fgt5Kk5Sigxl4sOqYj1rjQnjiCdQp2E3OAFCwI4WEy4OtBPwp-dnfX-DyRA0FoOSNYLkWn-y4kRdz5kdpd_67ONyvNJHwsFNlT1SWuov_8YDAcoQDJfiybCjOM71mvv_9BAluYwBueR_iyOG433X5sVuXiphSdvQcIJ_TwaiGmkBr6SoTlyLDAch9hDeaFiDrXZkCsBFIOd91ax86SUguxP3jjBLZzxHv8kLvfwkAYta1S7FbbAcARn35Q20wkEqUjJL3uktN5_3oXTvpaqMsJE_O7CRC6r53U4dOZdM4geZEoekabOsMWjDQp3LFKkDInOX4eJTgwvYbC-VEIF62c38c0mLr65vA248Zdn7xhDY0Yzjm7qNWyTR7_VFY6RnSsP_lUYYaMtNMicFrYmZgDxdyX8xe8m49fjCyL1eREX9ERisz5uFsJlfZQsEs9azazXyvq99NtcQf3fQr3_oNgIUfr2KzKs7Oyezr3otzRLS9QlCE5vObU0SfKUqqQupUv6yfEIrrB52lKpA4oWj6VLqx1mqav8y9a9_unyCIUhFLmga7jt_h_81-0vGM5W9g?type=png "Class Diagram")
+![Class Diagram](https://mermaid.ink/img/pako:eNqVVctu2zAQ_BVBJ6dR8gFGL22MAAZsJ6ibU9XDmlzbjClS5cOpkPrfu9STUn1oLrY4uzu7wyGl95Rpjuk8ZRKsXQg4GChy5S2a5POfu7vEOs9RuTUqH8MOgR3RNLBQZ0rRpko-UUg4JIbw26S-am8UyCTGdlqfcmUdGLcQtpRQEX5_n4QGAe97JpTMwPBnqAqC4l51wWi8KLGJ9sm5omhQWHd4z9WtdUaoQ71UUOCAlJT1pg0nRBCP1AehVnhGSQAHhwnXO3ok_Mm7WVd_00BL1SNZRxRCv7wY5_aTXc2_dNNG8sLQe6nBDaq-GAPVj599YAcSFAtaDCXMOL5htQz1NzXkyIcJGPHP4r6Rvf-7WVFJoLoNyWtQcMDgRw0xg7SBLxSolxwlDsvL4FEvcNDMobIrKg4sR2SnrdPsNBEjKf4QghPcwQmv5R_E-RoeD0IHNtLvhJORePDuqI2dujCQjbjCkY-4ltuvm2G1rZQurbCRBe21iUoWT8th0YY3IzuYVnsk7xk2eNQ-vmsRJ01JBfzlH2fbwPNgcJBLqGCdh5PabFJSW9w0XIVLtPWMobUTr6M7G40V0O9ViWNk44tdeD-MsNHUFpk3wlWUGUn5XYrwCmj9CcfkEdFOJD0Q2azrmw3tsq5LFpFnDWfWcWXd-QyiS6g-TNTV94w1EY3vviHD0s2u8Vzr3m5umqUFmgIEp3c7bWyS5Clppb1K5_TIcQ9eujyldEqlfdB0BFk6d8ZjlvoyvOnar0E634O0hCIXdCnX7fci_F3-AvqTXSY?type=png "Class Diagram")
 
 </div>
 
@@ -534,13 +600,272 @@ The Activity diagram for this project depicts the process of the program from st
 
 ### State Chart Diagram
 
-The purpose of a state chart diagram is to model the dynamic nature of a system. State chart diagrams act as a graphical representation of changes to components within a system by either internal or external events. A fully comprehensive state chart diagram would cover all possible states - including system crashes - in order for unexpected occurrences to be dealt with by a failsafe. In order to describe the relationship between components, a state chart diagram also includes the flow of control within a system (activities, data passthrough, etc) (Yildirim, Campean, & Williams, 2017).
+The purpose of a state chart diagram is to model the dynamic nature of a system. State chart diagrams act as a graphical representation of changes to components within a system by either internal or external events. A fully comprehensive state chart diagram would cover all possible states - including system crashes - in order for unexpected occurrences to be dealt with by a failsafe. In order to describe the relationship between components, a state chart diagram also includes the flow of control within a system (activities, data passthrough, etc).
 
 <div align=center>
 
-**[Figure 6: State Chart Diagram](State_Chart_Diagram.png)**
+**[State Chart Diagram](State_Chart_Diagram.png)**
 
 ![State Chart Diagram](State_Chart_Diagram.png)
+
+</div>
+
+## Phase 3 - Implementation and Testing
+
+## Implementation
+
+### Interfaces
+
+The main implementation point for this project was to use an interface to create polymorphic classes as both users and inventory items could be seen as generic objects that have the same methods acting upon them. The role of the interface is to allow scalability as well as abstraction from the User and Inventory classes so the front end developer can easily implement the functions in the xaml.cs back-end. The creation of `I_SystemObjectManager` allows the methods to be created in the `InventoryManager` and `UserManager` classes as seen below.
+
+### The `InventoryManager` Class
+---
+
+**The `InventoryManager` class** is responsible for managing the inventory of books and journals in the library system. It contains several methods that facilitate operations such as adding, deleting, editing, and retrieving inventory items and their information. 
+
+**Core Methods**
+
+**`OpenDatabaseFile()`:**
+
+Opens the inventory database file(`.csv` format) and reads its contents into memory.
+
+**`CloseDatabaseFile()`:**
+
+Closes the inventory database file and saves the current state of the inventory data back to the database file. It concatenates the `tableHeaders` and `inventoryList` into a list of strings and writes it line by line to the CSV file.
+
+**`CreateNewObject()`:**
+
+Adds a new item to the inventory. It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
+
+**`DeleteObject()`:**
+
+Deletes an item from the inventory.
+
+**`GetObjectInfo()`:**
+
+ Retrieves all information for a specific object (inventory item) by its name. It uses the `FindObjectInList` helper method to locate the object's index and then returns the entire row from `inventoryList` at that index.
+
+**`EditObject:`**
+
+Edits information about an item in the inventory. It uses helper methods to find the object's and field's index, then removes the old value and inserts the new edited value in the inventoryList.
+
+**Helper Methods**
+
+**`FindObjectInList` and `FindFieldNameInList`:**
+
+ These helper methods iterate through specific columns in the inventoryList to find the index of an object by name or a field, respectively.
+
+---
+### The `UserManager` Class
+---
+
+The `UserManager`class is responsible for managing user data, such as adding, editing, or deleting user data.
+
+**Core Methods**
+
+**`OpenDatabaseFile()`:**
+
+Opens the Uer database file and reads its contents into memory. Reads the user data from a CSV file located at the specified path and initializes the `userList` and `tableHeaders` properties with the data read from the file.
+
+**`CloseDatabaseFile()`:**
+
+The purpose of this method is to save any changes made to the user data in the database file. The method first closes the user database file, then prepares the data to be written back to the file and writes the updated user data back to the database file to effectively save any changes made to the user data.
+
+**`CreateNewObject()`:** 
+
+Add new user to the user database.  It validates the input user data, ensuring that it is not null and that the object name does not already exist in the database. If no issues are found, it adds the new user to the `userList`.
+
+**`DeleteObject()`:**
+
+Deletes an user entry from the databse. It finds the index of the user by name and removes it from the `userList`.
+
+**`EditObject()`:** 
+
+Edits user information in the database. This method finds the user by name, locates the field to edit, and updates its value with the new information provided.
+
+**`GetObejectInfo()`:**
+
+To retrieve information about a specific user in the user database. It finds the user by name and returns its information as a list of strings.
+
+**`GetSpecificObjectData()`:**
+
+Retrieves specific data about a user from the user database. It finds the user by name, retrieves the index of the specified field, and returns the corresponding data for that field.
+
+**Helper Methods**
+
+**`ToSHA512()`:**
+
+Serves for password hashing using a secure algorithm (SHA512) for password storage.
+
+---
+
+### The `paymentGateway` partial class
+
+The `paymentGateway` class is responsible for handling payment from the users through various types of cards. It facilitates the process of users making payments towards their owed fees or balances.
+
+**Core Methods**
+
+**`payFeesButton_Click`:**
+
+Handles the logic for processing payments when the user clicks the "Pay Fees" button. It gathers information such as the credit card number, expiry date, CVC, and payment amount entered by the user. It validates the credit card details, checks if the payment amount exceeds the owed balance, and updates the user's balance in the database accordingly. If the payment is successful, it displays a confirmation message and navigates the user back to the student menu window.
+
+**`IsValidCreditCard()`:**
+
+Validates the credit card details entered by the user. It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
+
+**`GetCardType()`:**
+
+This method determines the type of credit card based on its number. 
+
+---
+### The `bookRental` partial class
+
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+
+**Core Methods**
+
+**`titleSearch_TextChanged()`:**
+
+Filters the list of available books based on the entered title, updating the search results displayed.
+
+**`isbnSearch_TextChanged()`:**
+
+It filters the books based on the ISBN number entered by user and shows the possible result.
+
+**`authorSearch_TextChanged()`:**
+
+Filters the available books and journals list by the searched author name and displays the result.
+
+**`submitButton_Click()`:**
+
+This function processes the selected book or journal for renting. This function updates the status of the book and records the rental duration and show the confirmation message upon button clicked.
+
+---
+
+### The `studentMenu` partial class
+
+
+The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view there own account, pay any outstanding balances and rent any books.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Opens the payment gateway window to allow the students pay there outstanding balence. This also Retrives the current outstanding balance and passes it to the payment gateway window.
+
+**`rentBookButton_Click()`:**
+
+Nevigates to the bookRental window for allowing students to rent books.
+
+**`LoadDebtFromCSV()`:**
+
+Shows the current outstanding balance of the user also the updated amount after paying.
+
+---
+
+### The `teacherMenu` partial class
+
+This class provides options for staff or teacher to  manage user account, such as deleting existing account, creating new accont or edit information of the user.
+
+**`deleteUserButton_Click()`:**
+
+Deletes the existing user from the user data after confirming the deletion with a message box.
+
+**`createUserButton_Click()`**
+
+Alows staff to create new user. This function also hasesh the password using SHA512 before adding it to the user data.
+
+**`GenerateUsername()`**
+
+it generates a unique username based on the provided first name and last name. this function onstructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+
+---
+
+### The `loginScreen` partial class
+
+This class handles user login attempts, verifies credentials, and directs users to the appropriate menu based on their access level.
+
+**Core Methods**
+
+**`loginButton_Click()`:**
+
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+
+---
+
+## Testing
+
+**Testing Strategies**
+
+The team employed a variety of testing strategies to ensure the reliability and functionality of the program. 
+
+**Integration Test**
+
+Integration testing is performed to test how the individual components of the program work together as a whole.
+
+**Unit Test**
+
+Unit testing is used to test individual components or units of the program in isolation.
+
+**UI Testing**
+
+Tests the user interface elements and their behaviour. It verifies the window opens and closes as expected and ensures UI elements function correctly based on user interaction.
+
+#### `teacherMenuTests`:
+
+The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
+- Opening window
+- Closing window
+- Generating usernames
+- Creating new users
+- Deleting users
+- Database handling
+
+All tests passed successfully (as shown in **Figure 8**), and the teacher menu functionality was verified to be working as expected.
+
+<div align=center>
+
+**[Figure 8: Teacher Menu Test Results]()**
+
+![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
+#### `userManagerTest`:
+
+<div align=center>
+
+**Table 2: UserManager Test Cases and Result**
+
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|` OpenDatabaseFileTest` | Tests the `OpenDatabaseFile` method in UserManager to ensure it correctly reads the database file. | Database file is successfully opened  and `userList` and `tableHeader`s are populated. | Passed 
+| `CloseDatabaseFileTest` | Tests if the method properly close the database file and save if any changes occur | Successfully closed the database and saved the updated data | passed
+| `CreateNewFieldTest` | Tests if `CreateNewField` method successfully creates a new field to table headers and initializes it with empty value | Successfully Created a new field to `tableHeader` and has empty values for all the user in `userList` | Passed
+| `CreateNewObjectTest` | Test the CreateNewObject to ensure it's correctly create a new user or object to an existing `userList` | The new object successfully added to `userList`| Passed
+| `EditObjectTest` | Test the EditObject function to ensure it correctly modify existing object's field value | Successfully modify an exististing object's field value | Passed 
+
+
+**[Figure 9: UserManager Test Results]()**
+
+![UserManager Test Results](Documentation/UserManagerTest.png)
+
+</div>
+
+#### `bookRentalTest`:
+
+<div align=center>
+
+**Table 3: bookRental Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`bookRentalOpenTest` | Tests If the `bookRental` Window open successfully | The window opens when the program run but the test not running in test explorer | Not Run
+| `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
+
+
+**[Figure 10: bookRental UI Test Results]()**
+
+![bookRental Test Results](Documentation/bookRentalTest.png)
 
 </div>
 
@@ -554,20 +879,20 @@ The Gantt chart, Overall Architecture, Sequence Diagram, Class Diagram, Activity
 
 A Gantt chart is well known to be an intuitive, simple, practical and useful visual representation of activities and their associated durations. They are a very widely used tool within industry, and are built to focus on 5 main areas (Geraldi & Lechler, 2012).
 
-**Unidimensional**
+#### Unidimensional
 * One view being 'time', emphasising efficiency.
 
-**Objective**
+#### Objective
 * Object-oriented.
 
-**Deterministic**
-* A Gantt chart determines all that will occur in the project.
+#### Deterministic
+* A Gantt chart determins all that will occur in the project.
 
-**Analytical and Accountable**
+#### Analytical and Accountable
 * Division of the project allows for smaller bite-sized chunks so resources can be allocated efficiently.
 
-**Sequential**
-* After tasks have been completed, then the next task is to be completed, thus sequentially.
+#### Sequential
+* After tasks have been completed, then the next task is to be completed, thus sequenciality.
 
 <br>
 
@@ -576,17 +901,20 @@ A Gantt chart is well known to be an intuitive, simple, practical and useful vis
 
 <div align=center>
 
-**[Figure 7: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
+**[Figure 6: Project Plan Gantt Chart, Phase 2 Update](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png)**
 
 ![Project Plan Gantt Chart](https://mermaid.ink/img/pako:eNq9Vm1v2jAQ_itWPidtE7q2y7eqqNW0oVXQaprEFxMf4C1xsrPdClX97zs7LyQMtlXTQAiS3HPPPXe-c_wSZKWAIA1WXBkzV4w-Rpoc2APwgsXsHstvkBl25-zsZs2xQQlu4LbEghvGxuNoMom-0meuaqsmH1kqNiuX5pkjOJ4MtGYTCpfXmLHUmdXawdIMpQl1VYgwGUVxHCVnyShksaiRX8gKka0YV4JNYQkIithScni2GPKlAWTe-6LxmMKThGeWdiaHa-mGEh81Iabww0qEApTRB9RZHIj7kzaLW2nOdVeZxa31sLjZRhso_kaexjfWrqdP79GHDtDZDyucSv1d1-R0xaqcKyXV6vfBESvH2NN7KX7Jq_ap1fgUyUu0khuGLs0TlsbxKX09224bflAGS2H9TW259_fAxkh85HvRq9xVw3krFc-lhqH6pqeqOIsJ-35vUR74IofTj1wt-FHi3eWl1hw3_xqL7Q920j7P4r0t0C1s20It3R03a0BqB-onXIUDJaOGfGYXhTQ9Et973TKvetCdpHe3pJ28fRL9kJdvyb1trPs1J2TCbOV2PKrmeRQnNeGVaCRtfzpxn58AeZ6za8zWNAOZsQj7V2fLty34gU44S6Izn8z5wU54nHxyOxq7carHkq-QF_V4-p7Ux9Awo93KV7SJf4yYNzmnt8sRA17T35M0m2PGnBnXgr7ju7X9n3HbbXSowk-E7k9H7IZtMGrJxc74pFUS9lWNrgaAEQFG7n3QSXl3LoIwKIBOGFLQAeXFwecB7ScFzIOULgUsuc3NPJirV4Jya8rZRmVBatBCGNQD25QpSJc81_QUhDQlTupDjz_7vP4EwNzBfw?type=png "Project Plan Gantt Chart")
 
 </div>
 
+
 ## Kanban
 
-Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections (Radigan, 2023).
+### Kanban
 
-Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method (Toyota, 2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
+Kanban is a method of improving software development by means of creating a visual flow using boards and charts. The idea is to promote team communication, collaboration and visibility of project timelines and projections Radigan, D. (2022).
+
+Kanban originates from the manufacturing industry, specifically Taiichi Ohno from Toyota in Japan, where it literally translates to "signboard". Toyota continue their Kanban philosophy under a new name, "Just-in-Time" method TOYOTA (2023), where they focus more on incorporating lean principles however Kanban, in the last decade, has been on the rise in tech and is being used in an array of diverse software organisations.
 
 Below is a screenshot of our project Kanban from 01/12/23 and will change throughout the project to include new tasks as they are defined and allocated. The board has been split into major categories that define each task's state which project contributors can use to visualise the progress of the overall project.
 
@@ -602,9 +930,21 @@ Below is a screenshot of our project Kanban from 21/01/24.
 
 <div align=center>
 
-**[Figure 4: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
+
+**[Figure 3: Kanban Board 21/01/24](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](kanban2.png)
+
+</div>
+
+Below is a screenshot of our project Kanban from 21/01/24.
+
+<div align=center>
+
+**[Figure 9: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+
+![Kanban](Documentation/kanban.png)
+
 
 </div>
 
@@ -615,6 +955,7 @@ We would like to thank the following for their contributions and support with th
 <div align=center>
 
 [CompEng0001](https://github.com/CompEng0001)
+Nathanial Sadler
 
 </div>
 
@@ -656,25 +997,18 @@ Pedamkar, P. (2023, 12 04). Incremental Model. Retrieved from educba.com: https:
 
 rdrr.io. (2023, 12 04). md5sum: Compute MD5 Checksums. Retrieved from rdrr.io: https://rdrr.io/r/tools/md5sum.html
 
-IBM. (2024, 01 22). Processing Transaction Systems. Retrieved from IBM: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
+IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
-IBM. (2024, 01 21). Sequence Diagrams. Retrieved from IBM.com: https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams
+Srinam (2023). Use Case Diagram. Retrieved from Geeks for Geeks : https://www.geeksforgeeks.org/use-case-diagram/.
 
-oclc.org. (2023, 12 04). Dewey Services. Retrieved from oclc.org: https://www.oclc.org/en/dewey.html
+IBM Corporation (2021) IBM Documentation, Transaction Processing Systems. Available at: https://www.ibm.com/docs/en/txseries/9.1?topic=processing-transaction-systems
 
-Radigan, D. (2023, 12 08). Software Development - Kanban. Retrieved from atlassian.com: https://www.atlassian.com/agile/kanban
+Toyota production system . [online] Toyota Motor Corporation Official Global Website. Available at: https://global.toyota/en/company/vision-and-philosophy/production-system/.
+  
 
-Ramuthi, D. (2024, 01 21). 11 UML diagram Examples: Class, Activity, and More. Retrieved from venngage.com: https://venngage.com/blog/uml-diagram-examples/
+IBM (2021). Sequence Diagrams. Retrieved from IBM : https://www.ibm.com/docs/en/rsm/7.5.0?topic=uml-sequence-diagrams.
 
-Shelton, B. (2024, 01 21). YouTube | UML Class Diagrams. Retrieved from YouTube.com: https://www.youtube.com/watch?v=6XrL5jXmTwM&ab_channel=LucidSoftware
-
-Toyota. (2023, 12 08). Toyota Production System - Company Information, Vision & Philosophy. Retrieved from Toyota: https://global.toyota/en/company/vision-and-philosophy/production-system/
-
-Visual Paradigm. (2024, 01 21). What is an Activity Diagram? Retrieved from visual-paradigm.com: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
-
-Visual Paradigm Online. (2024, 01 21). What are the six types of relationships in UML class diagrams? Retrieved from Visual Paradigm: https://blog.visual-paradigm.com/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
-
-Yildirim, U., Campean, F., & Williams, H. (2017). Function modeling using the system state flow diagram. Artificial Intelligence for Engineering Design, Analysis and Manufacturing. Volume 31, 413-435.
+Radigan, D. (2022). What is kanban? [online] Atlassian. Available at: https://www.atlassian.com/agile/kanban.
 
 bedbugexterminatorpro.ca. (2023, 12 08). library.jpg. Retrieved from bedbugexterminatorpro.ca: https://www.bedbugexterminatorpro.ca/wp-content/uploads/2019/05/libraries.jpg
 

@@ -1,0 +1,126 @@
+﻿<Window x:Class="LMS_WPFApp.loginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LMS_WPFApp"
+        mc:Ignorable="d"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Title="Library Management System" Height="450" Width="800">
+    <Grid>
+
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top" Click="loginButton_Click"/>
+        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top" Click="quitButton_Click"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="120"/>
+=======
+        Title="MainWindow" Height="450" Width="800">
+=======
+        Title="Library Management System" Height="450" Width="800">
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
+    <Grid>
+
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top" Click="loginButton_Click"/>
+        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top" Click="quitButton_Click"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <TextBox x:Name="passwordTestBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+>>>>>>> c12f289 (first UI additions)
+=======
+        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+>>>>>>> 15a958a (updated cs files for functionality)
+=======
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="120"/>
+>>>>>>> 6544e31 (Added user creation, user deletion, login system, finished teacher menu basics)
+=======
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="278,348,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="passwordTestBox" HorizontalAlignment="Center" Margin="0,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+>>>>>>> 4b11006 (first UI additions)
+        <TextBlock HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="LMS" VerticalAlignment="Top" AutomationProperties.Name="titleMain" Height="41" Width="47" FontSize="24"/>
+        <Label x:Name="usernameLbl" Content="Username" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="passwordLbl" Content="Password" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="64"/>
+=======
+        Title="Library Management System" Height="600" Width="800">
+=======
+        Title="Library Management System" Height="600" Width="1150">
+>>>>>>> 271206d (UI Updates, cannot test since hashing is not working on this commit)
+
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#B3FFFFFF" CornerRadius="5" Margin="0,0,0,10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#D0D0D0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="IsDefault" Value="True">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Foreground" Value="Black" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+>>>>>>> 4d6cbb1 (added some UI updates)
+
+    <Viewbox Stretch="Fill">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="75" Width="106">
+                <Border Background="#B3FFFFFF" Margin="0">
+                    <Image Source="/Logo.png" Height="75" Width="106"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="20" VerticalAlignment="Center">
+                <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Width="150">
+                    <TextBox x:Name="usernameTextBox" Width="150" Text="Username" TextWrapping="Wrap" GotFocus="Username_TextBox_GotFocus" LostFocus="Username_TextBox_LostFocus" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
+                </Border>
+                <Border CornerRadius="5" Background="#B3FFFFFF" BorderThickness="0" Margin="0,20,0,0" Width="150">
+                    <PasswordBox x:Name="passwordTextBox" Width="150" BorderThickness="0" Background="Transparent" FontFamily="Century Gothic"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="400" Margin="0,0,0,0">
+                <Button x:Name="loginButton" HorizontalAlignment="Center" Content="Login" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="loginButton_Click" Width="150" FontFamily="Century Gothic"/>
+                <Button x:Name="quitButton" HorizontalAlignment="Center" Content="Quit" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Click="quitButton_Click" Width="150" FontFamily="Century Gothic" />
+            </StackPanel>
+
+        </Grid>
+    </Viewbox>
+</Window>
