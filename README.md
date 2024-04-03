@@ -495,7 +495,10 @@ A sequence diagram is a type of Unified Modelling Language (UML) diagram that sh
 ### Class Diagrams
 ---
 
-**Class** diagrams are used to show the relationship between different planned classes for a class-based program. In this diagram, there are 9 different classes, and they are all related to each other in one way or another (Shelton, 2024). The different relationships in a normal class diagram are as follows (Visual Paradigm Online, 2024):
+**Class diagrams** are used to show the relationship between different planned classes for a program. In this diagram, there are 9 different classes, and they are all related to each other in one way or another. In the class diagram, per class there are three sections: class name, attributes, and methods. The class name is the name of the class. The attributes are the values within the class, these can be any form of data such as int, float, string, etc. The methods are the functions within the class. 
+
+The class diagram also shows which attributes or methods of each class are public or private by showing a '+' or a '-' next to the item. If something is private, other classes will not be able to use the attribute/method, and the opposite is true for a public attribute/method. You can even have a full public or private class (Shelton, 2024). The different relationships in a normal class diagram are as follows:
+
 
 #### Inheritance. UML notation: <|-- (blank arrow-head with solid line)
 Inherits previous attributes and methods of the super-class.
@@ -523,6 +526,7 @@ When there can only be a certain amount of instances of a class in relation to a
 - One to many: 1..*
 - Specific Number range: m..n 
 
+(Visual Paradigm Online, 2024)
 
 
 <div align=center>
