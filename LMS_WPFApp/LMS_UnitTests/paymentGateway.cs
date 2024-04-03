@@ -11,11 +11,14 @@ namespace LMS_UnitTests
         public void TestIsValidCreditCard_Valid()
         {
             // Arrange
-            var userManager = new UserManager(); // Assuming UserManager has a parameterless constructor
-            var inventoryManager = new InventoryManager(); // Assuming InventoryManager has a parameterless constructor
-            string username = "testUser";
+            UserManager testUserManager = new UserManager();
+            testUserManager.OpenDatabaseFile();
+            InventoryManager testInventoryManager = new InventoryManager();
+            testInventoryManager.OpenDatabaseFile();
+
+            string username = "jd1234a";
             string initialBalance = "100.00";
-            var paymentGateway = new paymentGateway(userManager, inventoryManager, username, initialBalance);
+            //var paymentGateway = new paymentGateway(userManager, inventoryManager, username, initialBalance);
             string cardNumber = "1234567890123456";
             string expiryDate = "12/25";
             string cvc = "123";
@@ -28,8 +31,8 @@ namespace LMS_UnitTests
             // Act: Instantiate the bookRental on the UI thread
             var thread = new Thread(() =>
             {
-                paymentGatewayInstance = new paymentGateway(userManager, inventoryManager, username, initialBalance);
-                paymentGateway.Show();
+                paymentGatewayInstance = new paymentGateway(testUserManager, testInventoryManager, username, initialBalance);
+                paymentGatewayInstance.Show();
                 System.Windows.Threading.Dispatcher.Run();
             });
 
@@ -51,26 +54,21 @@ namespace LMS_UnitTests
         public void TestGetCardType_Visa()
         {
             // Arrange
-            var userManager = new UserManager(); // Assuming UserManager has a parameterless constructor
-            var inventoryManager = new InventoryManager(); // Assuming InventoryManager has a parameterless constructor
-            string username = "testUser";
-            string initialBalance = "100.00";
-            var paymentGateway = new paymentGateway(userManager, inventoryManager, username, initialBalance);
-            string cardNumber = "4111111111111111";
-
-            // Act
-            string cardType = paymentGateway.GetCardType(cardNumber);
-
-            // Assert
-            Assert.AreEqual("Visa", cardType);
+            UserManager testUserManager = new UserManager();
+            testUserManager.OpenDatabaseFile();
+            InventoryManager testInventoryManager = new InventoryManager();
+            testInventoryManager.OpenDatabaseFile();
 
             paymentGateway paymentGatewayInstance = null;
 
-            // Act: Instantiate the bookRental on the UI thread
+            string username = "jd1234a";
+            string initialBalance = "100.00";
+
+
             var thread = new Thread(() =>
             {
-                paymentGatewayInstance = new paymentGateway(userManager, inventoryManager, username, initialBalance);
-                paymentGateway.Show();
+                paymentGatewayInstance = new paymentGateway(testUserManager, testInventoryManager, username, initialBalance);
+                paymentGatewayInstance.Show();
                 System.Windows.Threading.Dispatcher.Run();
             });
 
@@ -84,8 +82,15 @@ namespace LMS_UnitTests
             {
                 Assert.Fail("Payment Gateway window did not open!");
             }
-        }
 
-        // Add more test methods for other functionalities as needed
+
+            string cardNumber = "4111111111111111";
+
+            // Act
+            string cardType = paymentGatewayInstance.GetCardType(cardNumber);
+
+            // Assert
+            Assert.AreEqual("Visa", cardType);
+        }
     }
 }
