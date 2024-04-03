@@ -63,7 +63,7 @@ namespace LMS_WPFApp
                 }
             }
         }
-        
+
         // Search for books by title
         private void titleSearch_TextChanged(object sender, TextChangedEventArgs e)
         {

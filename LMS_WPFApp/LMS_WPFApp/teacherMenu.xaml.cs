@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace LMS_WPFApp
@@ -32,7 +32,7 @@ namespace LMS_WPFApp
         public void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             string usernameToDelete = usernameToDeleteCombo.Text;
-            
+
             MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete the user with the username '{usernameToDelete}'?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
@@ -59,7 +59,6 @@ namespace LMS_WPFApp
 
             string username = GenerateUsername(firstName.Text, lastName.Text);
             string newPassword = UserManager.ToSHA512(password.Text);
-            
             newUserList.Add(username);
             newUserList.Add(newPassword);
             newUserList.Add(accessLevel.Text);

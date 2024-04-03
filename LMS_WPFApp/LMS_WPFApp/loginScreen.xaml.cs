@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.IO;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -66,7 +66,6 @@ namespace LMS_WPFApp
 
             // Close window after login?
             Close();
-        
         }
 
         private void Username_TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -85,7 +84,6 @@ namespace LMS_WPFApp
                 tb.Text = "Username";
             }
         }
-       
 
 
         /* private void Window_SizeChanged(object sender, SizeChangedEventArgs e)

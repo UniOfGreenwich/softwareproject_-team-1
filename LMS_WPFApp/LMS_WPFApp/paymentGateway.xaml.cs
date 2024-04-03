@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 
 namespace LMS_WPFApp
 {
@@ -19,8 +19,7 @@ namespace LMS_WPFApp
             this.username = username;
             this.initialBalance = initialBalance;
 
-
-             owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
+              owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
         }
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -108,7 +107,6 @@ namespace LMS_WPFApp
 
         private void cancelPayFeesButton_Click(object sender, RoutedEventArgs e)
         {
-            
 
             // Show the studentMenu window
             studentMenu menu = new studentMenu(Users, Inventory,username);
@@ -131,8 +129,5 @@ namespace LMS_WPFApp
         {
 
         }
-    }
-
-   
+    } 
 }
-

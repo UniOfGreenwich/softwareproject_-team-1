@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace LMS_WPFApp
@@ -20,7 +20,7 @@ namespace LMS_WPFApp
             this.username = username;
 
             LoadDebtFromCSV(username);
-            
+
         }
 
         private void payFeesButton_Click(object sender, RoutedEventArgs e)
@@ -34,7 +34,7 @@ namespace LMS_WPFApp
 
             Close();
             LoadDebtFromCSV(username);
-            
+
             return;
         }
 
@@ -67,7 +67,7 @@ namespace LMS_WPFApp
             }
         }
 
-        
+
         private void populateBookInfo(string deweyDecimal)
         {
             return;
