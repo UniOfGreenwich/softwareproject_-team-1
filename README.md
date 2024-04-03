@@ -28,10 +28,12 @@
   - [The `studentMenu` partial class](#the-studentmenu-partial-class-1)
   - [The `teacherMenu` partial class](#the-teachermenu-partial-class-1)
   - [The `loginScreen` partial class](#the-loginscreen-partial-class-1)
+  - [The `paymentGateway` partial class](#the-paymentgateway-partial-class-1)
 - [Testing](#testing)
     - [`teacherMenuTests`:](#teachermenutests)
     - [`userManagerTest`:](#usermanagertest)
     - [`bookRentalTest`:](#bookrentaltest)
+    - [`paymentGatewayTest`:](#paymentgatewaytest)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
   
@@ -71,7 +73,6 @@ Closes the inventory database file and saves the current state of the inventory 
 **`CreateNewObject()`:**
 
 Adds a new item to the inventory. It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
-Adds a new item to the inventory. It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
 
 **`DeleteObject()`:**
 
@@ -108,11 +109,11 @@ The purpose of this method is to save any changes made to the user data in the d
 
 **`CreateNewObject()`:** 
 
-Add new user to the user database.  It validates the input user data, ensuring that it is not null and that the object name does not already exist in the database. If no issues are found, it adds the new user to the `userList`.
+Adds a new user to the user database. It validates the input user data, ensuring that it is not null and that the object name does not already exist in the database. If no issues are found, it adds the new user to the `userList`.
 
 **`DeleteObject()`:**
 
-Deletes an user entry from the databse. It finds the index of the user by name and removes it from the `userList`.
+Deletes a user entry from the database. It finds the index of the user by name and removes it from the `userList`.
 
 **`EditObject()`:** 
 
@@ -146,7 +147,6 @@ Handles the logic for processing payments when the user clicks the "Pay Fees" bu
 **`IsValidCreditCard()`:**
 
 Validates the credit card details entered by the user. It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
-Validates the credit card details entered by the user. It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
 
 **`GetCardType()`:**
 
@@ -155,7 +155,7 @@ This method determines the type of credit card based on its number.
 ---
 ### The `bookRental` partial class
 
-This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are allowed to rent books for 3,7 or 14 days.
 
 **Core Methods**
 
@@ -165,7 +165,7 @@ Filters the list of available books based on the entered title, updating the sea
 
 **`isbnSearch_TextChanged()`:**
 
-It filters the books based on the ISBN number entered by user and shows the possible result.
+It filters the books based on the ISBN number entered by the user and shows possible results.
 
 **`authorSearch_TextChanged()`:**
 
@@ -180,17 +180,17 @@ This function processes the selected book or journal for renting. This function 
 ### The `studentMenu` partial class
 
 
-The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view there own account, pay any outstanding balances and rent any books.
+The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view their own account, pay any outstanding balances and rent any books.
 
 **Core Methods**
 
 **`payFeesButton_Click()`:**
 
-Opens the payment gateway window to allow the students pay there outstanding balence. This also Retrives the current outstanding balance and passes it to the payment gateway window.
+Opens the payment gateway window to allow the students to pay their outstanding balance. This also Retrieves the current outstanding balance and passes it to the payment gateway window.
 
 **`rentBookButton_Click()`:**
 
-Nevigates to the bookRental window for allowing students to rent books.
+Navigates to the bookRental window for allowing students to rent books.
 
 **`LoadDebtFromCSV()`:**
 
@@ -200,7 +200,7 @@ Shows the current outstanding balance of the user also the updated amount after 
 
 ### The `teacherMenu` partial class
 
-This class provides options for staff or teacher to  manage user account, such as deleting existing account, creating new accont or edit information of the user.
+This class provides options for staff or teachers to manage user accounts, such as deleting existing accounts, creating new user accounts or editing information of the user.
 
 **`deleteUserButton_Click()`:**
 
@@ -208,11 +208,11 @@ Deletes the existing user from the user data after confirming the deletion with 
 
 **`createUserButton_Click()`**
 
-Alows staff to create new user. This function also hasesh the password using SHA512 before adding it to the user data.
+Allows staff to create a new user. This function also hashes the password using SHA512 before adding it to the user data.
 
 **`GenerateUsername()`**
 
-it generates a unique username based on the provided first name and last name. this function onstructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+it generates a unique username based on the provided first name and last name. this function instructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
 
 ---
 
@@ -224,12 +224,12 @@ This class handles user login attempts, verifies credentials, and directs users 
 
 **`loginButton_Click()`:**
 
-It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it navigates the users to the appropriate menu based on their access level.
 
 ---
 ### The `bookRental` partial class
 
-This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are allowed to rent books for 3,7 or 14 days.
 
 **Core Methods**
 
@@ -274,7 +274,7 @@ Shows the current outstanding balance of the user also the updated amount after 
 
 ### The `teacherMenu` partial class
 
-This class provides options for staff or teacher to  manage user account, such as deleting existing account, creating new accont or edit information of the user.
+This class provides options for staff or teacher to manage user account, such as deleting existing account, creating new accont or edit information of the user.
 
 **`deleteUserButton_Click()`:**
 
@@ -282,11 +282,11 @@ Deletes the existing user from the user data after confirming the deletion with 
 
 **`createUserButton_Click()`**
 
-Alows staff to create new user. This function also hasesh the password using SHA512 before adding it to the user data.
+Allows staff to create new user. This function also hashes the password using SHA512 before adding it to the user data.
 
 **`GenerateUsername()`**
 
-it generates a unique username based on the provided first name and last name. this function onstructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+it generates a unique username based on the provided first name and last name. this function instructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
 
 ---
 
@@ -298,7 +298,43 @@ This class handles user login attempts, verifies credentials, and directs users 
 
 **`loginButton_Click()`:**
 
-It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides a message for unsuccessful login attempts. If the login is successful it navigates the users to the appropriate menu based on their access level.
+
+---
+
+### The `paymentGateway` partial class
+
+This class handles the payment section of the application.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Upon the button click, the cardNumberText.Text, expiryDateText.Text, CvcText.Text and PaymentText.Text have their values stored in string and float parameters. These Parameters are then used to validate the card details, and pay the amount entered in to the PaymentText.Text textbox. The method from the Users class 'EditObject' is then used to change the stored amount of money owed in the userDatabase.csv.
+
+**`IsValidCreditCard()`:**
+
+This is a private void method which takes the cardNumber, expiryDate and cvc and strings and checks their lengths to ensure the right amount of characters are entered in to the relevant text boxes.
+
+**`GetCardType()`:**
+
+A private string that takes the cardNumber value, and removes any spaces or '-' characters to make one long string value to use in the cleanCardNumber value to identify which card is being used, where a card number starting with 4 is Visa, 5 is Mastercard, and 34 is American Express.
+
+**`cancelPayFeesButton_Click()`:**
+
+This takes the user back to the studentMenu window.
+
+**`TextBox_TextChanged()`:**
+
+Placeholder function.
+
+**`CardNumberText_TextChanged()`:**
+
+Placeholder function.
+
+**`PaymentText_TextChanged()`:**
+
+Placeholder function.
 
 ---
 
@@ -377,6 +413,25 @@ All tests passed successfully (as shown in **Figure 8**), and the teacher menu f
 ![bookRental Test Results](Documentation/bookRentalTest.png)
 
 </div>
+
+#### `paymentGatewayTest`:
+
+<div align=center>
+
+**Table 4: paymentGateway Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`TestGetCardType_Visa` | Tests the `getCardType` function to see what card is being used to pay with. This test tries to use the Visa card. It also tests to see if the window opens successfully | The window opens when the program is run, and the test passes as well, only when the `getCardType` function is run as public. | Run
+| `TestIsValidCreditCard_Valid` | Tests the UI`IsValidCreditCard` function. And tests the UI by loading and closing the test window. | The window closes and no errors are found. | Run
+
+
+**[Figure 11: paymentGateway UI Test Results]()**
+
+![bookRental Test Results](Documentation/paymentGatewayTestResults.png)
+
+</div>
+
+
 
 ## Kanban
 
