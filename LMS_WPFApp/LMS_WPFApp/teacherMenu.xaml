@@ -1,0 +1,69 @@
+<Window x:Class="LMS_WPFApp.teacherMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LMS_WPFApp"
+        mc:Ignorable="d"
+        Title="User Management" Height="600" Width="1150">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#B3FFFFFF" CornerRadius="5" Margin="0,0,0,10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#D0D0D0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="IsDefault" Value="True">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Foreground" Value="Black" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Viewbox Stretch="UniformToFill">
+
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/12345.jpg" Stretch="Fill"/>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBlock Text="User Management - Teacher" FontSize="24pt" FontFamily="Century Gothic" TextAlignment="Center" Foreground="#000000" Background="#B3FFFFFF"/>
+            </StackPanel>
+
+            <Button x:Name="createUserButton" Content="Create User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="171,275,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="createUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <Button x:Name="deleteUserButton" Content="Delete User" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Margin="537,168,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="deleteUserButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBox x:Name="firstName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="34,88,0,0" TextWrapping="Wrap" Background="#B3FFFFFF" VerticalAlignment="Top" Width="112"  FontFamily="Century Gothic"/>
+            <TextBox x:Name="lastName" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Margin="182,88,465,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#B3FFFFFF" FontFamily="Century Gothic"/>
+            <TextBox x:Name="accessLevel" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="42,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBox x:Name="balance" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="189,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBlock x:Name="firstNameTextBlock" HorizontalAlignment="Left" Margin="34,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="First Name" FontWeight="Bold" Background="#B3FFFFFF" Foreground="#000000"  FontFamily="Century Gothic"/>
+            <TextBlock x:Name="lastnameTextBlock" HorizontalAlignment="Left" Margin="182,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Last Name" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBlock x:Name="accessLevelTextBlock" HorizontalAlignment="Left" Margin="42,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#000000" FontWeight="Bold" Background="#B3FFFFFF"  FontFamily="Century Gothic"><Run Text="Access Level"/><LineBreak/><Run Text="0 for Student"/><LineBreak/><Run Text="1 for "/><Run Language="en-gb" Text="T"/><Run Text="eacher"/></TextBlock>
+            <TextBlock x:Name="balanceTextBlock" HorizontalAlignment="Left" Margin="189,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Balance" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <Button x:Name="backTeacherMenuButton" Content="Logout" HorizontalAlignment="Right" Style="{StaticResource ButtonStyle}" Margin="0,275,273,0" VerticalAlignment="Top" Width="100" Height="100" Click="backTeacherMenuButton_Click" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBlock x:Name="usernameToDeleteTextBlock" HorizontalAlignment="Left" Margin="537,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"><Run Language="en-gb" Text="User to Delete"/></TextBlock>
+            <ComboBox x:Name="usernameToDeleteCombo" Background="#B3FFFFFF" Margin="537,133,136,253" IsEditable="True" Text="Choose..." FontSize="12"/>
+            <TextBox x:Name="password" Text="Enter text here..." GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Margin="42,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+            <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="42,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Password" FontWeight="Bold" Foreground="#000000" Background="#B3FFFFFF"  FontFamily="Century Gothic"/>
+        </Grid>
+    </Viewbox>
+</Window>
