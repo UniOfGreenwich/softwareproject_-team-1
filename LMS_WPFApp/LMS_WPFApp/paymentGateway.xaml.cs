@@ -19,7 +19,6 @@ namespace LMS_WPFApp
             this.username = username;
             this.initialBalance = initialBalance;
 
-            //PaymentText.Text = initialBalance;
 
              owedMoniesLabel.Content = $"Owed Monies: £{initialBalance}";
         }

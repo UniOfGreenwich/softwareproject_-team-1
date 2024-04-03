@@ -20,7 +20,18 @@
   - [The `InventoryManager` Class](#the-inventorymanager-class)
   - [The `UserManager` Class](#the-usermanager-class)
   - [The `paymentGateway` partial class](#the-paymentgateway-partial-class)
+  - [The `bookRental` partial class](#the-bookrental-partial-class)
+  - [The `studentMenu` partial class](#the-studentmenu-partial-class)
+  - [The `teacherMenu` partial class](#the-teachermenu-partial-class)
+  - [The `loginScreen` partial class](#the-loginscreen-partial-class)
+  - [The `bookRental` partial class](#the-bookrental-partial-class-1)
+  - [The `studentMenu` partial class](#the-studentmenu-partial-class-1)
+  - [The `teacherMenu` partial class](#the-teachermenu-partial-class-1)
+  - [The `loginScreen` partial class](#the-loginscreen-partial-class-1)
 - [Testing](#testing)
+    - [`teacherMenuTests`:](#teachermenutests)
+    - [`userManagerTest`:](#usermanagertest)
+    - [`bookRentalTest`:](#bookrentaltest)
 - [Kanban](#kanban)
 - [References and Acknowledgements](#references-and-acknowledgements)
   
@@ -35,7 +46,8 @@
 | [th5528e](https://github.com/th5528e) | UI/XAML Design // Kanban // Inventory Testing
 | [Repi909](https://github.com/Repi909) | Github Admin // User/Inventory Classes and Interface // Login and StudentMenu Testing
 | [GeorgeElliotMathieson](https://github.com/GeorgeElliotMathieson) | Pull Requests // Hashing and Auth // TeacherMenu Testing
-| [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // User Testing
+| [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // UserManager and bookRent Testing
+| [shuvo00000](https://github.com/shuvo00000) | README.md // Payment Methods // UserManager and bookRent Testing
 
 </div>
 
@@ -58,7 +70,8 @@ Closes the inventory database file and saves the current state of the inventory 
 
 **`CreateNewObject()`:**
 
-Adds a new item to the inventory.It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
+Adds a new item to the inventory. It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
+Adds a new item to the inventory. It validates the input object items, checks if an item with the same name already exists, and adds the new item to the `inventoryList`.
 
 **`DeleteObject()`:**
 
@@ -132,17 +145,239 @@ Handles the logic for processing payments when the user clicks the "Pay Fees" bu
 
 **`IsValidCreditCard()`:**
 
-Validates the credit card details entered by the user .It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
+Validates the credit card details entered by the user. It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
+Validates the credit card details entered by the user. It verifies that the credit card number, expiry date, and CVC meet the necessary criteria for a valid credit card.
 
 **`GetCardType()`:**
 
 This method determines the type of credit card based on its number. 
 
 ---
+### The `bookRental` partial class
+
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+
+**Core Methods**
+
+**`titleSearch_TextChanged()`:**
+
+Filters the list of available books based on the entered title, updating the search results displayed.
+
+**`isbnSearch_TextChanged()`:**
+
+It filters the books based on the ISBN number entered by user and shows the possible result.
+
+**`authorSearch_TextChanged()`:**
+
+Filters the available books and journals list by the searched author name and displays the result.
+
+**`submitButton_Click()`:**
+
+This function processes the selected book or journal for renting. This function updates the status of the book and records the rental duration and show the confirmation message upon button clicked.
+
+---
+
+### The `studentMenu` partial class
 
 
+The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view there own account, pay any outstanding balances and rent any books.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Opens the payment gateway window to allow the students pay there outstanding balence. This also Retrives the current outstanding balance and passes it to the payment gateway window.
+
+**`rentBookButton_Click()`:**
+
+Nevigates to the bookRental window for allowing students to rent books.
+
+**`LoadDebtFromCSV()`:**
+
+Shows the current outstanding balance of the user also the updated amount after paying.
+
+---
+
+### The `teacherMenu` partial class
+
+This class provides options for staff or teacher to  manage user account, such as deleting existing account, creating new accont or edit information of the user.
+
+**`deleteUserButton_Click()`:**
+
+Deletes the existing user from the user data after confirming the deletion with a message box.
+
+**`createUserButton_Click()`**
+
+Alows staff to create new user. This function also hasesh the password using SHA512 before adding it to the user data.
+
+**`GenerateUsername()`**
+
+it generates a unique username based on the provided first name and last name. this function onstructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+
+---
+
+### The `loginScreen` partial class
+
+This class handles user login attempts, verifies credentials, and directs users to the appropriate menu based on their access level.
+
+**Core Methods**
+
+**`loginButton_Click()`:**
+
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+
+---
+### The `bookRental` partial class
+
+This class is responsible for handling searching and renting books in the library management system. Users are able to search for books or journals by entering the title, author, or ISBN number and they are alowed to rent books for 3,7 or 14 days.
+
+**Core Methods**
+
+**`titleSearch_TextChanged()`:**
+
+Filters the list of available books based on the entered title, updating the search results displayed.
+
+**`isbnSearch_TextChanged()`:**
+
+It filters the books based on the ISBN number entered by user and shows the possible result.
+
+**`authorSearch_TextChanged()`:**
+
+Filters the available books and journals list by the searched author name and displays the result.
+
+**`submitButton_Click()`:**
+
+This function processes the selected book or journal for renting. This function updates the status of the book and records the rental duration and show the confirmation message upon button clicked.
+
+---
+
+### The `studentMenu` partial class
+
+
+The `studentMenu` class in the LMS_WPFApp responsible for managing the user interface and interactions related to student-specific functionalities within the application. It provides options for students to view there own account, pay any outstanding balances and rent any books.
+
+**Core Methods**
+
+**`payFeesButton_Click()`:**
+
+Opens the payment gateway window to allow the students pay there outstanding balence. This also Retrives the current outstanding balance and passes it to the payment gateway window.
+
+**`rentBookButton_Click()`:**
+
+Nevigates to the bookRental window for allowing students to rent books.
+
+**`LoadDebtFromCSV()`:**
+
+Shows the current outstanding balance of the user also the updated amount after paying.
+
+---
+
+### The `teacherMenu` partial class
+
+This class provides options for staff or teacher to  manage user account, such as deleting existing account, creating new accont or edit information of the user.
+
+**`deleteUserButton_Click()`:**
+
+Deletes the existing user from the user data after confirming the deletion with a message box.
+
+**`createUserButton_Click()`**
+
+Alows staff to create new user. This function also hasesh the password using SHA512 before adding it to the user data.
+
+**`GenerateUsername()`**
+
+it generates a unique username based on the provided first name and last name. this function onstructs the username using the first letter of the first name, first letter of the last name, a random number, and a random letter.
+
+---
+
+### The `loginScreen` partial class
+
+This class handles user login attempts, verifies credentials, and directs users to the appropriate menu based on their access level.
+
+**Core Methods**
+
+**`loginButton_Click()`:**
+
+It provides a username and password input for users. Then it checks if the username exists in the user database and if the provided password matches the one stored in the database managed by the `UserManager` class. Then it provides message for unsuccessful login attempts. If the login is successful it nevigates the users to the appropiate menu based on their access level.
+
+---
 
 ## Testing
+
+**Testing Strategies**
+
+The team employed a variety of testing strategies to ensure the reliability and functionality of the program. 
+
+**Integration Test**
+
+Integration testing is performed to test how the individual components of the program work together as a whole.
+
+**Unit Test**
+
+Unit testing is used to test individual components or units of the program in isolation.
+
+**UI Testing**
+
+Tests the user interface elements and their behaviour. It verifies the window opens and closes as expected and ensures UI elements function correctly based on user interaction.
+
+#### `teacherMenuTests`:
+
+The `teacherMenuTests` class contains unit tests for the following high-level teacher menu functionality:
+- Opening window
+- Closing window
+- Generating usernames
+- Creating new users
+- Deleting users
+- Database handling
+
+All tests passed successfully (as shown in **Figure 8**), and the teacher menu functionality was verified to be working as expected.
+
+<div align=center>
+
+**[Figure 8: Teacher Menu Test Results]()**
+
+![Teacher Menu Test Results](Documentation/teacherMenuTestResults.png)
+
+</div>
+
+#### `userManagerTest`:
+
+<div align=center>
+
+**Table 2: UserManager Test Cases and Result**
+
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|` OpenDatabaseFileTest` | Tests the `OpenDatabaseFile` method in UserManager to ensure it correctly reads the database file. | Database file is successfully opened  and `userList` and `tableHeader`s are populated. | Passed 
+| `CloseDatabaseFileTest` | Tests if the method properly close the database file and save if any changes occur | Successfully closed the database and saved the updated data | passed
+| `CreateNewFieldTest` | Tests if `CreateNewField` method successfully creates a new field to table headers and initializes it with empty value | Successfully Created a new field to `tableHeader` and has empty values for all the user in `userList` | Passed
+| `CreateNewObjectTest` | Test the CreateNewObject to ensure it's correctly create a new user or object to an existing `userList` | The new object successfully added to `userList`| Passed
+| `EditObjectTest` | Test the EditObject function to ensure it correctly modify existing object's field value | Successfully modify an exististing object's field value | Passed 
+
+
+**[Figure 9: UserManager Test Results]()**
+
+![UserManager Test Results](Documentation/UserManagerTest.png)
+
+</div>
+
+#### `bookRentalTest`:
+
+<div align=center>
+
+**Table 3: bookRental Test Cases and Result**
+| Test case | Description | Result | Passed/Failed
+|:---:|:---:|:---:|:---:|
+|`bookRentalOpenTest` | Tests If the `bookRental` Window open successfully | The window opens when the program run but the test not running in test explorer | Not Run
+| `bookRentalCloseTest` | Tests If the `bookRental` WIndow closes successfully | The window closes when the program run but the test not running on test explorer | Not Run
+
+
+**[Figure 10: bookRental UI Test Results]()**
+
+![bookRental Test Results](Documentation/bookRentalTest.png)
+
+</div>
+
 ## Kanban
 
 
@@ -154,7 +389,7 @@ Below is a screenshot of our project Kanban from 21/01/24 and will change throug
 
 <div align=center>
 
-**[Figure 8: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
+**[Figure 9: Kanban Board Phase/3](https://github.com/orgs/TeachingMaterial/projects/9)**
 
 ![Kanban](Documentation/kanban.png)
 
