@@ -18,13 +18,7 @@ namespace LMS_UnitTests
 
             string username = "jd1234a";
             string initialBalance = "100.00";
-            //var paymentGateway = new paymentGateway(userManager, inventoryManager, username, initialBalance);
-            string cardNumber = "1234567890123456";
-            string expiryDate = "12/25";
-            string cvc = "123";
-
-
-
+            
 
             paymentGateway paymentGatewayInstance = null;
 
@@ -64,7 +58,7 @@ namespace LMS_UnitTests
             string username = "jd1234a";
             string initialBalance = "100.00";
 
-
+            // Act: Instantiate the bookRental on the UI thread
             var thread = new Thread(() =>
             {
                 paymentGatewayInstance = new paymentGateway(testUserManager, testInventoryManager, username, initialBalance);
